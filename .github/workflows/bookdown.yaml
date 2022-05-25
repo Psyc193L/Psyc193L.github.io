@@ -21,6 +21,10 @@ jobs:
         with:
           use-public-rspm: true
 
+      - name: install missing curl library
+        run: |
+            sudo apt-get install -y libcurl4-openssl-dev
+
       - uses: r-lib/actions/setup-renv@v1
       
       - name: install packages missed by renv
