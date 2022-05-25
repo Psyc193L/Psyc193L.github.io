@@ -1,29 +1,4 @@
 bookdown::bs4_book:
-  css: bs4_style.css
-  theme:
-    primary: "#096B72"
-  repo: https://github.com/rstudio/bookdown-demo
-bookdown::bs4_book:
-  css: bs4_style.css
-  theme:
-    primary: "#096B72"
-  repo: https://github.com/rstudio/bookdown-demo
-bookdown::bs4_book:
-  css: bs4_style.css
-  theme:
-    primary: "#096B72"
-  repo: https://github.com/rstudio/bookdown-demo
-bookdown::bs4_book:
-  css: bs4_style.css
-  theme:
-    primary: "#096B72"
-  repo: https://github.com/rstudio/bookdown-demo
-bookdown::bs4_book:
-  css: bs4_style.css
-  theme:
-    primary: "#096B72"
-  repo: https://github.com/rstudio/bookdown-demo
-bookdown::bs4_book:
   css: 
     - bs4_style.css
     - style.css #file to include some manual aesthetic tweaks and fine tuning
