@@ -1,0 +1,36 @@
+book_filename: "Psyc193L.github.io"
+new_session: true
+before_chapter_script: _common.R
+book_filename: "Psyc193L.github.io"
+new_session: true
+before_chapter_script: _common.R
+book_filename: "Psyc193L.github.io"
+new_session: true
+before_chapter_script: _common.R
+book_filename: "Psyc193L.github.io"
+new_session: true
+before_chapter_script: _common.R
+book_filename: "Psyc193L.github.io"
+new_session: true
+before_chapter_script: _common.R
+book_filename: "psyc193l.github.io"
+new_session: true
+before_chapter_script: _common.R
+delete_merged_file: true
+rmd_files:
+- index.Rmd
+#- 01-intro.Rmd
+#- 06-Schedule.Rmd
+- Syllabus.Rmd
+- RBasics1.Rmd
+- RBasics2.Rmd
+- RBasics3.Rmd
+- RBasics4.Rmd
+- Visualizations1.Rmd
+- Visualizations2.Rmd
+- Visualizations3.Rmd
+- Visualizations4.Rmd
+#- Datahub.Rmd
+language:
+  ui:
+    chapter_name: "Chapter "

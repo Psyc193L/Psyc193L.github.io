@@ -1,0 +1,18 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.DS_Store
+*.rds
+_book/
+_bookdown_files/
+rsconnect
+shiny_bookmarks
+shiny-book.*
+# knitr and R markdown default cache directories
+/*_cache/
+/cache/
+*_cache
+# Temporary files created by R markdown
+*.utf8.md
+*.knit.md

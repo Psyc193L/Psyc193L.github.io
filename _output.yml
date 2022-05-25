@@ -1,0 +1,49 @@
+bookdown::bs4_book:
+  css: bs4_style.css
+  theme:
+    primary: "#096B72"
+  repo: https://github.com/rstudio/bookdown-demo
+bookdown::bs4_book:
+  css: bs4_style.css
+  theme:
+    primary: "#096B72"
+  repo: https://github.com/rstudio/bookdown-demo
+bookdown::bs4_book:
+  css: bs4_style.css
+  theme:
+    primary: "#096B72"
+  repo: https://github.com/rstudio/bookdown-demo
+bookdown::bs4_book:
+  css: bs4_style.css
+  theme:
+    primary: "#096B72"
+  repo: https://github.com/rstudio/bookdown-demo
+bookdown::bs4_book:
+  css: bs4_style.css
+  theme:
+    primary: "#096B72"
+  repo: https://github.com/rstudio/bookdown-demo
+bookdown::bs4_book:
+  css: 
+    - bs4_style.css
+    - style.css #file to include some manual aesthetic tweaks and fine tuning
+  theme:
+    #bg: "#2d2b2a"
+    #fg: "#DAD6D5"
+    bg: "#2c2c2c"
+    fg: "#f2f2f2"
+    primary: "#37A5EC"
+    #color - "#03b3c1"
+    #hover - "#01565d "
+  repo: https://github.com/psyc193l/psyc193l.github.io
+  # test below
+  #includes: 
+  #  in_header: [css.html]
+  # end test
+bookdown::pdf_book:
+  includes:
+    in_header: preamble.tex
+  latex_engine: xelatex
+  citation_package: natbib
+  keep_tex: yes
+bookdown::epub_book: default

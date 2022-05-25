@@ -1,0 +1,48 @@
+---
+title: ""
+author: ""
+date: ""
+output: html_document
+---
+
+# 1. Decide where you want your R and class files to live on your computer. Create a new project called "my_first_project" in that location. Open the .Rproj file and create and save a new RMarkdown file titled "notes".
+
+# 2. Use `here()` to find the file path to your R Project and copy/paste it to the cell below. What would the `here()` command be to create the file path do your "notes" document? Include that below as well!
+
+```{r exercise 2}
+# Your code here
+```
+
+
+# 3. Create a new code chunk below. Name the code chunk "exercise 3", and copy/paste your file path from above.
+
+
+
+
+# 4. First, decide on a coding convention to use. Then, create a new code chunk named "coding convention". In it, save the name of your chosen coding convention as a string to a variable called "coding convention" that is formatted with that coding convention. For example, if you are going to use snake case, it would be called `coding_convention`.
+
+
+
+
+
+# 5. Clean up all the code below so that it follows the proper formatting guidlines listed above.
+
+```{r exercise 5}
+df[,4]
+df[ ,2]
+df[ , 0]
+
+mean (df$col, na.rm = TRUE)
+mean( df$col, na.rm = TRUE )
+
+3+4+5
+-2*8^2
+#computer persons height
+height<-feet*12+inches
+T+1<2
+!F|F+1
+
+long_computation('little',bunny=1,foo*2,hopping,through='forest')
+
+```
+
