@@ -74,7 +74,7 @@ You create a new project by going to *file -> new project*.
 
 ![](figures/rprojectfiles.png){width=100%}
 <div class="panel panel-success">
-  <div class="panel-heading">EXERCISE #1</div>
+  <div class="panel-heading">**EXERCISE #1**</div>
   <div class="panel-body">Decide where you want your R and class files to live on your computer. Create a new project called "my_first_project" in that location. Open the .Rproj file and create and save a new RMarkdown file titled "notes".</div>
 </div>
 
@@ -117,7 +117,7 @@ The output from this would be, `"/Users/ethan/Documents/Psyc193L/data/dataset.cs
 These relative paths work regardless of where the associated file lives inside your project directory, and will work for anyone who downloads your project and runs that code on their own computer!!
 
 <div class="panel panel-success">
-  <div class="panel-heading">EXERCISE #2</div>
+  <div class="panel-heading">**EXERCISE #2**</div>
   <div class="panel-body">Use `here()` to find the file path to your R Project and copy/paste it to the cell below. What would the `here()` command be to create the file path do your "notes" document? Include that below as well!</div>
 </div>
 
@@ -188,7 +188,7 @@ The mean is `` `r mean(x)` ``.
 When this document is generated, the R code will be evaluated and it will look as though I wrote, "The mean is 14." (or whatever the mean of `x` happens to be)!
 
 <div class="panel panel-success">
-  <div class="panel-heading">EXERCISE #3</div>
+  <div class="panel-heading">**EXERCISE #3**</div>
   <div class="panel-body">Create a new code chunk in your Markdown file. Name the code chunk "exercise 3", and copy/paste your file path from above.</div>
 </div>
 
@@ -219,7 +219,7 @@ You want to use names that are concise, unique, and meaningful (this is difficul
 * X_se -- for the standard error of some data
 
 <div class="panel panel-success">
-  <div class="panel-heading">EXERCISE #4</div>
+  <div class="panel-heading">**EXERCISE #4**</div>
   <div class="panel-body">First, decide on a coding convention to use. Then, create a new code chunk named "coding convention". In it, save the name of your chosen coding convention as a string to a variable called "coding convention" that is formatted with that coding convention. For example, if you are going to use snake case, it would be called `coding_convention`.</div>
 </div>
 
@@ -330,7 +330,7 @@ do_something_very_complicated("that", requires, many, arguments,
 * DO NOT hardcode. Always softcode. It saves you from having to constantly update different sections of your code any time there is a change. 
 
 <div class="panel panel-success">
-  <div class="panel-heading">EXERCISE #5</div>
+  <div class="panel-heading">**EXERCISE #5**</div>
   <div class="panel-body">Clean up all the code below so that it follows the proper formatting guidelines listed above.</div>
 </div>
 

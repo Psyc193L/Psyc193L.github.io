@@ -4,15 +4,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Chapter 3 Why use R? | Psyc193L</title>
+<title>Chapter 2 Why use R? | PSYC193L</title>
 <meta name="author" content="Ethan Hurwitz">
 <meta name="description" content="Consider some of the main tasks we do in Social Sciences. As in all sciences, we work with data. We inspect and manipulate that data in different ways, and modify it to make it amenable to...">
 <meta name="generator" content="bookdown 0.24 with bs4_book()">
-<meta property="og:title" content="Chapter 3 Why use R? | Psyc193L">
+<meta property="og:title" content="Chapter 2 Why use R? | PSYC193L">
 <meta property="og:type" content="book">
 <meta property="og:description" content="Consider some of the main tasks we do in Social Sciences. As in all sciences, we work with data. We inspect and manipulate that data in different ways, and modify it to make it amenable to...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chapter 3 Why use R? | Psyc193L">
+<meta name="twitter:title" content="Chapter 2 Why use R? | PSYC193L">
 <meta name="twitter:description" content="Consider some of the main tasks we do in Social Sciences. As in all sciences, we work with data. We inspect and manipulate that data in different ways, and modify it to make it amenable to...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
@@ -29,7 +29,7 @@
 
     <div class="d-flex align-items-start justify-content-between">
       <h1>
-        <a href="index.html" title="">Psyc193L</a>
+        <a href="index.html" title="">PSYC193L</a>
       </h1>
       <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
     </div>
@@ -41,19 +41,18 @@
 
       <nav aria-label="Table of contents"><h2>Table of contents</h2>
         <ul class="book-toc list-unstyled">
-<li><a class="" href="index.html"><span class="header-section-number">1</span> About</a></li>
-<li><a class="" href="syllabus.html"><span class="header-section-number">2</span> Syllabus</a></li>
+<li><a class="" href="index.html"><span class="header-section-number">1</span> Syllabus</a></li>
 <li class="book-part">R Basics</li>
-<li><a class="active" href="why-use-r.html"><span class="header-section-number">3</span> Why use R?</a></li>
-<li><a class="" href="r-coding-basics.html"><span class="header-section-number">4</span> R Coding Basics</a></li>
-<li><a class="" href="using-r-effectively.html"><span class="header-section-number">5</span> Using R Effectively</a></li>
-<li><a class="" href="preparing-for-more-content.html"><span class="header-section-number">6</span> Preparing For More Content</a></li>
+<li><a class="active" href="why-use-r.html"><span class="header-section-number">2</span> Why use R?</a></li>
+<li><a class="" href="r-coding-basics.html"><span class="header-section-number">3</span> R Coding Basics</a></li>
+<li><a class="" href="using-r-effectively.html"><span class="header-section-number">4</span> Using R Effectively</a></li>
+<li><a class="" href="preparing-for-more-content.html"><span class="header-section-number">5</span> Preparing For More Content</a></li>
 <li class="book-part">Visualizations</li>
-<li><a class="" href="intro-to-ggplot2.html"><span class="header-section-number">7</span> Intro to ggplot2</a></li>
-<li><a class="" href="aesthetics.html"><span class="header-section-number">8</span> Aesthetics</a></li>
-<li><a class="" href="different-geoms-and-when-to-use-them.html"><span class="header-section-number">9</span> Different Geoms and When To Use Them</a></li>
-<li><a class="" href="customization.html"><span class="header-section-number">10</span> Customization</a></li>
-<li><a class="" href="color-theory.html"><span class="header-section-number">11</span> Color Theory</a></li>
+<li><a class="" href="intro-to-ggplot2.html"><span class="header-section-number">6</span> Intro to ggplot2</a></li>
+<li><a class="" href="aesthetics.html"><span class="header-section-number">7</span> Aesthetics</a></li>
+<li><a class="" href="different-geoms-and-when-to-use-them.html"><span class="header-section-number">8</span> Different Geoms and When To Use Them</a></li>
+<li><a class="" href="customization.html"><span class="header-section-number">9</span> Customization</a></li>
+<li><a class="" href="color-theory.html"><span class="header-section-number">10</span> Color Theory</a></li>
 </ul>
 
         <div class="book-extra">
@@ -63,7 +62,7 @@
 </div>
   </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="why-use-r" class="section level1">
 <h1>
-<span class="header-section-number">3</span> Why use R?<a class="anchor" aria-label="anchor" href="#why-use-r"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2</span> Why use R?<a class="anchor" aria-label="anchor" href="#why-use-r"><i class="fas fa-link"></i></a>
 </h1>
 <p>Consider some of the main tasks we do in Social Sciences. As in all sciences, we work with data. We <strong>inspect</strong> and <strong>manipulate</strong> that data in different ways, and modify it to make it amenable to <strong>analysis</strong> and <strong>visualizations</strong>. Visualizations and statistical analyses help us explore relationships we have observed in the real world and test for relationships in our experiments/studies. We then use these to <strong>communicate</strong> some findings to the general public.</p>
 <p>So why would we want to use R or <strong>any</strong> programming language vs a Graphical User Interface (GUI) software like Excel, JMP, SPSS, or SAS, to do this?</p>
@@ -106,11 +105,11 @@ from Tobi Gerstenberg’s <em>Statistical Methods for Behavioral and Social Scie
 </p>
 <div id="r-tools" class="section level2">
 <h2>
-<span class="header-section-number">3.1</span> R tools<a class="anchor" aria-label="anchor" href="#r-tools"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.1</span> R tools<a class="anchor" aria-label="anchor" href="#r-tools"><i class="fas fa-link"></i></a>
 </h2>
 <div id="base-r-vs-rstudio" class="section level3">
 <h3>
-<span class="header-section-number">3.1.1</span> Base R vs RStudio<a class="anchor" aria-label="anchor" href="#base-r-vs-rstudio"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.1.1</span> Base R vs RStudio<a class="anchor" aria-label="anchor" href="#base-r-vs-rstudio"><i class="fas fa-link"></i></a>
 </h3>
 <p>When we talk about R, we are referring to the programming language R itself. We use RStudio to help us write and use R. RStudio is an Integrated Development Environment (IDE). Basically, it provides an interface to make writing and using R code easier.</p>
 <ul>
@@ -124,7 +123,7 @@ from Tobi Gerstenberg’s <em>Statistical Methods for Behavioral and Social Scie
 </div>
 <div id="rstudio-tour" class="section level3">
 <h3>
-<span class="header-section-number">3.1.2</span> RStudio Tour<a class="anchor" aria-label="anchor" href="#rstudio-tour"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.1.2</span> RStudio Tour<a class="anchor" aria-label="anchor" href="#rstudio-tour"><i class="fas fa-link"></i></a>
 </h3>
 <p>Generally speaking, you’ll see 4 sections in your RStudio window. Let’s quickly overview each.</p>
 <p><span style="font-size:18.0pt"><u><strong>R file / document</strong></u></span></p>
@@ -142,7 +141,7 @@ from Tobi Gerstenberg’s <em>Statistical Methods for Behavioral and Social Scie
 </div>
 <div id="customize-your-rstudio" class="section level3">
 <h3>
-<span class="header-section-number">3.1.3</span> Customize Your RStudio<a class="anchor" aria-label="anchor" href="#customize-your-rstudio"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.1.3</span> Customize Your RStudio<a class="anchor" aria-label="anchor" href="#customize-your-rstudio"><i class="fas fa-link"></i></a>
 </h3>
 <p>Looking at a default white screen for a long time can put a lot of strain on your eyes. RStudio comes with a lot of different themes you can apply by going to:</p>
 <p>preferences -&gt; appearance. I personally use a <a href="https://github.com/patrickshox/Mojave-Dark-RStudio-Theme">custom theme</a> called “Mojave Dark” (the one you see in the screenshots is called “Cobalt”). What theme to use is personal preference.</p>
@@ -154,7 +153,7 @@ from Tobi Gerstenberg’s <em>Statistical Methods for Behavioral and Social Scie
 </div>
 <div id="different-types-of-files" class="section level3">
 <h3>
-<span class="header-section-number">3.1.4</span> Different types of files<a class="anchor" aria-label="anchor" href="#different-types-of-files"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.1.4</span> Different types of files<a class="anchor" aria-label="anchor" href="#different-types-of-files"><i class="fas fa-link"></i></a>
 </h3>
 <p>There are three main types of R files.</p>
 <ol style="list-style-type: decimal">
@@ -176,14 +175,14 @@ Artwork by <span class="citation">(<span class="citeproc-not-found" data-referen
 </div>
 <div id="components-of-a-markdown-file" class="section level3">
 <h3>
-<span class="header-section-number">3.1.5</span> Components of a Markdown File<a class="anchor" aria-label="anchor" href="#components-of-a-markdown-file"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.1.5</span> Components of a Markdown File<a class="anchor" aria-label="anchor" href="#components-of-a-markdown-file"><i class="fas fa-link"></i></a>
 </h3>
 <p>Markdown files themselves have 2 components:</p>
 <ol style="list-style-type: decimal">
 <li>General text, like what this is</li>
 <li>Code chunks, like this:</li>
 </ol>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># This is a code chunk -- essentially mini r files</span>
 <span class="co"># You put R code inside chunks, text outside.</span>
 <span class="co"># You can comment out text by starting the line with a hashtag. </span>
@@ -199,7 +198,7 @@ Artwork by <span class="citation">(<span class="citeproc-not-found" data-referen
 </div>
 <div id="resources" class="section level2">
 <h2>
-<span class="header-section-number">3.2</span> Resources:<a class="anchor" aria-label="anchor" href="#resources"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.2</span> Resources:<a class="anchor" aria-label="anchor" href="#resources"><i class="fas fa-link"></i></a>
 </h2>
 <p>Here are some good resources that will help you throughout this class and your R learning journey.</p>
 <p><a href="https://github.com/rstudio/cheatsheets">R Cheatsheets</a></p>
@@ -213,22 +212,22 @@ Artwork by <span class="citation">(<span class="citeproc-not-found" data-referen
 </div>
 </div>
   <div class="chapter-nav">
-<div class="prev"><a href="syllabus.html"><span class="header-section-number">2</span> Syllabus</a></div>
-<div class="next"><a href="r-coding-basics.html"><span class="header-section-number">4</span> R Coding Basics</a></div>
+<div class="prev"><a href="index.html"><span class="header-section-number">1</span> Syllabus</a></div>
+<div class="next"><a href="r-coding-basics.html"><span class="header-section-number">3</span> R Coding Basics</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#why-use-r"><span class="header-section-number">3</span> Why use R?</a></li>
+<li><a class="nav-link" href="#why-use-r"><span class="header-section-number">2</span> Why use R?</a></li>
 <li>
-<a class="nav-link" href="#r-tools"><span class="header-section-number">3.1</span> R tools</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#base-r-vs-rstudio"><span class="header-section-number">3.1.1</span> Base R vs RStudio</a></li>
-<li><a class="nav-link" href="#rstudio-tour"><span class="header-section-number">3.1.2</span> RStudio Tour</a></li>
-<li><a class="nav-link" href="#customize-your-rstudio"><span class="header-section-number">3.1.3</span> Customize Your RStudio</a></li>
-<li><a class="nav-link" href="#different-types-of-files"><span class="header-section-number">3.1.4</span> Different types of files</a></li>
-<li><a class="nav-link" href="#components-of-a-markdown-file"><span class="header-section-number">3.1.5</span> Components of a Markdown File</a></li>
+<a class="nav-link" href="#r-tools"><span class="header-section-number">2.1</span> R tools</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#base-r-vs-rstudio"><span class="header-section-number">2.1.1</span> Base R vs RStudio</a></li>
+<li><a class="nav-link" href="#rstudio-tour"><span class="header-section-number">2.1.2</span> RStudio Tour</a></li>
+<li><a class="nav-link" href="#customize-your-rstudio"><span class="header-section-number">2.1.3</span> Customize Your RStudio</a></li>
+<li><a class="nav-link" href="#different-types-of-files"><span class="header-section-number">2.1.4</span> Different types of files</a></li>
+<li><a class="nav-link" href="#components-of-a-markdown-file"><span class="header-section-number">2.1.5</span> Components of a Markdown File</a></li>
 </ul>
 </li>
-<li><a class="nav-link" href="#resources"><span class="header-section-number">3.2</span> Resources:</a></li>
+<li><a class="nav-link" href="#resources"><span class="header-section-number">2.2</span> Resources:</a></li>
 </ul>
 
       <div class="book-extra">
@@ -246,7 +245,7 @@ Artwork by <span class="citation">(<span class="citeproc-not-found" data-referen
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Psyc193L</strong>" was written by Ethan Hurwitz. It was last built on 2022-05-25.</p>
+    <p>"<strong>PSYC193L</strong>" was written by Ethan Hurwitz. It was last built on 2022-05-26.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

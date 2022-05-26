@@ -4,15 +4,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Chapter 7 Intro to ggplot2 | Psyc193L</title>
+<title>Chapter 6 Intro to ggplot2 | PSYC193L</title>
 <meta name="author" content="Ethan Hurwitz">
 <meta name="description" content="library(tidyverse) library(palmerpenguins) Starting here, we will begin our focus on how to visualize our data, which is both a part of understanding and communicating your data. “The greatest...">
 <meta name="generator" content="bookdown 0.24 with bs4_book()">
-<meta property="og:title" content="Chapter 7 Intro to ggplot2 | Psyc193L">
+<meta property="og:title" content="Chapter 6 Intro to ggplot2 | PSYC193L">
 <meta property="og:type" content="book">
 <meta property="og:description" content="library(tidyverse) library(palmerpenguins) Starting here, we will begin our focus on how to visualize our data, which is both a part of understanding and communicating your data. “The greatest...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chapter 7 Intro to ggplot2 | Psyc193L">
+<meta name="twitter:title" content="Chapter 6 Intro to ggplot2 | PSYC193L">
 <meta name="twitter:description" content="library(tidyverse) library(palmerpenguins) Starting here, we will begin our focus on how to visualize our data, which is both a part of understanding and communicating your data. “The greatest...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
@@ -29,7 +29,7 @@
 
     <div class="d-flex align-items-start justify-content-between">
       <h1>
-        <a href="index.html" title="">Psyc193L</a>
+        <a href="index.html" title="">PSYC193L</a>
       </h1>
       <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
     </div>
@@ -41,19 +41,18 @@
 
       <nav aria-label="Table of contents"><h2>Table of contents</h2>
         <ul class="book-toc list-unstyled">
-<li><a class="" href="index.html"><span class="header-section-number">1</span> About</a></li>
-<li><a class="" href="syllabus.html"><span class="header-section-number">2</span> Syllabus</a></li>
+<li><a class="" href="index.html"><span class="header-section-number">1</span> Syllabus</a></li>
 <li class="book-part">R Basics</li>
-<li><a class="" href="why-use-r.html"><span class="header-section-number">3</span> Why use R?</a></li>
-<li><a class="" href="r-coding-basics.html"><span class="header-section-number">4</span> R Coding Basics</a></li>
-<li><a class="" href="using-r-effectively.html"><span class="header-section-number">5</span> Using R Effectively</a></li>
-<li><a class="" href="preparing-for-more-content.html"><span class="header-section-number">6</span> Preparing For More Content</a></li>
+<li><a class="" href="why-use-r.html"><span class="header-section-number">2</span> Why use R?</a></li>
+<li><a class="" href="r-coding-basics.html"><span class="header-section-number">3</span> R Coding Basics</a></li>
+<li><a class="" href="using-r-effectively.html"><span class="header-section-number">4</span> Using R Effectively</a></li>
+<li><a class="" href="preparing-for-more-content.html"><span class="header-section-number">5</span> Preparing For More Content</a></li>
 <li class="book-part">Visualizations</li>
-<li><a class="active" href="intro-to-ggplot2.html"><span class="header-section-number">7</span> Intro to ggplot2</a></li>
-<li><a class="" href="aesthetics.html"><span class="header-section-number">8</span> Aesthetics</a></li>
-<li><a class="" href="different-geoms-and-when-to-use-them.html"><span class="header-section-number">9</span> Different Geoms and When To Use Them</a></li>
-<li><a class="" href="customization.html"><span class="header-section-number">10</span> Customization</a></li>
-<li><a class="" href="color-theory.html"><span class="header-section-number">11</span> Color Theory</a></li>
+<li><a class="active" href="intro-to-ggplot2.html"><span class="header-section-number">6</span> Intro to ggplot2</a></li>
+<li><a class="" href="aesthetics.html"><span class="header-section-number">7</span> Aesthetics</a></li>
+<li><a class="" href="different-geoms-and-when-to-use-them.html"><span class="header-section-number">8</span> Different Geoms and When To Use Them</a></li>
+<li><a class="" href="customization.html"><span class="header-section-number">9</span> Customization</a></li>
+<li><a class="" href="color-theory.html"><span class="header-section-number">10</span> Color Theory</a></li>
 </ul>
 
         <div class="book-extra">
@@ -63,9 +62,9 @@
 </div>
   </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="intro-to-ggplot2" class="section level1">
 <h1>
-<span class="header-section-number">7</span> Intro to ggplot2<a class="anchor" aria-label="anchor" href="#intro-to-ggplot2"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6</span> Intro to ggplot2<a class="anchor" aria-label="anchor" href="#intro-to-ggplot2"><i class="fas fa-link"></i></a>
 </h1>
-<div class="sourceCode" id="cb38"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb36"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://allisonhorst.github.io/palmerpenguins/">palmerpenguins</a></span><span class="op">)</span></code></pre></div>
 <p>Starting here, we will begin our focus on how to visualize our data, which is both a part of <strong>understanding</strong> and <strong>communicating</strong> your data.</p>
@@ -93,7 +92,7 @@ Show/Hide
 <p>The key point here is that the summary statistics of some variables and their linear relationships inherently overlook some aspects of the data. This highlights the critical importance of visualizing your data, and not just relying on summary statistics alone. The point of a visualization, just like a summary statistic, is to understand a relationship or pattern in your data. However, by looking at the raw data itself, you don’t run the risk of missing things the way you do by relying on summary statistics alone.</p>
 <div id="when-visualizing-go-wrong" class="section level2">
 <h2>
-<span class="header-section-number">7.1</span> When Visualizing Go Wrong<a class="anchor" aria-label="anchor" href="#when-visualizing-go-wrong"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.1</span> When Visualizing Go Wrong<a class="anchor" aria-label="anchor" href="#when-visualizing-go-wrong"><i class="fas fa-link"></i></a>
 </h2>
 <p>It’s easy enough to just say, “Look at your raw data! Create a visualization!” However, a bad visualization is often times worse than no visualization at all. One of the things that the Covid-19 pandemic brought with it originally was a plethora of data visualizations. Below are a few that I came across myself out in the real world:</p>
 <div class="inline-figure"><img src="figures/bad_visualizations/badviz3.jpeg" style="width:100.0%"></div>
@@ -104,7 +103,7 @@ Show/Hide
 </div>
 <div id="ggplot2" class="section level2">
 <h2>
-<span class="header-section-number">7.2</span> ggplot2<a class="anchor" aria-label="anchor" href="#ggplot2"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.2</span> ggplot2<a class="anchor" aria-label="anchor" href="#ggplot2"><i class="fas fa-link"></i></a>
 </h2>
 <p>Data visualization is one of the things that sets R apart from other programming languages that can be used for statistics, like Python. R still has the best data visualization capabilities, and it is one of the primary reasons it is used over Python in Social Sciences. This is also one of the first times you will get to see what coding can be all about. You are actually going to be creating stuff today with your code!</p>
 <p>In this class, we will use the <code>ggplot2</code> package to create visualizations. Graphs are constructed by mapping data to geometric objects (lines, bars, points, etc.) according to some aesthetic attributes (color, shape, size, etc.). <code>ggplot2</code> uses this to inform its grammar. We’ll explain this much more as we go!</p>
@@ -113,9 +112,9 @@ Artwork by <span class="citation">(<span class="citeproc-not-found" data-referen
 </p>
 <div id="meet-the-penguins" class="section level3">
 <h3>
-<span class="header-section-number">7.2.1</span> Meet the Penguins<a class="anchor" aria-label="anchor" href="#meet-the-penguins"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.2.1</span> Meet the Penguins<a class="anchor" aria-label="anchor" href="#meet-the-penguins"><i class="fas fa-link"></i></a>
 </h3>
-<p>To create visualizations, we need some data to visualize! I am going to work with the <code>palmerpenguins</code> dataset from <a href="https://allisonhorst.github.io/palmerpenguins/">Alison Horst</a> (you may be noticing a theme here with her. Yes, she is someone I admire greatly and think does great work!).</p>
+<p>To create visualizations, we need some data to visualize! I am going to work with the <code>palmerpenguins</code> dataset from <a href="https://allisonhorst.github.io/palmerpenguins/">Alison Horst</a> (Yes, she is someone I admire and think does great work!).</p>
 <div class="inline-figure"><img src="figures/palmerpenguins_logo.png" width="207"></div>
 <p>This dataset contains measurements from 344 different penguins. Measurements include things like bill length and depth, sex, among others.</p>
 <img src="figures/palmerpenguins_bills.png" style="width:100.0%"><p style="font-size:6pt">
@@ -131,14 +130,14 @@ Artwork by <span class="citation">(<span class="citeproc-not-found" data-referen
 </div>
 <div id="a-basic-graph" class="section level2">
 <h2>
-<span class="header-section-number">7.3</span> A Basic Graph<a class="anchor" aria-label="anchor" href="#a-basic-graph"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.3</span> A Basic Graph<a class="anchor" aria-label="anchor" href="#a-basic-graph"><i class="fas fa-link"></i></a>
 </h2>
 <p>Let’s start building a basic graph. There are going to be <u><strong>LOTS</strong><u> of exercise breaks throughout.</u></u></p>
 <p class="text-info">
-<strong>Note:</strong> <em>As we move forward with building our first graph, each new piece of code added will be accompanied by a literate programming portion, where you will describe in words what the code is doing.</em>
+<strong><u>Note:</u> As we move forward with building our first graph, each new piece of code added will be accompanied by a literate programming portion, where you will describe in words what the code is doing.</strong>
 </p>
 <p>All ggplot graphs are build using the <code><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot()</a></code> call. The first thing it needs is some data. We’ll use the <code>%&gt;%</code> to pass in our <code>penguins</code> dataframe.</p>
-<div class="sourceCode" id="cb39"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb37"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">penguins</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 <div class="inline-figure"><img src="Visualizations1_files/figure-html/unnamed-chunk-5-1.png" width="672"></div>
@@ -147,7 +146,7 @@ Artwork by <span class="citation">(<span class="citeproc-not-found" data-referen
 </blockquote>
 <p>Woo! We got a grey rectangle! Of course, the code above alone will not do anything. We have to tell ggplot what we want to plot. Hmm… Let’s see how a penguin’s <code>bill_length_mm</code> is related to its <code>flipper_length_mm</code>. I would imagine that bigger penguins would tend to have longer bills and flippers, but maybe not? That is why we create visualizations, to try and help answer questions we may have about our data (which consist of samples thought to be representative of the world at large)!</p>
 <p>We need to tell ggplot what variables from our data should be mapped to the aesthetics we want to render on our graph. We’ll do that with the <code><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes()</a></code> call, and start with specifying what to display on each axis.</p>
-<div class="sourceCode" id="cb40"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb38"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">penguins</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>y <span class="op">=</span> <span class="va">flipper_length_mm</span>,
                        x <span class="op">=</span> <span class="va">bill_length_mm</span><span class="op">)</span><span class="op">)</span></code></pre></div>
@@ -167,9 +166,9 @@ Create your own graph using the <code>penguins</code> data and pick 2 of the fol
 <p><br>
 We told ggplot what our aesthetic mappings are (what data source to use), but not what it should render from those mappings! We want ggplot to use those mappings to construct some <strong>geom</strong>etric object, and the way we do that is by adding a <em>geom</em>, aptly named. There are a number of different geoms, which have the general syntax of <code>geom_X()</code>, where X usually refers to the specific geometric object you want to render. Here, we want a point on our graph for each penguin, so we will use <code><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point()</a></code>.</p>
 <p class="text-info">
-<strong>Note:</strong> <em>There are a <b>ton</b> of different geoms. You will see many more as we go.</em>
+<strong><u>Note:</u> There are a TON of different geoms. You will see many more as we go.</strong>
 </p>
-<div class="sourceCode" id="cb41"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb39"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">penguins</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>y <span class="op">=</span> <span class="va">flipper_length_mm</span>,
                        x <span class="op">=</span> <span class="va">bill_length_mm</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
@@ -180,7 +179,7 @@ We told ggplot what our aesthetic mappings are (what data source to use), but no
 <blockquote>
 <p>“Start by telling ggplot to use the <code>penguins</code> dataframe for our data, map flipper length to the y-axis and bill length to the x-axis. <strong>Represent each observation with a point.</strong>”</p>
 </blockquote>
-<p>Okay, <strong><u>NOW</u></strong> we are talking! This looks like an actual real graph. Look at your very first ggplot masterpiece!</p>
+<p>Okay, <strong>NOW</strong> we are talking! This looks like an actual real graph. Look at your very first ggplot masterpiece!</p>
 <p>There are two important things to note here:</p>
 <ol style="list-style-type: decimal">
 <li><p>We used the <code>+</code> instead of <code>%&gt;%</code> to add on a new function. The ggplot system is additive/layered, which is a very powerful idea that we will get into more later. For now, it is enough to know that what we are doing was adding the <code><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point()</a></code> to our code. We do not want to take the <code>penguins %&gt;% ggplot(mapping = aes(y = flipper_length_mm, x = bill_length_mm))</code> code and use it as the argument for our <code><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point()</a></code> function, which is what would happen if we used %&gt;% to pipe it! We want to just add the points on top of the existing base that code created, which is why we use the <code>+</code>.</p></li>
@@ -203,7 +202,7 @@ We told ggplot what our aesthetic mappings are (what data source to use), but no
 <p>In the visualization we can see that, generally speaking, penguins with greater flipper length tend to have greater bill length as well. There seems to be a positive linear relationship between bill length and flipper length such that, as flipper length increases, bill length increases in turn.</p>
 </div>
 <p class="text-info">
-<strong>Note:</strong> We have to use a lot of tentative language and include many qualifiers here. We have not done any formal statistical analyses to state any relationship or effect definitively.
+<strong><u>Note:</u> We have to use a lot of tentative language and include many qualifiers here. We have not done any formal statistical analyses to state any relationship or effect definitively.</strong>
 </p>
 <div class="panel panel-success">
 <div class="panel-heading">
@@ -216,17 +215,17 @@ Update your graph above by telling ggplot you want it to render a point for each
 </div>
 </div>
   <div class="chapter-nav">
-<div class="prev"><a href="preparing-for-more-content.html"><span class="header-section-number">6</span> Preparing For More Content</a></div>
-<div class="next"><a href="aesthetics.html"><span class="header-section-number">8</span> Aesthetics</a></div>
+<div class="prev"><a href="preparing-for-more-content.html"><span class="header-section-number">5</span> Preparing For More Content</a></div>
+<div class="next"><a href="aesthetics.html"><span class="header-section-number">7</span> Aesthetics</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#intro-to-ggplot2"><span class="header-section-number">7</span> Intro to ggplot2</a></li>
-<li><a class="nav-link" href="#when-visualizing-go-wrong"><span class="header-section-number">7.1</span> When Visualizing Go Wrong</a></li>
+<li><a class="nav-link" href="#intro-to-ggplot2"><span class="header-section-number">6</span> Intro to ggplot2</a></li>
+<li><a class="nav-link" href="#when-visualizing-go-wrong"><span class="header-section-number">6.1</span> When Visualizing Go Wrong</a></li>
 <li>
-<a class="nav-link" href="#ggplot2"><span class="header-section-number">7.2</span> ggplot2</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#meet-the-penguins"><span class="header-section-number">7.2.1</span> Meet the Penguins</a></li></ul>
+<a class="nav-link" href="#ggplot2"><span class="header-section-number">6.2</span> ggplot2</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#meet-the-penguins"><span class="header-section-number">6.2.1</span> Meet the Penguins</a></li></ul>
 </li>
-<li><a class="nav-link" href="#a-basic-graph"><span class="header-section-number">7.3</span> A Basic Graph</a></li>
+<li><a class="nav-link" href="#a-basic-graph"><span class="header-section-number">6.3</span> A Basic Graph</a></li>
 </ul>
 
       <div class="book-extra">
@@ -244,7 +243,7 @@ Update your graph above by telling ggplot you want it to render a point for each
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Psyc193L</strong>" was written by Ethan Hurwitz. It was last built on 2022-05-25.</p>
+    <p>"<strong>PSYC193L</strong>" was written by Ethan Hurwitz. It was last built on 2022-05-26.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

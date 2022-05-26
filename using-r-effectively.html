@@ -4,15 +4,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Chapter 5 Using R Effectively | Psyc193L</title>
+<title>Chapter 4 Using R Effectively | PSYC193L</title>
 <meta name="author" content="Ethan Hurwitz">
 <meta name="description" content="There are many things you can do to set yourself up for success and make your life easier (both now and in the future). It is really important to start implementing these good practices ASAP to...">
 <meta name="generator" content="bookdown 0.24 with bs4_book()">
-<meta property="og:title" content="Chapter 5 Using R Effectively | Psyc193L">
+<meta property="og:title" content="Chapter 4 Using R Effectively | PSYC193L">
 <meta property="og:type" content="book">
 <meta property="og:description" content="There are many things you can do to set yourself up for success and make your life easier (both now and in the future). It is really important to start implementing these good practices ASAP to...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chapter 5 Using R Effectively | Psyc193L">
+<meta name="twitter:title" content="Chapter 4 Using R Effectively | PSYC193L">
 <meta name="twitter:description" content="There are many things you can do to set yourself up for success and make your life easier (both now and in the future). It is really important to start implementing these good practices ASAP to...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
@@ -29,7 +29,7 @@
 
     <div class="d-flex align-items-start justify-content-between">
       <h1>
-        <a href="index.html" title="">Psyc193L</a>
+        <a href="index.html" title="">PSYC193L</a>
       </h1>
       <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
     </div>
@@ -41,19 +41,18 @@
 
       <nav aria-label="Table of contents"><h2>Table of contents</h2>
         <ul class="book-toc list-unstyled">
-<li><a class="" href="index.html"><span class="header-section-number">1</span> About</a></li>
-<li><a class="" href="syllabus.html"><span class="header-section-number">2</span> Syllabus</a></li>
+<li><a class="" href="index.html"><span class="header-section-number">1</span> Syllabus</a></li>
 <li class="book-part">R Basics</li>
-<li><a class="" href="why-use-r.html"><span class="header-section-number">3</span> Why use R?</a></li>
-<li><a class="" href="r-coding-basics.html"><span class="header-section-number">4</span> R Coding Basics</a></li>
-<li><a class="active" href="using-r-effectively.html"><span class="header-section-number">5</span> Using R Effectively</a></li>
-<li><a class="" href="preparing-for-more-content.html"><span class="header-section-number">6</span> Preparing For More Content</a></li>
+<li><a class="" href="why-use-r.html"><span class="header-section-number">2</span> Why use R?</a></li>
+<li><a class="" href="r-coding-basics.html"><span class="header-section-number">3</span> R Coding Basics</a></li>
+<li><a class="active" href="using-r-effectively.html"><span class="header-section-number">4</span> Using R Effectively</a></li>
+<li><a class="" href="preparing-for-more-content.html"><span class="header-section-number">5</span> Preparing For More Content</a></li>
 <li class="book-part">Visualizations</li>
-<li><a class="" href="intro-to-ggplot2.html"><span class="header-section-number">7</span> Intro to ggplot2</a></li>
-<li><a class="" href="aesthetics.html"><span class="header-section-number">8</span> Aesthetics</a></li>
-<li><a class="" href="different-geoms-and-when-to-use-them.html"><span class="header-section-number">9</span> Different Geoms and When To Use Them</a></li>
-<li><a class="" href="customization.html"><span class="header-section-number">10</span> Customization</a></li>
-<li><a class="" href="color-theory.html"><span class="header-section-number">11</span> Color Theory</a></li>
+<li><a class="" href="intro-to-ggplot2.html"><span class="header-section-number">6</span> Intro to ggplot2</a></li>
+<li><a class="" href="aesthetics.html"><span class="header-section-number">7</span> Aesthetics</a></li>
+<li><a class="" href="different-geoms-and-when-to-use-them.html"><span class="header-section-number">8</span> Different Geoms and When To Use Them</a></li>
+<li><a class="" href="customization.html"><span class="header-section-number">9</span> Customization</a></li>
+<li><a class="" href="color-theory.html"><span class="header-section-number">10</span> Color Theory</a></li>
 </ul>
 
         <div class="book-extra">
@@ -63,7 +62,7 @@
 </div>
   </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="using-r-effectively" class="section level1">
 <h1>
-<span class="header-section-number">5</span> Using R Effectively<a class="anchor" aria-label="anchor" href="#using-r-effectively"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4</span> Using R Effectively<a class="anchor" aria-label="anchor" href="#using-r-effectively"><i class="fas fa-link"></i></a>
 </h1>
 <p>There are many things you can do to set yourself up for success and make your life easier (both now and in the future). It is really important to start implementing these good practices ASAP to establish good habits early on. It is much harder to break routines later. We are going to cover both coding best practices in general as well as some things specific to R and RStudio.</p>
 <p>I’ll remind you all of the quote mentioned previously:</p>
@@ -73,11 +72,11 @@
 <p>Even if for selfish purposes only, and we ignore how this could impact anyone else, help future you. Don’t put future you in a position where they are mad at current you!</p>
 <div id="rstudio" class="section level2">
 <h2>
-<span class="header-section-number">5.1</span> RStudio<a class="anchor" aria-label="anchor" href="#rstudio"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.1</span> RStudio<a class="anchor" aria-label="anchor" href="#rstudio"><i class="fas fa-link"></i></a>
 </h2>
 <div id="settings" class="section level3">
 <h3>
-<span class="header-section-number">5.1.1</span> Settings<a class="anchor" aria-label="anchor" href="#settings"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.1.1</span> Settings<a class="anchor" aria-label="anchor" href="#settings"><i class="fas fa-link"></i></a>
 </h3>
 <p>There are a number of settings tweaks that you’ll want to make to help force you into some good habits.</p>
 <div class="inline-figure"><img src="figures/RStudio-settings1.png" style="width:100.0%"></div>
@@ -120,12 +119,12 @@ Artwork by <span class="citation">(<span class="citeproc-not-found" data-referen
 </div>
 <div id="r-projects" class="section level2">
 <h2>
-<span class="header-section-number">5.2</span> R Projects<a class="anchor" aria-label="anchor" href="#r-projects"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.2</span> R Projects<a class="anchor" aria-label="anchor" href="#r-projects"><i class="fas fa-link"></i></a>
 </h2>
 <p>Something that I strongly encourage doing is creating a new R Project for every project you work on. There is a really great tutorial on R projects <a href="https://alexd106.github.io/intro2R/project_setup.html">here</a>. Rather than reinvent the wheel, I’ll just summarize and highlight a few key pieces of information.</p>
 <div id="why-use-them" class="section level3">
 <h3>
-<span class="header-section-number">5.2.1</span> Why use them?<a class="anchor" aria-label="anchor" href="#why-use-them"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.2.1</span> Why use them?<a class="anchor" aria-label="anchor" href="#why-use-them"><i class="fas fa-link"></i></a>
 </h3>
 <blockquote>
 <p>“There’s nothing more frustrating than coming back to a project months (sometimes years) later and have to spend days (or weeks) figuring out where everything is, what you did and why you did it. A well documented project that has a consistent and logical structure increases the liklihood that you can pick up where you left off with minimal fuss no matter how much time has passed. In addition, it’s much easier to write code to automate tasks when files are well organised and are sensibly named. This is even more relevant nowadays as it’s never been easier to collect vasts amount of data which can be saved across 1000’s or even 100,000’s of separate data files. Lastly, having a well organised project reduces the risk of introducing bugs or errors into your workflow and if they do occur (which inevitably they will at some point), it makes it easier to track down these errors and deal with them efficiently.”</p>
@@ -133,7 +132,7 @@ Artwork by <span class="citation">(<span class="citeproc-not-found" data-referen
 </div>
 <div id="what-are-they" class="section level3">
 <h3>
-<span class="header-section-number">5.2.2</span> What are they?<a class="anchor" aria-label="anchor" href="#what-are-they"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.2.2</span> What are they?<a class="anchor" aria-label="anchor" href="#what-are-they"><i class="fas fa-link"></i></a>
 </h3>
 <blockquote>
 <p>“An RStudio Project keeps all of your R scripts, R markdown documents, R functions and data together in one place. The nice thing about RStudio Projects is that each project has its own directory, workspace, history and source documents so different analyses that you are working on are kept completely separate from each other. This means that you can have multiple instances of RStudio open at the same time (if that’s your thing) or you can switch very easily between projects without fear of them interfering with each other.”</p>
@@ -141,7 +140,7 @@ Artwork by <span class="citation">(<span class="citeproc-not-found" data-referen
 </div>
 <div id="how-do-i-make-one" class="section level3">
 <h3>
-<span class="header-section-number">5.2.3</span> How do I make one?<a class="anchor" aria-label="anchor" href="#how-do-i-make-one"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.2.3</span> How do I make one?<a class="anchor" aria-label="anchor" href="#how-do-i-make-one"><i class="fas fa-link"></i></a>
 </h3>
 <p>You create a new project by going to <em>file -&gt; new project</em>.</p>
 <div class="inline-figure"><img src="figures/rprojects.png" style="width:100.0%"></div>
@@ -150,7 +149,7 @@ Artwork by <span class="citation">(<span class="citeproc-not-found" data-referen
 </blockquote>
 <img src="figures/rprojectfiles.png" style="width:100.0%"><div class="panel panel-success">
 <div class="panel-heading">
-EXERCISE #1
+<strong>EXERCISE #1</strong>
 </div>
 <div class="panel-body">
 Decide where you want your R and class files to live on your computer. Create a new project called “my_first_project” in that location. Open the .Rproj file and create and save a new RMarkdown file titled “notes”.
@@ -159,7 +158,7 @@ Decide where you want your R and class files to live on your computer. Create a 
 </div>
 <div id="file-paths" class="section level3">
 <h3>
-<span class="header-section-number">5.2.4</span> File Paths<a class="anchor" aria-label="anchor" href="#file-paths"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.2.4</span> File Paths<a class="anchor" aria-label="anchor" href="#file-paths"><i class="fas fa-link"></i></a>
 </h3>
 <p>A file’s path specifies where that file is located. It is like a map for your computer, giving it instructions on where to go to look for that specific file. When you download a file (let’s call it <strong>“dataset.csv”</strong>), it likely would appear in your downloads folder. Thus, the full file specification would be:</p>
 <p>For mac: <code>/users/userName/Downloads/dataset.csv</code></p>
@@ -177,7 +176,7 @@ Decide where you want your R and class files to live on your computer. Create a 
 <p>One of the best features of RStudio Projects is that it helps solve this issue! Instead of using <strong>absolute</strong> file paths like this (where it is fully specified), it let’s you use <strong>relative</strong> file paths. In a <strong>relative</strong> file path, all file paths are <em>relative</em> to a particular directory. When you use an RStudio Project, upon opening a <strong>.Rproj</strong> file, it will automatically set your working directory to the location of that file! This way, if you want to share your project and analysis files with someone else, you just save and send the entire project directory. When they open it on their computer, the relative path will be appropriately set!</p>
 <div id="here" class="section level4">
 <h4>
-<span class="header-section-number">5.2.4.1</span> Here()<a class="anchor" aria-label="anchor" href="#here"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.2.4.1</span> Here()<a class="anchor" aria-label="anchor" href="#here"><i class="fas fa-link"></i></a>
 </h4>
 <p>Kirill Müller has created an extremely useful R tool called <code>here</code>.</p>
 <img src="figures/here.png" style="width:100.0%"><p style="font-size:6pt">
@@ -190,7 +189,7 @@ Artwork by <span class="citation">(<span class="citeproc-not-found" data-referen
 <p>These relative paths work regardless of where the associated file lives inside your project directory, and will work for anyone who downloads your project and runs that code on their own computer!!</p>
 <div class="panel panel-success">
 <div class="panel-heading">
-EXERCISE #2
+<strong>EXERCISE #2</strong>
 </div>
 <div class="panel-body">
 Use <code>here()</code> to find the file path to your R Project and copy/paste it to the cell below. What would the <code>here()</code> command be to create the file path do your “notes” document? Include that below as well!
@@ -200,13 +199,13 @@ Use <code>here()</code> to find the file path to your R Project and copy/paste i
 </div>
 <div id="introduction-file" class="section level3">
 <h3>
-<span class="header-section-number">5.2.5</span> Introduction File<a class="anchor" aria-label="anchor" href="#introduction-file"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.2.5</span> Introduction File<a class="anchor" aria-label="anchor" href="#introduction-file"><i class="fas fa-link"></i></a>
 </h3>
 <p>It’s also a good practice to create a specific introduction file in the root of each project. Explain how to navigate the directory, where everything is, a synopsis of what the project/assignment is about, any of the materials needed to run the code you have, etc. Future you will thank you for doing this!</p>
 </div>
 <div id="tldr" class="section level3">
 <h3>
-<span class="header-section-number">5.2.6</span> TL;DR<a class="anchor" aria-label="anchor" href="#tldr"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.2.6</span> TL;DR<a class="anchor" aria-label="anchor" href="#tldr"><i class="fas fa-link"></i></a>
 </h3>
 <ul>
 <li><p>Create an RStudio Project for every data analysis project or assignment</p></li>
@@ -225,7 +224,7 @@ Use <code>here()</code> to find the file path to your R Project and copy/paste i
 </div>
 <div id="literate-programming" class="section level2">
 <h2>
-<span class="header-section-number">5.3</span> Literate Programming<a class="anchor" aria-label="anchor" href="#literate-programming"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.3</span> Literate Programming<a class="anchor" aria-label="anchor" href="#literate-programming"><i class="fas fa-link"></i></a>
 </h2>
 <p>Given our goals of reproducibility, one of the best things we can do is make sure our code is easy to understand and replicate. To do this, we will establish the routine of <strong>literate programming</strong>.</p>
 <p>Literate programming was originally proposed by Donald Knuth in 1984.</p>
@@ -236,7 +235,7 @@ Use <code>here()</code> to find the file path to your R Project and copy/paste i
 <p>In practice literate programming is a technique for mixing written text and chunks of code together, whereby you will annotate your code step-wise and explain what each part of your code is doing via comments throughout. This practice provides a much easier documentation of your code and the creation of written reports of your code and the results of your code.</p>
 <div id="markdown" class="section level3">
 <h3>
-<span class="header-section-number">5.3.1</span> Markdown<a class="anchor" aria-label="anchor" href="#markdown"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.3.1</span> Markdown<a class="anchor" aria-label="anchor" href="#markdown"><i class="fas fa-link"></i></a>
 </h3>
 <p>When we talked briefly before about how the different types of R files, we introduced markdown files. These are what we will mainly be using. Not only do they allow the combination of R code and text, but they also incorporate markdown syntax (which you can think of as it’s own mini language), HTML, and CSS! Thus, markdown files afford a powerful combination of languages to help create literate programming documents with easy to understand and reproduce analyses.</p>
 <p>However, the true power comes from the ability to take markdown files and generate many different kinds of documents. When combined with some other packages (e.g., <code>knitr</code>), Markdown files can be turned into:</p>
@@ -249,11 +248,11 @@ Use <code>here()</code> to find the file path to your R Project and copy/paste i
 <p>In fact, this course website, all the course content, my personal website (and all parts of it), are all created in RStudio and written with a lot of R and Markdown!</p>
 <div id="syntax" class="section level4">
 <h4>
-<span class="header-section-number">5.3.1.1</span> Syntax<a class="anchor" aria-label="anchor" href="#syntax"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.3.1.1</span> Syntax<a class="anchor" aria-label="anchor" href="#syntax"><i class="fas fa-link"></i></a>
 </h4>
 <p>We won’t go too in depth about Markdown syntax, that could be a whole course on its own! Here are a couple fundamental things though:</p>
 <p>You can insert code chunks with the keyboard shortcut: ctrl+option/alt+i</p>
-<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co">## R code here</span></code></pre></div>
 <p>You should always name your chunks (part of literate programming), and there are a number of options you can set for them (that are chunk specific). Some include:</p>
 <ul>
@@ -268,7 +267,7 @@ Use <code>here()</code> to find the file path to your R Project and copy/paste i
 <p>When this document is generated, the R code will be evaluated and it will look as though I wrote, “The mean is 14.” (or whatever the mean of <code>x</code> happens to be)!</p>
 <div class="panel panel-success">
 <div class="panel-heading">
-EXERCISE #3
+<strong>EXERCISE #3</strong>
 </div>
 <div class="panel-body">
 Create a new code chunk in your Markdown file. Name the code chunk “exercise 3”, and copy/paste your file path from above.
@@ -279,12 +278,12 @@ Create a new code chunk in your Markdown file. Name the code chunk “exercise 3
 </div>
 <div id="coding-best-practices" class="section level2">
 <h2>
-<span class="header-section-number">5.4</span> Coding Best Practices<a class="anchor" aria-label="anchor" href="#coding-best-practices"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.4</span> Coding Best Practices<a class="anchor" aria-label="anchor" href="#coding-best-practices"><i class="fas fa-link"></i></a>
 </h2>
 <p>There are many best practices that are good to incorporate in your coding. I’m going to highlight some of the main ones here, but include a list of many others at the bottom (that for time purposes we won’t cover extensively).</p>
 <div id="develop-a-naming-convention" class="section level3">
 <h3>
-<span class="header-section-number">5.4.1</span> Develop a Naming Convention<a class="anchor" aria-label="anchor" href="#develop-a-naming-convention"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.4.1</span> Develop a Naming Convention<a class="anchor" aria-label="anchor" href="#develop-a-naming-convention"><i class="fas fa-link"></i></a>
 </h3>
 <p>One important thing to do initially is develop a naming convention. This is important both for objects AND your files.</p>
 <p>Object names must start with a letter, and can only contain letters, numbers, <code>_</code> and <code>.</code>. File names require the same, but can also use <code>-</code>. However, you should avoid using <code>.</code> for both, and you should <strong>never</strong> use spaces! You want your names to be descriptive, so you’ll need a convention for multiple words.</p>
@@ -306,7 +305,7 @@ Artwork by <span class="citation">(<span class="citeproc-not-found" data-referen
 </ul>
 <div class="panel panel-success">
 <div class="panel-heading">
-EXERCISE #4
+<strong>EXERCISE #4</strong>
 </div>
 <div class="panel-body">
 First, decide on a coding convention to use. Then, create a new code chunk named “coding convention”. In it, save the name of your chosen coding convention as a string to a variable called “coding convention” that is formatted with that coding convention. For example, if you are going to use snake case, it would be called <code>coding_convention</code>.
@@ -315,7 +314,7 @@ First, decide on a coding convention to use. Then, create a new code chunk named
 </div>
 <div id="style-and-syntax" class="section level3">
 <h3>
-<span class="header-section-number">5.4.2</span> Style and Syntax<a class="anchor" aria-label="anchor" href="#style-and-syntax"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.4.2</span> Style and Syntax<a class="anchor" aria-label="anchor" href="#style-and-syntax"><i class="fas fa-link"></i></a>
 </h3>
 <blockquote>
 <p>“Good coding style is like correct punctuation: you can manage without it, butitsuremakesthingseasiertoread.”
@@ -324,10 +323,10 @@ First, decide on a coding convention to use. Then, create a new code chunk named
 <p>Many of the following tips are highlights from the <a href="https://style.tidyverse.org/syntax.html">tidyverse style guide</a>.</p>
 <div id="spacing" class="section level4">
 <h4>
-<span class="header-section-number">5.4.2.1</span> Spacing<a class="anchor" aria-label="anchor" href="#spacing"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.4.2.1</span> Spacing<a class="anchor" aria-label="anchor" href="#spacing"><i class="fas fa-link"></i></a>
 </h4>
 <p>In general, you want to aim to write your code to be legible. This is both for your sake AND others. R makes no difference between the following code:</p>
-<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co">#1</span>
 <span class="fl">3</span><span class="op">*</span><span class="fl">2</span><span class="op">/</span><span class="fl">2</span><span class="op">*</span><span class="fl">5</span><span class="op">/</span><span class="fl">2</span>
 
@@ -340,7 +339,7 @@ First, decide on a coding convention to use. Then, create a new code chunk named
 <ul>
 <li>Always put a space after a comma, never before, just like in regular English</li>
 </ul>
-<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Good</span>
 <span class="va">df</span><span class="op">[</span>, <span class="fl">1</span><span class="op">]</span>
 
@@ -351,7 +350,7 @@ First, decide on a coding convention to use. Then, create a new code chunk named
 <ul>
 <li>Do not put spaces inside or outside parentheses</li>
 </ul>
-<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Good</span>
 <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">x</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
 
@@ -361,7 +360,7 @@ First, decide on a coding convention to use. Then, create a new code chunk named
 <ul>
 <li>Place a space after () used for function arguments:</li>
 </ul>
-<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Good</span>
 <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">{</span><span class="op">}</span>
 
@@ -371,7 +370,7 @@ First, decide on a coding convention to use. Then, create a new code chunk named
 <ul>
 <li>Most operators (<code>==</code>, <code>+</code>, <code>-</code>, <code>&lt;-</code>, etc.) should always be surrounded by spaces:</li>
 </ul>
-<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Good</span>
 <span class="va">x</span> <span class="op">+</span> <span class="op">(</span><span class="fl">3</span> <span class="op">*</span> <span class="fl">4</span><span class="op">)</span>
 
@@ -380,10 +379,10 @@ First, decide on a coding convention to use. Then, create a new code chunk named
 </div>
 <div id="avoid-long-lines" class="section level4">
 <h4>
-<span class="header-section-number">5.4.2.2</span> Avoid Long Lines<a class="anchor" aria-label="anchor" href="#avoid-long-lines"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.4.2.2</span> Avoid Long Lines<a class="anchor" aria-label="anchor" href="#avoid-long-lines"><i class="fas fa-link"></i></a>
 </h4>
 <p>Avoid writing code that takes up a lot of space horizontally. Use strategically placed line breaks and indentations, particularly after each argument/chunk of your code. You can use the keyboard shortcut ctrl+i to get R to automatically indent appropriately for you line-by-line!</p>
-<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Good</span>
 <span class="fu">do_something_very_complicated</span><span class="op">(</span>
   something <span class="op">=</span> <span class="st">"that"</span>,
@@ -398,7 +397,7 @@ First, decide on a coding convention to use. Then, create a new code chunk named
 </div>
 <div id="misc." class="section level4">
 <h4>
-<span class="header-section-number">5.4.2.3</span> Misc.<a class="anchor" aria-label="anchor" href="#misc."><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.4.2.3</span> Misc.<a class="anchor" aria-label="anchor" href="#misc."><i class="fas fa-link"></i></a>
 </h4>
 <ul>
 <li><p>Use double quotes <code>"hello"</code>, not single quotes <code>'hello'</code>, for quoting text. The only exception is when the text already contains double quotes and no single quotes <code>"She said, 'hello.'"</code>.</p></li>
@@ -411,7 +410,7 @@ First, decide on a coding convention to use. Then, create a new code chunk named
 </ul>
 <div class="panel panel-success">
 <div class="panel-heading">
-EXERCISE #5
+<strong>EXERCISE #5</strong>
 </div>
 <div class="panel-body">
 Clean up all the code below so that it follows the proper formatting guidelines listed above.
@@ -421,7 +420,7 @@ Clean up all the code below so that it follows the proper formatting guidelines 
 </div>
 <div id="document-organization" class="section level3">
 <h3>
-<span class="header-section-number">5.4.3</span> Document Organization<a class="anchor" aria-label="anchor" href="#document-organization"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.4.3</span> Document Organization<a class="anchor" aria-label="anchor" href="#document-organization"><i class="fas fa-link"></i></a>
 </h3>
 <p>You want to organize your files and directory structure in a way that is easy to navigate. You may come back to files months or years later, and you want to make sure you’ll understand what you were doing and what files are where. Not to mention if you make your project files open and accessible to the public!</p>
 <p>Some things that can help with this include:</p>
@@ -446,7 +445,7 @@ Clean up all the code below so that it follows the proper formatting guidelines 
 </div>
 <div id="visual-summary" class="section level3">
 <h3>
-<span class="header-section-number">5.4.4</span> Visual Summary<a class="anchor" aria-label="anchor" href="#visual-summary"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.4.4</span> Visual Summary<a class="anchor" aria-label="anchor" href="#visual-summary"><i class="fas fa-link"></i></a>
 </h3>
 <img src="figures/workflow.jpg" style="width:100.0%"><p style="font-size:6pt">
 Artwork by <span class="citation">(<span class="citeproc-not-found" data-reference-id="allison_horst"><strong>???</strong></span>)</span>
@@ -456,34 +455,34 @@ Artwork by <span class="citation">(<span class="citeproc-not-found" data-referen
 </div>
 </div>
   <div class="chapter-nav">
-<div class="prev"><a href="r-coding-basics.html"><span class="header-section-number">4</span> R Coding Basics</a></div>
-<div class="next"><a href="preparing-for-more-content.html"><span class="header-section-number">6</span> Preparing For More Content</a></div>
+<div class="prev"><a href="r-coding-basics.html"><span class="header-section-number">3</span> R Coding Basics</a></div>
+<div class="next"><a href="preparing-for-more-content.html"><span class="header-section-number">5</span> Preparing For More Content</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#using-r-effectively"><span class="header-section-number">5</span> Using R Effectively</a></li>
+<li><a class="nav-link" href="#using-r-effectively"><span class="header-section-number">4</span> Using R Effectively</a></li>
 <li>
-<a class="nav-link" href="#rstudio"><span class="header-section-number">5.1</span> RStudio</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#settings"><span class="header-section-number">5.1.1</span> Settings</a></li></ul>
+<a class="nav-link" href="#rstudio"><span class="header-section-number">4.1</span> RStudio</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#settings"><span class="header-section-number">4.1.1</span> Settings</a></li></ul>
 </li>
 <li>
-<a class="nav-link" href="#r-projects"><span class="header-section-number">5.2</span> R Projects</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#why-use-them"><span class="header-section-number">5.2.1</span> Why use them?</a></li>
-<li><a class="nav-link" href="#what-are-they"><span class="header-section-number">5.2.2</span> What are they?</a></li>
-<li><a class="nav-link" href="#how-do-i-make-one"><span class="header-section-number">5.2.3</span> How do I make one?</a></li>
-<li><a class="nav-link" href="#file-paths"><span class="header-section-number">5.2.4</span> File Paths</a></li>
-<li><a class="nav-link" href="#introduction-file"><span class="header-section-number">5.2.5</span> Introduction File</a></li>
-<li><a class="nav-link" href="#tldr"><span class="header-section-number">5.2.6</span> TL;DR</a></li>
+<a class="nav-link" href="#r-projects"><span class="header-section-number">4.2</span> R Projects</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#why-use-them"><span class="header-section-number">4.2.1</span> Why use them?</a></li>
+<li><a class="nav-link" href="#what-are-they"><span class="header-section-number">4.2.2</span> What are they?</a></li>
+<li><a class="nav-link" href="#how-do-i-make-one"><span class="header-section-number">4.2.3</span> How do I make one?</a></li>
+<li><a class="nav-link" href="#file-paths"><span class="header-section-number">4.2.4</span> File Paths</a></li>
+<li><a class="nav-link" href="#introduction-file"><span class="header-section-number">4.2.5</span> Introduction File</a></li>
+<li><a class="nav-link" href="#tldr"><span class="header-section-number">4.2.6</span> TL;DR</a></li>
 </ul>
 </li>
 <li>
-<a class="nav-link" href="#literate-programming"><span class="header-section-number">5.3</span> Literate Programming</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#markdown"><span class="header-section-number">5.3.1</span> Markdown</a></li></ul>
+<a class="nav-link" href="#literate-programming"><span class="header-section-number">4.3</span> Literate Programming</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#markdown"><span class="header-section-number">4.3.1</span> Markdown</a></li></ul>
 </li>
 <li>
-<a class="nav-link" href="#coding-best-practices"><span class="header-section-number">5.4</span> Coding Best Practices</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#develop-a-naming-convention"><span class="header-section-number">5.4.1</span> Develop a Naming Convention</a></li>
-<li><a class="nav-link" href="#style-and-syntax"><span class="header-section-number">5.4.2</span> Style and Syntax</a></li>
-<li><a class="nav-link" href="#document-organization"><span class="header-section-number">5.4.3</span> Document Organization</a></li>
-<li><a class="nav-link" href="#visual-summary"><span class="header-section-number">5.4.4</span> Visual Summary</a></li>
+<a class="nav-link" href="#coding-best-practices"><span class="header-section-number">4.4</span> Coding Best Practices</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#develop-a-naming-convention"><span class="header-section-number">4.4.1</span> Develop a Naming Convention</a></li>
+<li><a class="nav-link" href="#style-and-syntax"><span class="header-section-number">4.4.2</span> Style and Syntax</a></li>
+<li><a class="nav-link" href="#document-organization"><span class="header-section-number">4.4.3</span> Document Organization</a></li>
+<li><a class="nav-link" href="#visual-summary"><span class="header-section-number">4.4.4</span> Visual Summary</a></li>
 </ul>
 </li>
 </ul>
@@ -503,7 +502,7 @@ Artwork by <span class="citation">(<span class="citeproc-not-found" data-referen
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Psyc193L</strong>" was written by Ethan Hurwitz. It was last built on 2022-05-25.</p>
+    <p>"<strong>PSYC193L</strong>" was written by Ethan Hurwitz. It was last built on 2022-05-26.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

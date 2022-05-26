@@ -64,7 +64,7 @@ penguins %>%
 
 <img src="Visualizations2_files/figure-html/unnamed-chunk-3-1.png" width="672" />
 
-<p class="text-info"> __Note:__ Proportions must sum to 1! If your bars ever do not sum to one, there is an issue!</p>
+<p class="text-info"> **<u>Note:</u> Proportions must sum to 1! If your bars ever do not sum to one, there is an issue!**</p>
 
 <div class="panel panel-success">
   <div class="panel-heading">**EXERCISE 1**</div>
@@ -340,7 +340,7 @@ ggExtra::ggMarginal(type = "histogram")
 
 <img src="Visualizations2_files/figure-html/unnamed-chunk-17-1.png" width="672" />
 
-<p class="text-info"> __Note:__ **`ggMarginal` is not part of ggplot proper, so it isn't added on like other geoms. Instead, you have to pipe your ggplot graph in. In doing so, you must wrap the ggplot code in parentheses. This way, the entire visualization gets piped in and not just the last piece!**</p>
+<p class="text-info"> **<u>Note:</u> `ggMarginal` is not part of ggplot proper, so it isn't added on like other geoms. Instead, you have to pipe your ggplot graph in. In doing so, you must wrap the ggplot code in parentheses. This way, the entire visualization gets piped in and not just the last piece!**</p>
 
 <div class="panel panel-success">
   <div class="panel-heading">**EXERCISE 7**</div>
@@ -358,7 +358,7 @@ Maybe it is the case that some islands have better food sources that others, and
 
 There are a **<u>LOT</u>** of options for how to visualize comparisons of this kind. In the examples, you will also see some important guidelines to implement or follow.
 
-<p class="text-info"> __Note:__ When looking at how the values of one continuous variable compare across levels of a categorical variable, it is helpful to first examine how the values of the continuous variable vary to begin with.</p>
+<p class="text-info"> **<u>Note:</u> When looking at how the values of one continuous variable compare across levels of a categorical variable, it is helpful to first examine how the values of the continuous variable vary to begin with.**</p>
 
 
 ```r
@@ -1394,7 +1394,7 @@ ggplot(aes(x = island, y = body_mass_g, fill = species)) +
 
 <img src="Visualizations2_files/figure-html/unnamed-chunk-73-1.png" width="672" />
 
-<p class="text-info"> __Note:__ This only works if you are comparing two groups! You could imagine how it would be difficult to create this visualization if each island had measurements from more than 2 species. It would not be possible for 3 violins and 3 box plots to work.</p>
+<p class="text-info"> **<u>Note:</u> This only works if you are comparing two groups! You could imagine how it would be difficult to create this visualization if each island had measurements from more than 2 species. It would not be possible for 3 violins and 3 box plots to work.**</p>
 
 ### Raincloud
 

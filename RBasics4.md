@@ -19,7 +19,7 @@ We have already used a few functions before (`typeof()`, `class()`, `here()`), b
 
 We were finding what type `myDF` was. This function had one argument, `x`, that was given the value "myDF". Functions expect arguments to be given values. They need something to apply the pre-written code to! Functions that have multiple arguments often have default values, so you only need to set one or a few of them. We'll see more about this later on.
 
-<p class="text-info"> __Note:__ arguments are separated with a comma and should often be given their own line.</p> 
+<p class="text-info"> **<u>Note:</u> arguments are separated with a comma and should often be given their own line.**</p> 
 
 ### Where Do Functions Come From? 
 
