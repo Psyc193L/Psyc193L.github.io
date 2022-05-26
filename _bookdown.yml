@@ -6,7 +6,7 @@ rmd_files:
 - index.Rmd
 #- 01-intro.Rmd
 #- 06-Schedule.Rmd
-- Syllabus.Rmd
+#- Syllabus.Rmd
 - RBasics1.Rmd
 - RBasics2.Rmd
 - RBasics3.Rmd

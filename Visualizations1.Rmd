@@ -75,7 +75,7 @@ In this class, we will use the `ggplot2` package to create visualizations. Graph
 
 ### Meet the Penguins
 
-To create visualizations, we need some data to visualize! I am going to work with the `palmerpenguins` dataset from [Alison Horst](https://allisonhorst.github.io/palmerpenguins/) (you may be noticing a theme here with her. Yes, she is someone I admire greatly and think does great work!). 
+To create visualizations, we need some data to visualize! I am going to work with the `palmerpenguins` dataset from [Alison Horst](https://allisonhorst.github.io/palmerpenguins/) (Yes, she is someone I admire and think does great work!).
 
 ![](figures/palmerpenguins_logo.png){width=207px}
 
@@ -96,7 +96,7 @@ Use the `library(palmerpenguins)` call to load in the dataset.
 
 Let's start building a basic graph. There are going to be <u>**LOTS**<u> of exercise breaks throughout. 
 
-<p class="text-info"> __Note:__ *As we move forward with building our first graph, each new piece of code added will be accompanied by a literate programming portion, where you will describe in words what the code is doing.*</p>
+<p class="text-info"> **<u>Note:</u> As we move forward with building our first graph, each new piece of code added will be accompanied by a literate programming portion, where you will describe in words what the code is doing.**</p>
 
 All ggplot graphs are build using the `ggplot()` call. The first thing it needs is some data. We'll use the `%>%` to pass in our `penguins` dataframe. 
 
@@ -128,7 +128,7 @@ Above, we specified that we want `flipper_length_mm` on our y-axis, and `bill_le
 <br>
 We told ggplot what our aesthetic mappings are (what data source to use), but not what it should render from those mappings! We want ggplot to use those mappings to construct some **geom**etric object, and the way we do that is by adding a *geom*, aptly named. There are a number of different geoms, which have the general syntax of `geom_X()`, where X usually refers to the specific geometric object you want to render. Here, we want a point on our graph for each penguin, so we will use `geom_point()`. 
 
-<p class="text-info"> __Note:__ *There are a <b>ton</b> of different geoms. You will see many more as we go.*</p>
+<p class="text-info"> **<u>Note:</u> There are a TON of different geoms. You will see many more as we go.**</p>
 
 ```{r}
 penguins %>%
@@ -139,7 +139,7 @@ penguins %>%
 
 > "Start by telling ggplot to use the `penguins` dataframe for our data, map flipper length to the y-axis and bill length to the x-axis. **Represent each observation with a point.**"
 
-Okay, **<u>NOW</u>** we are talking! This looks like an actual real graph. Look at your very first ggplot masterpiece! 
+Okay, **NOW** we are talking! This looks like an actual real graph. Look at your very first ggplot masterpiece! 
 
 There are two important things to note here:
 
@@ -163,7 +163,7 @@ Above, we mentioned how the goal of a visualization is to understand a relations
 In the visualization we can see that, generally speaking, penguins with greater flipper length tend to have greater bill length as well. There seems to be a positive linear relationship between bill length and flipper length such that, as flipper length increases, bill length increases in turn.
 :::
 
-<p class="text-info"> __Note:__ We have to use a lot of tentative language and include many qualifiers here. We have not done any formal statistical analyses to state any relationship or effect definitively.</p>
+<p class="text-info"> **<u>Note:</u> We have to use a lot of tentative language and include many qualifiers here. We have not done any formal statistical analyses to state any relationship or effect definitively.**</p>
 
 <div class="panel panel-success">
   <div class="panel-heading">**EXERCISE 2**</div>
@@ -360,7 +360,7 @@ penguins %>%
   geom_smooth(method = "lm", se = FALSE, color = "purple")
 ```
 
-<p class="text-info"> __Note:__ Aesthetic settings can only be set locally, not globally. Aesthetic mappings can be local OR global.</p>
+<p class="text-info"> **<u>Note:</u> Aesthetic settings can only be set locally, not globally. Aesthetic mappings can be local OR global.**</p>
 
 ```{r warning=FALSE, message=FALSE}
 penguins %>%

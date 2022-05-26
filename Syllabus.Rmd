@@ -195,6 +195,7 @@ kableExtra::kbl(data.frame("A" = c("A+", "A", "A-"),
 NO!
 
 ![](figures/circuitousPath.jpeg){width=100%}
+<p style="font-size:6pt">Artwork by @allison_horst</p>
 
 This is an intro course that assumes no prior knowledge. As long as your code ultimately gives you what you want, and you aren't cheating or breaking any rules, it doesn't matter how circuitous or un-glamorous that code is!
 
@@ -243,6 +244,7 @@ This is an intro course that assumes no prior knowledge. As long as your code ul
 This is a brand new course, and the first time it is being offered. When designing a new course, there is a lot of content you could potentially cover!
 
 ![](figures/courseDevelopment.jpeg){width=100%}
+<p style="font-size:6pt">Artwork by @allison_horst</p>
 
 In choosing what content to include, this was my philosophy:
 
@@ -273,10 +275,12 @@ SCHEDULE HERE
 Learning a new language, particularly a programming language, can be frustrating at times!
 
 ![](figures/r_rollercoaster.png){width=100%}
+<p style="font-size:6pt">Artwork by @allison_horst</p>
 
 It is truly a roller coaster. With time, effort, and perseverance,<!-- and maybe some wine/Beyoncè playlists,--> you will be surprised at how much you know and are able to do (and how much *more* you can learn and do)!
 
 ![](figures/r_first_then.png){width=100%}
+<p style="font-size:6pt">Artwork by @allison_horst</p>
 
 ## How to be Successful in this Course:
 
@@ -290,8 +294,8 @@ It is truly a roller coaster. With time, effort, and perseverance,<!-- and maybe
 
 5. Try to keep a good mindset. Acknowledge that this is challenging, but is not impossible, that you have help available and know what our expectations are for you.
 
-6. Be proactive. There’s a lot of work and assignments in this class. If you’re constantly waiting until the last minute to do things, you really run the risk of not only just missing work, but falling behind and having trouble learning.
+6. Be proactive. This is a Summer Session course, and we will be moving very quickly through material. If you constantly wait until the last minute to do things, you run the risk of not only just missing work, but falling behind and having trouble being able to catch up.
 
 ## Acknowledgements
 
-  I'd like to directly thank [Emma Geller](https://www.lime-lab-ucsd.com/people) (endlessly), [Judy Fan](https://cogtoolslab.github.io/people.html), and Angela Lowe, for sharing their syllabi materials, teaching philosophy, and mentorship.<!--, and [Natalia Pallis-Hassani](https://www.linkedin.com/in/natalia-pallis-hassani-865ba3193) for feedback in developing course material.--> Throughout this course, I will use many illustrations created by the brilliant [Allison Horst](https://www.allisonhorst.com/). 
+I'd like to directly thank [Emma Geller](https://www.lime-lab-ucsd.com/people) (endlessly), [Judy Fan](https://cogtoolslab.github.io/people.html), and Angela Lowe, for sharing their syllabi materials, teaching philosophy, and mentorship.<!--, and [Natalia Pallis-Hassani](https://www.linkedin.com/in/natalia-pallis-hassani-865ba3193) for feedback in developing course material.--> Throughout this course, I will use many illustrations created by the brilliant [Allison Horst](https://www.allisonhorst.com/). 
