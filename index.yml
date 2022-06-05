@@ -1,6 +1,4 @@
 description: |
-  This is a minimal example of using the bookdown package to write a book.
-  The HTML output format for this example is bookdown::bs4_book,
-  set in the _output.yml file.
+  Course material related to PSYC193L at UCSD.
 biblio-style: apalike
-csl: chicago-fullnote-bibliography.csl
+csl: apa.csl

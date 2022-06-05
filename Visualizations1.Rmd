@@ -11,7 +11,7 @@ library(tidyverse)
 library(palmerpenguins)
 ```
 
-Starting here, we will begin our focus on how to visualize our data, which is both a part of **understanding** and **communicating** your data.
+<a href="Exercise_Viz1.Rmd" download>Exercise Sheet</a>
 
 > "The greatest value of a picture is when it forces us to notice what we never expected to see."<br>— John Tukey
 

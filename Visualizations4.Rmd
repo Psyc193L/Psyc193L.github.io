@@ -73,6 +73,8 @@ theme_set(theme_classic() +
       plot.tag.position = c(0.05, 1)))
 ```
 
+<a href="Exercise_Viz4.Rmd" download>Exercise Sheet</a>
+
 At this point, you know why it is important to visualize your data, several types of graphs to use to create visualizations of different relationships and comparisons within your data, and how to customize some of the elements in those graphs. Changes to the specific type of graph you use, or its title and axes labels, are overt ways to impact the effectiveness of your visualization. However, there are other things that, while subtle, have a very significant impact as well. 
 
 Visualizations are composed of different geometric shapes, lines, edges, contours, colors, etc. With this in mind, it is important to consider different aspects of visual perception and how they affect the way your graph will be perceived by a viewer. With this in mind, this final part of the section on Visualizations covers color and design principles. These are often overlooked when considering how to make an effective visualization, but very important!

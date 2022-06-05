@@ -11,6 +11,8 @@ library(tidyverse)
 library(palmerpenguins)
 ```
 
+<a href="Exercise_Viz3.Rmd" download>Exercise Sheet</a>
+
 You now have a number of different graphs in your toolkit to use when visualizing different types of relationships or comparisons in your data. You also learned a lot of ways to tinker with the geoms and their aesthetics. Now it is time to add some techniques and skills to customize the other elements of the graphs.
 
 This will serve as a base plot to customize:

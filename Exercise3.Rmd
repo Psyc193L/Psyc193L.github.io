@@ -30,6 +30,8 @@ park(drive(start_car(find("keys")), to = "campus"))
 pull(swoop(loop(laces)))
 
 brush(tooth_paste(running_water(tooth_brush)), teeth)
+
+leave_house(get_dressed(get_out_of_bed(wake_up(me))))
 ```
 
 
