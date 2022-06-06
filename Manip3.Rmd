@@ -17,7 +17,7 @@ This dataset used in examples throughout, called `HELPfull` (`mosaicData::HELPfu
 This data is saved in a variable called `dat`.
 
 ```{r echo = FALSE, warning=FALSE, message=FALSE}
-dat <- read_csv("HELPFull.csv")
+load("HELPfull.RData")
 ```
 
 This dataset is ***massive***, so it is not even worth using `glimpse()` to preview it.

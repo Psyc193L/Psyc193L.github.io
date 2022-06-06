@@ -1,0 +1,139 @@
+---
+title: ""
+author: ""
+date: ""
+output: html_document
+---
+
+# 1. Create bar plots to explore both the count and proportion of penguins of each species. Try out different aesthetic **settings**, and see how they change the graph (if you want to try an aesthetic **mapping**, only use the singular variable on your x-axis).
+
+```{r}
+
+```
+
+# 2. Make a histogram to explore the distribution of `body_mass_g` scores in your dataset. Try out different aesthetic **settings** and see how they change the graph. Also, try different bin settings (size and width) and see how they change your interpretation/understanding of the data.
+
+```{r}
+
+```
+
+# 3. Take your plot from Exercise 2 and add a colored line approximately where you think the mean would be. Add another line in a different color where you think the mode would be.
+
+```{r}
+
+```
+
+# 4. Create a visualization to explore the relationship between a penguin's `bill_length_mm` and their `flipper_length_mm`. Try out different aesthetic **settings**, and see how they change the graph.
+
+```{r}
+
+```
+
+
+# 5. Create a visualization to explore the relationship between a penguin's `bill_length_mm` and their `flipper_length_mm`. Specifically, create a visualization if you had anticipated having a large n. Try out different aesthetic **settings**, and see how they change the graph.
+
+```{r}
+
+```
+
+# 6. Take your visualization from Exercise 5 and add a line of best fit for your data. Try out different aesthetic **settings**, and see how they change the graph.
+
+```{r}
+
+```
+
+
+# 7. Take your visualization from exercise 6 and try to add some extra information to the margins. Try out different aesthetic **settings**, and see how they change the graph.
+
+```{r}
+
+```
+
+# 8. Create 3 visualizations to explore how the average penguin `flipper_length_mm` varies across the different `species` of penguins. Use a different shape for the mean in each visualization. Try out different aesthetic **settings**, and see how they change the graph (if you want to try an aesthetic **mapping**, only use the singular variable on your x-axis).
+
+```{r}
+
+```
+
+# 9. Take your 3 visualizations created from Exercise 8 and add error bars around the means. Try out different aesthetic **settings**, and see how they change the graph.
+
+```{r}
+
+```
+
+# 10. Create a boxplot to compare how `flipper_length_mm` varies across penguin `species`. Try out different aesthetic **settings**, and see how they change the graph (if you want to try an aesthetic **mapping**, only use the singular variable on your x-axis).
+
+```{r}
+
+```
+
+
+# 11. Take your visualization from Exercise 10 and put a violin underneath to give more information about the distribution of `flipper_length_mm`. Try out different aesthetic **settings**, and see how they change the graph (if you want to try an aesthetic **mapping**, only use the singular variable on your x-axis).
+
+```{r}
+
+```
+
+# 12. Create 2-3 jitter plots to explore the relationship between a penguin's `bill_length_mm` and their `flipper_length_mm`. Think about which you think is best and why. Try out different aesthetic **settings**, and see how they change the graph (if you want to try an aesthetic **mapping**, only use the singular variable on your x-axis).
+
+```{r}
+
+```
+
+# 13. Create a strip chart to compare the mean `flipper_length_mm` between different `species` of penguins. Try out different aesthetic **settings**, and see how they change the graph (if you want to try an aesthetic **mapping**, only use the singular variable on your x-axis).
+
+```{r}
+
+```
+
+# 14. Create a modified beeswarm/dot plot to compare the `flipper_length_mm` between different `species` of penguins. Try to see how changes to the different settings in the `dotplot()` call effect your graph.
+
+```{r}
+
+```
+
+# 15. Create a ridgeline plot to compare the `flipper_length_mm` across the different `species` of penguins. Try out different settings and aesthetics to see how they change your graph (if you want to try an aesthetic **mapping**, only use the singular variable on your y-axis).
+
+```{r}
+
+```
+
+# 16. Take your scatter plot exploring the relationship between a penguin's `bill_length_mm` and their `flipper_length_mm` and do the following:
+
+A. Facet by `species`.
+  
+```{r}
+
+```
+
+B. Facet by `sex`.
+  
+```{r}
+
+```
+
+C. Facet by both `species` and `sex`.
+
+```{r}
+
+```
+
+# 17. Create a line plot to visualize the compare how `flipper_length_mm` varies across penguin `species`, and whether there are any differences between the sexes of each species (think about what the graph would look like to best visualize this). Try out different aesthetic **settings**, and see how they change the graph.
+
+```{r}
+
+```
+
+# 18. Pick your favorite visualization you created that compares `flipper_length_mm` across the different `species` of penguins, and show how that comparison varies by `sex`. You can do this by adding a new aesthetic or faceting. Which do you think looks better and why? Try out different aesthetics to see how they change your graph.
+
+```{r}
+
+```
+
+# 19. Take the visualization you created above to explore the relationship between a penguin's `bill_length_mm` and `flipper_length_mm`, and see if this relationship varies based on which `island` a penguin lives.
+
+```{r}
+
+```
+
+

@@ -1,0 +1,54 @@
+---
+title: ""
+author: ""
+date: ""
+output: html_document
+---
+
+# Set up
+```{r}
+library(tidyverse)
+msleep2 = msleep %>%
+  select(-conservation)
+```
+
+# 1. Write some code to find the number of instances of each unique value of `vore`.
+
+```{r}
+
+```
+
+# 2. Modify your code from exercise 1 to show the proportions, and verify that they sum to 1.
+
+```{r}
+
+```
+
+# 3. Use `summarize()` to find the average number of hours each animal spends awake and the average brain weight. If there are any issues with missing values, modify your code to account for this.
+
+```{r}
+
+```
+
+# 4. Modify your code from exercise 3 to show averages for each level of `vore`.
+
+```{r}
+
+```
+
+# 5. 
+##  A. Find the average of all variables that start with "sleep" for every level of `vore`.
+##  B. Find the average and sd for all variables that end in "wt" for every level of `vore`.
+##  C. Find the number of unique values for each variable that is a *character*.
+
+```{r}
+
+```
+
+# 6. Take your code from Exercise 5 and replace the color palettes from RColorBrewer with ones from viris.
+
+```{r}
+
+```
+
+
