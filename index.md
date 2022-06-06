@@ -1,16 +1,16 @@
 --- 
 title: "PSYC193L"
 author: "Ethan Hurwitz"
-date: "2022-05-26"
+date: "2022-06-06"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
-# url: your book url like https://bookdown.org/yihui/bookdown
+url: https://psyc193l.github.io
 # cover-image: path to the social sharing image like images/cover.jpg
 description: |
   Course material related to PSYC193L at UCSD.
 biblio-style: apalike
-#csl: chicago-fullnote-bibliography.csl
+csl: apa.csl
 ---
 
 # Syllabus
@@ -24,7 +24,6 @@ Summer Session 1 2022
 *Lecture:* MTuWTh 11:00a-11:50a
 
 *Lab:* TuTh 12:00p-12:50p
-
 
 https://ucsd.zoom.us/my/ethanhurwitz
 
@@ -69,7 +68,7 @@ None! There are no prerequisites for this course, nor do you need to have any pr
 
 **Professor**
 
-Name: Ethan Hurwitz
+Name: [Ethan Hurwitz](https://www.ethanhurwitz.com/)
 
 Email: ehurwitz@ucsd.edu
 
@@ -104,7 +103,7 @@ All course materials are free. You have enough expenses, I am not interested in 
   
   
 * **[Discord]()**
-  + We’ll use Discord as a central place to manage questions about the class, communicate with each other, and easily copy/paste code for sharing. 
+  + We will use Discord as a central place to manage questions about the class, communicate with each other, and easily copy/paste code for sharing.
 
   
 * **[Zoom](https://ucsd.zoom.us/my/ethanhurwitz)**
@@ -304,11 +303,11 @@ In choosing what content to include, this was my philosophy:
 	<!-- 	- Whereas most Social Psychology courses involve material that requires declarative knowledge, or the knowledge about facts, this course requires procedural knowledge. Learning programming is like learning a language, because it literally **is** learning a language. When you're learning to drive, you can't just read about different driving tips and best practices, you have to actually go out and get behind a wheel and practice. It requires procedural knowledge. With that in mind, focusing on a narrower amount of content affords more practice with that content and better learning. -->
 	<!-- 	- Always happy to chat about things outside the scope of course content! In office hours or email/discord/whatever -->
 		
-## Schedule
+<!-- ## Schedule -->
 
-SCHEDULE HERE
+<!-- SCHEDULE HERE -->
 
-## Words of Encouragement
+## Words of Advice
 
 Learning a new language, particularly a programming language, can be frustrating at times!
 
@@ -336,4 +335,6 @@ It is truly a roller coaster. With time, effort, and perseverance,<!-- and maybe
 
 ## Acknowledgements
 
-I'd like to directly thank [Emma Geller](https://www.lime-lab-ucsd.com/people) (endlessly), [Judy Fan](https://cogtoolslab.github.io/people.html), and Angela Lowe, for sharing their syllabi materials, teaching philosophy, and mentorship.<!--, and [Natalia Pallis-Hassani](https://www.linkedin.com/in/natalia-pallis-hassani-865ba3193) for feedback in developing course material.--> Throughout this course, I will use many illustrations created by the brilliant [Allison Horst](https://www.allisonhorst.com/). 
+I'd like to directly thank [Emma Geller](https://www.lime-lab-ucsd.com/people) (endlessly), [Judy Fan](https://cogtoolslab.github.io/people.html), and Angela Lowe, for sharing their syllabi materials, teaching philosophy, and mentorship.<!--, and [Natalia Pallis-Hassani](https://www.linkedin.com/in/natalia-pallis-hassani-865ba3193) for feedback in developing course material.--> Throughout this course, I will use many illustrations created by the brilliant [Allison Horst](https://www.allisonhorst.com/).
+
+## References

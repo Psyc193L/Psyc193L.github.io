@@ -4,6 +4,8 @@
 
 
 
+<a href="Exercise3.Rmd" download>Exercise Sheet</a>
+
 In this lesson, we're going to cover a couple miscellaneous things that will help prepare you for all the content covered in the rest of the course. This is meant to wrap up the basics and background, getting you ready to dive in to the real R coding! 
 
 ## Functions

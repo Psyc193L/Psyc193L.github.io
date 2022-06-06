@@ -6,14 +6,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Chapter 6 Intro to ggplot2 | PSYC193L</title>
 <meta name="author" content="Ethan Hurwitz">
-<meta name="description" content="library(tidyverse) library(palmerpenguins) Starting here, we will begin our focus on how to visualize our data, which is both a part of understanding and communicating your data. “The greatest...">
+<meta name="description" content="library(tidyverse) library(palmerpenguins) Exercise Sheet “The greatest value of a picture is when it forces us to notice what we never expected to see.”— John Tukey  “There is no single...">
 <meta name="generator" content="bookdown 0.24 with bs4_book()">
 <meta property="og:title" content="Chapter 6 Intro to ggplot2 | PSYC193L">
 <meta property="og:type" content="book">
-<meta property="og:description" content="library(tidyverse) library(palmerpenguins) Starting here, we will begin our focus on how to visualize our data, which is both a part of understanding and communicating your data. “The greatest...">
+<meta property="og:url" content="https://psyc193l.github.io/intro-to-ggplot2.html">
+<meta property="og:description" content="library(tidyverse) library(palmerpenguins) Exercise Sheet “The greatest value of a picture is when it forces us to notice what we never expected to see.”— John Tukey  “There is no single...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chapter 6 Intro to ggplot2 | PSYC193L">
-<meta name="twitter:description" content="library(tidyverse) library(palmerpenguins) Starting here, we will begin our focus on how to visualize our data, which is both a part of understanding and communicating your data. “The greatest...">
+<meta name="twitter:description" content="library(tidyverse) library(palmerpenguins) Exercise Sheet “The greatest value of a picture is when it forces us to notice what we never expected to see.”— John Tukey  “There is no single...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -53,6 +54,13 @@
 <li><a class="" href="different-geoms-and-when-to-use-them.html"><span class="header-section-number">8</span> Different Geoms and When To Use Them</a></li>
 <li><a class="" href="customization.html"><span class="header-section-number">9</span> Customization</a></li>
 <li><a class="" href="color-theory.html"><span class="header-section-number">10</span> Color Theory</a></li>
+<li class="book-part">Data Manipulation</li>
+<li><a class="" href="control-flow.html"><span class="header-section-number">11</span> Control Flow</a></li>
+<li><a class="" href="tidy-data-and-tidyverse.html"><span class="header-section-number">12</span> Tidy Data and Tidyverse</a></li>
+<li><a class="" href="basic-wrangling.html"><span class="header-section-number">13</span> Basic Wrangling</a></li>
+<li><a class="" href="advanced-wrangling.html"><span class="header-section-number">14</span> Advanced Wrangling</a></li>
+<li><a class="" href="summarizing-data.html"><span class="header-section-number">15</span> Summarizing Data</a></li>
+<li><a class="" href="text-cleaning.html"><span class="header-section-number">16</span> Text Cleaning</a></li>
 </ul>
 
         <div class="book-extra">
@@ -67,7 +75,7 @@
 <div class="sourceCode" id="cb36"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://allisonhorst.github.io/palmerpenguins/">palmerpenguins</a></span><span class="op">)</span></code></pre></div>
-<p>Starting here, we will begin our focus on how to visualize our data, which is both a part of <strong>understanding</strong> and <strong>communicating</strong> your data.</p>
+<p><a href="Exercise_Viz1.Rmd" download>Exercise Sheet</a></p>
 <blockquote>
 <p>“The greatest value of a picture is when it forces us to notice what we never expected to see.”<br>— John Tukey</p>
 </blockquote>
@@ -108,7 +116,7 @@ Show/Hide
 <p>Data visualization is one of the things that sets R apart from other programming languages that can be used for statistics, like Python. R still has the best data visualization capabilities, and it is one of the primary reasons it is used over Python in Social Sciences. This is also one of the first times you will get to see what coding can be all about. You are actually going to be creating stuff today with your code!</p>
 <p>In this class, we will use the <code>ggplot2</code> package to create visualizations. Graphs are constructed by mapping data to geometric objects (lines, bars, points, etc.) according to some aesthetic attributes (color, shape, size, etc.). <code>ggplot2</code> uses this to inform its grammar. We’ll explain this much more as we go!</p>
 <img src="figures/ggplot2_masterpiece.png" style="width:100.0%"><p style="font-size:6pt">
-Artwork by <span class="citation">(<span class="citeproc-not-found" data-reference-id="allison_horst"><strong>???</strong></span>)</span>
+Artwork by <span class="citation">Horst (2022)</span>
 </p>
 <div id="meet-the-penguins" class="section level3">
 <h3>
@@ -118,12 +126,12 @@ Artwork by <span class="citation">(<span class="citeproc-not-found" data-referen
 <div class="inline-figure"><img src="figures/palmerpenguins_logo.png" width="207"></div>
 <p>This dataset contains measurements from 344 different penguins. Measurements include things like bill length and depth, sex, among others.</p>
 <img src="figures/palmerpenguins_bills.png" style="width:100.0%"><p style="font-size:6pt">
-Artwork by <span class="citation">(<span class="citeproc-not-found" data-reference-id="allison_horst"><strong>???</strong></span>)</span>
+Artwork by <span class="citation">Horst (2022)</span>
 </p>
 <p><br></p>
 <p>There are 3 different species of penguins in this dataset, collected from 3 islands in the Palmer Archipelago, Antarctica.</p>
 <img src="figures/palmerpenguins_species.png" style="width:100.0%"><p style="font-size:6pt">
-Artwork by <span class="citation">(<span class="citeproc-not-found" data-reference-id="allison_horst"><strong>???</strong></span>)</span>
+Artwork by <span class="citation">Horst (2022)</span>
 </p>
 <p>Use the <code><a href="https://allisonhorst.github.io/palmerpenguins/">library(palmerpenguins)</a></code> call to load in the dataset.</p>
 </div>
@@ -243,7 +251,7 @@ Update your graph above by telling ggplot you want it to render a point for each
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>PSYC193L</strong>" was written by Ethan Hurwitz. It was last built on 2022-05-26.</p>
+    <p>"<strong>PSYC193L</strong>" was written by Ethan Hurwitz. It was last built on 2022-06-06.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

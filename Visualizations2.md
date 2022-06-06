@@ -22,6 +22,9 @@ library(palmerpenguins)
 <!-- In the visualization we can see that, generally speaking, penguins with greater flipper length tend to have greater bill length as well. There seems to be a positive linear relationship between bill length and flipper length such that, as flipper length increases, bill length increases in turn. -->
 <!-- ::: -->
 <!-- ------------------------------- -->
+
+<a href="Exercise_Viz2.Rmd" download>Exercise Sheet</a>
+
 Previously, we mentioned how the point of a visualization is to explore and understand a relationship or pattern in your data (often between a response/outcome variable and one or more explanatory/predictor variables). It is important to know how to best graphically represent your data based on the types of variables (categorical vs continuous) you have and the relationships or patterns you are trying to visualize. There are a number of ways you can visualize specific types of relationships. Some are better than others, and sometimes what is "best" depends on the specific context. 
 
 What follows here is an overview of a number of different ways you can visualize different data and relationships, as well as recommendations as to which are best and when. 

@@ -6,14 +6,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Chapter 8 Different Geoms and When To Use Them | PSYC193L</title>
 <meta name="author" content="Ethan Hurwitz">
-<meta name="description" content="library(tidyverse) library(palmerpenguins)      Previously, we mentioned how the point of a visualization is to explore and understand a relationship or pattern in your data (often between a...">
+<meta name="description" content="library(tidyverse) library(palmerpenguins)      Exercise Sheet Previously, we mentioned how the point of a visualization is to explore and understand a relationship or pattern in your data (often...">
 <meta name="generator" content="bookdown 0.24 with bs4_book()">
 <meta property="og:title" content="Chapter 8 Different Geoms and When To Use Them | PSYC193L">
 <meta property="og:type" content="book">
-<meta property="og:description" content="library(tidyverse) library(palmerpenguins)      Previously, we mentioned how the point of a visualization is to explore and understand a relationship or pattern in your data (often between a...">
+<meta property="og:url" content="https://psyc193l.github.io/different-geoms-and-when-to-use-them.html">
+<meta property="og:description" content="library(tidyverse) library(palmerpenguins)      Exercise Sheet Previously, we mentioned how the point of a visualization is to explore and understand a relationship or pattern in your data (often...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chapter 8 Different Geoms and When To Use Them | PSYC193L">
-<meta name="twitter:description" content="library(tidyverse) library(palmerpenguins)      Previously, we mentioned how the point of a visualization is to explore and understand a relationship or pattern in your data (often between a...">
+<meta name="twitter:description" content="library(tidyverse) library(palmerpenguins)      Exercise Sheet Previously, we mentioned how the point of a visualization is to explore and understand a relationship or pattern in your data (often...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -53,6 +54,13 @@
 <li><a class="active" href="different-geoms-and-when-to-use-them.html"><span class="header-section-number">8</span> Different Geoms and When To Use Them</a></li>
 <li><a class="" href="customization.html"><span class="header-section-number">9</span> Customization</a></li>
 <li><a class="" href="color-theory.html"><span class="header-section-number">10</span> Color Theory</a></li>
+<li class="book-part">Data Manipulation</li>
+<li><a class="" href="control-flow.html"><span class="header-section-number">11</span> Control Flow</a></li>
+<li><a class="" href="tidy-data-and-tidyverse.html"><span class="header-section-number">12</span> Tidy Data and Tidyverse</a></li>
+<li><a class="" href="basic-wrangling.html"><span class="header-section-number">13</span> Basic Wrangling</a></li>
+<li><a class="" href="advanced-wrangling.html"><span class="header-section-number">14</span> Advanced Wrangling</a></li>
+<li><a class="" href="summarizing-data.html"><span class="header-section-number">15</span> Summarizing Data</a></li>
+<li><a class="" href="text-cleaning.html"><span class="header-section-number">16</span> Text Cleaning</a></li>
 </ul>
 
         <div class="book-extra">
@@ -78,6 +86,7 @@
 <!-- In the visualization we can see that, generally speaking, penguins with greater flipper length tend to have greater bill length as well. There seems to be a positive linear relationship between bill length and flipper length such that, as flipper length increases, bill length increases in turn. -->
 <!-- ::: -->
 <!-- ------------------------------- -->
+<p><a href="Exercise_Viz2.Rmd" download>Exercise Sheet</a></p>
 <p>Previously, we mentioned how the point of a visualization is to explore and understand a relationship or pattern in your data (often between a response/outcome variable and one or more explanatory/predictor variables). It is important to know how to best graphically represent your data based on the types of variables (categorical vs continuous) you have and the relationships or patterns you are trying to visualize. There are a number of ways you can visualize specific types of relationships. Some are better than others, and sometimes what is “best” depends on the specific context.</p>
 <p>What follows here is an overview of a number of different ways you can visualize different data and relationships, as well as recommendations as to which are best and when.</p>
 <div id="one-categorical" class="section level2">
@@ -549,7 +558,7 @@ Create a boxplot to compare how <code>flipper_length_mm</code> varies across pen
 </h3>
 <p>In the <a href="intro-to-ggplot2.html#intro-to-ggplot2">first lesson</a> on visualizations, you saw how many different datasets and distributions were consistent with the same summary statistics (the datasauRus dozen and Anscombe’s quartet). This was the rationale for why visualizations are so important. However, if you plot nothing but summary statistics, this is not much better than only reporting the summary statistics as numbers! You never know what your summary statistics could be hiding about your data:</p>
 <img src="figures/summary_statistics.png" style="width:100.0%"><p style="font-size:6pt">
-Artwork by <span class="citation">(<span class="citeproc-not-found" data-reference-id="allison_horst"><strong>???</strong></span>)</span>
+Artwork by <span class="citation">Horst (2022)</span>
 </p>
 <p>While boxplots give you a better sense of a distribution by providing more information than just a bar for the mean and SEM does, many datasets can be consistent with the same boxplot too!</p>
 <img src="figures/boxplots.gif" style="width:100.0%"><p style="font-size:8pt">
@@ -1305,7 +1314,7 @@ Take the visualization you created above to explore the relationship between a p
 <h2>
 <span class="header-section-number">8.10</span> Citations<a class="anchor" aria-label="anchor" href="#citations"><i class="fas fa-link"></i></a>
 </h2>
-<p>As always, most illustrations by <span class="citation">(<span class="citeproc-not-found" data-reference-id="allison_horst"><strong>???</strong></span>)</span>(<a href="https://twitter.com/allison_horst" class="uri">https://twitter.com/allison_horst</a>)</p>
+<p>As always, most illustrations by <span class="citation">(Horst, 2022)</span>(<a href="https://twitter.com/allison_horst" class="uri">https://twitter.com/allison_horst</a>)</p>
 <p>Custom violin plots modified from source code <a href="https://psyteachr.github.io/introdataviz/advanced-plots.html">here</a></p>
 <!-- ------ -->
 <!-- ------ -->
@@ -1507,7 +1516,7 @@ Take the visualization you created above to explore the relationship between a p
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>PSYC193L</strong>" was written by Ethan Hurwitz. It was last built on 2022-05-26.</p>
+    <p>"<strong>PSYC193L</strong>" was written by Ethan Hurwitz. It was last built on 2022-06-06.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

@@ -2,6 +2,8 @@
 
 
 
+<a href="Exercise2.Rmd" download>Exercise Sheet</a>
+
 There are many things you can do to set yourself up for success and make your life easier (both now and in the future). It is really important to start implementing these good practices ASAP to establish good habits early on. It is much harder to break routines later. We are going to cover both coding best practices in general as well as some things specific to R and RStudio.
 
 I'll remind you all of the quote mentioned previously:

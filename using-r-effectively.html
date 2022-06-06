@@ -6,14 +6,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Chapter 4 Using R Effectively | PSYC193L</title>
 <meta name="author" content="Ethan Hurwitz">
-<meta name="description" content="There are many things you can do to set yourself up for success and make your life easier (both now and in the future). It is really important to start implementing these good practices ASAP to...">
+<meta name="description" content="Exercise Sheet There are many things you can do to set yourself up for success and make your life easier (both now and in the future). It is really important to start implementing these good...">
 <meta name="generator" content="bookdown 0.24 with bs4_book()">
 <meta property="og:title" content="Chapter 4 Using R Effectively | PSYC193L">
 <meta property="og:type" content="book">
-<meta property="og:description" content="There are many things you can do to set yourself up for success and make your life easier (both now and in the future). It is really important to start implementing these good practices ASAP to...">
+<meta property="og:url" content="https://psyc193l.github.io/using-r-effectively.html">
+<meta property="og:description" content="Exercise Sheet There are many things you can do to set yourself up for success and make your life easier (both now and in the future). It is really important to start implementing these good...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chapter 4 Using R Effectively | PSYC193L">
-<meta name="twitter:description" content="There are many things you can do to set yourself up for success and make your life easier (both now and in the future). It is really important to start implementing these good practices ASAP to...">
+<meta name="twitter:description" content="Exercise Sheet There are many things you can do to set yourself up for success and make your life easier (both now and in the future). It is really important to start implementing these good...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -53,6 +54,13 @@
 <li><a class="" href="different-geoms-and-when-to-use-them.html"><span class="header-section-number">8</span> Different Geoms and When To Use Them</a></li>
 <li><a class="" href="customization.html"><span class="header-section-number">9</span> Customization</a></li>
 <li><a class="" href="color-theory.html"><span class="header-section-number">10</span> Color Theory</a></li>
+<li class="book-part">Data Manipulation</li>
+<li><a class="" href="control-flow.html"><span class="header-section-number">11</span> Control Flow</a></li>
+<li><a class="" href="tidy-data-and-tidyverse.html"><span class="header-section-number">12</span> Tidy Data and Tidyverse</a></li>
+<li><a class="" href="basic-wrangling.html"><span class="header-section-number">13</span> Basic Wrangling</a></li>
+<li><a class="" href="advanced-wrangling.html"><span class="header-section-number">14</span> Advanced Wrangling</a></li>
+<li><a class="" href="summarizing-data.html"><span class="header-section-number">15</span> Summarizing Data</a></li>
+<li><a class="" href="text-cleaning.html"><span class="header-section-number">16</span> Text Cleaning</a></li>
 </ul>
 
         <div class="book-extra">
@@ -64,6 +72,7 @@
 <h1>
 <span class="header-section-number">4</span> Using R Effectively<a class="anchor" aria-label="anchor" href="#using-r-effectively"><i class="fas fa-link"></i></a>
 </h1>
+<p><a href="Exercise2.Rmd" download>Exercise Sheet</a></p>
 <p>There are many things you can do to set yourself up for success and make your life easier (both now and in the future). It is really important to start implementing these good practices ASAP to establish good habits early on. It is much harder to break routines later. We are going to cover both coding best practices in general as well as some things specific to R and RStudio.</p>
 <p>I’ll remind you all of the quote mentioned previously:</p>
 <blockquote>
@@ -97,7 +106,7 @@
 <p>It is thus best practice to not feel attached at all to the stuff in your workspace. If you need something, rerun your code to get it! If you have things that you think would be hard to replicate, that’s a problem you need to fix!</p>
 <p>Particularly because most of the time you can’t predict when things will go wrong…</p>
 <img src="figures/planForCompFailure.jpeg" style="width:100.0%"><p style="font-size:6pt">
-Artwork by <span class="citation">(<span class="citeproc-not-found" data-reference-id="allison_horst"><strong>???</strong></span>)</span>
+Artwork by <span class="citation">Horst (2022)</span>
 </p>
 <p>The settings changes above help fix this. Something else that you can do yourself is to regularly restart R, clear all content, and re-run your code scripts (particularly if they are in development!). You can restart R from the <em>Session</em> menu, or the keyboard shortcut cmd/ctrl+shift+F10. You can clear your workspace and output by using the brooms!</p>
 <div class="inline-figure"><img src="figures/fantasia_broom.gif" width="500px" height="350px" style="display: block; margin: auto;"></div>
@@ -180,7 +189,7 @@ Decide where you want your R and class files to live on your computer. Create a 
 </h4>
 <p>Kirill Müller has created an extremely useful R tool called <code>here</code>.</p>
 <img src="figures/here.png" style="width:100.0%"><p style="font-size:6pt">
-Artwork by <span class="citation">(<span class="citeproc-not-found" data-reference-id="allison_horst"><strong>???</strong></span>)</span>
+Artwork by <span class="citation">Horst (2022)</span>
 </p>
 <p>The functions within the <code>here</code> package create paths relative to the top-level directory (aka the <strong>root</strong>). The top-level of the current project can be printed any time you call <code>here()</code>. For example, when I run <code>here()</code>, it will print out: <code>"/Users/ethan/Documents/Psyc193L"</code>, because my R Project folder is called <strong>“Psyc193L”</strong> and it’s in my <strong>Documents</strong> folder.</p>
 <p>You can also easily build a path relative to the top-level directory! Let’s say we made a “data” folder in our R Project directory (we’ll talk more about directory organization later), and put <strong>“dataset.csv”</strong> in there. We can use <code>here()</code> to get full relative file path like so:</p>
@@ -288,7 +297,7 @@ Create a new code chunk in your Markdown file. Name the code chunk “exercise 3
 <p>One important thing to do initially is develop a naming convention. This is important both for objects AND your files.</p>
 <p>Object names must start with a letter, and can only contain letters, numbers, <code>_</code> and <code>.</code>. File names require the same, but can also use <code>-</code>. However, you should avoid using <code>.</code> for both, and you should <strong>never</strong> use spaces! You want your names to be descriptive, so you’ll need a convention for multiple words.</p>
 <img src="figures/coding_cases.png" style="width:100.0%"><p style="font-size:6pt">
-Artwork by <span class="citation">(<span class="citeproc-not-found" data-reference-id="allison_horst"><strong>???</strong></span>)</span>
+Artwork by <span class="citation">Horst (2022)</span>
 </p>
 <p>I use camelCase, where the first word is not capitalized and the first letter of each subsequent word is. It is technically the most efficient in terms of keystrokes, but you can run into some issues when using acronyms or singular letters (e.g., "RStudio technically breaks this rule). I have seen more people recommending snake_case and arguing against the use of capital letters. So I would generally only recommend camelCase or snake_case.</p>
 <p>You want to use names that are concise, unique, and meaningful (this is difficult!), avoiding terms that will be commonly repeated. This is also the case for your variable (column) and factor names as well. However, it IS helpful to develop a relatively consistent way of naming things for yourself. This helps make it easier to work with different projects (especially after some time). For example:</p>
@@ -448,7 +457,7 @@ Clean up all the code below so that it follows the proper formatting guidelines 
 <span class="header-section-number">4.4.4</span> Visual Summary<a class="anchor" aria-label="anchor" href="#visual-summary"><i class="fas fa-link"></i></a>
 </h3>
 <img src="figures/workflow.jpg" style="width:100.0%"><p style="font-size:6pt">
-Artwork by <span class="citation">(<span class="citeproc-not-found" data-reference-id="allison_horst"><strong>???</strong></span>)</span>
+Artwork by <span class="citation">Horst (2022)</span>
 </p>
 
 </div>
@@ -502,7 +511,7 @@ Artwork by <span class="citation">(<span class="citeproc-not-found" data-referen
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>PSYC193L</strong>" was written by Ethan Hurwitz. It was last built on 2022-05-26.</p>
+    <p>"<strong>PSYC193L</strong>" was written by Ethan Hurwitz. It was last built on 2022-06-06.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

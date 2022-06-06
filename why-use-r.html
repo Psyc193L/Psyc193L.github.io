@@ -10,6 +10,7 @@
 <meta name="generator" content="bookdown 0.24 with bs4_book()">
 <meta property="og:title" content="Chapter 2 Why use R? | PSYC193L">
 <meta property="og:type" content="book">
+<meta property="og:url" content="https://psyc193l.github.io/why-use-r.html">
 <meta property="og:description" content="Consider some of the main tasks we do in Social Sciences. As in all sciences, we work with data. We inspect and manipulate that data in different ways, and modify it to make it amenable to...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chapter 2 Why use R? | PSYC193L">
@@ -53,6 +54,13 @@
 <li><a class="" href="different-geoms-and-when-to-use-them.html"><span class="header-section-number">8</span> Different Geoms and When To Use Them</a></li>
 <li><a class="" href="customization.html"><span class="header-section-number">9</span> Customization</a></li>
 <li><a class="" href="color-theory.html"><span class="header-section-number">10</span> Color Theory</a></li>
+<li class="book-part">Data Manipulation</li>
+<li><a class="" href="control-flow.html"><span class="header-section-number">11</span> Control Flow</a></li>
+<li><a class="" href="tidy-data-and-tidyverse.html"><span class="header-section-number">12</span> Tidy Data and Tidyverse</a></li>
+<li><a class="" href="basic-wrangling.html"><span class="header-section-number">13</span> Basic Wrangling</a></li>
+<li><a class="" href="advanced-wrangling.html"><span class="header-section-number">14</span> Advanced Wrangling</a></li>
+<li><a class="" href="summarizing-data.html"><span class="header-section-number">15</span> Summarizing Data</a></li>
+<li><a class="" href="text-cleaning.html"><span class="header-section-number">16</span> Text Cleaning</a></li>
 </ul>
 
         <div class="book-extra">
@@ -96,7 +104,7 @@ Source: <a href="http://trendct.org/2015/06/12/r-for-beginners-how-to-transition
 <li>Generally, this helps others be able to see exactly what you did and run the same analyses themselves. This is great practice for the open-science movement, and can actually help you fight back against any critiques or questions about your data/analyses.</li>
 </ul>
 <img src="figures/reproducibility_court.png" style="width:100.0%"><p style="font-size:6pt">
-Artwork by <span class="citation">(<span class="citeproc-not-found" data-reference-id="allison_horst"><strong>???</strong></span>)</span>
+Artwork by <span class="citation">Horst (2022)</span>
 </p>
 <p>So why R in particular instead of any other programming language?</p>
 <p>“What about Python?” – you might ask. You should learn that too! Python is great for advanced machine learning (neural networks and deep learning), fMRI and other image analyses, and lots of other advanced programming things. However, for data science tasks that social scientists and researchers are most often concerned with, R is preferable because it uses the same basic syntax and approach to everything. With Python, your toolbox may be bigger, but all the tools are very different.</p>
@@ -161,7 +169,7 @@ from Tobi Gerstenberg’s <em>Statistical Methods for Behavioral and Social Scie
 <li>R markdown notebooks (“fileName.rmd”) which contain text, code, and outputs.</li>
 </ol>
 <img src="figures/rmarkdown_rockstar.png" style="width:100.0%"><p style="font-size:6pt">
-Artwork by <span class="citation">(<span class="citeproc-not-found" data-reference-id="allison_horst"><strong>???</strong></span>)</span>
+Artwork by <span class="citation">Horst (2022)</span>
 </p>
 <ol start="3" style="list-style-type: decimal">
 <li>RData files (“fileName.RData”), which contain saved R objects/variables.</li>
@@ -170,7 +178,7 @@ Artwork by <span class="citation">(<span class="citeproc-not-found" data-referen
 <p>Markdown files can also be used to create documents that help communicate what you are doing in your data analysis pipeline. If you use word, then every time some figure or result changes, you have to go through and copy/paste a bunch of stuff, make a million changes throughout, save new files, it’s a nuisance and often error prone. R Markdown files are living, breathing documents. Figures and results are automatically updated if the data is changed. Also, everything is in one place. In fact, what you are looking at here is the output of a markdown file!</p>
 <div class="inline-figure"><img src="figures/rmarkdown_wizards.png" style="width:100.0%"></div>
 <p style="font-size:6pt">
-Artwork by <span class="citation">(<span class="citeproc-not-found" data-reference-id="allison_horst"><strong>???</strong></span>)</span>
+Artwork by <span class="citation">Horst (2022)</span>
 </p>
 </div>
 <div id="components-of-a-markdown-file" class="section level3">
@@ -245,7 +253,7 @@ Artwork by <span class="citation">(<span class="citeproc-not-found" data-referen
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>PSYC193L</strong>" was written by Ethan Hurwitz. It was last built on 2022-05-26.</p>
+    <p>"<strong>PSYC193L</strong>" was written by Ethan Hurwitz. It was last built on 2022-06-06.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

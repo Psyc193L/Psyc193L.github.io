@@ -2,6 +2,8 @@
 
 
 
+<a href="Exercise1.Rmd" download>Exercise Sheet</a>
+
 Okay so what is R?
 
 ## Operators
@@ -305,7 +307,7 @@ If you want to clear your entire workspace (which is good practice at the beginn
 
 We obviously want to do more than evaluate simple expressions with R. To that end, at some point we are going to need to save more than just a single value to a variable! There are many different types of *data objects*, or *structures* that can hold data. We are going to focus on 2 in particular: **vectors** and **data frames**. 
 
-### Vectors
+### Vectors {#Vectors}
 
 Often times we will want to work with a series of values (or elements). **(Atomic) Vectors** are exactly that! Each item in a vector is an element. You initiate a vector with `c()`:
 
