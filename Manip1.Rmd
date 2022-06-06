@@ -25,7 +25,7 @@ Other tests/conditions can be appended with `else` statements, which specify wha
 
 ```{r eval=FALSE}
 if(some test/condition to evaluate) {
-code for what to do if that test/condition evaluates to true
+  code for what to do if that test/condition evaluates to true
 }
 ```
 
@@ -296,8 +296,8 @@ This illustrates the Social/Data Science workflow that the `tidyverse` suite of 
 
 * **Visualize** -- look at the data in different ways
 
-* ~**Model** -- answer questions about the data~
-  + *we will not be covering modeling or statistics in this course*
+* ~**Model**~ -- ~answer questions about the data~
+  + *modeling and statistics are not covered in this course*
 
 * **Communicate** -- write reproducible research reports
 

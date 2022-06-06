@@ -79,6 +79,9 @@ This also works on special characters.
 ```{r}
 dat %>%
   select(contains("_")) %>% 
+  select(1:7) %>%
+  # Take just the first 7 columns
+  # to save space
   head()
 ```
 
@@ -91,11 +94,14 @@ Select all columns that contain "re".
 
 ### `matches()`
 
-`matches()` works similarly to `contains()` but uses regular expressions (more on these below) rather than patterns.
+`matches()` works similarly to `contains()` but uses [regular expressions](#regex) (more on these below) rather than patterns.
 
 ```{r}
 dat %>%
   select(matches("[[:digit:]]")) %>%
+  select(1:7) %>%
+  # Take just the first 7 columns
+  # to save space
   head()
 ```
 
@@ -139,6 +145,10 @@ dat %>%
   select(all_of(c("DRUGRISK", "DRUGRISK2"))) %>%
   head()
 ```
+
+::: {.rmdimportant}
+**The `DRUGRISK2` variable does not exist in this dataset. Thus, the 2nd code chunk will throw an error.**
+:::
 
 ### `any_of()`
 
@@ -211,6 +221,8 @@ Breaking this down line by line:
 
 <p class="text-info"> **NOTE: You are not looking for the mean of the column, the output *IS* the column that has a mean greater than 1. Remember, selection helper functions are to help select certain columns. You can just get VERY specific with which columns you want in this way!**</p>
 </div>
+
+<br>
 
 <div class="panel panel-success">
   <div class="panel-heading">**EXERCISE 3**</div>
@@ -360,27 +372,30 @@ You can use helper functions to make these selections as well!
 dat %>% 
   mutate(across(starts_with("Q"), scale)) %>%
   select(starts_with("Q")) %>%
+  select(1:7) %>%
+  # Take just the first 7 columns
+  # to save space
   head(10)
 ```
 
 You can combine `where()` with `across()` to mutate conditionally. In other words, **IF** the column passes some test, the function will be applied to all its values.
 
-Consider the following scenario: say you wanted to convert all the characters to factors.
+Consider the following scenario: say you wanted to convert all the *factors* to *characters*.
 
-First, you would check which columns contain characters:
+First, you would check which columns contain *factors*:
 
 ```{r}
 dat %>%
-  select(where(is.character)) %>%
+  select(where(is.factor)) %>%
   glimpse()
 ```
 
-Next, you can use `across()` and `where()` to change only columns that are characters into factors, checking which columns are factors The columns that were previously characters should show up here.
+Next, you can use `across()` and `where()` to change only columns that are *factors* into *characters*, checking which columns are *characters*. The columns that were previously *factors* should show up here.
 
 ```{r}
 dat %>% 
-  mutate(across(where(is.character), as.factor)) %>%
-  select(where(is.factor)) %>%
+  mutate(across(where(is.factor), as.character)) %>%
+  select(where(is.character)) %>%
   glimpse()
 ```
   
@@ -407,7 +422,7 @@ Use helper functions to...<br>
   </div>
 </div>
 
-## Regular Expressions
+## Regular Expressions {#regex}
 
 Regular expressions (regex) are a way to select certain *kinds* of characters. When you want to refer to a class/type of character, you can select them with a regex.
 
@@ -426,8 +441,8 @@ Regular expressions all get wrapped in brackets. So, to use any of these, wrap t
 - **[:space:]** - space characters (basically equivalent to `\s`).
 - **[:blank:]** - space and tab.
 
+## Extra Resources
 
-
-https://dplyr.tidyverse.org/reference/select.html
+* [Select Vignette](https://dplyr.tidyverse.org/reference/select.html)
 
 
