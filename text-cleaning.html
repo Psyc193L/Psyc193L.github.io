@@ -124,7 +124,8 @@
 <div class="sourceCode" id="cb329"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">x</span> <span class="op">=</span> <span class="st">'Response:{"Apple Juice"}'</span>
 
-<span class="fu"><a href="https://stringr.tidyverse.org/reference/str_remove.html">str_remove_all</a></span><span class="op">(</span><span class="va">x</span>, <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">'Response'</span>, <span class="st">'[:]'</span>, <span class="st">'[{]'</span>, <span class="st">'["]'</span>, <span class="st">'[}]'</span><span class="op">)</span>, collapse<span class="op">=</span><span class="st">'|'</span><span class="op">)</span><span class="op">)</span>
+<span class="fu"><a href="https://stringr.tidyverse.org/reference/str_remove.html">str_remove_all</a></span><span class="op">(</span><span class="va">x</span>, <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">'Response'</span>, <span class="st">'[:]'</span>, <span class="st">'[{]'</span>, <span class="st">'["]'</span>, <span class="st">'[}]'</span><span class="op">)</span>, 
+                        collapse<span class="op">=</span><span class="st">'|'</span><span class="op">)</span><span class="op">)</span>
 <span class="co">#&gt; [1] "Apple Juice"</span></code></pre></div>
 </div>
 <div id="removing-the-first-instance" class="section level2">
@@ -135,13 +136,15 @@
 <div class="sourceCode" id="cb330"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">x</span> <span class="op">=</span> <span class="st">'Response:{"Apple Juice Response"}'</span>
 
-<span class="fu"><a href="https://stringr.tidyverse.org/reference/str_remove.html">str_remove_all</a></span><span class="op">(</span><span class="va">x</span>, <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">'Response'</span>, <span class="st">'[:]'</span>, <span class="st">'[{]'</span>, <span class="st">'["]'</span>, <span class="st">'[}]'</span><span class="op">)</span>, collapse<span class="op">=</span><span class="st">'|'</span><span class="op">)</span><span class="op">)</span>
+<span class="fu"><a href="https://stringr.tidyverse.org/reference/str_remove.html">str_remove_all</a></span><span class="op">(</span><span class="va">x</span>, <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">'Response'</span>, <span class="st">'[:]'</span>, <span class="st">'[{]'</span>, <span class="st">'["]'</span>, <span class="st">'[}]'</span><span class="op">)</span>, 
+                        collapse<span class="op">=</span><span class="st">'|'</span><span class="op">)</span><span class="op">)</span>
 <span class="co">#&gt; [1] "Apple Juice "</span></code></pre></div>
 <p>If we removed things as we had been before, we’d lose part of their response! Instead, we can just remove the <em>first</em> instance of a string by using <code><a href="https://stringr.tidyverse.org/reference/str_remove.html">str_remove()</a></code></p>
 <div class="sourceCode" id="cb331"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">x</span> <span class="op">=</span> <span class="st">'Response:{"Apple Juice Response"}'</span>
 
-<span class="va">x</span> <span class="op">=</span> <span class="fu"><a href="https://stringr.tidyverse.org/reference/str_remove.html">str_remove_all</a></span><span class="op">(</span><span class="va">x</span>, <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">'[:]'</span>, <span class="st">'[{]'</span>, <span class="st">'["]'</span>, <span class="st">'[}]'</span><span class="op">)</span>, collapse<span class="op">=</span><span class="st">'|'</span><span class="op">)</span><span class="op">)</span>
+<span class="va">x</span> <span class="op">=</span> <span class="fu"><a href="https://stringr.tidyverse.org/reference/str_remove.html">str_remove_all</a></span><span class="op">(</span><span class="va">x</span>, <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">'[:]'</span>, <span class="st">'[{]'</span>, <span class="st">'["]'</span>, <span class="st">'[}]'</span><span class="op">)</span>, 
+                            collapse<span class="op">=</span><span class="st">'|'</span><span class="op">)</span><span class="op">)</span>
 <span class="va">x</span>
 <span class="co">#&gt; [1] "ResponseApple Juice Response"</span>
 <span class="fu"><a href="https://stringr.tidyverse.org/reference/str_remove.html">str_remove</a></span><span class="op">(</span><span class="va">x</span>, <span class="st">"Response"</span><span class="op">)</span>
@@ -161,7 +164,7 @@
 
 <span class="fu"><a href="https://stringr.tidyverse.org/reference/str_remove.html">str_remove</a></span><span class="op">(</span><span class="va">x</span>, <span class="st">":"</span><span class="op">)</span> <span class="co"># Not what you want</span>
 <span class="co">#&gt; [1] "foobar"</span>
-<span class="fu"><a href="https://rdrr.io/r/base/grep.html">gsub</a></span><span class="op">(</span><span class="st">":"</span>, <span class="st">" "</span>, <span class="va">x</span><span class="op">)</span> <span class="co"># What we want!</span>
+<span class="fu"><a href="https://rdrr.io/r/base/grep.html">gsub</a></span><span class="op">(</span><span class="st">":"</span>, <span class="st">" "</span>, <span class="va">x</span><span class="op">)</span> <span class="co"># What you want!</span>
 <span class="co">#&gt; [1] "foo bar"</span></code></pre></div>
 <!-- ## Replace NAs without removing **all** observations: -->
 <!-- You [previously](#NAs) saw how `na.omit()` and `drop_na()` could be used to remove observations containing an `NA` value. However, sometimes you may not want to remove the **entire** observation if one of its variables contains an `NA` value. You may instead want to just *replace* that value. This can be done with `replace()`. -->

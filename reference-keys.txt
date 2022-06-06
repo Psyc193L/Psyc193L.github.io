@@ -243,7 +243,8 @@ filtering
 if_any
 if_all
 mutating-across
-regular-expressions
+regex
+extra-resources-2
 summarizing-data
 table-and-count
 proportions
@@ -252,7 +253,7 @@ summarize
 grouping-data
 grouped-summaries
 using-across-with-summarize
-extra-resources-2
+extra-resources-3
 text-cleaning
 remove-text-from-strings
 escaping-special-characters

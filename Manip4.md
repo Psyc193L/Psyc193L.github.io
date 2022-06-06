@@ -404,7 +404,7 @@ There are two things to note here. First, these two are slightly different class
 
 ## Grouped Summaries
 
-`group_by()` allows you to perform operations group-wise and helps unlock to true power of `summarize()`, it tells R that you want to analyze your data separately according to the different levels of some grouping variable that you specify. The following example will again use a subset of the `penguins` data:
+`group_by()` allows you to perform operations group-wise and helps unlock to true power of `summarize()`. It tells R that you want to analyze your data separately according to the different levels of some grouping variable that you specify. The following example will again use a subset of the `penguins` data:
 
 
 ```r
@@ -587,11 +587,11 @@ penguins_example %>%
 
 Put a different way, when `summarize()` gets passed a grouped df, it will:
 
-1. Treat all groups of data as though they are a distinct data set
+1. Treat all groups of data as though they are a distinct dataset
 2. Apply the code to each group individually, resulting in separate summary statistics for each
 3. Combine the results into a new data frame.
 
-You can this process illustrated in the figure above.
+You see can this process illustrated in the figure above.
 
 <p class="text-info"> **Note: When you are not using `summarize()`, it is very important to remember to `ungroup()` your data when you are finished. Otherwise, subsequent functions will be unintentionally applied to individual groups rather than the entire dataset! This is not relevant when using `summarize()` because the resulting output will be a new dataframe.**</p>
 
@@ -732,9 +732,6 @@ The combination of `group_by()`, `summarize()`, and `across()`, allow for some q
 * dplyr documentation for [row-wise](https://dplyr.tidyverse.org/articles/rowwise.html) and [column-wise](https://dplyr.tidyverse.org/articles/colwise.html) operations
 * [across](https://dplyr.tidyverse.org/reference/across.html) documentation
 * [data wrangling cheatsheet](https://rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
-* []()
-
-https://github.com/rstudio/cheatsheets/blob/main/tidyr.pdf
 
 # Text Cleaning
 
@@ -801,7 +798,8 @@ You can remove multiple strings at once by using `paste()` to include all the ch
 ```r
 x = 'Response:{"Apple Juice"}'
 
-str_remove_all(x, paste(c('Response', '[:]', '[{]', '["]', '[}]'), collapse='|'))
+str_remove_all(x, paste(c('Response', '[:]', '[{]', '["]', '[}]'), 
+                        collapse='|'))
 #> [1] "Apple Juice"
 ```
 
@@ -813,7 +811,8 @@ Sometimes, you do not want EVERY instance of a string removed. In the example be
 ```r
 x = 'Response:{"Apple Juice Response"}'
 
-str_remove_all(x, paste(c('Response', '[:]', '[{]', '["]', '[}]'), collapse='|'))
+str_remove_all(x, paste(c('Response', '[:]', '[{]', '["]', '[}]'), 
+                        collapse='|'))
 #> [1] "Apple Juice "
 ```
 
@@ -823,7 +822,8 @@ If we removed things as we had been before, we'd lose part of their response! In
 ```r
 x = 'Response:{"Apple Juice Response"}'
 
-x = str_remove_all(x, paste(c('[:]', '[{]', '["]', '[}]'), collapse='|'))
+x = str_remove_all(x, paste(c('[:]', '[{]', '["]', '[}]'), 
+                            collapse='|'))
 x
 #> [1] "ResponseApple Juice Response"
 str_remove(x, "Response")
@@ -847,7 +847,7 @@ x = "foo:bar"
 
 str_remove(x, ":") # Not what you want
 #> [1] "foobar"
-gsub(":", " ", x) # What we want!
+gsub(":", " ", x) # What you want!
 #> [1] "foo bar"
 ```
 

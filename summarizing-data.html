@@ -426,7 +426,7 @@ Use <code><a href="https://dplyr.tidyverse.org/reference/summarise.html">summari
 <h2>
 <span class="header-section-number">15.5</span> Grouped Summaries<a class="anchor" aria-label="anchor" href="#grouped-summaries"><i class="fas fa-link"></i></a>
 </h2>
-<p><code><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by()</a></code> allows you to perform operations group-wise and helps unlock to true power of <code><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize()</a></code>, it tells R that you want to analyze your data separately according to the different levels of some grouping variable that you specify. The following example will again use a subset of the <code>penguins</code> data:</p>
+<p><code><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by()</a></code> allows you to perform operations group-wise and helps unlock to true power of <code><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize()</a></code>. It tells R that you want to analyze your data separately according to the different levels of some grouping variable that you specify. The following example will again use a subset of the <code>penguins</code> data:</p>
 <div class="sourceCode" id="cb317"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">penguins_example</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
   <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">species</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
@@ -671,11 +671,11 @@ Gentoo
 </tr></tbody></table></div>
 <p>Put a different way, when <code><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize()</a></code> gets passed a grouped df, it will:</p>
 <ol style="list-style-type: decimal">
-<li>Treat all groups of data as though they are a distinct data set</li>
+<li>Treat all groups of data as though they are a distinct dataset</li>
 <li>Apply the code to each group individually, resulting in separate summary statistics for each</li>
 <li>Combine the results into a new data frame.</li>
 </ol>
-<p>You can this process illustrated in the figure above.</p>
+<p>You see can this process illustrated in the figure above.</p>
 <p class="text-info">
 <strong>Note: When you are not using <code><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize()</a></code>, it is very important to remember to <code><a href="https://dplyr.tidyverse.org/reference/group_by.html">ungroup()</a></code> your data when you are finished. Otherwise, subsequent functions will be unintentionally applied to individual groups rather than the entire dataset! This is not relevant when using <code><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize()</a></code> because the resulting output will be a new dataframe.</strong>
 </p>
@@ -797,18 +797,16 @@ Modify your code from exercise 3 to show averages for each level of <code>vore</
 </div>
 </div>
 </div>
-<div id="extra-resources-2" class="section level2">
+<div id="extra-resources-3" class="section level2">
 <h2>
-<span class="header-section-number">15.6</span> Extra Resources<a class="anchor" aria-label="anchor" href="#extra-resources-2"><i class="fas fa-link"></i></a>
+<span class="header-section-number">15.6</span> Extra Resources<a class="anchor" aria-label="anchor" href="#extra-resources-3"><i class="fas fa-link"></i></a>
 </h2>
 <ul>
 <li>dplyr documentation for <a href="https://dplyr.tidyverse.org/articles/rowwise.html">row-wise</a> and <a href="https://dplyr.tidyverse.org/articles/colwise.html">column-wise</a> operations</li>
 <li>
 <a href="https://dplyr.tidyverse.org/reference/across.html">across</a> documentation</li>
 <li><a href="https://rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf">data wrangling cheatsheet</a></li>
-<li><a href=""></a></li>
 </ul>
-<p><a href="https://github.com/rstudio/cheatsheets/blob/main/tidyr.pdf" class="uri">https://github.com/rstudio/cheatsheets/blob/main/tidyr.pdf</a></p>
 </div>
 </div>
   <div class="chapter-nav">
@@ -827,7 +825,7 @@ Modify your code from exercise 3 to show averages for each level of <code>vore</
 <li>
 <a class="nav-link" href="#grouped-summaries"><span class="header-section-number">15.5</span> Grouped Summaries</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#using-across-with-summarize"><span class="header-section-number">15.5.1</span> Using across() with summarize()</a></li></ul>
 </li>
-<li><a class="nav-link" href="#extra-resources-2"><span class="header-section-number">15.6</span> Extra Resources</a></li>
+<li><a class="nav-link" href="#extra-resources-3"><span class="header-section-number">15.6</span> Extra Resources</a></li>
 </ul>
 
       <div class="book-extra">

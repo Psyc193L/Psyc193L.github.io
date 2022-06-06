@@ -1413,12 +1413,12 @@ The `everything()` function selects... everything! It will select all the variab
 
 <!-- filter(columnToSubset == valueOfInterest) - returns rows that meet specified condition(s). Can use single conditions or string together multiple tests with logical operators -->
 
-The second primary subsetting function is `filter()`, which returns rows that meet specified condition(s). Each condition is a logical test performed on a column. This will results in a vector of TRUE and FALSE values, and only the rows for which the test evaluates to TRUE will be returned!
+The second primary subsetting function is `filter()`, which returns rows that meet specified condition(s). Each condition is a logical test performed on a column. This will results in a vector of `TRUE` and `FALSE` values, and only the rows for which the test evaluates to `TRUE` will be returned!
 
 ![](figures/dplyr_filter.jpeg){width=100%}
 <p style="font-size:6pt">Artwork by @allison_horst</p>
 
-As you see in the illustration above, only the rows with a check mark (where the logical test resulted in TRUE) would be returned from that `filter()` call!
+As you see in the illustration above, only the rows with a check mark (where the logical test resulted in `TRUE`) would be returned from that `filter()` call!
 
 
 ```r
@@ -2666,7 +2666,7 @@ mean(c(4,5,3,NA))
 #> [1] NA
 ```
 
-As you can see, any time you have `NA` as part of your computation, the results are `NA`. It is because of this that NAs are thought to be **contagious**. In these instances, you get around this by utilizing functions like `na.omit()`, `drop_na()`, or the *na.rm* argument set to *TRUE*.
+As you can see, any time you have `NA` as part of your computation, the results are `NA`. It is because of this that NAs are thought to be **contagious**. In these instances, you get around this by utilizing functions like `na.omit()`, `drop_na()`, or the *na.rm* argument set to `TRUE`.
 
 `na.omit()` will remove all NAs. When used on a dataframe, this will remove an entire row of data if it has an `NA` value for ***any*** column.
 

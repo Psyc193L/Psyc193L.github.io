@@ -2539,11 +2539,11 @@ Volvo 142E
 <span class="header-section-number">13.6</span> Filter<a class="anchor" aria-label="anchor" href="#filter"><i class="fas fa-link"></i></a>
 </h2>
 <!-- filter(columnToSubset == valueOfInterest) - returns rows that meet specified condition(s). Can use single conditions or string together multiple tests with logical operators -->
-<p>The second primary subsetting function is <code><a href="https://dplyr.tidyverse.org/reference/filter.html">filter()</a></code>, which returns rows that meet specified condition(s). Each condition is a logical test performed on a column. This will results in a vector of TRUE and FALSE values, and only the rows for which the test evaluates to TRUE will be returned!</p>
+<p>The second primary subsetting function is <code><a href="https://dplyr.tidyverse.org/reference/filter.html">filter()</a></code>, which returns rows that meet specified condition(s). Each condition is a logical test performed on a column. This will results in a vector of <code>TRUE</code> and <code>FALSE</code> values, and only the rows for which the test evaluates to <code>TRUE</code> will be returned!</p>
 <img src="figures/dplyr_filter.jpeg" style="width:100.0%"><p style="font-size:6pt">
 Artwork by <span class="citation">Horst (2022)</span>
 </p>
-<p>As you see in the illustration above, only the rows with a check mark (where the logical test resulted in TRUE) would be returned from that <code><a href="https://dplyr.tidyverse.org/reference/filter.html">filter()</a></code> call!</p>
+<p>As you see in the illustration above, only the rows with a check mark (where the logical test resulted in <code>TRUE</code>) would be returned from that <code><a href="https://dplyr.tidyverse.org/reference/filter.html">filter()</a></code> call!</p>
 <div class="sourceCode" id="cb246"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">mtcars2</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
   <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">gear</span> <span class="op">==</span> <span class="fl">4</span><span class="op">)</span></code></pre></div>
@@ -4506,7 +4506,7 @@ Artwork by <span class="citation">Horst (2022)</span>
 <span class="co">#&gt; [1] NA</span>
 <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">4</span>,<span class="fl">5</span>,<span class="fl">3</span>,<span class="cn">NA</span><span class="op">)</span><span class="op">)</span>
 <span class="co">#&gt; [1] NA</span></code></pre></div>
-<p>As you can see, any time you have <code>NA</code> as part of your computation, the results are <code>NA</code>. It is because of this that NAs are thought to be <strong>contagious</strong>. In these instances, you get around this by utilizing functions like <code><a href="https://rdrr.io/r/stats/na.fail.html">na.omit()</a></code>, <code><a href="https://tidyr.tidyverse.org/reference/drop_na.html">drop_na()</a></code>, or the <em>na.rm</em> argument set to <em>TRUE</em>.</p>
+<p>As you can see, any time you have <code>NA</code> as part of your computation, the results are <code>NA</code>. It is because of this that NAs are thought to be <strong>contagious</strong>. In these instances, you get around this by utilizing functions like <code><a href="https://rdrr.io/r/stats/na.fail.html">na.omit()</a></code>, <code><a href="https://tidyr.tidyverse.org/reference/drop_na.html">drop_na()</a></code>, or the <em>na.rm</em> argument set to <code>TRUE</code>.</p>
 <p><code><a href="https://rdrr.io/r/stats/na.fail.html">na.omit()</a></code> will remove all NAs. When used on a dataframe, this will remove an entire row of data if it has an <code>NA</code> value for <strong><em>any</em></strong> column.</p>
 <p><code><a href="https://tidyr.tidyverse.org/reference/drop_na.html">drop_na()</a></code> is used specifically for dataframes, and will remove an entire row of data if it has an <code>NA</code> value for <strong><em>specific</em></strong> column(s) that you select. If you do not pass any specific columns, it will function similarly to <code><a href="https://rdrr.io/r/stats/na.fail.html">na.omit()</a></code> and remove an entire row if it as an <code>NA</code> value for <strong><em>any</em></strong> column.</p>
 <div class="sourceCode" id="cb266"><pre class="downlit sourceCode r">

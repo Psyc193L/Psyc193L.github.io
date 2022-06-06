@@ -25,7 +25,7 @@ Other tests/conditions can be appended with `else` statements, which specify wha
 
 ```r
 if(some test/condition to evaluate) {
-code for what to do if that test/condition evaluates to true
+  code for what to do if that test/condition evaluates to true
 }
 ```
 
@@ -58,7 +58,7 @@ if(3 < x) {
 }
 #> [1] "The condition evaluated TRUE"
 x
-#> [1] 6
+#> [1] 4
 ```
 
 This code specifies what to do depending on whether the test evaluates to *TRUE* or if it evaluates *FALSE*.
@@ -76,9 +76,9 @@ if(4 < x) {
 } else {
   print("Neither the first or second condition evaluated TRUE.")
 }
-#> [1] "The second condition evaluated TRUE"
+#> [1] "The first condition evaluated TRUE"
 x
-#> [1] 3
+#> [1] 5
 ```
 
 Writing `if` statements like this is most useful when the code you want to run executes a function. As you will note above, in all instances the `print()` function was the code being executed (what is in the curly brackets). An infinite number of `if` conditions can be chained together in an `if...else` chain.
@@ -118,7 +118,7 @@ ifelse(4 < x, "The first condition evaluated true.",
               "Neither the first or second condition evaluated true."))
 #> [1] "Neither the first or second condition evaluated true."
 x
-#> [1] 2
+#> [1] 1
 ```
 
 <div class="panel panel-success">
@@ -140,9 +140,9 @@ case_when(
   2 < x & x < 5 ~ "The second condition evaluated true.",
   TRUE ~ "Neither the first or second condition evaluated true."
 )
-#> [1] "The first condition evaluated true."
+#> [1] "The second condition evaluated true."
 x
-#> [1] 3
+#> [1] 4
 ```
 
 <div class="panel panel-success">
@@ -321,8 +321,8 @@ This illustrates the Social/Data Science workflow that the `tidyverse` suite of 
 
 * **Visualize** -- look at the data in different ways
 
-* ~**Model** -- answer questions about the data~
-  + *we will not be covering modeling or statistics in this course*
+* ~**Model**~ -- ~answer questions about the data~
+  + *modeling and statistics are not covered in this course*
 
 * **Communicate** -- write reproducible research reports
 
