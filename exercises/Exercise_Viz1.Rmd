@@ -33,22 +33,27 @@ output: html_document
 
 # 5. Use R code to recreate the graphs below
 
+## A.
 ```{r}
 
 ```
 
+## B.
 ```{r}
 
 ```
 
+## C.
 ```{r}
 
 ```
 
+## D.
 ```{r}
 
 ```
 
+## E.
 ```{r}
 
 ```

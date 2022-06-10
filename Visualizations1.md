@@ -10,7 +10,7 @@ library(tidyverse)
 library(palmerpenguins)
 ```
 
-<a href="Exercise_Viz1.Rmd" download>Exercise Sheet</a>
+<a href="exercises/Exercise_Viz1.Rmd" download>Exercise Sheet</a>
 
 > "The greatest value of a picture is when it forces us to notice what we never expected to see."<br>— John Tukey
 
@@ -20,7 +20,7 @@ library(palmerpenguins)
 
 Consider the following scenario:
 
-I tell you that I have two different datasets. Each dataset is comprised of individuals measured on two outcomes (say height and weight). The mean and standard deviation of height and of weight are the same in both datasets. The correlation between height and weight is the same in both datasets as well. By every statistical metric, these datasets are the same. So, they must ***look*** similar, right?
+There are two different datasets, each comprised of individuals measured on two outcomes (say height and weight). The mean and standard deviation of height and of weight are the same in both datasets. The correlation between height and weight is the same in both datasets as well. By every statistical metric, these datasets are the same. So, they must ***look*** similar, right?
 
 Click the button below:
 
@@ -39,11 +39,11 @@ This collection of data is called the [datasauRus](https://github.com/jumpingriv
 
 All four of these datasets have matching n's, means, standard deviations, and correlations. This means that the slope and intercept, and corresponding statistical tests, will all be equivalent. The data **clearly** look different though. (These data are built into R in an object called `anscombe`, which you can look at to test this for yourself!)
 
-The key point here is that the summary statistics of some variables and their linear relationships inherently overlook some aspects of the data. This highlights the critical importance of visualizing your data, and not just relying on summary statistics alone. The point of a visualization, just like a summary statistic, is to understand a relationship or pattern in your data. However, by looking at the raw data itself, you don't run the risk of missing things the way you do by relying on summary statistics alone.
+The key point here is that the summary statistics of some variables and their linear relationships inherently overlook some aspects of the data. This highlights the critical importance of visualizing your data, and not just relying on summary statistics alone. The point of a visualization, just like a summary statistic, is to understand a relationship or pattern in your data. However, by looking at the raw data itself, you do not run the risk of missing things the way you do by relying on summary statistics alone.
 
 ## When Visualizing Go Wrong
 
-It's easy enough to just say, "Look at your raw data! Create a visualization!" However, a bad visualization is often times worse than no visualization at all. One of the things that the Covid-19 pandemic brought with it originally was a plethora of data visualizations. Below are a few that I came across myself out in the real world:
+It is easy enough to just say, "Look at your raw data! Create a visualization!" However, a bad visualization is often times worse than no visualization at all. One of the things that the Covid-19 pandemic brought with it originally was a plethora of data visualizations. Below are a few that were observed out in the real world over the last 2 years:
 
 ![](figures/bad_visualizations/badviz3.jpeg){width=100%}
 
@@ -53,22 +53,22 @@ It's easy enough to just say, "Look at your raw data! Create a visualization!" H
 
 ![](figures/bad_visualizations/badviz1.png){width=100%}
 
-So it's not enough to just make *some* visualization. It's important to also consider the principles that make a ***GOOD***. Over the next few lessons, we are going to cover both!
+So, it is not enough to just make *some* visualization, it is important to also consider the principles that make a ***GOOD*** visualization. Over the next few lessons, both will be covered.
 
 
 
 ## ggplot2
 
-Data visualization is one of the things that sets R apart from other programming languages that can be used for statistics, like Python. R still has the best data visualization capabilities, and it is one of the primary reasons it is used over Python in Social Sciences. This is also one of the first times you will get to see what coding can be all about. You are actually going to be creating stuff today with your code!
+Data visualization is one of the things that sets R apart from other programming languages that can be used for statistics, like Python. R still has the best data visualization capabilities, and it is one of the primary reasons it is used over Python in Social Sciences. This is also one of the first times you will get to see what coding can be all about. You are actually going to be creating stuff with your code!
 
-In this class, we will use the `ggplot2` package to create visualizations. Graphs are constructed by mapping data to geometric objects (lines, bars, points, etc.) according to some aesthetic attributes (color, shape, size, etc.). `ggplot2` uses this to inform its grammar. We'll explain this much more as we go!
+In this class, the `ggplot2` package will be used to create visualizations. Graphs are constructed by mapping data to geometric objects (lines, bars, points, etc.) according to some aesthetic attributes (color, shape, size, etc.). `ggplot2` uses this to inform its grammar.
 		
 ![](figures/ggplot2_masterpiece.png){width=100%}
 <p style="font-size:6pt">Artwork by @allison_horst</p>
 
 ### Meet the Penguins
 
-To create visualizations, we need some data to visualize! I am going to work with the `palmerpenguins` dataset from [Alison Horst](https://allisonhorst.github.io/palmerpenguins/) (Yes, she is someone I admire and think does great work!).
+To create visualizations, you need some data to visualize! The `palmerpenguins` dataset from [Alison Horst](https://allisonhorst.github.io/palmerpenguins/) will be used to create examples throughout.
 
 ![](figures/palmerpenguins_logo.png){width=207px}
 
@@ -87,11 +87,11 @@ Use the `library(palmerpenguins)` call to load in the dataset.
 
 ## A Basic Graph
 
-Let's start building a basic graph. There are going to be <u>**LOTS**<u> of exercise breaks throughout. 
+The most sensible place to start is building a basic graph. There are going to be <u>**LOTS**<u> of exercise breaks throughout.
 
-<p class="text-info"> **<u>Note:</u> As we move forward with building our first graph, each new piece of code added will be accompanied by a literate programming portion, where you will describe in words what the code is doing.**</p>
+<p class="text-info"> **<u>Note:</u> As you move forward with building your first graph, each new piece of code added will be accompanied by a literate programming portion, where you will describe in words what the code is doing.**</p>
 
-All ggplot graphs are build using the `ggplot()` call. The first thing it needs is some data. We'll use the `%>%` to pass in our `penguins` dataframe. 
+All ggplot graphs are build using the `ggplot()` call. The first thing it needs is some data. The `%>%` will be used to pass in the `penguins` dataframe.
 
 
 ```r
@@ -101,11 +101,11 @@ penguins %>%
 
 <img src="Visualizations1_files/figure-html/unnamed-chunk-5-1.png" width="672" />
 
-> **Start by telling ggplot to use the `penguins` dataframe for our data**
+> **Start by telling ggplot to use the `penguins` dataframe for the data**
 
-Woo! We got a grey rectangle! Of course, the code above alone will not do anything. We have to tell ggplot what we want to plot. Hmm... Let's see how a penguin's `bill_length_mm` is related to its `flipper_length_mm`. I would imagine that bigger penguins would tend to have longer bills and flippers, but maybe not? That is why we create visualizations, to try and help answer questions we may have about our data (which consist of samples thought to be representative of the world at large)!
+Woo! This actually created something. A grey rectangle! Of course, the code above alone will not do anything. You have to tell ggplot what you want to plot. Hmm... As an example, consider how a penguin's `bill_length_mm` is related to its `flipper_length_mm`. You might imagine that bigger penguins would tend to have longer bills and flippers, but maybe not? That is why you create visualizations, to try and help answer questions you may have about your data (which consist of samples thought to be representative of the world at large)!
 
-We need to tell ggplot what variables from our data should be mapped to the aesthetics we want to render on our graph. We'll do that with the `aes()` call, and start with specifying what to display on each axis.
+ggplot needs to be told what variables from your data should be mapped to the aesthetics you want to render on your graph. You will do that with the `aes()` call, and start with specifying what to display on each axis.
 
 
 ```r
@@ -116,18 +116,18 @@ penguins %>%
 
 <img src="Visualizations1_files/figure-html/unnamed-chunk-6-1.png" width="672" />
 
->"Start by telling ggplot to use the `penguins` dataframe for our data, **map flipper length to the y-axis and bill length to the x-axis.**"
+>"Start by telling ggplot to use the `penguins` dataframe for the data, **map flipper length to the y-axis and bill length to the x-axis.**"
 
-Above, we specified that we want `flipper_length_mm` on our y-axis, and `bill_length_mm` on our x-axis (it is good practice to specify *y* first and *x* second). All aesthetic mappings must be separated by a comma, and it does not matter the order you list them (though it is good practice to start with the axes first). As you can see, ggplot figured out how to label the axes on its own. 
+Above, it was specified that `flipper_length_mm` should be on the y-axis, and `bill_length_mm` on the x-axis (it is good practice to specify *y* first and *x* second). All aesthetic mappings must be separated by a comma, and it does not matter the order you list them (though it is good practice to start with the axes first). As you can see, ggplot figured out how to label the axes on its own. 
 
 <div class="panel panel-success">
   <div class="panel-heading">**EXERCISE 1**</div>
   <div class="panel-body">Create your own graph using the `penguins` data and pick 2 of the following to put on your x and y axes: `bill_length_mm`, `bill_depth_mm`, `flipper_length_mm`, or `body_mass_g`.</div>
 </div>
 <br>
-We told ggplot what our aesthetic mappings are (what data source to use), but not what it should render from those mappings! We want ggplot to use those mappings to construct some **geom**etric object, and the way we do that is by adding a *geom*, aptly named. There are a number of different geoms, which have the general syntax of `geom_X()`, where X usually refers to the specific geometric object you want to render. Here, we want a point on our graph for each penguin, so we will use `geom_point()`. 
+ggplot was told what the aesthetic mappings are (what data source to use), but not what it should render from those mappings! You want ggplot to use those mappings to construct some **geom**etric object, and the way you do that is by adding a *geom*, aptly named. There are a number of different geoms, which have the general syntax of `geom_X()`, where X usually refers to the specific geometric object you want to render. Here, you want a point on the graph for each penguin, so `geom_point()` will be used.
 
-<p class="text-info"> **<u>Note:</u> There are a TON of different geoms. You will see many more as we go.**</p>
+<p class="text-info"> **<u>Note:</u> There are a TON of different geoms. You will see many more later.**</p>
 
 
 ```r
@@ -141,33 +141,33 @@ penguins %>%
 
 <img src="Visualizations1_files/figure-html/unnamed-chunk-7-1.png" width="672" />
 
-> "Start by telling ggplot to use the `penguins` dataframe for our data, map flipper length to the y-axis and bill length to the x-axis. **Represent each observation with a point.**"
+> "Start by telling ggplot to use the `penguins` dataframe for the data, map flipper length to the y-axis and bill length to the x-axis. **Represent each observation with a point.**"
 
-Okay, **NOW** we are talking! This looks like an actual real graph. Look at your very first ggplot masterpiece! 
+Okay, **NOW** we are talking! This looks like an actual real graph. Look at your very first ggplot masterpiece!
 
 There are two important things to note here:
 
-1. We used the `+` instead of `%>%` to add on a new function. The ggplot system is additive/layered, which is a very powerful idea that we will get into more later. For now, it is enough to know that what we are doing was adding the `geom_point()` to our code. We do not want to take the `penguins %>% ggplot(mapping = aes(y = flipper_length_mm, x = bill_length_mm))` code and use it as the argument for our `geom_point()` function, which is what would happen if we used %>% to pipe it! We want to just add the points on top of the existing base that code created, which is why we use the `+`.
+1. The `+` was used instead of `%>%` to add on a new function. The ggplot system is additive/layered, which is a very powerful idea that will be explained later. For now, it is enough to know that the `geom_point()` was being added to the code. You do not want to take the `penguins %>% ggplot(mapping = aes(y = flipper_length_mm, x = bill_length_mm))` code and use it as the argument for the `geom_point()` function, which is what would happen if a `%>%` was used to pipe it! You want to just add the points on top of the existing base that code created, which is why the `+` is used.
 
 2. When running this code, in addition to creating the graph (in the "Plots" section of RStudio or inline under your code), the following showed up in the console: 
 
 <p style="color:#A79BF0"> **Warning message:<br>Removed 2 rows containing missing values (geom_point).**</p>
 
-Looking at your warnings and errors is always important, but especially so when creating visualizations! This says that it removed 2 rows of data, which may not seem like a big deal but we don't want our visualizations to be misleading. Especially when we start visualizing summary statistics (like means). If we look at our actual data though, we can verify that there are two penguins that don't have a measurement value for flipper length or bill length. So obviously without either or both of those, it cannot be included on the graph. In this case, this is okay, but it's important to always verify!
+Looking at your warnings and errors is always important, but especially so when creating visualizations! This says that it removed 2 rows of data, which may not seem like a big deal but you do not want your visualizations to be misleading. Especially when you start visualizing summary statistics (like means). If you look at your actual data though, you can verify that there are two penguins that do not have a measurement value for flipper length or bill length. So obviously without either or both of those, it cannot be included on the graph. In this case, this is okay, but it is important to always verify!
 
 ::: {.rmdtip}
-<p style="font-size:10pt"><u>**NOTE:**</u> *moving forward, for pedagogical purposes I am going to be hiding this warning message so the output from subsequent code is cleaner. However, those 2 rows are still being removed!*</p>
+<p style="font-size:10pt"><u>**NOTE:**</u> *moving forward, for pedagogical purposes this warning message will be hidden so the output from subsequent code is cleaner. However, those 2 rows are still being removed!*</p>
 :::
 
-Above, we mentioned how the goal of a visualization is to understand a relationship, or pattern, in our data. For every visualization we make, we are also going to provide a verbal description of the pattern we see (should one exist!) underneath. This will help develop an intuitive **graph literacy**. Being able to quickly and accurately interpret visualizations is an important skill, and one of the pillars of this course. 
+Above, it was noted that the goal of a visualization is to understand a relationship, or pattern, in your data. For every visualization you make, a verbal description of the pattern seen (should one exist!) will be provided underneath. This will help develop an intuitive **graph literacy**. Being able to quickly and accurately interpret visualizations is an important skill, and one of the pillars of this course. 
 
 ::: {.rmdimportant}
 <p style="font-size:10pt">*Things related to graph literacy and comprehension will appear in boxes like this moving forward!*</p>
 
-In the visualization we can see that, generally speaking, penguins with greater flipper length tend to have greater bill length as well. There seems to be a positive linear relationship between bill length and flipper length such that, as flipper length increases, bill length increases in turn.
+In the visualization it can be seen that, generally speaking, penguins with greater flipper length tend to have greater bill length as well. There seems to be a positive linear relationship between bill length and flipper length such that, as flipper length increases, bill length increases in turn.
 :::
 
-<p class="text-info"> **<u>Note:</u> We have to use a lot of tentative language and include many qualifiers here. We have not done any formal statistical analyses to state any relationship or effect definitively.**</p>
+<p class="text-info"> **<u>Note:</u> You have to use a lot of tentative language and include many qualifiers here. No formal statistical analyses have been done to afford the ability to state any relationship or effect definitively.**</p>
 
 <div class="panel panel-success">
   <div class="panel-heading">**EXERCISE 2**</div>
@@ -178,20 +178,20 @@ In the visualization we can see that, generally speaking, penguins with greater 
 
 ## Color
 
-In looking at the graph created above, it kind of seems like there may be different groups or clusters of penguins in this data. Let's look into this further and consider what variables we have in our data.
+In looking at the graph created above, it kind of seems like there may be different groups or clusters of penguins in this data. When you notice a pattern like this, it is worth looking into further and considering what variables you have in our data that could be related.
 
-One way we can see the penguins grouped is with a cluster at the top and another at the bottom:
+One way the penguins seem to be grouped is with a cluster at the top and another at the bottom:
 
 <img src="Visualizations1_files/figure-html/unnamed-chunk-8-1.png" width="672" />
 
-This might correspond to the `sex` variable we have! Maybe it's the case that the bigger penguins were males, and the smaller ones were females?
+This might correspond to the `sex` variable in the dataset! Maybe it is the case that the bigger penguins were males, and the smaller ones were females?
 
 <img src="Visualizations1_files/figure-html/unnamed-chunk-9-1.png" width="672" />
 
-We could explore this idea if there was some way to visually indicate which of the observations on our graph were from male penguins and which were from female. Specifically, we want the *color* of the points to different based on the value for that observation's `sex`. So... let's just try to do that! One of the best parts about coding is, you can always just try to run some code and see what happens!
+This idea could be explored if there was some way to visually indicate which of the observations on the graph were from male penguins and which were from female. Specifically, you want the *color* of the points to different based on the value for that observation's `sex`. In fact... you can do just that! One of the best parts about coding is, you can always just try to run some code and see what happens!
 
 ::: {.rmdwarning}
-<p style="font-size:10pt">Let's declare this as a formal prediction. We'll specify two mutually exclusive alternatives that we *could* see.</p>
+<p style="font-size:10pt">It is often helpful to declare formal predictions. To do so, you specify two mutually exclusive alternatives that you *could* see when exploring some idea.</p>
 
 * "If it is the case that the differences in penguin size could be explained by what sex they are (e.g., bigger penguins were males and the smaller ones were females), then all the points in the cluster at the top would be one color and all the points in the cluster at the bottom would be a different color. If it is not the case that the differences in penguin size could be explained by what sex they are, the points in each of the two clusters would not have distinct colors."
 :::
@@ -207,7 +207,7 @@ penguins %>%
 
 <img src="Visualizations1_files/figure-html/unnamed-chunk-10-1.png" width="672" />
 
-Uh... okay. So, that didn't work. OH! I remember we said above that we use `aes()` to tell ggplot what variables from our data should be *mapped* to the aesthetics we want to render on our graph. We need to pass color as another argument to the aesthetics of the plot via `aes()`. 
+Uh... okay. So, that did not work. OH! Remember from above that `aes()` is used to tell ggplot what variables from the data should be *mapped* to the aesthetics you want to render on your graph? Color needs to be passed as another argument to the aesthetics of the plot via `aes()`. 
 
 
 ```r
@@ -220,13 +220,13 @@ penguins %>%
 
 <img src="Visualizations1_files/figure-html/unnamed-chunk-11-1.png" width="672" />
 
-> "Start by telling ggplot to use the `penguins` dataframe for our data, map flipper length to the y-axis and bill length to the x-axis. Represent each observation with a point, **and map sex to the color of each point.**"
+> "Start by telling ggplot to use the `penguins` dataframe for the data, map flipper length to the y-axis and bill length to the x-axis. Represent each observation with a point, **and map sex to the color of each point.**"
 
-That's more like it! This doesn't really look like what we thought it might though. It is consistent with our possible outcome, where sex does not explain the differences in penguin size. However, after looking at this more carefully, it actually kind of looks like there are 3 distinct clusters, not 2.
+That is more like it! This does not really look like what you may have thought it might though. It is consistent with the other possible outcome, where sex does not explain the differences in penguin size. However, after looking at this more carefully, it actually kind of looks like there are 3 distinct clusters, not 2.
 
 <img src="Visualizations1_files/figure-html/unnamed-chunk-12-1.png" width="672" />
 
-This might correspond to the `species` variable we have! Maybe it's the case that different penguin species differ in size? That actually makes a lot more sense. Let's try to test that now.
+This might correspond to the `species` variable in the dataset! Maybe it is the case that different penguin species differ in size? That actually makes a lot more sense. This idea can be tested as well!
 
 ::: {.rmdwarning}
 * "If it is the case that the differences in penguin size could be explained by what species they are, then all the points in each cluster would have distinct colors. If it is not the case that the differences in penguin size could be explained by what species they are, the points in each of the clusters would not have distinct colors."
@@ -243,13 +243,13 @@ penguins %>%
 
 <img src="Visualizations1_files/figure-html/unnamed-chunk-13-1.png" width="672" />
 
-> "Start by telling ggplot to use the `penguins` dataframe for our data, map flipper length to the y-axis and bill length to the x-axis. Represent each observation with a point, **and map *species* to the color of each point.**"
+> "Start by telling ggplot to use the `penguins` dataframe for the data, map flipper length to the y-axis and bill length to the x-axis. Represent each observation with a point, **and map *species* to the color of each point.**"
 
 ::: {.rmdimportant}
-In the visualization we can see that, generally speaking, penguins with greater flipper length tend to have greater bill length as well. There seems to be a positive linear relationship between bill length and flipper length such that, as flipper length increases, bill length increases in turn. **Additionally, penguins of the same species tend to have similar flipper and bill lengths, which are distinct from other species. Adelie penguins tend to have the shortest lengths, and Gentoo the longest. Chinstrap penguins seem to have shorter flippers but longer bills.**
+In the visualization it can be seen that, generally speaking, penguins with greater flipper length tend to have greater bill length as well. There seems to be a positive linear relationship between bill length and flipper length such that, as flipper length increases, bill length increases in turn. **Additionally, penguins of the same species tend to have similar flipper and bill lengths, which are distinct from other species. Adelie penguins tend to have the shortest lengths, and Gentoo the longest. Chinstrap penguins seem to have shorter flippers but longer bills.**
 :::
 
-Hot dang, looks like we might have found a promising explanation for how penguins differ in size! We would obviously need to do some kind of formal statistical analysis to know for sure, but visualizing our actual raw data in ways like this allow us to quickly get answers to different questions we may want to use our data to answer.
+Hot dang, looks like this could be a promising explanation for how penguins differ in size! There would obviously need to be some kind of formal statistical analysis to know for sure, but visualizing your raw data in ways like this allow you to quickly get insights into different questions you may want to use your data to answer.
 
 <div class="panel panel-success">
   <div class="panel-heading">**EXERCISE 3**</div>
@@ -259,9 +259,9 @@ Hot dang, looks like we might have found a promising explanation for how penguin
 
 ### Global vs Local Aesthetics
 
-When we first described our visualization, one of the things we noted was that, *"There seems to be a positive linear relationship between bill length and flipper length such that, as flipper length increases, bill length increases in turn."* Let's add on the line of best fit to actually see the linear relationship. We'll do this by using `geom_smooth()`. We'll set a few arguments within `geom_smooth()`, but you don't have to worry much about those.
+When first describing This visualization, one of the things noted was that, *"There seems to be a positive linear relationship between bill length and flipper length such that, as flipper length increases, bill length increases in turn."* It can be helpful to add the line of best fit to actually see this linear relationship. You can do this by using `geom_smooth()`. A few arguments need to be set within `geom_smooth()`, but you do not have to worry much about those.
 
-Let's copy/paste the code from above and add in our new `geom_smooth()` call. By doing so we should see the best fitting line for all of our data.
+The code from above will be copy/pasted and the new `geom_smooth()` call can be added directly to it. By doing so the best fitting line for all of the data will be displayed.
 
 
 ```r
@@ -275,11 +275,11 @@ penguins %>%
 
 <img src="Visualizations1_files/figure-html/unnamed-chunk-14-1.png" width="672" />
 
->"Start by telling ggplot to use the `penguins` dataframe for our data, map flipper length to the y-axis and bill length to the x-axis. Represent each observation with a point, and map *species* to the color of each point. **Add a line of best fit for our data.**"
+>"Start by telling ggplot to use the `penguins` dataframe for the data, map flipper length to the y-axis and bill length to the x-axis. Represent each observation with a point, and map *species* to the color of each point. **Add a line of best fit for the data.**"
 
-Hey, wait, that is not quite what we were expecting... Instead of there being one line for all of our data, it looks like there is a line for each species. What's happening here is highlighting the difference between a **<u>global</u>** aesthetic (those put in the `ggplot()` call and apply to ALL added parts of our graph) and a **<u>local</u>** aesthetic (those put in individual geoms and apply only to those individual ones).
+Hey, wait, that is not quite what was expected... Instead of there being one line for all of the data, it looks like there is a line for each species. What is happening here is highlighting the difference between a **<u>global</u>** aesthetic (those put in the `ggplot()` call and apply to ALL added parts of your graph) and a **<u>local</u>** aesthetic (those put in individual geoms and apply only to those individual ones).
 
-Let's move color into the `geom_point()`, because that is the only thing we want mapped to the values of `species` in our data.
+Color should be moved into the `geom_point()` call, because that is the only thing that should be mapped to the values of `species` in the data.
 
 
 ```r
@@ -292,7 +292,7 @@ penguins %>%
 
 <img src="Visualizations1_files/figure-html/unnamed-chunk-15-1.png" width="672" />
 
-Huzzah! We still have the points colored by species, but we just have the one line for all our data, as we originally intended. You will also notice that we didn't specify a `mapping=` in `geom_point()`, and we got rid of it in `ggplot()` as well! It actually is not necessary to specify that. Once you have the hang of things, you can leave that part out.
+Alright! The points are still colored by species, but there is just the one line for all the data, as was originally intended. You will also notice that a `mapping=` was not specified in `geom_point()`, and it was removed from the `ggplot()` as well! It actually is not necessary to specify that. Once you have the hang of things, you can leave that part out.
 
 <div class="panel panel-success">
   <div class="panel-heading">**EXERCISE 4**</div>
@@ -302,7 +302,7 @@ Huzzah! We still have the points colored by species, but we just have the one li
 
 ### Setting vs Mapping Aesthetics
 
-Above, to change the color of our points (and inadvertently our line of best fit), we specified the `color` argument in the `aes()` call to map the values to the `species` variable in our data. What if you didn't want to map something to a variable in your data? What if you just want to set the value of something yourself? You might think, "maybe we just take it out of the `mapping = aes()` part?" And you would be right, because you are smart! Let's go ahead and do that now and try to change all the points to orange, so they have a good contrast with the line.
+Above, to change the color of your points (and inadvertently our line of best fit), the `color` argument was specified in the `aes()` call to map the values to the `species` variable in the data. What if you did not want to map something to a variable in your data? What if you just want to set the value of something yourself? You might think, "maybe I just take it out of the `mapping = aes()` part?" And you would be right, because you are smart! Look at the example below that does just that to try and change all the points to orange (so they have a good contrast with the line).
 
 
 ```r
@@ -314,11 +314,11 @@ penguins %>%
 #> Error in layer(data = data, mapping = mapping, stat = stat, geom = GeomPoint, : object 'orange' not found
 ```
 
-Well, okay, this obviously is not right because we get an error:
+Well, okay, this obviously is not right because it results in an error:
 
 <p style="color:#A79BF0"> **Error in layer(data = data, mapping = mapping, stat = stat, geom = GeomPoint, : object 'orange' not found**</p>
 
-By writing `orange` like this, R thinks it is a variable in our `penguins` dataset that we piped in to ggplot! To tell R that this **is NOT** a variable/object that is defined, and instead just the color orange, you use quotes.
+By writing `orange` like this, R thinks it is a variable in the `penguins` dataset that was piped in to ggplot! To tell R that this **is NOT** a variable/object that is defined, and instead just the color orange, you use quotes.
 
 
 ```r
@@ -360,7 +360,7 @@ penguins %>%
 
 ### Setting Colors
 
-When setting a color, this can be done by name, as we did above, or by hexcode:
+When setting a color, this can be done by name, as was done above, or by hexcode:
 
 
 ```r
@@ -386,7 +386,7 @@ penguins %>%
 
 <img src="Visualizations1_files/figure-html/unnamed-chunk-21-1.png" width="672" />
 
-Notice that we just set the color to be equal to a simple logical test! This is still a mapped aesthetic, because it is based on values of a variable in your data.
+Notice that the color was just set to be equal to a simple logical test! This is still a mapped aesthetic, because it will be based on values of a variable in your data.
 
 <!-- You can also set colors by using palettes from different packages. We will talk more about this later, but one package we will use often is `viridis`. -->
 
@@ -401,31 +401,31 @@ Notice that we just set the color to be equal to a simple logical test! This is 
 
 <!-- >"Start by telling ggplot to use the `penguins` dataframe for our data, map flipper length to the y-axis and bill length to the x-axis. Represent each observation with a point, and map species to the color of each point. Add a line of best fit for our data, **and use the viridis color palette for our discrete mapped variable.**" -->
 
-You can find two good color guides [here](http://sape.inf.usi.ch/quick-reference/ggplot2/colour) and [here](http://www.cookbook-r.com/Graphs/Colors_(ggplot2)/#hexadecimal-color-code-chart). We will cover more on colors later.
+You can find two good color guides [here](http://sape.inf.usi.ch/quick-reference/ggplot2/colour) and [here](http://www.cookbook-r.com/Graphs/Colors_(ggplot2)/#hexadecimal-color-code-chart). More on colors will be covered in a later lesson.
 
 <div class="panel panel-success">
   <div class="panel-heading">**EXERCISE 5**</div>
   <div class="panel-body">Use R code to recreate the graphs below:
 <br>
-1. Make a visualization to investigate the relationship between bill length (on the y-axis) and bill depth (on the x-axis). 
+A. Make a visualization to investigate the relationship between bill length (on the y-axis) and bill depth (on the x-axis). 
 
 
 
 
-2. 
+B.
 
 <img src="Visualizations1_files/figure-html/unnamed-chunk-23-1.png" width="672" />
 
 
-3. Make a visualization to investigate the relationship between between body mass and flipper length. In doing so, make the geometric figure rendering the observations appear in blue.
+C. Make a visualization to investigate the relationship between between body mass and flipper length. In doing so, make the geometric figure rendering the observations appear in blue.
 
 
 
-4. 
+D.
 
 <img src="Visualizations1_files/figure-html/unnamed-chunk-25-1.png" width="672" />
 
-5. 
+E.
 
 <img src="Visualizations1_files/figure-html/unnamed-chunk-26-1.png" width="672" />
 </div></div>
@@ -434,7 +434,7 @@ You can find two good color guides [here](http://sape.inf.usi.ch/quick-reference
 
 ### Mapping
 
-Color is one of the aesthetics we can change, but there are many others too! Another one is shape. Like color, shape can be mapped to a variable in our data. In addition to changing the color of our points by `species`, let's change their shape too!
+Color is one of the aesthetics you can change, but there are many others too! Another one is shape. Like color, shape can be mapped to a variable in your data. In addition to changing the color of the points by `species`, the code below will change their shape too!
 
 
 ```r
@@ -448,9 +448,9 @@ penguins %>%
 
 <img src="Visualizations1_files/figure-html/unnamed-chunk-27-1.png" width="672" />
 
->"Start by telling ggplot to use the `penguins` dataframe for our data, map flipper length to the y-axis and bill length to the x-axis. Represent each observation with a point, and map species to the color of each point. Add a line of best fit for our data **and change the shape of each point to be mapped to species.**"
+>"Start by telling ggplot to use the `penguins` dataframe for the data, map flipper length to the y-axis and bill length to the x-axis. Represent each observation with a point, and map species to the color of each point. Add a line of best fit for the data **and change the shape of each point to be mapped to species.**"
 
-However, we don't have to map the same aesthetic. We could map the shape to a different aesthetic too! Let's try mapping it to `island` instead.
+However, you do not have to map the same aesthetic. The shape could be mapped to a different aesthetic too! Consider what happens when mapping it to `island` instead.
 
 
 ```r
@@ -464,7 +464,7 @@ penguins %>%
 
 <img src="Visualizations1_files/figure-html/unnamed-chunk-28-1.png" width="672" />
 
-You'll now notice instead of each coloring having one shape, when you mapped them to the same variable, now the colors can have multiple shapes! Mapping another variable to a different aesthetic visualizes even more data and patterns in our dataset! It can quickly become overwhelming and difficult to interpret though, so it is often best to try to just communicate one main relationship or pattern in your visualizations. For practice though, we can go nuts!
+You will now notice instead of each coloring having one shape, as when you mapped them to the same variable, now the colors can have multiple shapes! Mapping another variable to a different aesthetic visualizes even more data and patterns in your dataset! It can quickly become overwhelming and difficult to interpret though, so it is often best to try to just communicate one main relationship or pattern in your visualizations. For practice though, you can go nuts!
 
 ### Setting
 
@@ -477,7 +477,7 @@ or by name:
 ![](figures/ggplot_shapes_name.png){width=100%}
 <p style="font-size:8pt">Source: [ggplot documentation](https://ggplot2.tidyverse.org/articles/ggplot2-specs.html#point)</p>
 
-You will notice that for several shapes, there appear to be different versions. For example, there appears to be 3 different kinds of triangles. Let's compare the differences:
+You will notice that for several shapes, there appear to be different versions. For example, there appears to be 3 different kinds of triangles. Their differences are compared below:
 
 * 17 or 'triangle'
     + Solid color shape
@@ -554,7 +554,7 @@ This introduces another way to change colors in ggplot! When changing the color 
 
 ### Mapping
 
-So, it was actually kind of hard to see some of those shape differences, wasn't it? The points on our graph were just too small. It would be helpful if we could change the *size*. Wouldn't you know it, `size` happens to be another aesthetic! Let's look at an example of mapping size:
+So, it was actually kind of hard to see some of those shape differences, wasn't it? The points on the graph were just too small. It would be helpful if the *size* could be changed. Wouldn't you know it, `size` happens to be another aesthetic! Below is an example of mapping *size*:
 
 
 ```r
@@ -569,9 +569,9 @@ penguins %>%
 
 <img src="Visualizations1_files/figure-html/unnamed-chunk-35-1.png" width="672" />
 
->"Start by telling ggplot to use the `penguins` dataframe for our data, map flipper length to the y-axis and bill length to the x-axis. Represent each observation with a point, and map species to the color of each point. Add a line of best fit for our data, change the shape of each point to be mapped to species **and do the same with corresponding size changes.**"
+>"Start by telling ggplot to use the `penguins` dataframe for the data, map flipper length to the y-axis and bill length to the x-axis. Represent each observation with a point, and map species to the color of each point. Add a line of best fit for the data, change the shape of each point to be mapped to species **and do the same with corresponding size changes.**"
 
-Well, this looks pretty shitty, but it gets the point across! One other thing this does is demonstrate what we mean by saying, **"ggplot is additive/layered"**.`geom_smooth()` was the last geom added here. That means, quite literally, it is added *on top* of the graph rendered by the previous code. It gets put on top, which is why it runs over and covers up some of our observations. 
+Well, this looks pretty shitty, but it gets the point across! One other thing this does is demonstrate what is meant by saying, **"ggplot is additive/layered"**.`geom_smooth()` was the last geom added here. That means, quite literally, it is added *on top* of the graph rendered by the previous code. It gets put on top, which is why it runs over and covers up some of the observations. 
 
 Think about what the graph would look like if you were to have added the `geom_smooth()` first and `geom_point()` second, then click the button below to find out:
 
@@ -587,7 +587,7 @@ This concept is very important to keep in mind when creating your visualizations
 
 ### Setting
 
-Maybe instead of mapping this... you should just change the size yourself. Let's take one of the graphs from above and make the shapes a little bit larger.
+Maybe instead of mapping this... you should just change the size yourself. For example, you could take one of the graphs from above and make the shapes a little bit larger.
 
 
 ```r
@@ -602,7 +602,6 @@ penguins %>%
 ```
 
 <img src="Visualizations1_files/figure-html/unnamed-chunk-37-1.png" width="672" />
-
 
 Wow, okay, this shows the fill a lot better than before! You can actually do some pretty neat things by playing around with different size values. For example:
 
@@ -629,8 +628,6 @@ penguins %>%
 </div>
 <br>
 
-
-
 ## Alpha
 
 ### Mapping
@@ -651,13 +648,13 @@ penguins %>%
 
 <img src="Visualizations1_files/figure-html/unnamed-chunk-40-1.png" width="672" />
 
->"Start by telling ggplot to use the `penguins` dataframe for our data, map flipper length to the y-axis and bill length to the x-axis. Represent each observation with a point, and map species to the color of each point. Add a line of best fit for our data, change the shape of each point to be mapped to species, and do the same with corresponding size changes **and alpha changes.**"
+>"Start by telling ggplot to use the `penguins` dataframe for the data, map flipper length to the y-axis and bill length to the x-axis. Represent each observation with a point, and map species to the color of each point. Add a line of best fit for the data, change the shape of each point to be mapped to species, and do the same with corresponding size changes **and alpha changes.**"
 
 As you can see, using alpha as a mapped aesthetic is not particularly useful. There are few, if any, instances where you would want to do this.
 
 ### Setting
 
-More often, you'll want to set the alpha levels of different elements of your graphs yourself. Alpha values range from 0-1, with 0 being completely transparent and 1 being completely opaque.
+More often, you will want to set the alpha levels of different elements of your graphs yourself. Alpha values range from 0-1, with 0 being completely transparent and 1 being completely opaque.
 
 Compare the two graphs below and note their alpha levels:
 
@@ -700,13 +697,13 @@ This is even more clear when looking at an example from the built in `diamonds` 
 
 <img src="Visualizations1_files/figure-html/unnamed-chunk-44-1.png" width="672" />
 
-Even with a very low alpha (look how faint the points outside the center cluster are), you can see just how many observations are overlapping! We'll see better ways to visualize data like this later.
+Even with a very low alpha (look how faint the points outside the center cluster are), you can see just how many observations are overlapping! You will see better ways to visualize data like this later.
 
 <div class="panel panel-success">
   <div class="panel-heading">**EXERCISE 7**</div>
   <div class="panel-body">Update the main graph you have been working with throughout the exercises to make the observations more translucent. First try doing so by mapping it to `island`. Then, create another graph where you set the alpha yourself. Try to pick the value you think makes the graph most legible and effective.</div>
 </div>
 
-Citations:
+## References:
 
 Horst AM, Hill AP, Gorman KB (2020). palmerpenguins: Palmer Archipelago (Antarctica) penguin data. R package version 0.1.0. https://allisonhorst.github.io/palmerpenguins/

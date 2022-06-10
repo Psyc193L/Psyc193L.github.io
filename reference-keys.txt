@@ -30,7 +30,7 @@ r-tools
 base-r-vs-rstudio
 rstudio-tour
 customize-your-rstudio
-different-types-of-files
+file-types
 components-of-a-markdown-file
 resources
 r-coding-basics
@@ -62,7 +62,7 @@ literate-programming
 markdown
 syntax
 coding-best-practices
-develop-a-naming-convention
+naming-convention
 style-and-syntax
 spacing
 avoid-long-lines
@@ -82,7 +82,7 @@ creating-good-reprex
 reproducible
 minimal
 legible
-man-this-is-a-lot-of-work
+dude-this-is-a-lot-of-work
 data-importing-and-exporting
 importing
 csv-files
@@ -107,6 +107,7 @@ setting-1
 alpha
 mapping-2
 setting-2
+references-1
 different-geoms-and-when-to-use-them
 one-categorical
 bar
@@ -145,8 +146,6 @@ dodging
 stacking
 categorical-categorical
 cont-cat-cat
-add-another-aesthetic-to-any-cont-cat
-or-facet
 raster
 extras
 cont-cont-cat
@@ -188,7 +187,7 @@ grey-scale
 viridis
 colorspace
 color-and-design-resources
-references-1
+references-2
 control-flow
 ifelse-statements
 traditional
@@ -196,7 +195,7 @@ ifelse
 case_when
 loops
 tidy-data-and-tidyverse
-tidy-data
+Tidy-Data
 tidyverse
 investigating-data
 view-full
@@ -226,7 +225,7 @@ factors
 factor-conversion
 reorder-levels
 extras-1
-references-2
+references-3
 advanced-wrangling
 helper-functions
 starts_with
@@ -260,3 +259,22 @@ escaping-special-characters
 removing-multiple-strings-at-once
 removing-the-first-instance
 replace-parts-of-a-response
+data-transformation
+pivots
+pivot_longer
+pivot_wider
+relational-data
+bind_rows
+mutating-joins
+inner_join
+left_join
+right_join
+full_join
+join-summary
+set-operators
+union
+intersect
+setdiff
+summary-1
+extra-resources-4
+references-4

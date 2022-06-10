@@ -61,6 +61,7 @@
 <li><a class="" href="advanced-wrangling.html"><span class="header-section-number">14</span> Advanced Wrangling</a></li>
 <li><a class="" href="summarizing-data.html"><span class="header-section-number">15</span> Summarizing Data</a></li>
 <li><a class="" href="text-cleaning.html"><span class="header-section-number">16</span> Text Cleaning</a></li>
+<li><a class="" href="data-transformation.html"><span class="header-section-number">17</span> Data Transformation</a></li>
 </ul>
 
         <div class="book-extra">
@@ -72,9 +73,9 @@
 <h1>
 <span class="header-section-number">12</span> Tidy Data and Tidyverse<a class="anchor" aria-label="anchor" href="#tidy-data-and-tidyverse"><i class="fas fa-link"></i></a>
 </h1>
-<div id="tidy-data" class="section level2">
+<div id="Tidy-Data" class="section level2">
 <h2>
-<span class="header-section-number">12.1</span> Tidy Data<a class="anchor" aria-label="anchor" href="#tidy-data"><i class="fas fa-link"></i></a>
+<span class="header-section-number">12.1</span> Tidy Data<a class="anchor" aria-label="anchor" href="#Tidy-Data"><i class="fas fa-link"></i></a>
 </h2>
 <p>You can represent the same data in many different ways. In almost all cases, the best way to do so is to make sure your data is <strong>tidy</strong>. In tidy data, each row corresponds to a unique observation, each column is a variable, and each cell contains the value for a particular observation and variable.</p>
 <p>The series of illustrations below helps explain the concept of tidy data and why it is useful!</p>
@@ -98,11 +99,11 @@ Illustrations from the Openscapes blog Tidy Data for reproducibility, efficiency
 <h2>
 <span class="header-section-number">12.2</span> Tidyverse<a class="anchor" aria-label="anchor" href="#tidyverse"><i class="fas fa-link"></i></a>
 </h2>
-<p><code>tidyverse</code> is a collection of packages that all “share an underlying design philosophy, grammar, and data structure” of tidy data. The <code>tidyverse</code> packages and functions are the tools you will use to fill your R workbench, and they will help with every step of your workflow.</p>
+<p>tidyverse is a collection of packages that all “share an underlying design philosophy, grammar, and data structure” of tidy data. The tidyverse packages and functions are the tools you will use to fill your R workbench, and they will help with every step of your workflow.</p>
 <img src="figures/environmental-data-science-r4ds-general.png" style="width:100.0%"><p style="font-size:6pt">
 Updated from Grolemund &amp; Wickham’s classis R4DS schematic, envisioned by Dr. Julia Lowndes for her 2019 useR! keynote talk and illustrated by Allison Horst.
 </p>
-<p>This illustrates the Social/Data Science workflow that the <code>tidyverse</code> suite of packages are designed to help you accomplish:</p>
+<p>This illustrates the Social/Data Science workflow that the tidyverse suite of packages are designed to help you accomplish:</p>
 <ul>
 <li><p><strong>Import</strong> – get data into R</p></li>
 <li><p><strong>Tidy</strong> – clean and format the data</p></li>
@@ -151,7 +152,7 @@ Artwork by <span class="citation">Horst (2022)</span>
 <span class="co">#&gt; $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 20…</span></code></pre></div>
 <p>From this one function alone, you can learn a lot about your data:</p>
 <ol style="list-style-type: decimal">
-<li><p>The names of the variables (columns), which we also could have gotten with <code><a href="https://rdrr.io/r/base/names.html">names()</a></code>.</p></li>
+<li><p>The names of the variables (columns), which you also can get with <code><a href="https://rdrr.io/r/base/names.html">names()</a></code>.</p></li>
 <li><p>The number of observations (rows, 344) and variables (columns, 8). You can also get this information with the <code><a href="https://rdrr.io/r/base/nrow.html">nrow()</a></code> and <code><a href="https://rdrr.io/r/base/nrow.html">ncol()</a></code> functions.</p></li>
 <li><p>These variables are saved as either “fct” (factors), “dbl” (double-precision), or “int” (integers).</p></li>
 </ol>
@@ -232,7 +233,7 @@ Artwork by <span class="citation">Horst (2022)</span>
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
 <li><a class="nav-link" href="#tidy-data-and-tidyverse"><span class="header-section-number">12</span> Tidy Data and Tidyverse</a></li>
-<li><a class="nav-link" href="#tidy-data"><span class="header-section-number">12.1</span> Tidy Data</a></li>
+<li><a class="nav-link" href="#Tidy-Data"><span class="header-section-number">12.1</span> Tidy Data</a></li>
 <li><a class="nav-link" href="#tidyverse"><span class="header-section-number">12.2</span> Tidyverse</a></li>
 <li>
 <a class="nav-link" href="#investigating-data"><span class="header-section-number">12.3</span> Investigating Data</a><ul class="nav navbar-nav">
@@ -258,7 +259,7 @@ Artwork by <span class="citation">Horst (2022)</span>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>PSYC193L</strong>" was written by Ethan Hurwitz. It was last built on 2022-06-06.</p>
+    <p>"<strong>PSYC193L</strong>" was written by Ethan Hurwitz. It was last built on 2022-06-10.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

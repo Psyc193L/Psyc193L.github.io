@@ -10,7 +10,7 @@ library(palmerpenguins) # Load penguins data
 
 
 
-<a href="Exercise_Manip4.Rmd" download>Exercise Sheet</a>
+<a href="exercises/Exercise_Manip4.Rmd" download>Exercise Sheet</a>
 
 Once you have wrangled and subset your data, you may want to compute summary information about that data. There are several quick and flexible ways to do so!
 

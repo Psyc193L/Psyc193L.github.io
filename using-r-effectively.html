@@ -61,6 +61,7 @@
 <li><a class="" href="advanced-wrangling.html"><span class="header-section-number">14</span> Advanced Wrangling</a></li>
 <li><a class="" href="summarizing-data.html"><span class="header-section-number">15</span> Summarizing Data</a></li>
 <li><a class="" href="text-cleaning.html"><span class="header-section-number">16</span> Text Cleaning</a></li>
+<li><a class="" href="data-transformation.html"><span class="header-section-number">17</span> Data Transformation</a></li>
 </ul>
 
         <div class="book-extra">
@@ -72,13 +73,13 @@
 <h1>
 <span class="header-section-number">4</span> Using R Effectively<a class="anchor" aria-label="anchor" href="#using-r-effectively"><i class="fas fa-link"></i></a>
 </h1>
-<p><a href="Exercise2.Rmd" download>Exercise Sheet</a></p>
-<p>There are many things you can do to set yourself up for success and make your life easier (both now and in the future). It is really important to start implementing these good practices ASAP to establish good habits early on. It is much harder to break routines later. We are going to cover both coding best practices in general as well as some things specific to R and RStudio.</p>
-<p>I’ll remind you all of the quote mentioned previously:</p>
+<p><a href="exercises/Exercise2.Rmd" download>Exercise Sheet</a></p>
+<p>There are many things you can do to set yourself up for success and make your life easier (both now and in the future). It is really important to start implementing these good practices ASAP to establish good habits early on. It is much harder to break routines later. Both coding best practices in general as well as some things specific to R and RStudio will be covered below.</p>
+<p>Remember the quote mentioned previously:</p>
 <blockquote>
 <p><strong>You are always working with at least one collaborator: Future you."<br>-Hadley Wickham</strong></p>
 </blockquote>
-<p>Even if for selfish purposes only, and we ignore how this could impact anyone else, help future you. Don’t put future you in a position where they are mad at current you!</p>
+<p>Even if for selfish purposes only, and you ignore how this could impact anyone else, help future you. Do not put future you in a position where they are mad at present you!</p>
 <div id="rstudio" class="section level2">
 <h2>
 <span class="header-section-number">4.1</span> RStudio<a class="anchor" aria-label="anchor" href="#rstudio"><i class="fas fa-link"></i></a>
@@ -87,7 +88,7 @@
 <h3>
 <span class="header-section-number">4.1.1</span> Settings<a class="anchor" aria-label="anchor" href="#settings"><i class="fas fa-link"></i></a>
 </h3>
-<p>There are a number of settings tweaks that you’ll want to make to help force you into some good habits.</p>
+<p>There are a number of settings tweaks that you will want to make to help force you into some good habits.</p>
 <div class="inline-figure"><img src="figures/RStudio-settings1.png" style="width:100.0%"></div>
 <ul>
 <li>“Restore .RData into workspace at startup” is <u><em>unselected</em></u>
@@ -101,10 +102,10 @@
 </ul>
 </li>
 </ul>
-<p>These basically just make it so that variables and other saved data floating around in your global environment get preserved and automatically loaded if R closes. This can create an over-reliance on things that just exist locally in your files. This is very much contra to our whole aim and benefit of reproducibility by using R! You should always be able to easily re-run your code and get anything you need.</p>
-<p>It can also cause weird behavior in between your R sessions because some things may still be saved in your workspace and you don’t realize it.</p>
-<p>It is thus best practice to not feel attached at all to the stuff in your workspace. If you need something, rerun your code to get it! If you have things that you think would be hard to replicate, that’s a problem you need to fix!</p>
-<p>Particularly because most of the time you can’t predict when things will go wrong…</p>
+<p>These basically just make it so that variables and other saved data floating around in your global environment get preserved and automatically loaded if R closes. This can create an over-reliance on things that just exist locally in your files. This is very much contra to the whole aim and benefit of reproducibility by using R! You should always be able to easily re-run your code and get anything you need.</p>
+<p>It can also cause weird behavior in between your R sessions because some things may still be saved in your workspace and you do not realize it.</p>
+<p>It is thus best practice to not feel attached at all to the stuff in your workspace. If you need something, rerun your code to get it! If you have things that you think would be hard to replicate, that is a problem you need to fix!</p>
+<p>Particularly because most of the time you cannot predict when things will go wrong…</p>
 <img src="figures/planForCompFailure.jpeg" style="width:100.0%"><p style="font-size:6pt">
 Artwork by <span class="citation">Horst (2022)</span>
 </p>
@@ -119,7 +120,7 @@ Artwork by <span class="citation">Horst (2022)</span>
 <ul>
 <li>“Soft-wrap R source files” is <em>selected</em>
 <ul>
-<li>This will just make some of your written code easier to read, so you won’t have to scroll horizontally. This only impacts working in RStudio, not your outputs!</li>
+<li>This will just make some of your written code easier to read, so you will not have to scroll horizontally. This only impacts working in RStudio, not your outputs!</li>
 </ul>
 </li>
 </ul>
@@ -130,7 +131,7 @@ Artwork by <span class="citation">Horst (2022)</span>
 <h2>
 <span class="header-section-number">4.2</span> R Projects<a class="anchor" aria-label="anchor" href="#r-projects"><i class="fas fa-link"></i></a>
 </h2>
-<p>Something that I strongly encourage doing is creating a new R Project for every project you work on. There is a really great tutorial on R projects <a href="https://alexd106.github.io/intro2R/project_setup.html">here</a>. Rather than reinvent the wheel, I’ll just summarize and highlight a few key pieces of information.</p>
+<p>Something that is strongly encouraged is creating a new R Project for every project you work on. There is a really great tutorial on R projects <a href="https://alexd106.github.io/intro2R/project_setup.html">here</a>. The section below will highlight and summarize a few key pieces of information from it.</p>
 <div id="why-use-them" class="section level3">
 <h3>
 <span class="header-section-number">4.2.1</span> Why use them?<a class="anchor" aria-label="anchor" href="#why-use-them"><i class="fas fa-link"></i></a>
@@ -169,20 +170,20 @@ Decide where you want your R and class files to live on your computer. Create a 
 <h3>
 <span class="header-section-number">4.2.4</span> File Paths<a class="anchor" aria-label="anchor" href="#file-paths"><i class="fas fa-link"></i></a>
 </h3>
-<p>A file’s path specifies where that file is located. It is like a map for your computer, giving it instructions on where to go to look for that specific file. When you download a file (let’s call it <strong>“dataset.csv”</strong>), it likely would appear in your downloads folder. Thus, the full file specification would be:</p>
-<p>For mac: <code>/users/userName/Downloads/dataset.csv</code></p>
-<p>For windows: <code>C:\Users\userName\Downloads\dataset.csv</code></p>
-<p>Replacing “userName” with whatever the user name on your machine is.</p>
+<p>A file’s path specifies where that file is located. It is like a map for your computer, giving it instructions on where to go to look for that specific file. When you download a file (e.g., <strong>“dataset.csv”</strong>), it likely would appear in your downloads folder. Thus, the full file specification would be:</p>
+<p>For mac: <code>/users/user_name/Downloads/dataset.csv</code></p>
+<p>For windows: <code>C:\Users\user_name\Downloads\dataset.csv</code></p>
+<p>(Replacing “user_name” with whatever the user name on your machine is)</p>
 <p>A file path is constructed by 2 parts:</p>
 <ol style="list-style-type: decimal">
-<li>the file location: <code>/users/userName/Downloads/</code> or <code>C:\Users\userName\Downloads\</code>
+<li>the file location: <code>/users/user_name/Downloads/</code> or <code>C:\Users\user_name\Downloads\</code>
 </li>
 <li>the file name: <code>dataset.csv</code>
 </li>
 </ol>
-<p>You don’t have to specify the full file path if you change R’s current <em>working directory</em>. Setting your working directory is basically telling R, “I’m going to be working in this specific place. So if you need to look for any files, they will be <strong>here</strong>. Also, if you create any files, create them <strong>here</strong>.”</p>
-<p>This can cause some issues though. If a file path tells your computer where to look for a file, and I set it to a folder in a specific place on my computer, then that code wouldn’t work if you tried to run it. Your computer couldn’t access mine, and likely has a totally different file structure!</p>
-<p>One of the best features of RStudio Projects is that it helps solve this issue! Instead of using <strong>absolute</strong> file paths like this (where it is fully specified), it let’s you use <strong>relative</strong> file paths. In a <strong>relative</strong> file path, all file paths are <em>relative</em> to a particular directory. When you use an RStudio Project, upon opening a <strong>.Rproj</strong> file, it will automatically set your working directory to the location of that file! This way, if you want to share your project and analysis files with someone else, you just save and send the entire project directory. When they open it on their computer, the relative path will be appropriately set!</p>
+<p>You do not have to specify the full file path if you change R’s current <em>working directory</em>. Setting your working directory is basically telling R, “I’m going to be working in this specific place. So if you need to look for any files, they will be <strong>here</strong>. Also, if you create any files, create them <strong>here</strong>.”</p>
+<p>This can cause some issues though. If a file path tells your computer where to look for a file, and you set it to a folder in a specific place on your computer, then that code would not work if someone else tried to run it. Their computer could not access yours, and likely has a totally different file structure!</p>
+<p>One of the best features of RStudio Projects is that it helps solve this issue! Instead of using <strong>absolute</strong> file paths like this (where it is fully specified), it will let you use <strong>relative</strong> file paths. In a <strong>relative</strong> file path, all file paths are <em>relative</em> to a particular directory. When you use an RStudio Project, upon opening a <strong>.Rproj</strong> file, it will automatically set your working directory to the location of that file! This way, if you want to share your project and analysis files with someone else, you just save and send the entire project directory. When they open it on their computer, the relative path will be appropriately set!</p>
 <div id="here" class="section level4">
 <h4>
 <span class="header-section-number">4.2.4.1</span> Here()<a class="anchor" aria-label="anchor" href="#here"><i class="fas fa-link"></i></a>
@@ -192,10 +193,10 @@ Decide where you want your R and class files to live on your computer. Create a 
 Artwork by <span class="citation">Horst (2022)</span>
 </p>
 <p>The functions within the <code>here</code> package create paths relative to the top-level directory (aka the <strong>root</strong>). The top-level of the current project can be printed any time you call <code>here()</code>. For example, when I run <code>here()</code>, it will print out: <code>"/Users/ethan/Documents/Psyc193L"</code>, because my R Project folder is called <strong>“Psyc193L”</strong> and it’s in my <strong>Documents</strong> folder.</p>
-<p>You can also easily build a path relative to the top-level directory! Let’s say we made a “data” folder in our R Project directory (we’ll talk more about directory organization later), and put <strong>“dataset.csv”</strong> in there. We can use <code>here()</code> to get full relative file path like so:</p>
+<p>You can also easily build a path relative to the top-level directory! Say for example that you made a “data” folder in your R Project directory (more about directory organization later), and put <strong>“dataset.csv”</strong> in there. You can use <code>here()</code> to get full relative file path like so:</p>
 <p><code>here("data", "dataset.csv")</code></p>
 <p>The output from this would be, <code>"/Users/ethan/Documents/Psyc193L/data/dataset.csv"</code></p>
-<p>These relative paths work regardless of where the associated file lives inside your project directory, and will work for anyone who downloads your project and runs that code on their own computer!!</p>
+<p>These relative paths work regardless of where the associated file lives inside your project directory, and will work for anyone who downloads your project and runs that code on their own computer!</p>
 <div class="panel panel-success">
 <div class="panel-heading">
 <strong>EXERCISE #2</strong>
@@ -210,7 +211,7 @@ Use <code>here()</code> to find the file path to your R Project and copy/paste i
 <h3>
 <span class="header-section-number">4.2.5</span> Introduction File<a class="anchor" aria-label="anchor" href="#introduction-file"><i class="fas fa-link"></i></a>
 </h3>
-<p>It’s also a good practice to create a specific introduction file in the root of each project. Explain how to navigate the directory, where everything is, a synopsis of what the project/assignment is about, any of the materials needed to run the code you have, etc. Future you will thank you for doing this!</p>
+<p>It is also a good practice to create a specific introduction file in the root of each project. Explain how to navigate the directory, where everything is, a synopsis of what the project/assignment is about, any of the materials needed to run the code you have, etc. Future you will thank you for doing this!</p>
 </div>
 <div id="tldr" class="section level3">
 <h3>
@@ -235,7 +236,7 @@ Use <code>here()</code> to find the file path to your R Project and copy/paste i
 <h2>
 <span class="header-section-number">4.3</span> Literate Programming<a class="anchor" aria-label="anchor" href="#literate-programming"><i class="fas fa-link"></i></a>
 </h2>
-<p>Given our goals of reproducibility, one of the best things we can do is make sure our code is easy to understand and replicate. To do this, we will establish the routine of <strong>literate programming</strong>.</p>
+<p>Given the goals of reproducibility, one of the best things you can do is make sure your code is easy to understand and replicate. To do this, you should establish the routine of <strong>literate programming</strong>.</p>
 <p>Literate programming was originally proposed by Donald Knuth in 1984.</p>
 <blockquote>
 <p>“Let us change our traditional attitude to the construction of programs: Instead of imagining that our main task is to instruct a computer what to do, let us concentrate rather on explaining to humans what we want the computer to do.”<br>
@@ -246,40 +247,40 @@ Use <code>here()</code> to find the file path to your R Project and copy/paste i
 <h3>
 <span class="header-section-number">4.3.1</span> Markdown<a class="anchor" aria-label="anchor" href="#markdown"><i class="fas fa-link"></i></a>
 </h3>
-<p>When we talked briefly before about how the different types of R files, we introduced markdown files. These are what we will mainly be using. Not only do they allow the combination of R code and text, but they also incorporate markdown syntax (which you can think of as it’s own mini language), HTML, and CSS! Thus, markdown files afford a powerful combination of languages to help create literate programming documents with easy to understand and reproduce analyses.</p>
-<p>However, the true power comes from the ability to take markdown files and generate many different kinds of documents. When combined with some other packages (e.g., <code>knitr</code>), Markdown files can be turned into:</p>
+<p>R Markdown files were <a href="why-use-r.html#file-types">previously</a> introduced as the type of file you will mainly be using.Not only do they allow the combination of R code and text, but they also incorporate markdown syntax (which you can think of as its own mini language), HTML, and CSS! Thus, R Markdown files afford a powerful combination of languages to help create literate programming documents with easy to understand and reproduce analyses.</p>
+<p>However, the true power comes from the ability to take markdown files and generate many different kinds of documents. When combined with some other packages (e.g., <code>knitr</code>), R Markdown files can be turned into:</p>
 <ul>
 <li>PDFs</li>
 <li>Microsoft Word documents</li>
 <li>Slideshows (like powerpoint or keynote)</li>
 <li>Web pages</li>
 </ul>
-<p>In fact, this course website, all the course content, my personal website (and all parts of it), are all created in RStudio and written with a lot of R and Markdown!</p>
+<p>In fact, this course website, all the course content, my personal website (and all parts of it), are all created in RStudio and written in a lot of R Markdown files!</p>
 <div id="syntax" class="section level4">
 <h4>
 <span class="header-section-number">4.3.1.1</span> Syntax<a class="anchor" aria-label="anchor" href="#syntax"><i class="fas fa-link"></i></a>
 </h4>
-<p>We won’t go too in depth about Markdown syntax, that could be a whole course on its own! Here are a couple fundamental things though:</p>
-<p>You can insert code chunks with the keyboard shortcut: ctrl+option/alt+i</p>
+<p>R Markdown syntax could be a whole course on its own, but there are a couple fundamental things worth knowing:</p>
+<p>You can insert code chunks with the keyboard shortcut: ctrl+option+i on OSX or alt+i on Windows</p>
 <div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co">## R code here</span></code></pre></div>
 <p>You should always name your chunks (part of literate programming), and there are a number of options you can set for them (that are chunk specific). Some include:</p>
 <ul>
 <li>Figure height and width</li>
-<li>Whether to <strong>echo</strong> (show) or <strong>eval</strong>uate (run) that code chunk in the final document (debugging tip! If you have a problem code chunk, set eval = FALSE so you can still knit, but leave yourself a note to fix it later!)</li>
+<li>Whether to <strong>echo</strong> (show) or <strong>eval</strong>uate (run) that code chunk in the final document (debugging tip! If you have a problem code chunk, set eval = <code>FALSE</code> so you can still knit, but leave yourself a note to fix it later!)</li>
 <li>Whether to show <strong>warnings</strong> and <strong>messages</strong>
 </li>
 </ul>
 <p>You can see the full list of options <a href="yihui.name/knitr/options/">here</a>.</p>
-<p>You can also write R code inline, or, without a chunk. You can do this by writing a set of backtics, r (lowercase) after the first, then a space and then your code. For example:</p>
+<p>You can also write R code inline, or, without a chunk. You can do this by writing a set of backticks, r (lowercase) after the first, then a space and then your code. For example:</p>
 <p>The mean is <code>`r mean(x)`</code>.</p>
-<p>When this document is generated, the R code will be evaluated and it will look as though I wrote, “The mean is 14.” (or whatever the mean of <code>x</code> happens to be)!</p>
+<p>When this document is generated, the R code will be evaluated and it will look as though “The mean is 14.” (or whatever the mean of <code>x</code> happens to be) was written!</p>
 <div class="panel panel-success">
 <div class="panel-heading">
 <strong>EXERCISE #3</strong>
 </div>
 <div class="panel-body">
-Create a new code chunk in your Markdown file. Name the code chunk “exercise 3”, and copy/paste your file path from above.
+Create a new code chunk in your R Markdown file. Name the code chunk “exercise 3”, and copy/paste your file path from above.
 </div>
 </div>
 </div>
@@ -289,17 +290,17 @@ Create a new code chunk in your Markdown file. Name the code chunk “exercise 3
 <h2>
 <span class="header-section-number">4.4</span> Coding Best Practices<a class="anchor" aria-label="anchor" href="#coding-best-practices"><i class="fas fa-link"></i></a>
 </h2>
-<p>There are many best practices that are good to incorporate in your coding. I’m going to highlight some of the main ones here, but include a list of many others at the bottom (that for time purposes we won’t cover extensively).</p>
-<div id="develop-a-naming-convention" class="section level3">
+<p>There are many best practices that are good to incorporate in your coding. Several of the main ones will be highlighted here, but a list of many others is included at the bottom.</p>
+<div id="naming-convention" class="section level3">
 <h3>
-<span class="header-section-number">4.4.1</span> Develop a Naming Convention<a class="anchor" aria-label="anchor" href="#develop-a-naming-convention"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.4.1</span> Develop a Naming Convention<a class="anchor" aria-label="anchor" href="#naming-convention"><i class="fas fa-link"></i></a>
 </h3>
 <p>One important thing to do initially is develop a naming convention. This is important both for objects AND your files.</p>
-<p>Object names must start with a letter, and can only contain letters, numbers, <code>_</code> and <code>.</code>. File names require the same, but can also use <code>-</code>. However, you should avoid using <code>.</code> for both, and you should <strong>never</strong> use spaces! You want your names to be descriptive, so you’ll need a convention for multiple words.</p>
+<p>Object names must start with a letter, and can only contain letters, numbers, <code>_</code> and <code>.</code>. File names require the same, but can also use <code>-</code>. However, you should avoid using <code>.</code> for both, and you should <strong>never</strong> use spaces! You want your names to be descriptive, so you will need a convention for multiple words.</p>
 <img src="figures/coding_cases.png" style="width:100.0%"><p style="font-size:6pt">
 Artwork by <span class="citation">Horst (2022)</span>
 </p>
-<p>I use camelCase, where the first word is not capitalized and the first letter of each subsequent word is. It is technically the most efficient in terms of keystrokes, but you can run into some issues when using acronyms or singular letters (e.g., "RStudio technically breaks this rule). I have seen more people recommending snake_case and arguing against the use of capital letters. So I would generally only recommend camelCase or snake_case.</p>
+<p>camelCase, where the first word is not capitalized and the first letter of each subsequent word is, is technically the most efficient in terms of keystrokes. You can run into some issues when using acronyms or singular letters (e.g., "RStudio technically breaks this rule) though. More people have recently been recommending snake_case and arguing against the use of capital letters at all. Generally, only camelCase or snake_case are recommended.</p>
 <p>You want to use names that are concise, unique, and meaningful (this is difficult!), avoiding terms that will be commonly repeated. This is also the case for your variable (column) and factor names as well. However, it IS helpful to develop a relatively consistent way of naming things for yourself. This helps make it easier to work with different projects (especially after some time). For example:</p>
 <ul>
 <li>
@@ -346,7 +347,7 @@ First, decide on a coding convention to use. Then, create a new code chunk named
 
 <span class="va">x</span> <span class="op">=</span> <span class="fl">2</span> <span class="op">+</span> <span class="fl">4</span></code></pre></div>
 <ul>
-<li>Always put a space after a comma, never before, just like in regular English</li>
+<li>Always put a space after a comma, never before, just like in regular English:</li>
 </ul>
 <div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Good</span>
@@ -357,7 +358,7 @@ First, decide on a coding convention to use. Then, create a new code chunk named
 <span class="va">df</span><span class="op">[</span> ,<span class="fl">1</span><span class="op">]</span>
 <span class="va">df</span><span class="op">[</span> , <span class="fl">1</span><span class="op">]</span></code></pre></div>
 <ul>
-<li>Do not put spaces inside or outside parentheses</li>
+<li>Do not put spaces inside or outside parentheses:</li>
 </ul>
 <div class="sourceCode" id="cb24"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Good</span>
@@ -367,7 +368,7 @@ First, decide on a coding convention to use. Then, create a new code chunk named
 <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span> <span class="op">(</span><span class="va">x</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span> <span class="va">x</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span> <span class="op">)</span></code></pre></div>
 <ul>
-<li>Place a space after () used for function arguments:</li>
+<li>Place a space after () (used for function arguments):</li>
 </ul>
 <div class="sourceCode" id="cb25"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Good</span>
@@ -390,7 +391,7 @@ First, decide on a coding convention to use. Then, create a new code chunk named
 <h4>
 <span class="header-section-number">4.4.2.2</span> Avoid Long Lines<a class="anchor" aria-label="anchor" href="#avoid-long-lines"><i class="fas fa-link"></i></a>
 </h4>
-<p>Avoid writing code that takes up a lot of space horizontally. Use strategically placed line breaks and indentations, particularly after each argument/chunk of your code. You can use the keyboard shortcut ctrl+i to get R to automatically indent appropriately for you line-by-line!</p>
+<p>Avoid writing code that takes up a lot of space horizontally. Use strategically placed line breaks and indentations, particularly after each argument/chunk of your code. You can use the keyboard shortcut cmd+i on OSX or ctrl+i on Windows to get R to automatically indent appropriately for you line-by-line!</p>
 <div class="sourceCode" id="cb27"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Good</span>
 <span class="fu">do_something_very_complicated</span><span class="op">(</span>
@@ -413,7 +414,7 @@ First, decide on a coding convention to use. Then, create a new code chunk named
 <li><p>Use <code>TRUE</code> and <code>FALSE</code> over <code>T</code> and <code>F</code></p></li>
 <li><p>Each line of a comment should begin with the comment symbol and a single space:
 <code>#</code></p></li>
-<li><p>Index and columns and subset rows by names or filtering, not numbers. Their order/position may change. Their name likely will not.</p></li>
+<li><p>Index columns and subset rows by names or filtering, not numbers. Their order/position may change. Their name likely will not.</p></li>
 <li><p>Pass named arguments into functions, not place.</p></li>
 <li><p>DO NOT hardcode. Always softcode. It saves you from having to constantly update different sections of your code any time there is a change.</p></li>
 </ul>
@@ -431,24 +432,24 @@ Clean up all the code below so that it follows the proper formatting guidelines 
 <h3>
 <span class="header-section-number">4.4.3</span> Document Organization<a class="anchor" aria-label="anchor" href="#document-organization"><i class="fas fa-link"></i></a>
 </h3>
-<p>You want to organize your files and directory structure in a way that is easy to navigate. You may come back to files months or years later, and you want to make sure you’ll understand what you were doing and what files are where. Not to mention if you make your project files open and accessible to the public!</p>
+<p>You want to organize your files and directory structure in a way that is easy to navigate. You may come back to files months or years later, and you want to make sure you will understand what you were doing and what files are where. Not to mention if you make your project files open and accessible to the public!</p>
 <p>Some things that can help with this include:</p>
 <ul>
 <li><p>Separate your data cleaning and analysis codes. R Markdown files are helpful for this because you can abide by the separation of concerns principle and label your code sections.</p></li>
 <li><p>Make text files for data if needed – describing where it came from, coding the variables if needed, etc.</p></li>
 <li><p><strong>Never</strong> mess with your raw data (and keep backups). Try to touch it directly as little as possible.</p></li>
-<li><p>Use version control. Version control are systems that save changes as separate files. Using a system like git is helpful, and prevents you from having tons and tons of older versions of files on your computer. We won’t cover github in class (though maybe we will), but there are many resources.</p></li>
+<li><p>Use version control. Version control are systems that save changes as separate files. Using a system like git is helpful, and prevents you from having tons and tons of older versions of files on your computer.</p></li>
 </ul>
 <p>As far as your markdown files themselves…</p>
 <ul>
-<li>All the needed packages are loaded at the top of your document</li>
-<li>No package installations called/executed in your Rmd</li>
-<li>No warnings/messages printed when you load packages (turn on the options to hide these)</li>
-<li>Use of markdown formatting to make your doc easier to follow</li>
-<li>Relative file paths only using the <code>here</code> package</li>
-<li>No chunks with errors!</li>
+<li>All the needed packages should be loaded at the top of your document</li>
+<li>No package installations should be called/executed</li>
+<li>No warnings/messages should be printed when you load packages (turn on the options to hide these)</li>
+<li>Markdown formatting should be used to make your file easier to follow</li>
+<li>You should use relative file paths only, making use of the <code>here</code> package</li>
+<li>There should be no code chunks with errors!</li>
 <li>
-<strong>NEVER EVER</strong> printing out an entire dataset to screen (&gt; 10 rows). This is never necessary.</li>
+<strong>NEVER EVER</strong> print out an entire dataset (&gt; 10 rows). This is <em>never</em> necessary.</li>
 <li>It is good to have a high text-to-code ratio!</li>
 </ul>
 </div>
@@ -488,7 +489,7 @@ Artwork by <span class="citation">Horst (2022)</span>
 </li>
 <li>
 <a class="nav-link" href="#coding-best-practices"><span class="header-section-number">4.4</span> Coding Best Practices</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#develop-a-naming-convention"><span class="header-section-number">4.4.1</span> Develop a Naming Convention</a></li>
+<li><a class="nav-link" href="#naming-convention"><span class="header-section-number">4.4.1</span> Develop a Naming Convention</a></li>
 <li><a class="nav-link" href="#style-and-syntax"><span class="header-section-number">4.4.2</span> Style and Syntax</a></li>
 <li><a class="nav-link" href="#document-organization"><span class="header-section-number">4.4.3</span> Document Organization</a></li>
 <li><a class="nav-link" href="#visual-summary"><span class="header-section-number">4.4.4</span> Visual Summary</a></li>
@@ -511,7 +512,7 @@ Artwork by <span class="citation">Horst (2022)</span>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>PSYC193L</strong>" was written by Ethan Hurwitz. It was last built on 2022-06-06.</p>
+    <p>"<strong>PSYC193L</strong>" was written by Ethan Hurwitz. It was last built on 2022-06-10.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

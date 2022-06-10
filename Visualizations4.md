@@ -44,13 +44,14 @@ theme_set(theme_classic() +
 
 
 
-<a href="Exercise_Viz4.Rmd" download>Exercise Sheet</a>
+<a href="exercises/Exercise_Viz4.Rmd" download>Exercise Sheet</a>
 
 At this point, you know why it is important to visualize your data, several types of graphs to use to create visualizations of different relationships and comparisons within your data, and how to customize some of the elements in those graphs. Changes to the specific type of graph you use, or its title and axes labels, are overt ways to impact the effectiveness of your visualization. However, there are other things that, while subtle, have a very significant impact as well. 
 
-Visualizations are composed of different geometric shapes, lines, edges, contours, colors, etc. With this in mind, it is important to consider different aspects of visual perception and how they affect the way your graph will be perceived by a viewer. With this in mind, this final part of the section on Visualizations covers color and design principles. These are often overlooked when considering how to make an effective visualization, but very important!
+Visualizations are composed of different geometric shapes, lines, edges, contours, colors, etc. With this in mind, it is important to consider different aspects of visual perception and how they affect the way your graph will be perceived by a viewer. This final part of the section on Visualizations covers color and design principles. These are often overlooked when considering how to make an effective visualization, but very important!
 
-The following graphs will serve as examples used throughout. 
+The following graphs will serve as examples used throughout.
+
 <p class="text-info"> **<u>Note:</u> these are not great visualizations, but will be useful to illustrate some different concepts.**</p>
 
 
@@ -136,13 +137,13 @@ Luminance is the brightness of a color. It ranges on a scale from black to white
 
 ### Why Does This Matter?
 
-To this point, this information may seem fairly irrelevant. Interesting, but disconnected. Why care about different components of "color"? It is a fair question, because most people do not. Consider, though, what you are doing when using color in a visualization. You are mapping specific colors that a viewer will observe to a specific quantity or category (depending on the variable type) in your data. You will, of course, want this mapping to accurately and meaningfully characterize the data it is representing. For example, the difference between two data points or summary statistics should be maintained when choosing values to define the colors used to represent them. Beyond this numerical accuracy, you want this difference to be maintained in a viewers perception of those different colors.
+To this point, this information may seem fairly irrelevant. Interesting, but disconnected. Why care about different components of "color"? It is a fair question, because most people do not. Consider, though, what you are doing when using color in a visualization. You are mapping specific colors that a viewer will observe to a specific quantity or category (depending on the variable type) in your data. You will, of course, want this mapping to accurately and meaningfully characterize the data it is representing. For example, the difference between two data points or summary statistics should be maintained when choosing values to define the colors used to represent them. Beyond this *numerical* accuracy, you want this difference to be maintained in a viewer's *perception* of those different colors.
 
 However, this is where things start to get tricky. Consider the two graphs below:
 
 <img src="Visualizations4_files/figure-html/unnamed-chunk-7-1.png" width="100%" />
 
-In both, there are 5 bars of equal height which use a grey scale ranging from dark to light. Each numerically positioned bar has the same exact luminance as the corresponding bar on the other graph. In the graph where the bars are touching, the darker bars seem comparatively darker and the lighter bars comparatively lighter. These are known as mach bands and are a classic visual illusion. Luminance is an important property of "color", and our perception of luminance is based on relative rather than absolute judgments. Even though two things may have precisely the same luminance, the perceived color is influenced by the environment and surrounding objects! 
+In both, there are 5 bars of equal height which use a grey scale ranging from dark to light. Each numerically positioned bar has the same exact luminance as the corresponding bar on the other graph. In the graph where the bars are touching, the darker bars seem comparatively darker and the lighter bars comparatively lighter. These are known as "mach bands" and are a classic visual illusion. Luminance is an important property of "color", and our perception of luminance is based on *relative* rather than *absolute* judgments. Even though two things may have precisely the same luminance, the perceived color is influenced by the environment and surrounding objects! 
 
 To make matters worse, even disregarding the impact that environmental factors may have on visual/color perception, the HCL color space itself is not even perceptually uniform! Two "colors" that are one unit apart in one area of HCL space may look very similar or very different, and this is not constant across the entirety of the space. 
 
@@ -150,17 +151,17 @@ The take home point is that <u>**color values that are *numerically* uniform may
 
 ## Categorical 
 
-When visualizing categorical/discrete data, color is used as a tool to help a viewer easily distinguish different groups, levels, or categories. Importantly, it is most often the case that these groups, levels, or categories, do not have an inherent order. For example, different political parties, Hogwarts houses, UCSD colleges, pokemon types, etc. These are distinct groups, but do not have an inherent order (despite some subjective opinions...).
+When visualizing categorical/discrete data, color is used as a tool to help a viewer easily distinguish different groups, levels, or categories. Importantly, it is most often the case that these groups, levels, or categories, **do not** have an inherent order. For example, different political parties, Hogwarts houses, UCSD colleges, pokemon types, etc. These are distinct groups, but do not have an inherent order (despite some subjective opinions...).
 
 In such instances you use a <u>*qualitative*</u> color scale, which contains a specific set of perceptually distinct but equivalently different colors. The set of colors does not convey any particular ordering or salience of particular colors compared to the rest.
 
-To change the color scale and/or palette used in your visualization, you will use another `scale_*_*()` command. The first asterisk gets replaced by what aesthetic you have mapped, *fill* or *color*. The second gets replaced by what type of scale you want to use or modify. For example, to manually set the HCL parameters of a color space, you would use `scale_*_hue()`. This function has 3 main arguments:
+To change the color scale and/or palette used in your visualization, you will use another `scale_*_*()` command. The first asterisk gets replaced by what aesthetic you have mapped, `fill` or `color`. The second gets replaced by what type of scale you want to use or modify. For example, to manually set the HCL parameters of a color space, you would use `scale_*_hue()`. This function has 3 main arguments:
 
-* **h** = range of hues to use 
+* `h` = range of hues to use 
   + (ranged from 0 - 360 -- default = (c(0,360) + 15))
-* **l** = luminance 
+* `l` = luminance 
   + (lightness; 0-100 -- default = 65)
-* **c** = chroma 
+* `c` = chroma 
   + (intensity of color -- maximum value varies depending on combination of hue and luminance).
 
 Look at the examples below:
@@ -197,7 +198,7 @@ Look at the examples below:
   <div class="panel-body">Practice changing the values for the 3 arguments in `scale_*_hue()` and see how they affect your visualization. Change multiple simultaneously and see how combinations work!
   </div>
 </div>
-Instead of tweaking the HCL values, you may want to just manually choose the colors for yourself. This can be done using `scale_*_manual()`. The main argument here is **values**, which expects a vector of color names/codes to use.
+Instead of tweaking the HCL values, you may want to just manually choose the colors for yourself. This can be done using `scale_*_manual()`. The main argument here is `values`, which expects a vector of color names/codes to use.
 
 
 ```r
@@ -250,10 +251,10 @@ It is important to consider what kind of latent information your color choices m
 
 ### Sequential
 
-When visualizing continuous data, color is used as a tool to represent the actual data values. Here, there *is* an ordering to the values. For example, a score of 80 on an exam is higher than a score of 70, a \$40k salary is more than a \$35k salary, etc. 
+When visualizing continuous data, color is used as a tool to represent the *actual* data values. Here, there **is** an ordering to the values. For example, a score of 80 on an exam is higher than a score of 70, a \$40k salary is more than a \$35k salary, etc. 
 
 In such instances you use a <u>*sequential*</u> color scale, or color *gradient*, 
-which contains a sequence of colors. Different colors in this sequence convey both which of two values is larger and additionally the relative distance between those two values. This, again, highlights the necessity for perceptual uniformity between adjacent colors in this scale. The function for this type of color scale in R is `scale_*_gradient()`. The main arguments needed are a *low* and *high* value over which to define the gradient.
+which contains a sequence of colors. Different colors in this sequence convey both which of two values is larger and additionally the relative distance between those two values. This, again, highlights the necessity for perceptual uniformity between adjacent colors in this scale. The function for this type of color scale in R is `scale_*_gradient()`. The main arguments needed are a `low` and `high` value over which to define the gradient.
 
 A sequential scale can be defined over a single hue (the default is dark to light blue):
 
@@ -291,7 +292,7 @@ plot_hex +
 
 Remember, a sequential color gradient should create the perception that values have a meaningful sequential order. One way to help with this is keep a constant hue and only vary the chrominance and luminance. Another way is to only use gradients that are readily observed in the natural world (e.g., light yellow to dark red, dark brown to green, etc.)
 
-When creating a scale based on multiple hues, you are not limited to just choosing a low and high end value. Using `scale_*_gradientn()` allows you to create a gradient over several colors. The argument *colors* takes a vector of colors over which to linearly create a gradient.
+When creating a scale based on multiple hues, you are not limited to just choosing a `low` and `high` end value. Using `scale_*_gradientn()` allows you to create a gradient over several colors. The argument `colors` takes a vector of colors over which to linearly create a gradient.
 
 
 ```r
@@ -321,7 +322,7 @@ These are obviously terrible color schemes, and are just for illustrative purpos
 
 Sometimes you may have data with a neutral point or true zero, where deviations in either direction from this midpoint become meaningful. For example, data that contains both positive and negative values, or visualizing deviations from the mean. In such instances, you would use a <u>*divergent*</u> scale. A divergent color scale is essentially two sequential scales appended to a single common point (0, the mean, etc.). Thus, the scale needs to make it readily apparent both in which direction the value is deviating **and** the magnitude of the deviation. It is important for the color gradients on both halves of the scale to be perceptually uniform and equivalent or the perceived magnitude of a value would be an artifact of how you defined the gradient. E.g., values above the neutral point might seem to have a large magnitude of change if the color deviations are more stark than those below it. 
 
-To create a divergent color scale, you use `scale_*_gradient2()` -- which admittedly is a little counterintuitive since you define 3 values and not 2 (and hopefully this little inconsistency will now serve as a way to remember this :P). In addition to the low and high values that you specified above, you also need to specify a *mid* color. Additionally, you may want to specify what value in your data should serve as the *midpoint* between the two scales. This value is 0 by default.
+To create a divergent color scale, you use `scale_*_gradient2()` -- which admittedly is a little counterintuitive since you define 3 values and not 2 (and hopefully this little inconsistency will now serve as a way to remember this :P). In addition to the `low` and `high` values that you specified above, you also need to specify a `mid` color. Additionally, you may want to specify what value in your data should serve as the `midpoint` between the two scales. This value is 0 by default.
 
 
 ```r
@@ -331,7 +332,7 @@ plot_hex +
 
 <img src="Visualizations4_files/figure-html/unnamed-chunk-14-1.png" width="672" />
 
-In the graph above, the midpoint argument was not set. The default value of 0 was used, but all values in the data fall above it!
+In the graph above, the `midpoint` argument was not set. The default value of 0 was used, but all values in the data fall above it!
 
 
 ```r
@@ -342,7 +343,7 @@ plot_hex +
 
 <img src="Visualizations4_files/figure-html/unnamed-chunk-15-1.png" width="672" />
 
-Here, the midpoint is set to the mean value for `flipper_length_mm`. You should note that this is not a particularly good scale to use. The midpoint appears to be at about 200, so values at 220 and 180 are equally different from the midpoint. However, because the low value (red) is darker than the high value (yellow), the 180 values are perceived to be more different.
+Here, the `midpoint` is set to the mean value for `flipper_length_mm`. You should note that this is not a particularly good scale to use. The midpoint appears to be at about 200, so values at 220 and 180 are equally different from the midpoint. However, because the low value (red) is darker than the high value (yellow), the 180 values are perceived to be more different.
 
 <div class="panel panel-success">
   <div class="panel-heading">**EXERCISE 4**</div>
@@ -360,7 +361,7 @@ Base R comes with the following color scales:
 
 ![](figures/R_base_color_palettes.png){width=100%}
 
-Each color scale can be used as a function that takes an argument *n* for the number of colors to sample from that color scale. 
+Each color scale can be used as a function that takes an argument `n` for the number of colors to sample from that color scale. 
 
 
 ```r
@@ -371,7 +372,7 @@ topo.colors(n)
 cm.colors(n)
 ```
 
-This will return those colors' hexcode, and can be passed in to any argument expecting a vector of color names:
+This will return those colors' hexcodes, and can be passed in to any argument expecting a vector of color names:
 
 
 ```r
@@ -439,7 +440,7 @@ Palettes are grouped into 3 distinct categories:
 2. Sequential
 3. Divergent
 
-Just like the 3 types of color scales outlined above! You can quickly visualize all the palettes with `display.brewer.all()` and specifying which *type* you want to see:
+Just like the 3 types of color scales outlined above! You can quickly visualize all the palettes with `display.brewer.all()` and specifying which `type` you want to see:
 
 
 ```r
@@ -460,7 +461,7 @@ display.brewer.all(colorblindFriendly = TRUE, type = "div")
 
 <img src="Visualizations4_files/figure-html/unnamed-chunk-19-3.png" width="672" />
 
-Note that the *colorblindFriendly* argument was also used and set to true. This filters the results to only show palettes that are colorblind friendly. There is almost no reason to ever not use a colorblind friendly palette. 
+Note that the `colorblindFriendly` argument was also used and set to `TRUE`. This filters the results to only show palettes that are colorblind friendly. There is almost no reason to ever not use a colorblind friendly palette. 
 
 Each palette has a maximum number of colors in the scale, but you might be curious about how the palette would look with varying numbers of colors. If you only have 4 levels to your variable, maybe one scale will accommodate that number better than another. You can see the exact colors used for a given palette and number of colors using `display.brewer.pal()`.
 
@@ -487,7 +488,7 @@ brewer.pal(n = 4, name = 'Reds')
 
 "Okay, cool, I get it, these are AWESOME. How do I ***USE*** them?!"
 
-Fair question! The answer is very easily! ggplot2 built in functions to easily adopt the brewer color palettes. You can do so using `scale_*_brewer()` for categorical data and `scale_*_distiller()` for continuous. All you have to do is pass in the name of the specific *palette*.
+Fair question! The answer is: very easily! ggplot2 has built in functions to easily adopt the brewer color palettes. You can do so using `scale_*_brewer()` for categorical data and `scale_*_distiller()` for continuous. All you have to do is pass in the name of the specific `palette`.
 
 
 ```r
@@ -545,7 +546,7 @@ You may sometimes encounter an error like this:
 
 <p style="color:#A79BF0"> **Error: Continuous value supplied to discrete scale**</p>
 
-This is another one of the errors from R that are actually pretty helpful and intuitive. This just means the type of color scale you or the function you are using does not map on to the data it's being applied to. In most instances like this, you just need to change the function you're using (e.g., brewer vs distiller).
+This is another one of the errors from R that are actually pretty helpful and intuitive. This just means the type of color scale you or the function you are using does not map on to the data it is being applied to. In most instances like this, you just need to change the function you are using (e.g., brewer vs distiller).
 
 <div class="panel panel-success">
   <div class="panel-heading">**EXERCISE 5**</div>
@@ -555,7 +556,7 @@ This is another one of the errors from R that are actually pretty helpful and in
 
 ### Grey scale
 
-For ink considerations, sometimes you may want to just use a grey scale. ggplot has a built in function to help with this for categorical data (as it is easy to do for continuous) called `scale_*_grey()`. The scale can be selected automatically, or you can specify the *start* and *end* values which range from 0 (dark) to 1 (light).
+For ink considerations, sometimes you may want to just use a grey scale. ggplot has a built in function to help with this for categorical data (as it is easy to do for continuous) called `scale_*_grey()`. The scale can be selected automatically, or you can specify the `start` and `end` values which range from 0 (dark) to 1 (light).
 
 
 ```r
@@ -576,14 +577,14 @@ plot_bar +
 
 ### Viridis
 
-The issue of colorblind friendly palettes was mentioned above and how there is almost no good reason to ever not use a colorblind friendly palette. It can be hard to determine what palettes are colorblind friendly. There are some good resources to help you see how your visualization would look in different forms of colorblindness. One of them is called `cvd_emulator()` from the colorspaces package (more on this below). Others are available [online](https://www.vischeck.com/vischeck/vischeckImage.php). 
+The issue of colorblind friendly palettes was mentioned above and how there is almost no good reason to ever not use a colorblind friendly palette. It can be hard to determine what palettes are colorblind friendly. There are some good resources to help you see how your visualization would look in different forms of colorblindness. One of them is called `cvd_emulator()` from the colorspace package (more on this below). Others are available [online](https://www.vischeck.com/vischeck/vischeckImage.php). 
 
-An alternative to selecting a color palette and then checking to see whether it is colorblind friendly is to just choose a palette specifically designed to be interpretable and effective under a variety of different color vision types (typical and different forms of color blindness). These come from the viridis package, which was introduced earlier!
+An alternative to selecting a color palette and then checking to see whether it is colorblind friendly is to just choose a palette specifically designed to be interpretable and effective under a variety of different color vision types (typical and different forms of color blindness). These come from the `viridis` package, which was introduced earlier!
 
 ![](figures/r_viridis.png){width=100%}
 <p style="font-size:8pt">Source: [viridis documentation](https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html)</p>
 
-These palettes can be easily applied by using `scale_*_viridis()`. The specific palette is set with the *option* argument, and can be applied to categorical data by using the *discrete* argument
+These palettes can be easily applied by using `scale_*_viridis()`. The specific palette is set with the `option` argument, and can be applied to categorical data by using the `discrete` argument
 
 
 ```r
@@ -657,7 +658,7 @@ hcl_palettes()
 #>        Lisbon, Tofino
 ```
 
-You can also *plot* them to actually see the palettes themselves.
+You can also `plot` them to actually see the palettes themselves.
 
 
 ```r
@@ -684,7 +685,7 @@ hcl_palettes(type = "Diverging", plot = TRUE)
 
 <img src="Visualizations4_files/figure-html/unnamed-chunk-32-4.png" width="672" />
 
-The way you actually use these palettes is quite similar to how you use `brewer.pal()` to use RColorBrewer palettes! Each type of scale has its own function, where you specify the *palette* and *n*umber of colors from it. That vector of colors can then be used in your ggplot code.
+The way you actually use these palettes is quite similar to how you use `brewer.pal()` to use RColorBrewer palettes! Each type of scale has its own function, where you specify the `palette` and `n`umber of colors from it. That vector of colors can then be used in your ggplot code.
 
 
 ```r
@@ -774,7 +775,7 @@ Here are some general color resources:
 
 * [ggplot Colors](figures/ggplot_colors.png)
 * [ggplot2 book](https://ggplot2-book.org/scale-colour.html)
-* [colorspaces info](https://cran.r-project.org/web/packages/colorspace/vignettes/colorspace.html)
+* [colorspace info](https://cran.r-project.org/web/packages/colorspace/vignettes/colorspace.html)
 	
 ## References
 

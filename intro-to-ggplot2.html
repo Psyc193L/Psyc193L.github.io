@@ -61,6 +61,7 @@
 <li><a class="" href="advanced-wrangling.html"><span class="header-section-number">14</span> Advanced Wrangling</a></li>
 <li><a class="" href="summarizing-data.html"><span class="header-section-number">15</span> Summarizing Data</a></li>
 <li><a class="" href="text-cleaning.html"><span class="header-section-number">16</span> Text Cleaning</a></li>
+<li><a class="" href="data-transformation.html"><span class="header-section-number">17</span> Data Transformation</a></li>
 </ul>
 
         <div class="book-extra">
@@ -75,7 +76,7 @@
 <div class="sourceCode" id="cb36"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://allisonhorst.github.io/palmerpenguins/">palmerpenguins</a></span><span class="op">)</span></code></pre></div>
-<p><a href="Exercise_Viz1.Rmd" download>Exercise Sheet</a></p>
+<p><a href="exercises/Exercise_Viz1.Rmd" download>Exercise Sheet</a></p>
 <blockquote>
 <p>“The greatest value of a picture is when it forces us to notice what we never expected to see.”<br>— John Tukey</p>
 </blockquote>
@@ -84,7 +85,7 @@
 </blockquote>
 <p><span style="font-size:14.0pt"><b><u>Why Do We Care About Visualizing Our Data?</u></b></span></p>
 <p>Consider the following scenario:</p>
-<p>I tell you that I have two different datasets. Each dataset is comprised of individuals measured on two outcomes (say height and weight). The mean and standard deviation of height and of weight are the same in both datasets. The correlation between height and weight is the same in both datasets as well. By every statistical metric, these datasets are the same. So, they must <strong><em>look</em></strong> similar, right?</p>
+<p>There are two different datasets, each comprised of individuals measured on two outcomes (say height and weight). The mean and standard deviation of height and of weight are the same in both datasets. The correlation between height and weight is the same in both datasets as well. By every statistical metric, these datasets are the same. So, they must <strong><em>look</em></strong> similar, right?</p>
 <p>Click the button below:</p>
 <button class="btn btn-primary" data-toggle="collapse" data-target="#BlockName">
 Show/Hide
@@ -97,24 +98,24 @@ Show/Hide
 <p>This collection of data is called the <a href="https://github.com/jumpingrivers/datasauRus">datasauRus</a>, and more information about how these were generated can be found in <a href="https://www.autodesk.com/research/publications/same-stats-different-graphs">this</a> technical paper. This is a modern version of the famous Anscombe’s Quartet:</p>
 <div class="inline-figure"><img src="figures/anscombes-quartet.jpeg" width="100%"></div>
 <p>All four of these datasets have matching n’s, means, standard deviations, and correlations. This means that the slope and intercept, and corresponding statistical tests, will all be equivalent. The data <strong>clearly</strong> look different though. (These data are built into R in an object called <code>anscombe</code>, which you can look at to test this for yourself!)</p>
-<p>The key point here is that the summary statistics of some variables and their linear relationships inherently overlook some aspects of the data. This highlights the critical importance of visualizing your data, and not just relying on summary statistics alone. The point of a visualization, just like a summary statistic, is to understand a relationship or pattern in your data. However, by looking at the raw data itself, you don’t run the risk of missing things the way you do by relying on summary statistics alone.</p>
+<p>The key point here is that the summary statistics of some variables and their linear relationships inherently overlook some aspects of the data. This highlights the critical importance of visualizing your data, and not just relying on summary statistics alone. The point of a visualization, just like a summary statistic, is to understand a relationship or pattern in your data. However, by looking at the raw data itself, you do not run the risk of missing things the way you do by relying on summary statistics alone.</p>
 <div id="when-visualizing-go-wrong" class="section level2">
 <h2>
 <span class="header-section-number">6.1</span> When Visualizing Go Wrong<a class="anchor" aria-label="anchor" href="#when-visualizing-go-wrong"><i class="fas fa-link"></i></a>
 </h2>
-<p>It’s easy enough to just say, “Look at your raw data! Create a visualization!” However, a bad visualization is often times worse than no visualization at all. One of the things that the Covid-19 pandemic brought with it originally was a plethora of data visualizations. Below are a few that I came across myself out in the real world:</p>
+<p>It is easy enough to just say, “Look at your raw data! Create a visualization!” However, a bad visualization is often times worse than no visualization at all. One of the things that the Covid-19 pandemic brought with it originally was a plethora of data visualizations. Below are a few that were observed out in the real world over the last 2 years:</p>
 <div class="inline-figure"><img src="figures/bad_visualizations/badviz3.jpeg" style="width:100.0%"></div>
 <div class="inline-figure"><img src="figures/bad_visualizations/badviz4.jpeg" style="width:100.0%"></div>
 <div class="inline-figure"><img src="figures/bad_visualizations/badviz2.png" style="width:100.0%"></div>
 <div class="inline-figure"><img src="figures/bad_visualizations/badviz1.png" style="width:100.0%"></div>
-<p>So it’s not enough to just make <em>some</em> visualization. It’s important to also consider the principles that make a <strong><em>GOOD</em></strong>. Over the next few lessons, we are going to cover both!</p>
+<p>So, it is not enough to just make <em>some</em> visualization, it is important to also consider the principles that make a <strong><em>GOOD</em></strong> visualization. Over the next few lessons, both will be covered.</p>
 </div>
 <div id="ggplot2" class="section level2">
 <h2>
 <span class="header-section-number">6.2</span> ggplot2<a class="anchor" aria-label="anchor" href="#ggplot2"><i class="fas fa-link"></i></a>
 </h2>
-<p>Data visualization is one of the things that sets R apart from other programming languages that can be used for statistics, like Python. R still has the best data visualization capabilities, and it is one of the primary reasons it is used over Python in Social Sciences. This is also one of the first times you will get to see what coding can be all about. You are actually going to be creating stuff today with your code!</p>
-<p>In this class, we will use the <code>ggplot2</code> package to create visualizations. Graphs are constructed by mapping data to geometric objects (lines, bars, points, etc.) according to some aesthetic attributes (color, shape, size, etc.). <code>ggplot2</code> uses this to inform its grammar. We’ll explain this much more as we go!</p>
+<p>Data visualization is one of the things that sets R apart from other programming languages that can be used for statistics, like Python. R still has the best data visualization capabilities, and it is one of the primary reasons it is used over Python in Social Sciences. This is also one of the first times you will get to see what coding can be all about. You are actually going to be creating stuff with your code!</p>
+<p>In this class, the <code>ggplot2</code> package will be used to create visualizations. Graphs are constructed by mapping data to geometric objects (lines, bars, points, etc.) according to some aesthetic attributes (color, shape, size, etc.). <code>ggplot2</code> uses this to inform its grammar.</p>
 <img src="figures/ggplot2_masterpiece.png" style="width:100.0%"><p style="font-size:6pt">
 Artwork by <span class="citation">Horst (2022)</span>
 </p>
@@ -122,7 +123,7 @@ Artwork by <span class="citation">Horst (2022)</span>
 <h3>
 <span class="header-section-number">6.2.1</span> Meet the Penguins<a class="anchor" aria-label="anchor" href="#meet-the-penguins"><i class="fas fa-link"></i></a>
 </h3>
-<p>To create visualizations, we need some data to visualize! I am going to work with the <code>palmerpenguins</code> dataset from <a href="https://allisonhorst.github.io/palmerpenguins/">Alison Horst</a> (Yes, she is someone I admire and think does great work!).</p>
+<p>To create visualizations, you need some data to visualize! The <code>palmerpenguins</code> dataset from <a href="https://allisonhorst.github.io/palmerpenguins/">Alison Horst</a> will be used to create examples throughout.</p>
 <div class="inline-figure"><img src="figures/palmerpenguins_logo.png" width="207"></div>
 <p>This dataset contains measurements from 344 different penguins. Measurements include things like bill length and depth, sex, among others.</p>
 <img src="figures/palmerpenguins_bills.png" style="width:100.0%"><p style="font-size:6pt">
@@ -140,29 +141,29 @@ Artwork by <span class="citation">Horst (2022)</span>
 <h2>
 <span class="header-section-number">6.3</span> A Basic Graph<a class="anchor" aria-label="anchor" href="#a-basic-graph"><i class="fas fa-link"></i></a>
 </h2>
-<p>Let’s start building a basic graph. There are going to be <u><strong>LOTS</strong><u> of exercise breaks throughout.</u></u></p>
+<p>The most sensible place to start is building a basic graph. There are going to be <u><strong>LOTS</strong><u> of exercise breaks throughout.</u></u></p>
 <p class="text-info">
-<strong><u>Note:</u> As we move forward with building our first graph, each new piece of code added will be accompanied by a literate programming portion, where you will describe in words what the code is doing.</strong>
+<strong><u>Note:</u> As you move forward with building your first graph, each new piece of code added will be accompanied by a literate programming portion, where you will describe in words what the code is doing.</strong>
 </p>
-<p>All ggplot graphs are build using the <code><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot()</a></code> call. The first thing it needs is some data. We’ll use the <code>%&gt;%</code> to pass in our <code>penguins</code> dataframe.</p>
+<p>All ggplot graphs are build using the <code><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot()</a></code> call. The first thing it needs is some data. The <code>%&gt;%</code> will be used to pass in the <code>penguins</code> dataframe.</p>
 <div class="sourceCode" id="cb37"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">penguins</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 <div class="inline-figure"><img src="Visualizations1_files/figure-html/unnamed-chunk-5-1.png" width="672"></div>
 <blockquote>
-<p><strong>Start by telling ggplot to use the <code>penguins</code> dataframe for our data</strong></p>
+<p><strong>Start by telling ggplot to use the <code>penguins</code> dataframe for the data</strong></p>
 </blockquote>
-<p>Woo! We got a grey rectangle! Of course, the code above alone will not do anything. We have to tell ggplot what we want to plot. Hmm… Let’s see how a penguin’s <code>bill_length_mm</code> is related to its <code>flipper_length_mm</code>. I would imagine that bigger penguins would tend to have longer bills and flippers, but maybe not? That is why we create visualizations, to try and help answer questions we may have about our data (which consist of samples thought to be representative of the world at large)!</p>
-<p>We need to tell ggplot what variables from our data should be mapped to the aesthetics we want to render on our graph. We’ll do that with the <code><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes()</a></code> call, and start with specifying what to display on each axis.</p>
+<p>Woo! This actually created something. A grey rectangle! Of course, the code above alone will not do anything. You have to tell ggplot what you want to plot. Hmm… As an example, consider how a penguin’s <code>bill_length_mm</code> is related to its <code>flipper_length_mm</code>. You might imagine that bigger penguins would tend to have longer bills and flippers, but maybe not? That is why you create visualizations, to try and help answer questions you may have about your data (which consist of samples thought to be representative of the world at large)!</p>
+<p>ggplot needs to be told what variables from your data should be mapped to the aesthetics you want to render on your graph. You will do that with the <code><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes()</a></code> call, and start with specifying what to display on each axis.</p>
 <div class="sourceCode" id="cb38"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">penguins</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>y <span class="op">=</span> <span class="va">flipper_length_mm</span>,
                        x <span class="op">=</span> <span class="va">bill_length_mm</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 <div class="inline-figure"><img src="Visualizations1_files/figure-html/unnamed-chunk-6-1.png" width="672"></div>
 <blockquote>
-<p>“Start by telling ggplot to use the <code>penguins</code> dataframe for our data, <strong>map flipper length to the y-axis and bill length to the x-axis.</strong>”</p>
+<p>“Start by telling ggplot to use the <code>penguins</code> dataframe for the data, <strong>map flipper length to the y-axis and bill length to the x-axis.</strong>”</p>
 </blockquote>
-<p>Above, we specified that we want <code>flipper_length_mm</code> on our y-axis, and <code>bill_length_mm</code> on our x-axis (it is good practice to specify <em>y</em> first and <em>x</em> second). All aesthetic mappings must be separated by a comma, and it does not matter the order you list them (though it is good practice to start with the axes first). As you can see, ggplot figured out how to label the axes on its own.</p>
+<p>Above, it was specified that <code>flipper_length_mm</code> should be on the y-axis, and <code>bill_length_mm</code> on the x-axis (it is good practice to specify <em>y</em> first and <em>x</em> second). All aesthetic mappings must be separated by a comma, and it does not matter the order you list them (though it is good practice to start with the axes first). As you can see, ggplot figured out how to label the axes on its own.</p>
 <div class="panel panel-success">
 <div class="panel-heading">
 <strong>EXERCISE 1</strong>
@@ -172,9 +173,9 @@ Create your own graph using the <code>penguins</code> data and pick 2 of the fol
 </div>
 </div>
 <p><br>
-We told ggplot what our aesthetic mappings are (what data source to use), but not what it should render from those mappings! We want ggplot to use those mappings to construct some <strong>geom</strong>etric object, and the way we do that is by adding a <em>geom</em>, aptly named. There are a number of different geoms, which have the general syntax of <code>geom_X()</code>, where X usually refers to the specific geometric object you want to render. Here, we want a point on our graph for each penguin, so we will use <code><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point()</a></code>.</p>
+ggplot was told what the aesthetic mappings are (what data source to use), but not what it should render from those mappings! You want ggplot to use those mappings to construct some <strong>geom</strong>etric object, and the way you do that is by adding a <em>geom</em>, aptly named. There are a number of different geoms, which have the general syntax of <code>geom_X()</code>, where X usually refers to the specific geometric object you want to render. Here, you want a point on the graph for each penguin, so <code><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point()</a></code> will be used.</p>
 <p class="text-info">
-<strong><u>Note:</u> There are a TON of different geoms. You will see many more as we go.</strong>
+<strong><u>Note:</u> There are a TON of different geoms. You will see many more later.</strong>
 </p>
 <div class="sourceCode" id="cb39"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">penguins</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
@@ -185,32 +186,32 @@ We told ggplot what our aesthetic mappings are (what data source to use), but no
 <span class="co">#&gt; (geom_point).</span></code></pre></div>
 <div class="inline-figure"><img src="Visualizations1_files/figure-html/unnamed-chunk-7-1.png" width="672"></div>
 <blockquote>
-<p>“Start by telling ggplot to use the <code>penguins</code> dataframe for our data, map flipper length to the y-axis and bill length to the x-axis. <strong>Represent each observation with a point.</strong>”</p>
+<p>“Start by telling ggplot to use the <code>penguins</code> dataframe for the data, map flipper length to the y-axis and bill length to the x-axis. <strong>Represent each observation with a point.</strong>”</p>
 </blockquote>
 <p>Okay, <strong>NOW</strong> we are talking! This looks like an actual real graph. Look at your very first ggplot masterpiece!</p>
 <p>There are two important things to note here:</p>
 <ol style="list-style-type: decimal">
-<li><p>We used the <code>+</code> instead of <code>%&gt;%</code> to add on a new function. The ggplot system is additive/layered, which is a very powerful idea that we will get into more later. For now, it is enough to know that what we are doing was adding the <code><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point()</a></code> to our code. We do not want to take the <code>penguins %&gt;% ggplot(mapping = aes(y = flipper_length_mm, x = bill_length_mm))</code> code and use it as the argument for our <code><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point()</a></code> function, which is what would happen if we used %&gt;% to pipe it! We want to just add the points on top of the existing base that code created, which is why we use the <code>+</code>.</p></li>
+<li><p>The <code>+</code> was used instead of <code>%&gt;%</code> to add on a new function. The ggplot system is additive/layered, which is a very powerful idea that will be explained later. For now, it is enough to know that the <code><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point()</a></code> was being added to the code. You do not want to take the <code>penguins %&gt;% ggplot(mapping = aes(y = flipper_length_mm, x = bill_length_mm))</code> code and use it as the argument for the <code><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point()</a></code> function, which is what would happen if a <code>%&gt;%</code> was used to pipe it! You want to just add the points on top of the existing base that code created, which is why the <code>+</code> is used.</p></li>
 <li><p>When running this code, in addition to creating the graph (in the “Plots” section of RStudio or inline under your code), the following showed up in the console:</p></li>
 </ol>
 <p style="color:#A79BF0">
 <strong>Warning message:<br>Removed 2 rows containing missing values (geom_point).</strong>
 </p>
-<p>Looking at your warnings and errors is always important, but especially so when creating visualizations! This says that it removed 2 rows of data, which may not seem like a big deal but we don’t want our visualizations to be misleading. Especially when we start visualizing summary statistics (like means). If we look at our actual data though, we can verify that there are two penguins that don’t have a measurement value for flipper length or bill length. So obviously without either or both of those, it cannot be included on the graph. In this case, this is okay, but it’s important to always verify!</p>
+<p>Looking at your warnings and errors is always important, but especially so when creating visualizations! This says that it removed 2 rows of data, which may not seem like a big deal but you do not want your visualizations to be misleading. Especially when you start visualizing summary statistics (like means). If you look at your actual data though, you can verify that there are two penguins that do not have a measurement value for flipper length or bill length. So obviously without either or both of those, it cannot be included on the graph. In this case, this is okay, but it is important to always verify!</p>
 <div class="rmdtip">
 <p style="font-size:10pt">
-<u><strong>NOTE:</strong></u> <em>moving forward, for pedagogical purposes I am going to be hiding this warning message so the output from subsequent code is cleaner. However, those 2 rows are still being removed!</em>
+<u><strong>NOTE:</strong></u> <em>moving forward, for pedagogical purposes this warning message will be hidden so the output from subsequent code is cleaner. However, those 2 rows are still being removed!</em>
 </p>
 </div>
-<p>Above, we mentioned how the goal of a visualization is to understand a relationship, or pattern, in our data. For every visualization we make, we are also going to provide a verbal description of the pattern we see (should one exist!) underneath. This will help develop an intuitive <strong>graph literacy</strong>. Being able to quickly and accurately interpret visualizations is an important skill, and one of the pillars of this course.</p>
+<p>Above, it was noted that the goal of a visualization is to understand a relationship, or pattern, in your data. For every visualization you make, a verbal description of the pattern seen (should one exist!) will be provided underneath. This will help develop an intuitive <strong>graph literacy</strong>. Being able to quickly and accurately interpret visualizations is an important skill, and one of the pillars of this course.</p>
 <div class="rmdimportant">
 <p style="font-size:10pt">
 <em>Things related to graph literacy and comprehension will appear in boxes like this moving forward!</em>
 </p>
-<p>In the visualization we can see that, generally speaking, penguins with greater flipper length tend to have greater bill length as well. There seems to be a positive linear relationship between bill length and flipper length such that, as flipper length increases, bill length increases in turn.</p>
+<p>In the visualization it can be seen that, generally speaking, penguins with greater flipper length tend to have greater bill length as well. There seems to be a positive linear relationship between bill length and flipper length such that, as flipper length increases, bill length increases in turn.</p>
 </div>
 <p class="text-info">
-<strong><u>Note:</u> We have to use a lot of tentative language and include many qualifiers here. We have not done any formal statistical analyses to state any relationship or effect definitively.</strong>
+<strong><u>Note:</u> You have to use a lot of tentative language and include many qualifiers here. No formal statistical analyses have been done to afford the ability to state any relationship or effect definitively.</strong>
 </p>
 <div class="panel panel-success">
 <div class="panel-heading">
@@ -251,7 +252,7 @@ Update your graph above by telling ggplot you want it to render a point for each
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>PSYC193L</strong>" was written by Ethan Hurwitz. It was last built on 2022-06-06.</p>
+    <p>"<strong>PSYC193L</strong>" was written by Ethan Hurwitz. It was last built on 2022-06-10.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

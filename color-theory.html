@@ -61,6 +61,7 @@
 <li><a class="" href="advanced-wrangling.html"><span class="header-section-number">14</span> Advanced Wrangling</a></li>
 <li><a class="" href="summarizing-data.html"><span class="header-section-number">15</span> Summarizing Data</a></li>
 <li><a class="" href="text-cleaning.html"><span class="header-section-number">16</span> Text Cleaning</a></li>
+<li><a class="" href="data-transformation.html"><span class="header-section-number">17</span> Data Transformation</a></li>
 </ul>
 
         <div class="book-extra">
@@ -106,10 +107,10 @@
       axis.text <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>face <span class="op">=</span> <span class="st">"bold"</span>,
                                color <span class="op">=</span> <span class="st">"black"</span>,
                                size <span class="op">=</span> <span class="fl">12</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></code></pre></div>
-<p><a href="Exercise_Viz4.Rmd" download>Exercise Sheet</a></p>
+<p><a href="exercises/Exercise_Viz4.Rmd" download>Exercise Sheet</a></p>
 <p>At this point, you know why it is important to visualize your data, several types of graphs to use to create visualizations of different relationships and comparisons within your data, and how to customize some of the elements in those graphs. Changes to the specific type of graph you use, or its title and axes labels, are overt ways to impact the effectiveness of your visualization. However, there are other things that, while subtle, have a very significant impact as well.</p>
-<p>Visualizations are composed of different geometric shapes, lines, edges, contours, colors, etc. With this in mind, it is important to consider different aspects of visual perception and how they affect the way your graph will be perceived by a viewer. With this in mind, this final part of the section on Visualizations covers color and design principles. These are often overlooked when considering how to make an effective visualization, but very important!</p>
-The following graphs will serve as examples used throughout.
+<p>Visualizations are composed of different geometric shapes, lines, edges, contours, colors, etc. With this in mind, it is important to consider different aspects of visual perception and how they affect the way your graph will be perceived by a viewer. This final part of the section on Visualizations covers color and design principles. These are often overlooked when considering how to make an effective visualization, but very important!</p>
+<p>The following graphs will serve as examples used throughout.</p>
 <p class="text-info">
 <strong><u>Note:</u> these are not great visualizations, but will be useful to illustrate some different concepts.</strong>
 </p>
@@ -188,10 +189,10 @@ Source: <a href="10.1175/BAMS-D-13-00155.1">Somewhere Over the Rainbow…</a>
 <h3>
 <span class="header-section-number">10.1.4</span> Why Does This Matter?<a class="anchor" aria-label="anchor" href="#why-does-this-matter"><i class="fas fa-link"></i></a>
 </h3>
-<p>To this point, this information may seem fairly irrelevant. Interesting, but disconnected. Why care about different components of “color”? It is a fair question, because most people do not. Consider, though, what you are doing when using color in a visualization. You are mapping specific colors that a viewer will observe to a specific quantity or category (depending on the variable type) in your data. You will, of course, want this mapping to accurately and meaningfully characterize the data it is representing. For example, the difference between two data points or summary statistics should be maintained when choosing values to define the colors used to represent them. Beyond this numerical accuracy, you want this difference to be maintained in a viewers perception of those different colors.</p>
+<p>To this point, this information may seem fairly irrelevant. Interesting, but disconnected. Why care about different components of “color”? It is a fair question, because most people do not. Consider, though, what you are doing when using color in a visualization. You are mapping specific colors that a viewer will observe to a specific quantity or category (depending on the variable type) in your data. You will, of course, want this mapping to accurately and meaningfully characterize the data it is representing. For example, the difference between two data points or summary statistics should be maintained when choosing values to define the colors used to represent them. Beyond this <em>numerical</em> accuracy, you want this difference to be maintained in a viewer’s <em>perception</em> of those different colors.</p>
 <p>However, this is where things start to get tricky. Consider the two graphs below:</p>
 <div class="inline-figure"><img src="Visualizations4_files/figure-html/unnamed-chunk-7-1.png" width="100%"></div>
-<p>In both, there are 5 bars of equal height which use a grey scale ranging from dark to light. Each numerically positioned bar has the same exact luminance as the corresponding bar on the other graph. In the graph where the bars are touching, the darker bars seem comparatively darker and the lighter bars comparatively lighter. These are known as mach bands and are a classic visual illusion. Luminance is an important property of “color”, and our perception of luminance is based on relative rather than absolute judgments. Even though two things may have precisely the same luminance, the perceived color is influenced by the environment and surrounding objects!</p>
+<p>In both, there are 5 bars of equal height which use a grey scale ranging from dark to light. Each numerically positioned bar has the same exact luminance as the corresponding bar on the other graph. In the graph where the bars are touching, the darker bars seem comparatively darker and the lighter bars comparatively lighter. These are known as “mach bands” and are a classic visual illusion. Luminance is an important property of “color”, and our perception of luminance is based on <em>relative</em> rather than <em>absolute</em> judgments. Even though two things may have precisely the same luminance, the perceived color is influenced by the environment and surrounding objects!</p>
 <p>To make matters worse, even disregarding the impact that environmental factors may have on visual/color perception, the HCL color space itself is not even perceptually uniform! Two “colors” that are one unit apart in one area of HCL space may look very similar or very different, and this is not constant across the entirety of the space.</p>
 <p>The take home point is that <u><strong>color values that are <em>numerically</em> uniform may not be <em>perceptually</em> uniform</strong></u>. This needs to be considered when choosing color scales and palettes for your visualizations. Perception is the the most important thing, so scales and palettes should only be used if there is a perceptually uniform magnitude of change between each level. The type of color scale, and specific color palette, used depends on the type of data being visualized and the use case for your visualization.</p>
 </div>
@@ -200,24 +201,24 @@ Source: <a href="10.1175/BAMS-D-13-00155.1">Somewhere Over the Rainbow…</a>
 <h2>
 <span class="header-section-number">10.2</span> Categorical<a class="anchor" aria-label="anchor" href="#categorical"><i class="fas fa-link"></i></a>
 </h2>
-<p>When visualizing categorical/discrete data, color is used as a tool to help a viewer easily distinguish different groups, levels, or categories. Importantly, it is most often the case that these groups, levels, or categories, do not have an inherent order. For example, different political parties, Hogwarts houses, UCSD colleges, pokemon types, etc. These are distinct groups, but do not have an inherent order (despite some subjective opinions…).</p>
+<p>When visualizing categorical/discrete data, color is used as a tool to help a viewer easily distinguish different groups, levels, or categories. Importantly, it is most often the case that these groups, levels, or categories, <strong>do not</strong> have an inherent order. For example, different political parties, Hogwarts houses, UCSD colleges, pokemon types, etc. These are distinct groups, but do not have an inherent order (despite some subjective opinions…).</p>
 <p>In such instances you use a <u><em>qualitative</em></u> color scale, which contains a specific set of perceptually distinct but equivalently different colors. The set of colors does not convey any particular ordering or salience of particular colors compared to the rest.</p>
-<p>To change the color scale and/or palette used in your visualization, you will use another <code>scale_*_*()</code> command. The first asterisk gets replaced by what aesthetic you have mapped, <em>fill</em> or <em>color</em>. The second gets replaced by what type of scale you want to use or modify. For example, to manually set the HCL parameters of a color space, you would use <code>scale_*_hue()</code>. This function has 3 main arguments:</p>
+<p>To change the color scale and/or palette used in your visualization, you will use another <code>scale_*_*()</code> command. The first asterisk gets replaced by what aesthetic you have mapped, <code>fill</code> or <code>color</code>. The second gets replaced by what type of scale you want to use or modify. For example, to manually set the HCL parameters of a color space, you would use <code>scale_*_hue()</code>. This function has 3 main arguments:</p>
 <ul>
 <li>
-<strong>h</strong> = range of hues to use
+<code>h</code> = range of hues to use
 <ul>
 <li>(ranged from 0 - 360 – default = (c(0,360) + 15))</li>
 </ul>
 </li>
 <li>
-<strong>l</strong> = luminance
+<code>l</code> = luminance
 <ul>
 <li>(lightness; 0-100 – default = 65)</li>
 </ul>
 </li>
 <li>
-<strong>c</strong> = chroma
+<code>c</code> = chroma
 <ul>
 <li>(intensity of color – maximum value varies depending on combination of hue and luminance).</li>
 </ul>
@@ -252,7 +253,7 @@ Source: <a href="10.1175/BAMS-D-13-00155.1">Somewhere Over the Rainbow…</a>
 Practice changing the values for the 3 arguments in <code>scale_*_hue()</code> and see how they affect your visualization. Change multiple simultaneously and see how combinations work!
 </div>
 </div>
-<p>Instead of tweaking the HCL values, you may want to just manually choose the colors for yourself. This can be done using <code>scale_*_manual()</code>. The main argument here is <strong>values</strong>, which expects a vector of color names/codes to use.</p>
+<p>Instead of tweaking the HCL values, you may want to just manually choose the colors for yourself. This can be done using <code>scale_*_manual()</code>. The main argument here is <code>values</code>, which expects a vector of color names/codes to use.</p>
 <div class="sourceCode" id="cb179"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">plot_bar</span> <span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_fill_manual</a></span><span class="op">(</span>values <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"cyan"</span>, <span class="st">"lightgreen"</span>, <span class="st">"orange4"</span><span class="op">)</span><span class="op">)</span></code></pre></div>
@@ -294,9 +295,9 @@ Change the colors in both graphs to manually set values. Find a combination of c
 <h3>
 <span class="header-section-number">10.3.1</span> Sequential<a class="anchor" aria-label="anchor" href="#sequential"><i class="fas fa-link"></i></a>
 </h3>
-<p>When visualizing continuous data, color is used as a tool to represent the actual data values. Here, there <em>is</em> an ordering to the values. For example, a score of 80 on an exam is higher than a score of 70, a $40k salary is more than a $35k salary, etc.</p>
+<p>When visualizing continuous data, color is used as a tool to represent the <em>actual</em> data values. Here, there <strong>is</strong> an ordering to the values. For example, a score of 80 on an exam is higher than a score of 70, a $40k salary is more than a $35k salary, etc.</p>
 <p>In such instances you use a <u><em>sequential</em></u> color scale, or color <em>gradient</em>,
-which contains a sequence of colors. Different colors in this sequence convey both which of two values is larger and additionally the relative distance between those two values. This, again, highlights the necessity for perceptual uniformity between adjacent colors in this scale. The function for this type of color scale in R is <code>scale_*_gradient()</code>. The main arguments needed are a <em>low</em> and <em>high</em> value over which to define the gradient.</p>
+which contains a sequence of colors. Different colors in this sequence convey both which of two values is larger and additionally the relative distance between those two values. This, again, highlights the necessity for perceptual uniformity between adjacent colors in this scale. The function for this type of color scale in R is <code>scale_*_gradient()</code>. The main arguments needed are a <code>low</code> and <code>high</code> value over which to define the gradient.</p>
 <p>A sequential scale can be defined over a single hue (the default is dark to light blue):</p>
 <div class="sourceCode" id="cb183"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">plot_line</span> <span class="op">+</span>
@@ -316,7 +317,7 @@ which contains a sequence of colors. Different colors in this sequence convey bo
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_gradient.html">scale_fill_gradient</a></span><span class="op">(</span>low <span class="op">=</span> <span class="st">"red"</span>, high <span class="op">=</span> <span class="st">"yellow"</span><span class="op">)</span></code></pre></div>
 <div class="inline-figure"><img src="Visualizations4_files/figure-html/unnamed-chunk-12-2.png" width="672"></div>
 <p>Remember, a sequential color gradient should create the perception that values have a meaningful sequential order. One way to help with this is keep a constant hue and only vary the chrominance and luminance. Another way is to only use gradients that are readily observed in the natural world (e.g., light yellow to dark red, dark brown to green, etc.)</p>
-<p>When creating a scale based on multiple hues, you are not limited to just choosing a low and high end value. Using <code>scale_*_gradientn()</code> allows you to create a gradient over several colors. The argument <em>colors</em> takes a vector of colors over which to linearly create a gradient.</p>
+<p>When creating a scale based on multiple hues, you are not limited to just choosing a <code>low</code> and <code>high</code> end value. Using <code>scale_*_gradientn()</code> allows you to create a gradient over several colors. The argument <code>colors</code> takes a vector of colors over which to linearly create a gradient.</p>
 <div class="sourceCode" id="cb187"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">plot_line</span> <span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_gradient.html">scale_color_gradientn</a></span><span class="op">(</span>colors <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"red"</span>, <span class="st">"orange"</span>, <span class="st">"yellow"</span>, 
@@ -341,18 +342,18 @@ Create 2 single hue gradients that you think seem perceptually uniform. Then cre
 <span class="header-section-number">10.3.2</span> Divergent<a class="anchor" aria-label="anchor" href="#divergent"><i class="fas fa-link"></i></a>
 </h3>
 <p>Sometimes you may have data with a neutral point or true zero, where deviations in either direction from this midpoint become meaningful. For example, data that contains both positive and negative values, or visualizing deviations from the mean. In such instances, you would use a <u><em>divergent</em></u> scale. A divergent color scale is essentially two sequential scales appended to a single common point (0, the mean, etc.). Thus, the scale needs to make it readily apparent both in which direction the value is deviating <strong>and</strong> the magnitude of the deviation. It is important for the color gradients on both halves of the scale to be perceptually uniform and equivalent or the perceived magnitude of a value would be an artifact of how you defined the gradient. E.g., values above the neutral point might seem to have a large magnitude of change if the color deviations are more stark than those below it.</p>
-<p>To create a divergent color scale, you use <code>scale_*_gradient2()</code> – which admittedly is a little counterintuitive since you define 3 values and not 2 (and hopefully this little inconsistency will now serve as a way to remember this :P). In addition to the low and high values that you specified above, you also need to specify a <em>mid</em> color. Additionally, you may want to specify what value in your data should serve as the <em>midpoint</em> between the two scales. This value is 0 by default.</p>
+<p>To create a divergent color scale, you use <code>scale_*_gradient2()</code> – which admittedly is a little counterintuitive since you define 3 values and not 2 (and hopefully this little inconsistency will now serve as a way to remember this :P). In addition to the <code>low</code> and <code>high</code> values that you specified above, you also need to specify a <code>mid</code> color. Additionally, you may want to specify what value in your data should serve as the <code>midpoint</code> between the two scales. This value is 0 by default.</p>
 <div class="sourceCode" id="cb189"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">plot_hex</span> <span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_gradient.html">scale_fill_gradient2</a></span><span class="op">(</span>low <span class="op">=</span> <span class="st">"red"</span>, mid <span class="op">=</span> <span class="st">"grey90"</span>, high <span class="op">=</span> <span class="st">"yellow"</span><span class="op">)</span></code></pre></div>
 <div class="inline-figure"><img src="Visualizations4_files/figure-html/unnamed-chunk-14-1.png" width="672"></div>
-<p>In the graph above, the midpoint argument was not set. The default value of 0 was used, but all values in the data fall above it!</p>
+<p>In the graph above, the <code>midpoint</code> argument was not set. The default value of 0 was used, but all values in the data fall above it!</p>
 <div class="sourceCode" id="cb190"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">plot_hex</span> <span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_gradient.html">scale_fill_gradient2</a></span><span class="op">(</span>low <span class="op">=</span> <span class="st">"red"</span>, mid <span class="op">=</span> <span class="st">"grey90"</span>, high <span class="op">=</span> <span class="st">"yellow"</span>,
                        midpoint <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">penguins</span><span class="op">$</span><span class="va">flipper_length_mm</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 <div class="inline-figure"><img src="Visualizations4_files/figure-html/unnamed-chunk-15-1.png" width="672"></div>
-<p>Here, the midpoint is set to the mean value for <code>flipper_length_mm</code>. You should note that this is not a particularly good scale to use. The midpoint appears to be at about 200, so values at 220 and 180 are equally different from the midpoint. However, because the low value (red) is darker than the high value (yellow), the 180 values are perceived to be more different.</p>
+<p>Here, the <code>midpoint</code> is set to the mean value for <code>flipper_length_mm</code>. You should note that this is not a particularly good scale to use. The midpoint appears to be at about 200, so values at 220 and 180 are equally different from the midpoint. However, because the low value (red) is darker than the high value (yellow), the 180 values are perceived to be more different.</p>
 <div class="panel panel-success">
 <div class="panel-heading">
 <strong>EXERCISE 4</strong>
@@ -374,14 +375,14 @@ Create 2 visualizations using divergent scales that you think are equally unifor
 </h3>
 <p>Base R comes with the following color scales:</p>
 <div class="inline-figure"><img src="figures/R_base_color_palettes.png" style="width:100.0%"></div>
-<p>Each color scale can be used as a function that takes an argument <em>n</em> for the number of colors to sample from that color scale.</p>
+<p>Each color scale can be used as a function that takes an argument <code>n</code> for the number of colors to sample from that color scale.</p>
 <div class="sourceCode" id="cb191"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/grDevices/palettes.html">rainbow</a></span><span class="op">(</span><span class="va">n</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/grDevices/palettes.html">heat.colors</a></span><span class="op">(</span><span class="va">n</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/grDevices/palettes.html">terrain.colors</a></span><span class="op">(</span><span class="va">n</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/grDevices/palettes.html">topo.colors</a></span><span class="op">(</span><span class="va">n</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/grDevices/palettes.html">cm.colors</a></span><span class="op">(</span><span class="va">n</span><span class="op">)</span></code></pre></div>
-<p>This will return those colors’ hexcode, and can be passed in to any argument expecting a vector of color names:</p>
+<p>This will return those colors’ hexcodes, and can be passed in to any argument expecting a vector of color names:</p>
 <div class="sourceCode" id="cb192"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">plot_hex</span> <span class="op">+</span>
     <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_gradient.html">scale_fill_gradientn</a></span><span class="op">(</span>colors <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/grDevices/palettes.html">terrain.colors</a></span><span class="op">(</span><span class="fl">4</span><span class="op">)</span><span class="op">)</span></code></pre></div>
@@ -440,7 +441,7 @@ Create 2 visualizations using divergent scales that you think are equally unifor
 <li>Sequential</li>
 <li>Divergent</li>
 </ol>
-<p>Just like the 3 types of color scales outlined above! You can quickly visualize all the palettes with <code><a href="https://rdrr.io/pkg/RColorBrewer/man/ColorBrewer.html">display.brewer.all()</a></code> and specifying which <em>type</em> you want to see:</p>
+<p>Just like the 3 types of color scales outlined above! You can quickly visualize all the palettes with <code><a href="https://rdrr.io/pkg/RColorBrewer/man/ColorBrewer.html">display.brewer.all()</a></code> and specifying which <code>type</code> you want to see:</p>
 <div class="sourceCode" id="cb195"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/pkg/RColorBrewer/man/ColorBrewer.html">display.brewer.all</a></span><span class="op">(</span>colorblindFriendly <span class="op">=</span> <span class="cn">TRUE</span>, type <span class="op">=</span> <span class="st">"qual"</span><span class="op">)</span></code></pre></div>
 <div class="inline-figure"><img src="Visualizations4_files/figure-html/unnamed-chunk-19-1.png" width="672"></div>
@@ -450,7 +451,7 @@ Create 2 visualizations using divergent scales that you think are equally unifor
 <div class="sourceCode" id="cb197"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/pkg/RColorBrewer/man/ColorBrewer.html">display.brewer.all</a></span><span class="op">(</span>colorblindFriendly <span class="op">=</span> <span class="cn">TRUE</span>, type <span class="op">=</span> <span class="st">"div"</span><span class="op">)</span></code></pre></div>
 <div class="inline-figure"><img src="Visualizations4_files/figure-html/unnamed-chunk-19-3.png" width="672"></div>
-<p>Note that the <em>colorblindFriendly</em> argument was also used and set to true. This filters the results to only show palettes that are colorblind friendly. There is almost no reason to ever not use a colorblind friendly palette.</p>
+<p>Note that the <code>colorblindFriendly</code> argument was also used and set to <code>TRUE</code>. This filters the results to only show palettes that are colorblind friendly. There is almost no reason to ever not use a colorblind friendly palette.</p>
 <p>Each palette has a maximum number of colors in the scale, but you might be curious about how the palette would look with varying numbers of colors. If you only have 4 levels to your variable, maybe one scale will accommodate that number better than another. You can see the exact colors used for a given palette and number of colors using <code><a href="https://rdrr.io/pkg/RColorBrewer/man/ColorBrewer.html">display.brewer.pal()</a></code>.</p>
 <div class="sourceCode" id="cb198"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/pkg/RColorBrewer/man/ColorBrewer.html">display.brewer.pal</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">4</span>, name <span class="op">=</span> <span class="st">'Reds'</span><span class="op">)</span></code></pre></div>
@@ -463,7 +464,7 @@ Create 2 visualizations using divergent scales that you think are equally unifor
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/pkg/RColorBrewer/man/ColorBrewer.html">brewer.pal</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">4</span>, name <span class="op">=</span> <span class="st">'Reds'</span><span class="op">)</span>
 <span class="co">#&gt; [1] "#FEE5D9" "#FCAE91" "#FB6A4A" "#CB181D"</span></code></pre></div>
 <p>“Okay, cool, I get it, these are AWESOME. How do I <strong><em>USE</em></strong> them?!”</p>
-<p>Fair question! The answer is very easily! ggplot2 built in functions to easily adopt the brewer color palettes. You can do so using <code>scale_*_brewer()</code> for categorical data and <code>scale_*_distiller()</code> for continuous. All you have to do is pass in the name of the specific <em>palette</em>.</p>
+<p>Fair question! The answer is: very easily! ggplot2 has built in functions to easily adopt the brewer color palettes. You can do so using <code>scale_*_brewer()</code> for categorical data and <code>scale_*_distiller()</code> for continuous. All you have to do is pass in the name of the specific <code>palette</code>.</p>
 <div class="sourceCode" id="cb201"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">plot_hex</span> <span class="op">+</span>
     <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_brewer.html">scale_fill_distiller</a></span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"GnBu"</span><span class="op">)</span>
@@ -506,7 +507,7 @@ plot_jitter +
 <p style="color:#A79BF0">
 <strong>Error: Continuous value supplied to discrete scale</strong>
 </p>
-<p>This is another one of the errors from R that are actually pretty helpful and intuitive. This just means the type of color scale you or the function you are using does not map on to the data it’s being applied to. In most instances like this, you just need to change the function you’re using (e.g., brewer vs distiller).</p>
+<p>This is another one of the errors from R that are actually pretty helpful and intuitive. This just means the type of color scale you or the function you are using does not map on to the data it is being applied to. In most instances like this, you just need to change the function you are using (e.g., brewer vs distiller).</p>
 <div class="panel panel-success">
 <div class="panel-heading">
 <strong>EXERCISE 5</strong>
@@ -520,7 +521,7 @@ Try out some different palettes from RColorBrewer, pick your top 3, and modify y
 <h3>
 <span class="header-section-number">10.4.3</span> Grey scale<a class="anchor" aria-label="anchor" href="#grey-scale"><i class="fas fa-link"></i></a>
 </h3>
-<p>For ink considerations, sometimes you may want to just use a grey scale. ggplot has a built in function to help with this for categorical data (as it is easy to do for continuous) called <code>scale_*_grey()</code>. The scale can be selected automatically, or you can specify the <em>start</em> and <em>end</em> values which range from 0 (dark) to 1 (light).</p>
+<p>For ink considerations, sometimes you may want to just use a grey scale. ggplot has a built in function to help with this for categorical data (as it is easy to do for continuous) called <code>scale_*_grey()</code>. The scale can be selected automatically, or you can specify the <code>start</code> and <code>end</code> values which range from 0 (dark) to 1 (light).</p>
 <div class="sourceCode" id="cb204"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">plot_jitter</span> <span class="op">+</span> 
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_grey.html">scale_color_grey</a></span><span class="op">(</span><span class="op">)</span>
@@ -539,12 +540,12 @@ Try out some different palettes from RColorBrewer, pick your top 3, and modify y
 <h3>
 <span class="header-section-number">10.4.4</span> Viridis<a class="anchor" aria-label="anchor" href="#viridis"><i class="fas fa-link"></i></a>
 </h3>
-<p>The issue of colorblind friendly palettes was mentioned above and how there is almost no good reason to ever not use a colorblind friendly palette. It can be hard to determine what palettes are colorblind friendly. There are some good resources to help you see how your visualization would look in different forms of colorblindness. One of them is called <code><a href="https://colorspace.R-Forge.R-project.org/reference/cvd_emulator.html">cvd_emulator()</a></code> from the colorspaces package (more on this below). Others are available <a href="https://www.vischeck.com/vischeck/vischeckImage.php">online</a>.</p>
-<p>An alternative to selecting a color palette and then checking to see whether it is colorblind friendly is to just choose a palette specifically designed to be interpretable and effective under a variety of different color vision types (typical and different forms of color blindness). These come from the viridis package, which was introduced earlier!</p>
+<p>The issue of colorblind friendly palettes was mentioned above and how there is almost no good reason to ever not use a colorblind friendly palette. It can be hard to determine what palettes are colorblind friendly. There are some good resources to help you see how your visualization would look in different forms of colorblindness. One of them is called <code><a href="https://colorspace.R-Forge.R-project.org/reference/cvd_emulator.html">cvd_emulator()</a></code> from the colorspace package (more on this below). Others are available <a href="https://www.vischeck.com/vischeck/vischeckImage.php">online</a>.</p>
+<p>An alternative to selecting a color palette and then checking to see whether it is colorblind friendly is to just choose a palette specifically designed to be interpretable and effective under a variety of different color vision types (typical and different forms of color blindness). These come from the <code>viridis</code> package, which was introduced earlier!</p>
 <img src="figures/r_viridis.png" style="width:100.0%"><p style="font-size:8pt">
 Source: <a href="https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html">viridis documentation</a>
 </p>
-<p>These palettes can be easily applied by using <code>scale_*_viridis()</code>. The specific palette is set with the <em>option</em> argument, and can be applied to categorical data by using the <em>discrete</em> argument</p>
+<p>These palettes can be easily applied by using <code>scale_*_viridis()</code>. The specific palette is set with the <code>option</code> argument, and can be applied to categorical data by using the <code>discrete</code> argument</p>
 <div class="sourceCode" id="cb205"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">plot_bar</span> <span class="op">+</span> 
   <span class="fu"><a href="https://rdrr.io/pkg/viridis/man/scale_viridis.html">scale_fill_viridis</a></span><span class="op">(</span>discrete <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
@@ -610,7 +611,7 @@ Take your code from Exercise 5 and replace the color palettes from RColorBrewer 
 <span class="co">#&gt;        Blue-Yellow 2, Blue-Yellow 3, Green-Orange,</span>
 <span class="co">#&gt;        Cyan-Magenta, Tropic, Broc, Cork, Vik, Berlin,</span>
 <span class="co">#&gt;        Lisbon, Tofino</span></code></pre></div>
-<p>You can also <em>plot</em> them to actually see the palettes themselves.</p>
+<p>You can also <code>plot</code> them to actually see the palettes themselves.</p>
 <div class="sourceCode" id="cb208"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://colorspace.R-Forge.R-project.org/reference/hcl_palettes.html">hcl_palettes</a></span><span class="op">(</span>type <span class="op">=</span> <span class="st">"Qualitative"</span>, plot <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></code></pre></div>
 <div class="inline-figure"><img src="Visualizations4_files/figure-html/unnamed-chunk-32-1.png" width="672"></div>
@@ -623,7 +624,7 @@ Take your code from Exercise 5 and replace the color palettes from RColorBrewer 
 <div class="sourceCode" id="cb211"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://colorspace.R-Forge.R-project.org/reference/hcl_palettes.html">hcl_palettes</a></span><span class="op">(</span>type <span class="op">=</span> <span class="st">"Diverging"</span>, plot <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></code></pre></div>
 <div class="inline-figure"><img src="Visualizations4_files/figure-html/unnamed-chunk-32-4.png" width="672"></div>
-<p>The way you actually use these palettes is quite similar to how you use <code><a href="https://rdrr.io/pkg/RColorBrewer/man/ColorBrewer.html">brewer.pal()</a></code> to use RColorBrewer palettes! Each type of scale has its own function, where you specify the <em>palette</em> and <em>n</em>umber of colors from it. That vector of colors can then be used in your ggplot code.</p>
+<p>The way you actually use these palettes is quite similar to how you use <code><a href="https://rdrr.io/pkg/RColorBrewer/man/ColorBrewer.html">brewer.pal()</a></code> to use RColorBrewer palettes! Each type of scale has its own function, where you specify the <code>palette</code> and <code>n</code>umber of colors from it. That vector of colors can then be used in your ggplot code.</p>
 <div class="sourceCode" id="cb212"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://colorspace.R-Forge.R-project.org/reference/hcl_palettes.html">qualitative_hcl</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">3</span>, palette <span class="op">=</span> <span class="st">"Harmonic"</span><span class="op">)</span>
 <span class="co">#&gt; [1] "#C7A76C" "#5CBD92" "#7DB0DD"</span>
@@ -693,12 +694,12 @@ Show/Hide
 <ul>
 <li><a href="figures/ggplot_colors.png">ggplot Colors</a></li>
 <li><a href="https://ggplot2-book.org/scale-colour.html">ggplot2 book</a></li>
-<li><a href="https://cran.r-project.org/web/packages/colorspace/vignettes/colorspace.html">colorspaces info</a></li>
+<li><a href="https://cran.r-project.org/web/packages/colorspace/vignettes/colorspace.html">colorspace info</a></li>
 </ul>
 </div>
-<div id="references-1" class="section level2">
+<div id="references-2" class="section level2">
 <h2>
-<span class="header-section-number">10.6</span> References<a class="anchor" aria-label="anchor" href="#references-1"><i class="fas fa-link"></i></a>
+<span class="header-section-number">10.6</span> References<a class="anchor" aria-label="anchor" href="#references-2"><i class="fas fa-link"></i></a>
 </h2>
 <p>Stauffer, R., Mayr, G. J., Dabernig, M., &amp; Zeileis, A. (2015). Somewhere over the rainbow: How to make effective use of colors in meteorological visualizations. <em>Bulletin of the American Meteorological Society, 96</em>(2), 203-216.</p>
 <!-- #### NAs -->
@@ -789,7 +790,7 @@ Show/Hide
 </ul>
 </li>
 <li><a class="nav-link" href="#color-and-design-resources"><span class="header-section-number">10.5</span> Color and Design Resources</a></li>
-<li><a class="nav-link" href="#references-1"><span class="header-section-number">10.6</span> References</a></li>
+<li><a class="nav-link" href="#references-2"><span class="header-section-number">10.6</span> References</a></li>
 </ul>
 
       <div class="book-extra">
@@ -807,7 +808,7 @@ Show/Hide
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>PSYC193L</strong>" was written by Ethan Hurwitz. It was last built on 2022-06-06.</p>
+    <p>"<strong>PSYC193L</strong>" was written by Ethan Hurwitz. It was last built on 2022-06-10.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

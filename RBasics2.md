@@ -2,7 +2,7 @@
 
 
 
-<a href="Exercise1.Rmd" download>Exercise Sheet</a>
+<a href="exercises/Exercise1.Rmd" download>Exercise Sheet</a>
 
 Okay so what is R?
 
@@ -69,7 +69,7 @@ While R is a programming language used for statistical modeling, data analysis, 
 
 ### Comparison Operators
 
-Return TRUE or FALSE values (aka booleans):
+Return `TRUE` or `FALSE` values (aka booleans):
 
 <table class="table table-striped table-hover table-condensed table-bordered" style="width: auto !important; margin-left: auto; margin-right: auto;">
  <thead>
@@ -106,7 +106,7 @@ Return TRUE or FALSE values (aka booleans):
 </tbody>
 </table>
 
-So we can look at some simple test expressions to see how they evaluate:
+You can look at some simple test expressions to see how they evaluate:
 
 
 ```r
@@ -220,7 +220,7 @@ myVar
 #> [1] 4
 ```
 
-As R is a programming language, it is very specific and finicky. You must be **precise** with your code.
+As R is a programming language, it is very specific and finicky. You must be <u>**precise**</u> with your code.
 
 
 ```r
@@ -253,10 +253,10 @@ A. Continuous
 B. Discrete
 
 1. Character (**chr**) - a string of characters/text (can use " or ')
-2. Logical (**lgl**) - a logical TRUE or FALSE
-3. Factor (**fctr**) - factors, which R uses to represent categorical variables with fixed possible values of discrete data. Useful when you have true categorical data, and when you want to override the ordering of character vectors to improve display
+2. Logical (**lgl**) - a logical `TRUE` or `FALSE`
+3. Factor (**fct**) - factors, which R uses to represent categorical variables with fixed possible values of discrete data. Useful when you have true categorical data, and when you want to override the ordering of character vectors to improve display
 
-There are other data types too (e.g., **date**) that we will largely avoid working with.
+There are other data types too (e.g., **date**) that will largely be avoided here.
 
 Variables are automatically and dynamically assigned one of these *modes* based on what is assigned to it. You can check the type of some data by using the `typeof()` function (more about functions later!).
 
@@ -280,7 +280,7 @@ typeof(z)
 		
 ## Global environment		
 
-Your workspace's global environment will contain all the objects that you've saved during your R session, including variables, functions, data, etc. You can print what is in your workspace with the code `ls()`. We previously saved the objects `x`, `y`, `z`, and `myVar`. So if we run `ls()`, we should see only those four objects. 
+Your workspace's global environment will contain all the objects that you have saved during your R session, including variables, functions, data, etc. You can print what is in your workspace with the code `ls()`. Previously the objects `x`, `y`, `z`, and `myVar` were saved. So `ls()` was ran, only those four objects should be seen.
 
 
 ```r
@@ -297,19 +297,19 @@ ls()
 #> [1] "myVar" "y"     "z"
 ```
 
-The `x` object is no longer there. `rm()` is **permanent**, so be careful!
+Notice that the `x` object is no longer there. `rm()` is **permanent**, so be careful!
 
-You may have thought, "if `y = x + 2`, and you remove x, won't there be an error?" This is a good question but the answer is no, because we are saving the exact value x was as the variable y. x is not a dynamic value, but rather once you set `x = 4`, anytime R reads "x", it will replace it with "4". So we set `y` equal to `4 + 2`. In R, once a variable is declared (set with `=` or `<-`), it's value does not change unless you explicitly overwrite it.
+You may have thought, "if `y = x + 2`, and you remove x, will there be an error?" This is a good question but the answer is no, because exact value `x` was is being saved as the variable `y`. `x` is not a dynamic value, but rather once you set `x = 4`, anytime R reads `x`, it will replace it with `4`. So `y` is set equal to `4 + 2`. In R, once a variable is declared (set with `=` or `<-`), its value does not change unless you explicitly overwrite it.
 
 If you want to clear your entire workspace (which is good practice at the beginning of your script), type in `rm(list=ls())` -- which is saying to remove (rm) the objects in your workspace (ls()). 
 
 ## Data Objects
 
-We obviously want to do more than evaluate simple expressions with R. To that end, at some point we are going to need to save more than just a single value to a variable! There are many different types of *data objects*, or *structures* that can hold data. We are going to focus on 2 in particular: **vectors** and **data frames**. 
+You obviously will want to do more than evaluate simple expressions with R. To that end, at some point you are going to need to save more than just a single value to a variable! There are many different types of *data objects*, or *structures* that can hold data. 2 in particular will be focused on: **vectors** and **data frames**.
 
 ### Vectors {#Vectors}
 
-Often times we will want to work with a series of values (or elements). **(Atomic) Vectors** are exactly that! Each item in a vector is an element. You initiate a vector with `c()`:
+Often times you will want to work with a series of values (or elements). **(Atomic) Vectors** are exactly that! Each item in a vector is an element. You initiate a vector with `c()`:
 
 
 ```r
@@ -345,8 +345,7 @@ c(1, "hello")
 #> [1] "1"     "hello"
 ```
 
-All elements in a vector have to be the same type of data. R will automatically coerce (change) data types of elements in a vector to match each other. We have to be careful because this can often cause issues!
-
+All elements in a vector have to be the same type of data. R will automatically coerce (change) data types of elements in a vector to match each other. You have to be careful because this can often cause issues!
 
 <div class="panel panel-success">
   <div class="panel-heading">**EXERCISE #5**</div>
@@ -376,9 +375,9 @@ myVector[2]
 
 ### Dataframes
 
-Most of the time we are going to be working with more than just one vector of values. Instead, we will have a set of different data (a dataset). The most common data structure used in R is a data frame (or df), which is used for datasets. The majority of your work in Social Sciences will be involving data frames. So, it's good to get used to them early!
+Most of the time you are going to be working with more than just one vector of values. Instead, you will have a set of different data (a dataset). The most common data structure used in R is a data frame (or df), which is used for datasets. The majority of your work in Social Sciences will be involving data frames. So, it is good to get used to them early!
 
-You can think of a data frame like an excel spreadsheet: a series of equal length vectors, where each vector is treated as a column and elements of those vectors are the rows. Most of the time we will be using a data frame that is loading a dataset from an existing file. However, we can also create them from scratch:
+You can think of a data frame like an excel spreadsheet: a series of equal length vectors, where each vector is treated as a column and elements of those vectors are the rows. Most of the time you will be using a data frame that is loading a dataset from an existing file. However, you can also create them from scratch:
 
 
 ```r
@@ -432,8 +431,7 @@ df
 #> 2    2    90    Dave
 #> 3    3    77    Dave
 #> 4    4    98    Dave
-  # Below are a few ways to index different parts of a dataframe. 
-  # Replace the X's to test things as I talk through it.
+  # Below are a few ways to index different parts of a df. 
 
 # [column] (single value only selects columns)
 # Select the second row of our df
@@ -457,7 +455,7 @@ df[,1]
 #> [1] 1 2 3 4
 ```
 
-A common way to index columns in a data frame is using the `$` sign. If we wanted the `score` column from our data frame, we'd use `df$Score`
+A common way to index columns in a data frame is using the `$` sign. If you wanted the `score` column from your data frame, you would use `df$Score`
 
 
 ```r
@@ -471,7 +469,7 @@ df[2]
 #> 4    98
 ```
 
-Note the difference between these two. When you index the column with brackets, you are pulling the entire column out. As this is a data frame, the output will be a list, which you can't always use directly in functions. If you index with the `$`, however, the output is a vector of just the values, which can be used in many functions. A quick way to check an object's type is by using the `typeof()` function (common in other programming languages). Let's check the types of these two objects and see what happens if we try to find the mean of our scores:
+Note the difference between these two. When you index the column with brackets, you are pulling the entire column out. As this is a data frame, the output will be a list, which you cannot always use directly in functions. If you index with the `$`, however, the output is a vector of just the values, which can be used in many functions. A quick way to check an object's type is by using the `typeof()` function (common in other programming languages). For example, compare the types of these two objects and observe what happens if you try to find the mean of the scores:
 
 
 ```r
@@ -495,7 +493,7 @@ mean(df$Score)
 #> [1] 88.25
 ```
 
-Since the output of `$` indexing is a vector, you can then index that to get any particular element you want, just as we did above!
+Since the output of `$` indexing is a vector, you can then index that to get any particular element you want, just as was done above!
 
 
 ```r
@@ -525,7 +523,7 @@ This may be familiar if you have knowledge of other coding languages, but is a l
 
 There is another type of data object that you will often encounter when working with datasets: **Tibbles**. Tibbles are relatively new, and are the default data object created by many of the packages and functions we will use most often in this course.
 
-Here is how Hadley Wickham (the dude who created tibbles, and much of the other code we'll use) describes them:
+Here is how Hadley Wickham (the dude who created tibbles, and much of the other code you will use) describes them:
 
 > "Tibbles are data frames, but they tweak some older behaviors to make life a little easier. R is an old language, and some things that were useful 10 or 20 years ago now get in your way. It's difficult to change base R without breaking existing code, so most innovation occurs in packages. 
 Tibbles are data.frames that are lazy and surly: they do less (i.e. they don't change variable names or types, and don't do partial matching) and complain more (e.g. they will generate a warning when a variable/column you are trying to index does not exist). This forces you to confront problems earlier, typically leading to cleaner, more expressive code."

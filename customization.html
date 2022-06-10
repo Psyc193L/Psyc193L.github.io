@@ -61,6 +61,7 @@
 <li><a class="" href="advanced-wrangling.html"><span class="header-section-number">14</span> Advanced Wrangling</a></li>
 <li><a class="" href="summarizing-data.html"><span class="header-section-number">15</span> Summarizing Data</a></li>
 <li><a class="" href="text-cleaning.html"><span class="header-section-number">16</span> Text Cleaning</a></li>
+<li><a class="" href="data-transformation.html"><span class="header-section-number">17</span> Data Transformation</a></li>
 </ul>
 
         <div class="book-extra">
@@ -75,7 +76,7 @@
 <div class="sourceCode" id="cb141"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://allisonhorst.github.io/palmerpenguins/">palmerpenguins</a></span><span class="op">)</span></code></pre></div>
-<p><a href="Exercise_Viz3.Rmd" download>Exercise Sheet</a></p>
+<p><a href="exercises/Exercise_Viz3.Rmd" download>Exercise Sheet</a></p>
 <p>You now have a number of different graphs in your toolkit to use when visualizing different types of relationships or comparisons in your data. You also learned a lot of ways to tinker with the geoms and their aesthetics. Now it is time to add some techniques and skills to customize the other elements of the graphs.</p>
 <p>This will serve as a base plot to customize:</p>
 <div class="sourceCode" id="cb142"><pre class="downlit sourceCode r">
@@ -107,7 +108,7 @@ Use the <code>penguins</code> dataframe and create your own <code>base_plot</cod
 <span class="header-section-number">9.1</span> Scaling The Axes<a class="anchor" aria-label="anchor" href="#scaling-the-axes"><i class="fas fa-link"></i></a>
 </h2>
 <p>By default, ggplot will use axes settings that it thinks best highlight the data being visualized. Here,the y-axis runs from ~2000 - 7000 and has intervals of 1000 starting at 3000.</p>
-<p>This can be changed using a <code>scale_*_*</code> function. The first <code>*</code> is replaced by which axes you want to modify, and the second with what type of data or scale you want it to have. Here, the y-axis is continuous, so <code><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_y_continuous()</a></code> would be used. Its arguments can be used to modify what is shown on the axis. There are two reasons why you might want to change this.</p>
+<p>This can be changed using a <code>scale_*_*</code> function. The first <code>*</code> is replaced by which axis you want to modify, and the second with what type of data or scale you want it to have. Here, the y-axis is continuous, so <code><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_y_continuous()</a></code> would be used. Its arguments can be used to modify what is shown on the axis. There are two reasons why you might want to change this.</p>
 <ol style="list-style-type: decimal">
 <li><p>Generally speaking, it is good practice to have your axes start at 0 and show the full scale. It can be misleading when parts of a scale are obscured and removed.</p></li>
 <li><p>You might have an issue with points being jittered past the scale and result in the Warning message covered in previous lessons.</p></li>
@@ -462,7 +463,7 @@ Use the code you’ve generated throughout the previous few examples to create a
 <code class="sourceCode R"><span class="va">modified_plot</span> <span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>legend.position <span class="op">=</span> <span class="st">"none"</span><span class="op">)</span></code></pre></div>
 <div class="inline-figure"><img src="Visualizations3_files/figure-html/unnamed-chunk-27-1.png" width="672"></div>
-<p>However, in certain cases, particularly if you are displaying information from another variable (e.g., indicating penguin <code>sex</code> by point shape), a legend is needed and may want to be customized.</p>
+<p>However, in certain cases, particularly if you are displaying information from another variable (e.g., indicating penguin <code>sex</code> by point <code>shape</code>), a legend is needed and customization may be useful.</p>
 <div class="sourceCode" id="cb162"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">penguins</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
   <span class="fu"><a href="https://tidyr.tidyverse.org/reference/drop_na.html">drop_na</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
@@ -595,7 +596,7 @@ Use patchwork to combine your <code>base_graph</code> and <code>modified_graph</
 <h2>
 <span class="header-section-number">9.5</span> Saving Graphs<a class="anchor" aria-label="anchor" href="#saving-graphs"><i class="fas fa-link"></i></a>
 </h2>
-<p>Once you have created your masterpieces, you may want to export them so they can be added to manuscripts created outside of R, posters, or anything else. To save your ggplot graphs, you can use <code><a href="https://ggplot2.tidyverse.org/reference/ggsave.html">ggsave()</a></code>. You have several file type options, but I would recommend pdf. It generally mainatins a high resolution AND aspect ratio. In <code><a href="https://ggplot2.tidyverse.org/reference/ggsave.html">ggsave()</a></code>, you must specify:</p>
+<p>Once you have created your masterpieces, you may want to export them so they can be added to manuscripts created outside of R, posters, or anything else. To save your ggplot graphs, you can use <code><a href="https://ggplot2.tidyverse.org/reference/ggsave.html">ggsave()</a></code>. You have several file type options, but I would recommend pdf. It generally maintains a high resolution AND aspect ratio. In <code><a href="https://ggplot2.tidyverse.org/reference/ggsave.html">ggsave()</a></code>, you must specify:</p>
 <ul>
 <li>the <code>filename</code> you want your graph to be saved with (which can/should include a relative file path)</li>
 <li>which <code>plot</code> you want to be saving</li>
@@ -669,7 +670,7 @@ Save your <code>modified_graph</code> and include that graph file with your subm
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>PSYC193L</strong>" was written by Ethan Hurwitz. It was last built on 2022-06-06.</p>
+    <p>"<strong>PSYC193L</strong>" was written by Ethan Hurwitz. It was last built on 2022-06-10.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

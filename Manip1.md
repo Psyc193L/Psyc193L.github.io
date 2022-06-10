@@ -10,17 +10,17 @@ library(tidyverse)
 library(palmerpenguins)
 ```
 
-<a href="Exercise_Manip1.Rmd" download>Exercise Sheet</a>
+<a href="exercises/Exercise_Manip1.Rmd" download>Exercise Sheet</a>
 
 ## If/Else statements
 
 ### Traditional
 
-Sometimes, you will want your code to perform different actions depending on something's value. In these circumstances, it is useful to implement `if...else` statements. `If` statements work as such: 
+Sometimes, you will want your code to perform different actions depending on something's value. In these circumstances, it is useful to implement `if...else` statements. `if` statements work as such: 
 
-**if** some test/condition evaluates to TRUE, execute some specific code. 
+**if** some test/condition evaluates to `TRUE`, execute some specific code. 
 
-Other tests/conditions can be appended with `else` statements, which specify what to do when the original test/condition evaluates to FALSE and is based on subsequent tests/conditions. The syntax of a basic `if` statement is as follows:
+Other tests/conditions can be appended with `else` statements, which specify what to do when the original test/condition evaluates to `FALSE` and is based on subsequent tests/conditions. The syntax of a basic `if` statement is as follows:
 
 
 ```r
@@ -41,9 +41,9 @@ if(3 < x) {
 #> [1] "The condition evaluated TRUE"
 ```
 
-`x` was set equal to 4. R evaluates the test `3 < x` in the `if` statement, here equivalent to `3 < 4`, which evaluates to *TRUE*. Since the `if` condition evaluates *TRUE*, it runs the code in the curly brackets. 
+`x` was set equal to 4. R evaluates the test `3 < x` in the `if` statement, here equivalent to `3 < 4`, which evaluates to `TRUE`. Since the `if` condition evaluates `TRUE`, it runs the code in the curly brackets. 
 
-`x` may not always be 4 though. What if `x` was not 4? What if you do not know what `x` is? If the test in the `if` statement evaluates to *FALSE*, nothing happens. If nothing at all happens, you may not know if there was an error in the code or the test just evaluated to *FALSE*. Considering this, it is always good practice to set up an alternative for when the test evaluates to *FALSE*. That is where `else` statements come in.
+`x` may not always be 4 though. What if `x` was not 4? What if you do not know what `x` is? If the test in the `if` statement evaluates to `FALSE`, nothing happens. If nothing at all happens, you may not know if there was an error in the code or the test just evaluated to `FALSE`. Considering this, it is always good practice to set up an alternative for when the test evaluates to `FALSE`. That is where `else` statements come in.
 
 The code below will change `x` to be a random value, so its actual value will be unknown.
 
@@ -56,14 +56,14 @@ if(3 < x) {
 } else {
   print("the condition evaluated FALSE")
 }
-#> [1] "The condition evaluated TRUE"
+#> [1] "the condition evaluated FALSE"
 x
-#> [1] 4
+#> [1] 3
 ```
 
-This code specifies what to do depending on whether the test evaluates to *TRUE* or if it evaluates *FALSE*.
+This code specifies what to do depending on whether the test evaluates to `TRUE` or if it evaluates to `FALSE`.
 
-You can get more specific and link several conditions together. You may not want just 2 options -- e.g., something to do if a test is *TRUE* and something else done in **all** other cases. Instead of using `else`, you use `else if()` and specify another test. 
+You can get more specific and link several conditions together. You may not want just 2 options -- e.g., something to do if a test is `TRUE` and something else done in **all** other cases. Instead of using `else`, you use `else if()` and specify another test. 
 
 
 ```r
@@ -76,9 +76,9 @@ if(4 < x) {
 } else {
   print("Neither the first or second condition evaluated TRUE.")
 }
-#> [1] "The first condition evaluated TRUE"
+#> [1] "Neither the first or second condition evaluated TRUE."
 x
-#> [1] 5
+#> [1] 1
 ```
 
 Writing `if` statements like this is most useful when the code you want to run executes a function. As you will note above, in all instances the `print()` function was the code being executed (what is in the curly brackets). An infinite number of `if` conditions can be chained together in an `if...else` chain.
@@ -103,9 +103,9 @@ There are two alternative ways to write `if...else` statements.
 
 `ifelse()` statements take the form:
 
-`ifelse(test, the value to return if the test evaluates TRUE, the value to return if the test evaluates FALSE)`
+`ifelse(test, the value to return if the test evaluates *TRUE*, the value to return if the test evaluates *FALSE*)`
 
-Multiple `ifelse()` statements can be chained together, akin to an `else if` by adding a nested `ifelse()` call in place of the "FALSE" argument.
+Multiple `ifelse()` statements can be chained together, akin to an `else if` by adding a nested `ifelse()` call in place of the `FALSE` argument.
 
 The examples below demonstrates this:
 
@@ -116,9 +116,9 @@ x = sample(c(1:6), 1)
 ifelse(4 < x, "The first condition evaluated true.",
        ifelse(2 < x & x < 5, "The second condition evaluated true.", 
               "Neither the first or second condition evaluated true."))
-#> [1] "Neither the first or second condition evaluated true."
+#> [1] "The first condition evaluated true."
 x
-#> [1] 1
+#> [1] 6
 ```
 
 <div class="panel panel-success">
@@ -140,9 +140,9 @@ case_when(
   2 < x & x < 5 ~ "The second condition evaluated true.",
   TRUE ~ "Neither the first or second condition evaluated true."
 )
-#> [1] "The second condition evaluated true."
+#> [1] "The first condition evaluated true."
 x
-#> [1] 4
+#> [1] 3
 ```
 
 <div class="panel panel-success">
@@ -158,7 +158,7 @@ x
 
 ## Loops
 
-Loops are used to repeat certain code iteratively, for example when you want to apply the same code to each element in a sequence (e.g., columns in a dataframe, elements in a vector, etc). The basic syntax of a for loop is as followings:
+Loops are used to repeat certain code iteratively, for example when you want to apply the same code to each element in a sequence (e.g., columns in a dataframe, elements in a vector, etc). The basic syntax of a for loop is as follows:
 
 
 
@@ -186,7 +186,7 @@ x # Look at output to verify changes
 #>  [1]  2  3  4  5  6  7  8  9 10 11
 ```
 
-Breaking down the code above step by step: First a `for` loop was initiated, saying you wanted to iterate over each element in the sequence 1 to `length(x)`. The `length()` function returns the number of elements in the object you pass it. Then it was specified that the ith element of `x` should be replaced with the value resulting from the sum of that value + 1 (x[i] + 1). The value of `i` will change in each iteration of the loop. It starts with 1 (because that is what the code tells it to do with the `1:` part), and increments by 1 each iteration, iterating `length(x)` times. 
+Breaking down the code above step by step: First a `for` loop was initiated, saying you wanted to iterate over each element in the sequence 1 to `length(x)`. The `length()` function returns the number of elements in the object you pass it. Then it was specified that the ith element of `x` should be replaced with the value resulting from the sum of that value + 1 (`x[i] + 1`). The value of `i` will change in each iteration of the loop. It starts with 1 (because that is what the code tells it to do with the `1:` part), and increments by 1 each iteration, iterating `length(x)` times. 
 
 ::: {.rmdcaution} 
 **`1:length(x)` was used instead of just 10 (the number of elements in the vector x) above to keep the code dynamic. This illustrates an important coding principle: <u>soft coding</u> vs <u>hard coding</u>. Hard coding is static and unchanging, whereas soft coding is dynamic. What does this mean? Well, `x` may not always have 10 exam scores. Maybe you have some students who take their exams with OSD, and you have to wait a few days to get their exams back. You want to be able to run the same code without making any modifications. If `1:10` is used in the `for` loop, then when the new exam scores are added to `x`, the code won't run on all exams! The `for` loop is specificed to explicitly iterate over the range 1:10. However, by using `1:length(x)`, `length(x)` will always be replaced by the exact number of elements in the vector `x`! This way, the same code can be used no matter how many exam scores you have! Generally speaking, you <u>always</u> want to soft code and make your code dynamic.**
@@ -235,7 +235,7 @@ for (i in 1:nrow(y)) {
 }
 ```
 
-The same task can be accomplished using `ifelse()`, since here the goal is to return values:
+The same task can be accomplished using `ifelse()`, since the goal here is to return values:
 
 
 ```r
@@ -271,7 +271,7 @@ You can see that only Ally and Tyreek's scores, the students who completed the S
 
 # Tidy Data and Tidyverse
 
-## Tidy Data
+## Tidy Data {#Tidy-Data}
 
 You can represent the same data in many different ways. In almost all cases, the best way to do so is to make sure your data is **tidy**. In tidy data, each row corresponds to a unique observation, each column is a variable, and each cell contains the value for a particular observation and variable.
 
@@ -306,12 +306,12 @@ It also makes all other tidy datasets seem more welcoming!
 
 ## Tidyverse
 
-`tidyverse` is a collection of packages that all "share an underlying design philosophy, grammar, and data structure" of tidy data. The `tidyverse` packages and functions are the tools you will use to fill your R workbench, and they will help with every step of your workflow.
+tidyverse is a collection of packages that all "share an underlying design philosophy, grammar, and data structure" of tidy data. The tidyverse packages and functions are the tools you will use to fill your R workbench, and they will help with every step of your workflow.
 
 ![](figures/environmental-data-science-r4ds-general.png){width=100%}
 <p style="font-size:6pt"> Updated from Grolemund & Wickham's classis R4DS schematic, envisioned by Dr. Julia Lowndes for her 2019 useR! keynote talk and illustrated by Allison Horst.</p>
 
-This illustrates the Social/Data Science workflow that the `tidyverse` suite of packages are designed to help you accomplish:
+This illustrates the Social/Data Science workflow that the tidyverse suite of packages are designed to help you accomplish:
 
 * **Import** -- get data into R
 
@@ -360,7 +360,7 @@ glimpse(penguins)
 
 From this one function alone, you can learn a lot about your data:
 
-1. The names of the variables (columns), which we also could have gotten with `names()`.
+1. The names of the variables (columns), which you also can get with `names()`.
 
 2. The number of observations (rows, 344) and variables (columns, 8). You can also get this information with the `nrow()` and `ncol()` functions.
 

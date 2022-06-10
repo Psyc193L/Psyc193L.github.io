@@ -7,7 +7,7 @@
 library(tidyverse) # Load tidyverse packages
 ```
 
-<a href="Exercise_Manip3.Rmd" download>Exercise Sheet</a>
+<a href="exercises/Exercise_Manip3.Rmd" download>Exercise Sheet</a>
 
 This dataset used in examples throughout, called `HELPfull` (`mosaicData::HELPfull`), contains data from the **H**ealth **E**valuation and **L**inkage to **P**rimary Care study. From the dataset's description:
 
