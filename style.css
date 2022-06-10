@@ -151,3 +151,11 @@ pre.downlit.sourceCode.r {
 .inline-figure {
     border: 0px transparent;
 }
+
+/*Fix Search Results*/
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion{
+  background-color: #d9d9d9;
+  color: #5EB7EF;
+  font-weight: bolder;
+}

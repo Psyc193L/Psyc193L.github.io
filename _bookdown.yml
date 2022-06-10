@@ -4,7 +4,6 @@ before_chapter_script: _common.R
 delete_merged_file: true
 rmd_files:
 - index.Rmd
-#- Syllabus.Rmd
 - RBasics1.Rmd
 - RBasics2.Rmd
 - RBasics3.Rmd
@@ -18,7 +17,6 @@ rmd_files:
 - Manip3.Rmd
 - Manip4.Rmd
 - DataTransformation.Rmd
-#- Datahub.Rmd
 language:
   ui:
     chapter_name: "Chapter "
