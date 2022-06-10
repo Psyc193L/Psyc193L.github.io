@@ -26,9 +26,9 @@ library(palmerpenguins)
 <!-- ::: -->
 <!-- ------------------------------- -->
 
-<a href="Exercise_Viz2.Rmd" download>Exercise Sheet</a>
+<a href="exercises/Exercise_Viz2.Rmd" download>Exercise Sheet</a>
 
-Previously, we mentioned how the point of a visualization is to explore and understand a relationship or pattern in your data (often between a response/outcome variable and one or more explanatory/predictor variables). It is important to know how to best graphically represent your data based on the types of variables (categorical vs continuous) you have and the relationships or patterns you are trying to visualize. There are a number of ways you can visualize specific types of relationships. Some are better than others, and sometimes what is "best" depends on the specific context. 
+Previously, it was stated that the point of a visualization is to explore and understand a relationship or pattern in your data (often between a response/outcome variable and one or more explanatory/predictor variables). It is important to know how to best graphically represent your data based on the types of variables (categorical vs continuous) you have and the relationships or patterns you are trying to visualize. There are a number of ways you can visualize specific types of relationships. Some are better than others, and sometimes what is "best" depends on the specific context. 
 
 What follows here is an overview of a number of different ways you can visualize different data and relationships, as well as recommendations as to which are best and when. 
 
@@ -56,7 +56,7 @@ If you wanted the bars to represent the *proportion* of all observations that ca
 
 $$\frac{nObservationsFromIslandX}{sumOfObservationsFromAllIslands}$$
 
-If the **count**'s were on the y-axis before, then you would just want each `..count..` (numerator above) divided by the sum of all the `..count..`s (denominator above). Luckily, we can just give that to R!
+If the **count**'s were on the y-axis before, then you would just want each `..count..` (numerator above) divided by the sum of all the `..count..`s (denominator above). Luckily, you can just give that to R!
 
 ```{r}
 penguins %>%
@@ -138,7 +138,7 @@ penguins %>%
                  bins = 15)
 ```
 
-In the first histogram you'd probably say this is a unimodal distribution with most of the flipper lengths around 190mm (+/- a few). However, when looking at the second histogram, you'd probably say this distribution looks more bimodal, with one cluster around 190mm and another around 210mm. The same data, visualized using the same type of graph, but two different stories based on choices that you made. You have to be very careful to make sure you are telling the data's story, not your story!
+In the first histogram you would probably say this is a unimodal distribution with most of the flipper lengths around 190mm (+/- a few). However, when looking at the second histogram, you would probably say this distribution looks more bimodal, with one cluster around 190mm and another around 210mm. The same data, visualized using the same type of graph, but two different stories based on choices that you made. You have to be very careful to make sure you are telling the **<u>data's</u>** story, not *your* story!
 
 <div class="panel panel-success">
   <div class="panel-heading">**EXERCISE 2**</div>
@@ -149,7 +149,7 @@ In the first histogram you'd probably say this is a unimodal distribution with m
 
 **density plots**, in short, are a smoothed histogram. If you are particularly stats-minded and want further information, you click below for some further info. 
 
-<button class="btn btn-primary" data-toggle="collapse" data-target="#BlockName"> Show/Hide </button>  
+<button class="btn btn-primary" data-toggle="collapse" data-target="#BlockName"> Advanced </button>  
 <div id="BlockName" class="collapse">  
 Density plots show probability density (not *actual* probability!) on the y-axis. What does that mean exactly? Well, it is a little complicated. In short, a continuous curve (aka kernel) is fit to each individual data point. The kernel is usually a gaussian. All the gaussians from each individual data point are summed and that forms the curve fit by the density plot. For those interested in more info, check [here](https://towardsdatascience.com/histograms-and-density-plots-in-python-f6bda88f5ac0) for a fairly approachable explanation.
 </div>
@@ -281,7 +281,7 @@ penguins %>%
   geom_rug(alpha=0.1, size=1.5)
 ```
 
-Another way to do so is by showing the individual histograms for each of the continuous variables. You can do this by using `ggMarginal()` from the `ggExtra` package.
+Another way to do so is by showing the individual histograms for each of the continuous variables. You can do this by using `ggMarginal()` from the `ggExtra` package (`ggExtra::ggMarginal()`).
 
 ```{r}
 (penguins %>%
@@ -290,7 +290,7 @@ Another way to do so is by showing the individual histograms for each of the con
 ggExtra::ggMarginal(type = "histogram")
 ```
 
-<p class="text-info"> **<u>Note:</u> `ggMarginal` is not part of ggplot proper, so it isn't added on like other geoms. Instead, you have to pipe your ggplot graph in. In doing so, you must wrap the ggplot code in parentheses. This way, the entire visualization gets piped in and not just the last piece!**</p>
+<p class="text-info"> **<u>Note:</u> `ggMarginal` is not part of ggplot proper, so it is not added on like other geoms. Instead, you have to pipe your ggplot graph in. In doing so, you must wrap the ggplot code in parentheses. This way, the entire visualization gets piped in and not just the last piece!**</p>
 
 <div class="panel panel-success">
   <div class="panel-heading">**EXERCISE 7**</div>
@@ -302,7 +302,8 @@ ggExtra::ggMarginal(type = "histogram")
 **Comparisons**
 
 Arguably, the most common thing you will create a graph to visualize is the comparison of data from many different conditions (or levels) of some variable. Specifically, to compare some summary statistics between them. For example: 
-> How does the average weight (`body_mass_g`) of the penguins compare across islands (`island`).
+
+> How does the average weight (`body_mass_g`) of the penguins compare across islands (`island`)?
 
 Maybe it is the case that some islands have better food sources that others, and the penguins there can gorge themselves into a food coma all day long while the penguins on other islands are not as lucky.
 
@@ -328,7 +329,7 @@ Just as there are several summary statistics you can use, there are several ways
 
 The canonical visualization is the bar chart, using the "bar" geom.
 
-<p style="font-size:10pt">Going forward, we will bring back the habit of making predictions for and/or summarizing the visualizations we create. You will first declare a formal prediction by specifying two mutually exclusive alternative patterns that *could* be observed in your visualizations. You will be working with the same idea (hypothesis), so subsequent predictions can just refer to that hypothesis rather than explicitly stating it. After making the visualization, you'll then write a <u>short</u> summary of what the visualization shows.</p>
+<p style="font-size:10pt">Going forward, the habit of making predictions for and/or summarizing the visualizations create will be brought back. A formal prediction will first be declared by specifying two mutually exclusive alternative patterns that *could* be observed in the visualizations. The same idea (hypothesis) will be worked with, so subsequent predictions can just refer to that hypothesis rather than explicitly stating it. After making the visualization, a <u>short</u> summary of what the visualization shows will be written.</p>
 
 ::: {.rmdwarning}
 * "If it is the case that the differences in penguin weight could be explained by what island they live on (e.g., penguins on some islands are heavier on average than penguins on other islands), then some bars should be higher or lower than the others. If it is not the case that the differences in penguin weight could be explained by what island they live on, the bars should all have roughly equivalent heights."
@@ -356,7 +357,7 @@ penguins %>%
   stat_summary(fun = "mean", geom = "point")
 ```
 
-Compared to when the means were represented with bars, the difference between the average weight of penguins on Biscoe island to the other two islands looks *much* more drastic. Why is that? It is the same data, just visualized differently. You will note that the scale of the y-axis has changed here. Instead of running from 0 - 5000 like in the bar chart, it runs from 3750 - 4750. Modifying axis scales will be covered later, but for now this is a reminder to be cognizant of scales when making your interpretation, and how the scale might skew the interpretations someone makes from your visualization!
+Compared to when the means were represented with bars, the difference between the average weight of penguins on Biscoe island to the other two islands looks *much* more drastic. Why is that? It is the same data, just visualized differently. You will note that the scale of the y-axis has changed here. Instead of running from 0 - 5000 like in the bar chart, it runs from 3750 - 4750. Modifying axis scales will be covered later, but for now this is a reminder to be mindful of scales when making your interpretation, and how the scale might skew the interpretations someone makes from your visualization!
 
 #### Line
 
@@ -384,7 +385,7 @@ penguins %>%
 
 `island` (the x-axis variable) is categorical, so ggplot will try to draw individual lines for each level by default. However, here, there is only one value for each factor level and at least two points are needed to create a line!
 
-There are a number of different styles of line you can use by changing the "linetype":
+There are a number of different styles of line you can use by changing the `linetype`:
 
 ![](figures/ggplot_line_types.png){width=100%}
 
@@ -427,7 +428,7 @@ You do not have to change anything about your raw data or create new dataframes,
 
 The one difference you will note is that you have to use `fun.data = ` instead of `fun = `. "mean_se" will give you the mean, upper, and lower SE boundaries. Since you are getting multiple pieces of information for each x-axis value, you have to use a slightly different argument.
 
-Another thing you may note is how ugly this looks. The error bars are far too wide. You can change this with the *width* aesthetic.
+Another thing you may note is how ugly this looks. The error bars are far too wide. You can change this with the `width` aesthetic.
 
 ```{r}
 penguins %>%
@@ -495,7 +496,7 @@ penguins %>%
 
 ### Problem With Summary Stats
 
-In the [first lesson][Intro to ggplot2] on visualizations, you saw how many different datasets and distributions were consistent with the same summary statistics (the datasauRus dozen and Anscombe's quartet). This was the rationale for why visualizations are so important. However, if you plot nothing but summary statistics, this is not much better than only reporting the summary statistics as numbers! You never know what your summary statistics could be hiding about your data:
+In the [first lesson][Intro to ggplot2] on visualizations, you saw how many different datasets and distributions were consistent with the same summary statistics (the datasauRus dozen and Anscombe's quartet). This was the rationale for why visualizations are so important. However, including nothing but summary statistics in your graphs is not much better than only reporting the summary statistics as numbers! You never know what your summary statistics could be hiding about your data:
 
 ![](figures/summary_statistics.png){width=100%}
 <p style="font-size:6pt">Artwork by @allison_horst</p>
@@ -506,7 +507,7 @@ While boxplots give you a better sense of a distribution by providing more infor
 <p style="font-size:8pt">Source: [Same Stats, Different Graphs...](https://www.autodeskresearch.com/publications/samestats)</p>
 
 ::: {.rmdcaution} 
-**While bar charts and boxplots are conventionally the most common way to represent your data, you have just seen who problematic this can be. It is always recommended to visualize the distribution of your data! This is the only way to be transparent and accurately communicate the patters in your data. For this reason, I <u>strongly</u> advise against using bars to represent means.**
+**While bar charts and boxplots are conventionally the most common way to represent your data, you have just seen who problematic this can be. It is always recommended to visualize the distribution of your data! This is the only way to be transparent and accurately communicate the patters in your data. For this reason, it is <u>strongly</u> advised to not use bars to represent means.**
 :::
 
 The graphs outlined below will help you achieve the goals of both visualizing summary statistics **AND** the raw distributions of individual participant data in your dataset.
@@ -621,7 +622,7 @@ penguins %>%
 
 There are 3 very important things to be mindful of when creating a jitter plot.
 
-1. By adding noise, you can quite literally change the data being visualized. This is not a problem for a categorical variable, like you have here on the x-axis, because small shifts in position will not change the value associated with the point. On continuous variables, like you have on the y-axis, this **will**. For this reason, it is recommended to only jitter along a categorical variable. Since your y-axis here is continuous, you don't want the height of the points to change. You can tell ggplot not to do this with the `height` argument. This will preserve the actual y-axis value, so your visualization will represent the true values in your dataset.
+1. By adding noise, you can quite literally change the data being visualized. This is not a problem for a categorical variable, like you have here on the x-axis, because small shifts in position will not change the value associated with the point. On continuous variables, like you have on the y-axis, this **will**. For this reason, it is recommended to only jitter along a categorical variable. Since your y-axis here is continuous, you do not want the height of the points to change. You can tell ggplot not to do this with the `height` argument. This will preserve the actual y-axis value, so your visualization will represent the true values in your dataset.
 
 ```{r}
 penguins %>%
@@ -629,7 +630,7 @@ penguins %>%
   geom_jitter(height = 0)
 ```
 
-2. The jitter added to a visualization is random. Every time you make a jitter plot, or even rerun the code for the same jitter plot, the jitter that's added is random and the visualization will look slightly different!
+2. The jitter added to a visualization is random. Every time you make a jitter plot, or even rerun the code for the same jitter plot, the jitter that is added is random and the visualization will look slightly different!
 
 3. When running code to generate a jitter plot, sometimes your code may work and produce a graph that seems normal but be accompanied by some text output in the console:
 
@@ -700,7 +701,7 @@ penguins %>%
 
 ### Ridgeline Plot
 
-Ridgeline plots, formerly known as joy plots, allows you visualize the distributions of a numerical variable for the different levels of a categorical variable. An important distinction is that ridgeline plots require the continuous variable to be on the x-axis and the categorical variable to be on the y-axis.
+Ridgeline plots, formerly known as joy plots, allows you visualize the distributions of a numerical variable for the different levels of a categorical variable. An important distinction is that ridgeline plots require the continuous variable to be on the x-axis and the categorical variable to be on the y-axis. You can create a ridgeline plot using the `geom_density_ridges()` function from the `ggridges` package (`ggridges::geom_density_ridges()`).
 
 ```{r}
 penguins %>%
@@ -708,7 +709,7 @@ penguins %>%
   ggridges::geom_density_ridges(scale = 0.9)
 ```
 
-Using the "scale" argument gives some space between each distribution.
+Using the `scale` argument gives some space between each distribution.
 
 Like jitter plots, they serve as the foundation of several different visualizations. For example, a popular extension of the ridgeline plot is to make a raincloud plot:
 
@@ -812,7 +813,7 @@ mtcars %>%
   <div class="panel-body">Create a line plot to visualize the compare how `flipper_length_mm` varies across penguin `species`, and whether there are any differences between the sexes of each species (think about what the graph would look like to best visualize this). Try out different aesthetic **<u>settings</u>**, and see how they change the graph.</div>
 </div>
 
-Very often in studies with within-subjects designs (where there are multiple measurements from the same subject -- and particularly in developmental/infant studies), you will see figures that look like this:
+Very often in studies implementing within-subjects designs (where there are multiple measurements from the same subject -- and particularly in developmental/infant studies), you will see figures that look like this:
 
 ```{r echo=FALSE}
 weight_example = data.frame("ID" = rep(1:8, 2),
@@ -839,7 +840,7 @@ weight_example %>%
 
 When you are grouping your data in your visualization code, you may run into some instances where your graph winds up looking funky. Most often this is the result of overlapping geoms.
 
-To fix that, we will have to talk about positions...
+To fix that, you will have to think about positions...
 
 ### Positions
 
@@ -849,13 +850,13 @@ knitr::include_graphics("figures/Ariana_Grande_Positions.png")
 
 No, nothing to do with Ariana Grande... <p style="font-size:10pt">**(great album though!)**</p>
 
-ggplot2 has a number of position/adjustment arguments that can be used in these cases. In fact, we already have touched on one! Jittering is in essence a position adjustment. So while you can create a jitter plot using `geom_jitter()`, you also could accomplish the same thing using `geom_point()` and setting a position argument. e.g.,
+ggplot2 has a number of position/adjustment arguments that can be used in these cases. In fact, you have already used one! Jittering is a position adjustment. So, while you can create a jitter plot using `geom_jitter()`, you also could accomplish the same thing using `geom_point()` and setting a position argument. e.g.,
 
 `geom_point(position = "jitter")` or `geom_point(position=position_jitter())`
 
-These in effect do the same thing. However, if you want to include any specific arguments (e.g., specify how much vertical or horizontal jitter to have), you can only do so by using the longer `position_X()` format. This helps create reproducible graphs, as the jitter is otherwise random every time you run the code to create the graph! Changing the positional adjustments can drastically alter the visualization you generate.
+These in effect do the same thing. However, if you want to include any specific arguments (e.g., specify how much vertical or horizontal jitter to have), you can only do so by using the longer `position_*()` format. This helps create reproducible graphs, as the jitter is otherwise random every time the code is ran to create the graph! Changing the positional adjustments can drastically alter the visualization you generate.
 
-Here are a few quick examples of a graph that came out looking funky, and how using positional adjustments can fix that.
+Here are a few quick examples of graphs that came out looking funky, and how using positional adjustments can fix that.
 
 #### Identity
 
@@ -882,7 +883,7 @@ penguins %>%
   geom_bar(position = position_dodge2())
 ```
 
-Note that the difference between *dodge* and *dodge2* is that the latter creates a bit of space between the elements. You'll also notice that, compared to *identity*, the scale of the y-axis for both of these graphs changed.
+<p class="text-info"> **<u>Note:</u> The difference between *dodge* and *dodge2* is that the latter creates a bit of space between the elements. You will also notice that, compared to *identity*, the scale of the y-axis for both of these graphs changed.**</p>
 
 This is useful for geoms other than bars as well:
 
@@ -895,7 +896,7 @@ penguins %>%
      geom_point(shape = 21, position = position_dodge(width = .75))
 ```
 
-Probably the most common use case for this will be with errorbars and CIs. Observe the following. By default, they are often come out looking funky:
+Probably the most common use case for this will be with error bars and CIs. Observe the following. By default, they are often come out looking funky:
 
 ```{r}
 data.frame(
@@ -955,7 +956,7 @@ ggplot(aes(x = island, fill = species)) +
   geom_bar(position = position_fill())
 ```
 
-However, this can be misleading. Recall that the total number of `species` == "Gentoo" penguins is much greater than `species` == "Chinstrap", even though they don't look TOO different here. So while you can compare the proportions easily, those proportions may correspond to drastically different raw numbers.
+However, this can be misleading. Recall that the total number of `species` == "Gentoo" penguins is much greater than `species` == "Chinstrap", even though they do not look *TOO* different here. So while you can compare the proportions easily, those proportions may correspond to drastically different raw numbers.
 
 ## Categorical ~ Categorical
 
@@ -976,7 +977,7 @@ All you do here is add the `fill=` mapping aesthetic and set it equal to `specie
 
 ### Cont ~ Cat + Cat
 
-#### Add another aesthetic to any Cont ~ Cat
+Add another aesthetic to any Cont ~ Cat
 
 ```{r}
 penguins %>%
@@ -998,7 +999,7 @@ penguins %>%
                position = position_dodge(width = 0.7))
 ```
 
-#### or facet
+or facet
 
 ```{r}
 penguins %>%
@@ -1040,7 +1041,7 @@ penguins %>%
   stat_summary_2d(fun = "mean", geom = "tile")
 ```
 
-Looks way better when there are more levels to your variables:
+Looks way better when there are more levels to your variables, for example:
 
 ```{r}
 diamonds %>%
@@ -1148,7 +1149,7 @@ penguins %>%
 
 ## Custom geoms
 
-With one exception, all the visualizations covered above use the geoms built in with ggplot2. However, as you saw from that one exception, there are packages that contain many other geoms to use with ggplot! In addition to loading new geoms from packages, you can use code to create them yourself. I've included code here to create 2 geoms that can be used to make 2 visualizations that are currently pretty popular:
+With one exception, all the visualizations covered above use the geoms built in with ggplot2. However, as you saw from that one exception, there are packages that contain many other geoms to use with ggplot! In addition to loading new geoms from packages, you can use code to create them yourself. Code is included here to create 2 geoms that can be used to make 2 visualizations that are currently pretty popular:
 
 ### Split Violin Plot
 
@@ -1358,20 +1359,20 @@ ggplot(aes(x = "", y = body_mass_g, fill = species)) +
 
 Below are some guidelines and best practices that should be considered when designing your visualizations.
 
-* Graphs should be EASILY readable visually, first and foremost. This should be the top design philosophy when constructing your graphs. 
+* Graphs should be EASILY readable, first and foremost. This should be the top design philosophy when constructing your graphs. 
   + Label everything (axes, titles, legends, anything else) and make labels intuitive.
   + Follow conventions: y = response variable, x = predictor, be mindful of variable types, etc.
   + People should not need to review the caption to understand what the visualization is showing.
 
 * Graphs should be purposeful
-  + What is the specific relationship or trend in your data that you are trying to communicate?
+  + What is the specific relationship or trend in your data that you are trying to communicate with this visualization?
 
-* Graphs should facilitate quantitatve interpretation and comparison, and allow for inferential statistics by eye.
-  + Represent variability (show the full distribution, include errorbars or confidence intervals).
+* Graphs should facilitate quantitative interpretation and comparison, and allow for inferential statistics by eye.
+  + Represent variability (show the full distribution, include error bars or confidence intervals).
   + Show relationship trends, means, etc.
 
 * Cool =/= best.
-  + Just because you **<u>can</u>** make some crazy complex graph that visualizes a lot of different variables, or might even be interactive and show you a lot of information, doesn't mean that's the best thing to do. Just because you CAN do something doesn't always mean you should. Keep things simple and clean, following the conventions for that type of data or relationship.
+  + Just because you **<u>can</u>** make some crazy complex graph that visualizes a lot of different variables, or might even be interactive and show you a lot of information, does not mean that is the best thing to do. Just because you CAN do something does not always mean you SHOULD. Keep things simple and clean, following the conventions for that type of data or relationship.
     
 * Make your visualization aesthetically pleasing but not at the cost of wasting ink.
 

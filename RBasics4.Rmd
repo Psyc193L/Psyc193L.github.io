@@ -8,9 +8,9 @@ knitr::opts_chunk$set(strip.white = TRUE)
 library(tidyverse)
 ```
 
-<a href="Exercise3.Rmd" download>Exercise Sheet</a>
+<a href="exercises/Exercise3.Rmd" download>Exercise Sheet</a>
 
-In this lesson, we're going to cover a couple miscellaneous things that will help prepare you for all the content covered in the rest of the course. This is meant to wrap up the basics and background, getting you ready to dive in to the real R coding! 
+In this lesson, a few miscellaneous topics will be covered that will help prepare you for all the content covered in the rest of the course. This is meant to wrap up the basics and background, getting you ready to dive in to the real R coding!
 
 ## Functions
 
@@ -19,27 +19,27 @@ In this lesson, we're going to cover a couple miscellaneous things that will hel
     Everything that happens is a function call."<br>
 - John Chambers, Advanced R, p. 79.
 
-We have already used a few functions before (`typeof()`, `class()`, `here()`), but let's formally introduce them now. Almost everything we do with coding is built around using functions. Functions are variables containing pre-written code which, most often, have a verb name and are always followed by a set of parentheses. The things inside the parentheses, called **arguments**, are what that verb will be applied. When we run:
+You have already used a few functions before (`typeof()`, `class()`, `here()`), but they will be formally introduced now. Almost everything you do with coding is built around using functions. Functions are variables containing pre-written code which, most often, have a verb name and are always followed by a set of parentheses. The things inside the parentheses, called **arguments**, are what that verb will be applied. When running:
 
 `typeof(x = myDF)`
 
-We were finding what type `myDF` was. This function had one argument, `x`, that was given the value "myDF". Functions expect arguments to be given values. They need something to apply the pre-written code to! Functions that have multiple arguments often have default values, so you only need to set one or a few of them. We'll see more about this later on.
+You are finding what type `myDF` is. This function has one argument, `x`, that is given the value "myDF". Functions expect arguments to be given values. They need something to apply the pre-written code to! Functions that have multiple arguments often have default values, so you only need to set one or a few of them. you will see more about this later on.
 
-<p class="text-info"> **<u>Note:</u> arguments are separated with a comma and should often be given their own line.**</p> 
+<p class="text-info"> **<u>Note:</u> Arguments are separated with a comma and should often be given their own line.**</p> 
 
 ### Where Do Functions Come From? 
 
 A number of different sources! They are:
 
 * Available from base R
-  + By default, R has many functions (like those we've been using)
-* Defined by you (we won't talk much about this)
+  + By default, R has many functions (like those you have seen so far)
+* Defined by you (this is beyond the scope of this course)
 * Available from packages you import
-  + Packages are collections of data, code, and functions, that other people have created and you install into your R. There are many packages that we will use throughout this course.
+  + Packages are collections of data, code, and functions, that other people have created and you install into your R. There are many packages that will be used throughout this course.
 
 ### Installing Packages
 
-The way you install packages is by using the `install.packages()` function! You just include the name of the package in quotes, and that's it! It is often that case that packages need the code from other packages to work (aka **dependencies**). If a package has dependencies, they will also automatically be installed. This means that when installing a package it will run a lot of scary looking code in your console, and it may look like it is installing a lot of things, but this is totally normal and fine! Most packages are extremely tiny. You can have hundreds of packages installed and it take up less than 1gb of space on your computer! Once a package is installed, you have to actually load it into your R session by using `library()`.
+The way you install packages is by using the `install.packages()` function! You just include the name of the package in quotes, and that is it! Packages often need the code from other packages to work (aka **dependencies**). If a package has dependencies, they will also automatically be installed. This means that a lot of scary looking code will be ran in your console when installing packages. It may look like a lot of things are being installed, but this is totally normal and fine! Most packages are extremely small. You can have hundreds of packages installed and it take up less than 1gb of space on your computer! Once a package is installed, you have to actually load it into your R session by using `library()`.
 
 Install a new package:
 
@@ -64,7 +64,7 @@ Load an installed package:
 <br>
 <span style="font-size:8.0pt"> This is a reference to René Magritte's "The Treachery of Images," which actually is on display at the LAC Museum of Art!</span>
 
-One of the more powerful tools in R that we will use is the `%>%` (pipe) operator.
+One of the more powerful tools in R that you will use is the `%>%` (pipe) operator.
 
 RStudio Keyboard Shortcuts:
 
@@ -75,7 +75,7 @@ RStudio Keyboard Shortcuts:
 
 Consider the [following example](https://twitter.com/dmi3k/status/1191824875842879489?s=09) of making and eating a cake.
 
-There are several things we need to do:
+There are several things you need to do:
 
 * Have ingredients
 * Mix ingredients
@@ -85,7 +85,7 @@ There are several things we need to do:
 * Slice
 * Eat a piece
 
-One thing we might think to do is just go step by step:
+One thing you might think to do is just go step by step:
 
 ```{r eval = FALSE}
 mixture = mix(ingredients)
@@ -97,17 +97,17 @@ sliced_cake = slice(cooled_baked_cake)
 eat(sliced_cake, 1)
 ```
 
-This creates a lot of unnecessary interim step variables that we don't care about. We won't use them again and they just clog up our workspace. 
+This creates a lot of unnecessary interim step variables that you do not care about. You will not use them again and they just clog up your workspace.
 
-If we were to express this process as a set of nested functions, it would look like this:
+If you were to express this process as a set of nested functions, it would look like this:
 
 ```{r eval = FALSE}
 eat(slice(cool(bake(put(pour(mix(ingredients), into = baking_pan), into = oven), time = 30), duration = 20), pieces = 6, 1))
 ```
 
-Nesting a dataframe inside a function is hard to read because it forces you to read the sequence of functions inside out. We have to start in the innermost parentheses, and then work our way out/back.
+Nesting a dataframe inside a function is hard to read because it forces you to read the sequence of functions inside out. You have to start in the innermost parentheses, and then work your way out/back.
 
-Even if we were to apply our style and syntax guidelines here:
+Even if you were to apply your style and syntax guidelines here:
 
 ```{r eval = FALSE}
 eat(
@@ -126,11 +126,11 @@ eat(
 )
 ```
 
-It is still difficult and unnatural to read. If we were to describe this process in words, spoken or written, it would take a totally different form! We would say something like:
+It is still difficult and unnatural to read. If you were to describe this process in words, spoken or written, it would take a totally different form! You might say something like:
 
->"First we mix our ingredients, then pour the mixture into a baking pan, then put that pan into the oven and bake for 30 minutes. Once that is done, take it and let it cool for 20 minutes, then slice into 6 pieces and eat one of them (or several, if you are me)!"
+>"First I need to mix my ingredients, then pour the mixture into a baking pan, then put that pan into the oven and bake for 30 minutes. Once that is done, take it and let it cool for 20 minutes, then slice into 6 pieces and eat one of them (or several, if you are me)!"
 
-It would be so much easier if we could write our code in a form that would match how we actually think about this process. That is precisely what piping with `%>%` allows us to do! Here is how we write this code with piping:
+It would be so much easier if you could write your code in a form that would match how you actually think about this process. That is precisely what piping with `%>%` allows you to do! Here is how you write this code with piping:
 
 ```{r eval = FALSE}
 ingredients %>% 
@@ -143,7 +143,7 @@ ingredients %>%
   eat(1)
 ```
 
-When you pipe a dataframe into a function, and *chain* together a number of functions, it let's you read left to right / up to down. Your code "sentence" starts with a noun instead of a verb. This is much easier to read and write because it takes the same form that we actually think about this process. It is in the chronological order of what we want to be doing.
+When you pipe a dataframe into a function, and *chain* together a number of functions, it lets you read left to right / up to down. Your code "sentence" starts with a noun instead of a verb. This is much easier to read and write because it takes the same form that you actually think about this process. It is in the chronological order of what you want to be doing.
 
 There are two mantras with pipes:
 
@@ -184,9 +184,9 @@ When you pipe something in to a function, it is input as the first element by de
 
 `a %>% sum(b)` is equivalent to `sum(a, b)`
 
-We can specify which argument (or what position in the function) the piped input should be given to with the `.` operator. The `.` operator can be used to refer to the object/dataframe in it's current state in the pipe chain. In other words, the `.` refers to what is being piped in to the current function. 
+You can specify which argument (or what position in the function) the piped input should be given to with the `.` operator. The `.` operator can be used to refer to the object/dataframe in its current state in the pipe chain. In other words, the `.` refers to what is being piped in to the current function. 
 
-Let's look at an example using the `seq(from, to)` function, which has two arguments (*from* and *to*). `seq()` will generate a sequence of numbers with a range of the *from* value until the *to* value (it was very hard avoiding the use of the words "from" and "to" here). We know that, by default, what is piped in will be input as the first element. 
+Consider the following example using the `seq(from, to)` function, which has two arguments (*from* and *to*). `seq()` will generate a sequence of numbers with a range of the *from* value until the *to* value (it was very hard avoiding the use of the words "from" and "to" here). By default, what is piped in will be input as the first element. 
 
 ```{r}
 a = 1
@@ -194,7 +194,7 @@ b = 5
 b %>% seq(a)
 ```
 
-Above, when we pipe in `b`, it get's set as the first argument and the result is a descending sequence. However, if we explicitly told `seq()` where we wanted the piped input to go using `.`, we could get the expected ascending sequence:
+Above, when `b` is piped in, it gets set as the first argument and the result is a descending sequence. However, if you explicitly told `seq()` where you wanted the piped input to go using `.`, you could get the expected ascending sequence:
 
 ```{r}
 b %>% seq(from = a, 
@@ -205,7 +205,7 @@ b %>% seq(from = a,
 
 ## REPREX
 
-The last thing you need to truly be prepared for the forthcoming material is to know how to get help. That is, how to help me best help you! If you are running into an error or your code is not working the way you want or expected, the best way to get help is by preparing a "minimal <u>**repr**</u>oducible <u>**ex**</u>ample".
+The last thing you need to truly be prepared for the forthcoming material is to know how to get help. That is, how to help others best help you! If you are running into an error or your code is not working the way you want or expected, the best way to get help is by preparing a "minimal <u>**repr**</u>oducible <u>**ex**</u>ample".
 
 ![](figures/reprex.png){width=100%}
 <p style="font-size:6pt">Artwork by @allison_horst</p>
@@ -240,7 +240,7 @@ A few good options include:
 
 #### Minimal
 
-Your reprex code should be as simple and minimal as possible. Only include things on a "need to run" basis. If something is not **directly** related to the problem you are facing, delete it and don't include it! This often means that your reprex will be using a much smaller and simpler R object, using a different dataset, than what you encountered in your actual coding.
+Your reprex code should be as simple and minimal as possible. Only include things on a "need to run" basis. If something is not **directly** related to the problem you are facing, delete it and do not include it! This often means that your reprex will be using a much smaller and simpler R object, using a different dataset, than what you encountered in your actual coding.
 
 #### Legible
 
@@ -248,28 +248,28 @@ Your reprex code should still incorporate all the same style and syntax guidelin
 
 More guidelines can be found on the reprex [website](https://reprex.tidyverse.org/articles/reprex-dos-and-donts.html) and [here](https://www.tidyverse.org/help/).
 
-#### Man, This is a Lot of Work!
+#### Dude, This is a Lot of Work!
 
-Yes, this is definitely true, and creating a good reprex is a skill in itself! You may be thinking, *"Okay but is it really worth it to go through all that effort when I'm <b><u>already</u></b> struggling?*
+Yes, this is definitely true, and creating a good reprex is a skill in itself! You may be thinking, *"Okay but is it really worth it to go through all that effort when I am <b><u>already</u></b> struggling?*
 
 The answer is definitely yes! There are two compelling reasons:
 
-1. Most of the time, in the process of creating a good reprex, you'll reveal the source of the error and solve your own problem. 
-2. In the instances where that doesn't happen, you've made it a lot easier to get help and increase the likelihood of solving your issue!
+1. Most of the time, in the process of creating a good reprex, you will reveal the source of the error and solve your own problem. 
+2. In the instances where that does not happen, you have made it a lot easier to get help and increase the likelihood of solving your issue!
 
 ## Data Importing and Exporting
 
-While the built in datasets that R comes with can be very helpful, the whole point of learning R is to use it for our own needs. So we need some ways to get our raw data into R, and the products of our code out of R.
+While the built in datasets that R comes with can be very helpful, the whole point of learning R is to use it for our own needs. So you need some ways to get your raw data into R, and the products of your code out of R.
 
 ### Importing
 
-We are most often going to work with csv's and .RData files. You can work with a number of other file types in R, but that will be beyond the scope of this class.
+You are most often going to work with csv's and .RData files. You can work with a number of other file types in R, but that will be beyond the scope of this class.
 
 #### csv Files
 
-You will use the `read_csv()` function to load a dataset into R. This function takes a file as its argument. How does R know where to look for the file? We need to give it the right file path, and this is where the `here()` function we talked about previously will be applied!
+You will use the `read_csv()` function to load a dataset into R. This function takes a file as its argument. How does R know where to look for the file? You need to give it the right file path, and this is where the `here()` function discussed [previously](#here) will be applied!
 
-Recall in the previous lesson when we were considering the structure of our project directories. We talked about a situation where we had a data file called **"dataset.csv"** and it was in a folder called **"data"**. We tell `read_csv()` where to look by giving it the same `here()` call we used before!
+Recall in the previous lesson when considering the structure of your project directories, an example was discussed where you had a data file called **"dataset.csv"** and it was in a folder called **"data"**. You tell `read_csv()` where to look by giving it the same `here()` call used before!
 
 ```{r eval = FALSE}
 here("data", "dataset.csv")
@@ -278,7 +278,7 @@ here("data", "dataset.csv")
 example_df = read_csv(here("data", "dataset.csv"))
 ```
 
-If we did not save the output from `read_csv()` to a variable, it would just print it out in our console. We need a variable to *get* the output so we can use it later in our other code. We do this by saving it to a variable.
+If the output from `read_csv()` was not saved to a variable, it would just print it out in the console. You need a variable to *get* the output so you can use it later in your other code. You do this by saving it to a variable.
 
 As an additional point, you can also directly load files from websites by using the website as the file path. Remember, a file path is just a map to tell your computer where to look for something. The file path just needs to lead `read_csv()` to a .csv file!
 
@@ -288,9 +288,9 @@ example_df = read_csv("https://www.ethanhurwitz.com/example_data.csv")
 
 #### RData Files
 
-The other type of file we may want to import is an .RData file. These directly load R objects into your workspace. Instead of using `read_csv()`, we just use `load()` and pass it the file path to a .RData file!
+The other type of file you may want to import is an .RData file. These directly load R objects into your workspace. Instead of using `read_csv()`, you just use `load()` and pass it the file path to a .RData file!
 
-Since .RData files already contain R objects, we do not have to save this to a variable. It's just loading variables that already exist!
+Since .RData files already contain R objects, you do not have to save this to a variable. It is loading variables that already exist!
 
 <div class="panel panel-success">
   <div class="panel-heading">**EXERCISE #3**</div>
@@ -299,11 +299,11 @@ Since .RData files already contain R objects, we do not have to save this to a v
 
 ### Exporting
 
-While the goal of using R code is to make your tasks easily reproducible, there are instances where you may want to directly save and export something. For example, you may want to use some data with other software. In these instances, we can easy export the file with `write_csv()`, which takes the form: `write_csv(object_to_be_saved, file = "file_name.csv")`. This will create a new .csv file of your dataframe/object in your working directory.
+While the goal of using R code is to make your tasks easily reproducible, there are instances where you may want to directly save and export something. For example, you may want to use some data with other software. In these instances, you can easy export the file with `write_csv()`, which takes the form: `write_csv(object_to_be_saved, file = "file_name.csv")`. This will create a new .csv file of your dataframe/object in your working directory.
 
 Alternatively, you may have run some code that takes a **V.F.L.T.** <b>(Very, *Frankly*, Long Time)</b> to run. Somewhere down the road you may be executing complicated models that can take hours or even days to run! You may not want to have to rerun this code consecutively each time you revisit that project. To avoid doing so, you can save R data object that you can easily load in to R.
 
-You do so using the `save()` function, which takes a similar form of `save(object_to_be_saved, file = "fil_name.rdata")`.
+You do so using the `save()` function, which takes a similar form of `save(objects_to_be_saved, file = "fil_name.rdata")`.
 
 <div class="panel panel-success">
   <div class="panel-heading">**EXERCISE #4**</div>

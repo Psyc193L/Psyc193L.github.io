@@ -17,6 +17,7 @@ rmd_files:
 - Manip2.Rmd
 - Manip3.Rmd
 - Manip4.Rmd
+- DataTransformation.Rmd
 #- Datahub.Rmd
 language:
   ui:

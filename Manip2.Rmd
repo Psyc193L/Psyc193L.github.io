@@ -23,7 +23,7 @@ mtcars2 = rownames_to_column(mtcars, "model") %>% # Create example df
          disp = round(disp))
 ```
 
-<a href="Exercise_Manip2.Rmd" download>Exercise Sheet</a>
+<a href="exercises/Exercise_Manip2.Rmd" download>Exercise Sheet</a>
 
 ![](figures/data_cowboy.png){width=100%}
 <p style="font-size:6pt">Artwork by @allison_horst</p>
@@ -32,7 +32,7 @@ mtcars2 = rownames_to_column(mtcars, "model") %>% # Create example df
 **Throughout this page, explanations for the code above will appear in blocks like this one!**
 :::
 
-When wrangling your data, you will be performing a series of actions to clean and prepare your data for whatever task you have. Whether you are creating visualizations, performing statistical analyses, or doing anything else, you will likely need to change your data object in several ways. Below, several of the most fundamental and basic data manipulation functions will be outlined. You will notice that the function names are all verbs, denoting that they are performing some action on the data object.
+When wrangling your data, you will be performing a series of actions to clean and prepare it for whatever task you have. Whether you are creating visualizations, performing statistical analyses, or doing anything else, you will likely need to change your data object in some way. Below, several of the most fundamental and basic data manipulation functions will be outlined. You will notice that the function names are all verbs, denoting that they are performing some action on the data object.
 
 ## Arrange
 
@@ -97,7 +97,7 @@ kables(list(arrTable1, tempTable3, arrTable2))
 **This code changes the order of the rows in `mtcars2` by the values in the `wt` column, with the lowest at the top.**
 :::
 
-To get rows arranged in a descending order, with highest values at the top, wrap variable names in `desc()` within the `arrange()` call. If a second column is passed, the rows with identical values on the first variable will be sorted by the values on the second.
+To get rows arranged in a descending order, with highest values at the top, wrap variable names in `desc()` within the `arrange()` call. If a second column is passed, the rows with identical values on the first variable will be arranged by the values on the second.
 
 <div class="panel panel-success">
   <div class="panel-heading">**EXERCISE 1**</div>
@@ -186,7 +186,7 @@ A good rule of thumb is that if you need to use the object in its current state 
 ![](figures/janitor_clean_names.png){width=100%}
 <p style="font-size:6pt">Artwork by @allison_horst</p>
 
-The `clean_names()` function from the `janitor` package is a powerful tool to change all your column names at once to a specific naming convention. This can be used to easily convert all variable names to one of the naming conventions mentioned in the Coding Best Practices section:
+The `clean_names()` function from the `janitor` package is a powerful tool to change all your column names at once to a specific naming convention. This can be used to easily convert all variable names to one of the naming conventions mentioned in the [Coding Best Practices](#naming-convention) section:
 
 * snake
 * lower_camel
@@ -847,7 +847,7 @@ Recall that all variables in a dataframe are each vectors. There are two consequ
 
 1. All new variables must be the same length as the existing columns in the dataframe.
 2. The R expression must return a vector, and so computations over vectors can be used!
-    + In the example above, `wt` is a vector. The R expression was a computation over a vector! Each value in the `wt` vector (column) was multiplied by 1000. This is essentially the same thing as seen [here](#Vectors).
+    + In the example above, `wt` is a vector. The R expression was a computation over a vector! Each value in the `wt` vector (column) was multiplied by 1000. This is essentially the same thing as seen in the section where vectors were first [introduced](#Vectors).
 
 Multiple new columns can be created simultaneously within the same `mutate()` call:
 
@@ -914,7 +914,7 @@ mtcars2 %>%
 
 ### Position
 
-By default `mutate()` adds the new variable(s) to the end of the dataframe. However, you can specify what existing column you want the new column to appear *.before* or *.after*.
+By default `mutate()` adds the new variable(s) to the end of the dataframe. However, you can specify what existing column you want the new column to appear `.before` or `.after`.
 
 ```{r}
 price_of_gas = 6.25
@@ -927,7 +927,7 @@ mtcars2 %>%
 **This specifies that the new `cost_per_mile` variable should be created after `mpg`.**
 :::
 
-<p class="text-info"> **<u>Note:</u> The *.before* and *.after* specifications apply to ALL new variables created by the particular `mutate()` call. If you want to create multiple new variables and have them added in different places in your dataframe, you will need to separate them into different `mutate()` calls.**</p>
+<p class="text-info"> **<u>Note:</u> The `.before` and `.after` specifications apply to ALL new variables created by the particular `mutate()` call. If you want to create multiple new variables and have them added in different places in your dataframe, you will need to separate them into different `mutate()` calls.**</p>
 
 ### NAs {#NAs}
 
@@ -938,7 +938,7 @@ When performing vector computations, you have to be mindful of `NA` values in yo
 mean(c(4,5,3,NA))
 ```
 
-As you can see, any time you have `NA` as part of your computation, the results are `NA`. It is because of this that NAs are thought to be **contagious**. In these instances, you get around this by utilizing functions like `na.omit()`, `drop_na()`, or the *na.rm* argument set to `TRUE`.
+As you can see, any time you have `NA` as part of your computation, the results are `NA`. It is because of this that NAs are thought to be **contagious**. In these instances, you get around this by utilizing functions like `na.omit()`, `drop_na()`, or the `na.rm` argument set to `TRUE`.
 
 `na.omit()` will remove all NAs. When used on a dataframe, this will remove an entire row of data if it has an `NA` value for ***any*** column.
 
@@ -991,7 +991,7 @@ By tweaking the code above, instead of creating a new one, the existing `wt` var
 
 ### Change Variable Types
 
-One of the ways in which it *is* appropriate to modify a variable is when you need to change the *type* of data it contains. In R, you can change data type by using the `as.*` function. For example, `as.logical()` changes the passed values to be logical. The one exception is that when changing something to a factor, you should use `factor()` (more on this below.)
+One of the ways in which it *is* appropriate to modify a variable is when you need to change the *type* of data it contains. In R, you can change data type by using the `as.*` function. For example, `as.logical()` changes the passed values to be *logical.* The one exception is that when changing something to a *factor*, you should use `factor()` (more on this below.)
 
 ```{r}
 mtcars2 %>%
@@ -1035,7 +1035,7 @@ data.frame(test = factor(c("0", "1"))) %>%
   mutate(test = as.numeric(test))
 ```
 
-This is obviously not what was intended. What is happening here is `mutate()` is taking the *level* of each value, with `0` being level 1 and `1` being level 2. Instead, you have to circumvent this issue by first converting the values to a character, and then a number:
+This is obviously not what was intended. What is happening here is `mutate()` is taking the *level* of each value, with `0` being level 1 and `1` being level 2. Instead, you have to circumvent this issue by first converting the values to a *character*, and then a *number*:
 
 ```{r}
 data.frame(test = factor(c("0", "1"))) %>% 
@@ -1043,11 +1043,11 @@ data.frame(test = factor(c("0", "1"))) %>%
          test = as.numeric(test))
 ```
 
-The take-home point is to always double check that your code is doing what you intend it to, especially when converting to and from a factor!
+The take-home point is to always double check that your code is doing what you intend it to, especially when converting to and from a *factor*!
 
 #### Reorder Levels
 
-While the levels of a factor are ordered, you may at times want to change what that order is. One of the more common instances when this will occur is in visualizations. Consider the following:
+While the levels of a *factor* are ordered, you may at times want to change what that order is. One of the more common instances when this will occur is in visualizations. Consider the following:
 
 ```{r}
 mtcars2 %>%

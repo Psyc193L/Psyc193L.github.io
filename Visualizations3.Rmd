@@ -11,7 +11,7 @@ library(tidyverse)
 library(palmerpenguins)
 ```
 
-<a href="Exercise_Viz3.Rmd" download>Exercise Sheet</a>
+<a href="exercises/Exercise_Viz3.Rmd" download>Exercise Sheet</a>
 
 You now have a number of different graphs in your toolkit to use when visualizing different types of relationships or comparisons in your data. You also learned a lot of ways to tinker with the geoms and their aesthetics. Now it is time to add some techniques and skills to customize the other elements of the graphs.
 
@@ -45,7 +45,7 @@ Saving the visualization to a variable prevents the need to copy/paste the entir
 
 By default, ggplot will use axes settings that it thinks best highlight the data being visualized. Here,the y-axis runs from ~2000 - 7000 and has intervals of 1000 starting at 3000.
 
-This can be changed using a `scale_*_*` function. The first `*` is replaced by which axes you want to modify, and the second with what type of data or scale you want it to have. Here, the y-axis is continuous, so `scale_y_continuous()` would be used. Its arguments can be used to modify what is shown on the axis. There are two reasons why you might want to change this.
+This can be changed using a `scale_*_*` function. The first `*` is replaced by which axis you want to modify, and the second with what type of data or scale you want it to have. Here, the y-axis is continuous, so `scale_y_continuous()` would be used. Its arguments can be used to modify what is shown on the axis. There are two reasons why you might want to change this.
 
 1. Generally speaking, it is good practice to have your axes start at 0 and show the full scale. It can be misleading when parts of a scale are obscured and removed. 
 
@@ -484,7 +484,7 @@ modified_plot +
   theme(legend.position = "none")
 ```
 
-However, in certain cases, particularly if you are displaying information from another variable (e.g., indicating penguin `sex` by point shape), a legend is needed and may want to be customized.
+However, in certain cases, particularly if you are displaying information from another variable (e.g., indicating penguin `sex` by point `shape`), a legend is needed and customization may be useful.
 
 ```{r warning=FALSE}
 penguins %>%
@@ -621,7 +621,7 @@ b / c
 
 ## Saving Graphs
 
-Once you have created your masterpieces, you may want to export them so they can be added to manuscripts created outside of R, posters, or anything else. To save your ggplot graphs, you can use `ggsave()`. You have several file type options, but I would recommend pdf. It generally mainatins a high resolution AND aspect ratio. In `ggsave()`, you must specify:
+Once you have created your masterpieces, you may want to export them so they can be added to manuscripts created outside of R, posters, or anything else. To save your ggplot graphs, you can use `ggsave()`. You have several file type options, but I would recommend pdf. It generally maintains a high resolution AND aspect ratio. In `ggsave()`, you must specify:
 
 * the `filename` you want your graph to be saved with (which can/should include a relative file path)
 * which `plot` you want to be saving
