@@ -8,7 +8,7 @@ knitr::opts_chunk$set(strip.white = TRUE)
 library(tidyverse) # Load tidyverse packages
 ```
 
-<a href="exercises/Exercise_Transformations.Rmd" download>Exercise Sheet</a>
+<a href="exercises/Exercise_Transformation.Rmd" download>Exercise Sheet</a>
 
 Up to this point you have been working with data that, while sometimes needed cleaning, was already in [tidy](#Tidy-Data) format. While you want to work with tidy data, it is not always the case that the data you get will be tidy! Also, sometimes you will need to make data *not* tidy for certain statistical analyses. Further, your data may not even all be in a singular object, and may be contained across several! This section is going to cover the most common data transformations you will have to implement.
 
