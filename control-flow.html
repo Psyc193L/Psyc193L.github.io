@@ -112,7 +112,7 @@
 <span class="op">}</span>
 <span class="co">#&gt; [1] "The condition evaluated TRUE"</span>
 <span class="va">x</span>
-<span class="co">#&gt; [1] 4</span></code></pre></div>
+<span class="co">#&gt; [1] 5</span></code></pre></div>
 <p>This code specifies what to do depending on whether the test evaluates to <code>TRUE</code> or if it evaluates to <code>FALSE</code>.</p>
 <p>You can get more specific and link several conditions together. You may not want just 2 options – e.g., something to do if a test is <code>TRUE</code> and something else done in <strong>all</strong> other cases. Instead of using <code>else</code>, you use <code>else if()</code> and specify another test.</p>
 <div class="sourceCode" id="cb222"><pre class="downlit sourceCode r">
@@ -166,9 +166,9 @@
 <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op">(</span><span class="fl">4</span> <span class="op">&lt;</span> <span class="va">x</span>, <span class="st">"The first condition evaluated true."</span>,
        <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op">(</span><span class="fl">2</span> <span class="op">&lt;</span> <span class="va">x</span> <span class="op">&amp;</span> <span class="va">x</span> <span class="op">&lt;</span> <span class="fl">5</span>, <span class="st">"The second condition evaluated true."</span>, 
               <span class="st">"Neither the first or second condition evaluated true."</span><span class="op">)</span><span class="op">)</span>
-<span class="co">#&gt; [1] "Neither the first or second condition evaluated true."</span>
+<span class="co">#&gt; [1] "The second condition evaluated true."</span>
 <span class="va">x</span>
-<span class="co">#&gt; [1] 1</span></code></pre></div>
+<span class="co">#&gt; [1] 3</span></code></pre></div>
 <div class="panel panel-success">
 <div class="panel-heading">
 <strong>EXERCISE 2</strong>
@@ -191,9 +191,9 @@ Reformat your code from Exercise 1 to use the <code><a href="https://rdrr.io/r/b
   <span class="fl">2</span> <span class="op">&lt;</span> <span class="va">x</span> <span class="op">&amp;</span> <span class="va">x</span> <span class="op">&lt;</span> <span class="fl">5</span> <span class="op">~</span> <span class="st">"The second condition evaluated true."</span>,
   <span class="cn">TRUE</span> <span class="op">~</span> <span class="st">"Neither the first or second condition evaluated true."</span>
 <span class="op">)</span>
-<span class="co">#&gt; [1] "The first condition evaluated true."</span>
+<span class="co">#&gt; [1] "Neither the first or second condition evaluated true."</span>
 <span class="va">x</span>
-<span class="co">#&gt; [1] 3</span></code></pre></div>
+<span class="co">#&gt; [1] 6</span></code></pre></div>
 <div class="panel panel-success">
 <div class="panel-heading">
 <strong>EXERCISE 3</strong>
@@ -342,7 +342,7 @@ Artwork by <span class="citation">Horst (2022)</span>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>PSYC193L</strong>" was written by Ethan Hurwitz. It was last built on 2022-06-10.</p>
+    <p>"<strong>PSYC193L</strong>" was written by Ethan Hurwitz. It was last built on 2022-06-14.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

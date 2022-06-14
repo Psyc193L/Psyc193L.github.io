@@ -127,7 +127,7 @@ eat(
 
 It is still difficult and unnatural to read. If you were to describe this process in words, spoken or written, it would take a totally different form! You might say something like:
 
->"First I need to mix my ingredients, then pour the mixture into a baking pan, then put that pan into the oven and bake for 30 minutes. Once that is done, take it and let it cool for 20 minutes, then slice into 6 pieces and eat one of them (or several, if you are me)!"
+>"I need to start by taking my ingredients, mix them together, pour the mixture into a baking pan, and then put that pan into the oven and bake for 30 minutes. Once that is done let it cool for 20 minutes, slice into 6 pieces, and eat one of them (or several, if you are me)!"
 
 It would be so much easier if you could write your code in a form that would match how you actually think about this process. That is precisely what piping with `%>%` allows you to do! Here is how you write this code with piping:
 
@@ -153,6 +153,16 @@ There are two mantras with pipes:
 What the `%>%` operator is actually doing is taking the result/output of the previous computation (thing on the left or above) and *piping* it through as input to the next computation. In most cases, these computations will be functions. 
 
 `mix(ingredients)` is equivalent to `ingredients %>% mix()`
+
+Below is an animated illustration of a similar example:
+
+<center>
+  <video width="450" height="450" autoplay loop>
+    <source src="figures/RPipe.mp4" type="video/mp4">
+  </video>
+</center>
+<p style="font-size:6pt">Source: [Arthur Welle](https://twitter.com/ArthurWelle/status/1535429654760284161)</p>
+<br>
 
 ### Do's and Dont's
 

@@ -199,7 +199,7 @@ tidyverse, viridis, RColorBrewer, DT, ggExtra, gridExtra, patchwork, reprex, kni
 <span class="op">)</span></code></pre></div>
 <p>It is still difficult and unnatural to read. If you were to describe this process in words, spoken or written, it would take a totally different form! You might say something like:</p>
 <blockquote>
-<p>“First I need to mix my ingredients, then pour the mixture into a baking pan, then put that pan into the oven and bake for 30 minutes. Once that is done, take it and let it cool for 20 minutes, then slice into 6 pieces and eat one of them (or several, if you are me)!”</p>
+<p>“I need to start by taking my ingredients, mix them together, pour the mixture into a baking pan, and then put that pan into the oven and bake for 30 minutes. Once that is done let it cool for 20 minutes, slice into 6 pieces, and eat one of them (or several, if you are me)!”</p>
 </blockquote>
 <p>It would be so much easier if you could write your code in a form that would match how you actually think about this process. That is precisely what piping with <code>%&gt;%</code> allows you to do! Here is how you write this code with piping:</p>
 <div class="sourceCode" id="cb31"><pre class="downlit sourceCode r">
@@ -219,6 +219,14 @@ tidyverse, viridis, RColorBrewer, DT, ggExtra, gridExtra, patchwork, reprex, kni
 </ul>
 <p>What the <code>%&gt;%</code> operator is actually doing is taking the result/output of the previous computation (thing on the left or above) and <em>piping</em> it through as input to the next computation. In most cases, these computations will be functions.</p>
 <p><code>mix(ingredients)</code> is equivalent to <code>ingredients %&gt;% mix()</code></p>
+<p>Below is an animated illustration of a similar example:</p>
+<center>
+<video width="450" height="450" autoplay loop><source src="figures/RPipe.mp4" type="video/mp4"></source></video>
+</center>
+<p style="font-size:6pt">
+Source: <a href="https://twitter.com/ArthurWelle/status/1535429654760284161">Arthur Welle</a>
+</p>
+<p><br></p>
 <div id="dos-and-donts" class="section level3">
 <h3>
 <span class="header-section-number">5.2.1</span> Do’s and Dont’s<a class="anchor" aria-label="anchor" href="#dos-and-donts"><i class="fas fa-link"></i></a>
@@ -456,7 +464,7 @@ Open up your exercises from the 3rd class. Export your dataframe as a .csv file 
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>PSYC193L</strong>" was written by Ethan Hurwitz. It was last built on 2022-06-10.</p>
+    <p>"<strong>PSYC193L</strong>" was written by Ethan Hurwitz. It was last built on 2022-06-14.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
