@@ -23,7 +23,7 @@ mtcars2 = rownames_to_column(mtcars, "model") %>% # Create example df
          disp = round(disp))
 ```
 
-<a href="exercises/Exercise_Manip2.Rmd" download>Exercise Sheet</a>
+<!-- <a href="exercises/Exercise_Manip2.Rmd" download>Exercise Sheet</a> -->
 
 ![](figures/data_cowboy.png){width=100%}
 <p style="font-size:6pt">Artwork by @allison_horst</p>
@@ -188,10 +188,10 @@ A good rule of thumb is that if you need to use the object in its current state 
 
 The `clean_names()` function from the `janitor` package is a powerful tool to change all your column names at once to a specific naming convention. This can be used to easily convert all variable names to one of the naming conventions mentioned in the [Coding Best Practices](#naming-convention) section:
 
-* snake
-* lower_camel
-* upper_camel
-* screaming_snake
+* snake (snake_case)
+* lower_camel (lowerCamel)
+* upper_camel (UpperCamel)
+* screaming_snake (SCREAMING_SNAKE)
 
 As well as many others! You can access a particular function from a package by first specifying the package name, then two colons, then the function name. As demonstrated in the illustration above, using `janitor::clean_names()` is saying you want to use the `clean_names()` function as defined in the `janitor` package.
 
@@ -425,7 +425,7 @@ kables(list(tempTable1, tempTable3, tempTable2))
 ```
 
 ::: {.rmdimportant}
-**This selects all rows *except* `cyl` and `gear`.**
+**This selects all columns *except* `cyl` and `gear`.**
 :::
 
 <div class="panel panel-success">
@@ -830,7 +830,7 @@ To add new variables to your dataframe, you use the `mutate()` function.
 
 `mutate()` takes the form:
 
-`mutate("new_col_name" = "content_for_that_column")`
+`mutate("new_col_name" = content_for_that_column)`
 
 The new column's name will be whatever is passed on the left, its contents will be the result of the R expression assigned to it. For example:
 

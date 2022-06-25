@@ -11,7 +11,7 @@ library(tidyverse)
 library(palmerpenguins)
 ```
 
-<a href="exercises/Exercise_Viz1.Rmd" download>Exercise Sheet</a>
+<!-- <a href="exercises/Exercise_Viz1.Rmd" download>Exercise Sheet</a> -->
 
 > "The greatest value of a picture is when it forces us to notice what we never expected to see."<br>— John Tukey
 
@@ -282,7 +282,7 @@ In the visualization it can be seen that, generally speaking, penguins with grea
 Hot dang, looks like this could be a promising explanation for how penguins differ in size! There would obviously need to be some kind of formal statistical analysis to know for sure, but visualizing your raw data in ways like this allow you to quickly get insights into different questions you may want to use your data to answer.
 
 <div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 3**</div>
+  <div class="panel-heading">**EXERCISE 1**</div>
   <div class="panel-body">Think about what patterns you notice in the visualization you created, and test whether `sex` or `species` might explain those patterns. Make a prediction, test that prediction, and then describe what you see.</div>
 </div>
 
@@ -319,7 +319,7 @@ penguins %>%
 Alright! The points are still colored by species, but there is just the one line for all the data, as was originally intended. You will also notice that a `mapping=` was not specified in `geom_point()`, and it was removed from the `ggplot()` as well! It actually is not necessary to specify that. Once you have the hang of things, you can leave that part out.
 
 <div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 4**</div>
+  <div class="panel-heading">**EXERCISE 2**</div>
   <div class="panel-body">Add in the line of best fit to your graph with `geom_smooth()`, making sure that your code produces a single line that is fit to ***all*** your data.</div>
 </div>
 
@@ -408,10 +408,15 @@ Notice that the color was just set to be equal to a simple logical test! This is
 
 <!-- >"Start by telling ggplot to use the `penguins` dataframe for our data, map flipper length to the y-axis and bill length to the x-axis. Represent each observation with a point, and map species to the color of each point. Add a line of best fit for our data, **and use the viridis color palette for our discrete mapped variable.**" -->
 
-You can find two good color guides [here](http://sape.inf.usi.ch/quick-reference/ggplot2/colour) and [here](http://www.cookbook-r.com/Graphs/Colors_(ggplot2)/#hexadecimal-color-code-chart). More on colors will be covered in a later lesson.
+There are tons of good color guides you can find on google. Here are couple:<br> 
+* [one](figures/ggplot_colors.png)
+* [two](https://github.com/EarlGlynn/colorchart/raw/master/ColorChart.pdf)
+* [three](figures/ggplot_colors2.png)<br>
+
+More on colors will be covered in a later lesson.
 
 <div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 5**</div>
+  <div class="panel-heading">**EXERCISE 3**</div>
   <div class="panel-body">Use R code to recreate the graphs below:
 <br>
 A. Make a visualization to investigate the relationship between bill length (on the y-axis) and bill depth (on the x-axis). 
@@ -545,8 +550,8 @@ penguins %>%
 This introduces another way to change colors in ggplot! When changing the color of something, some geoms have a 'color' argument, some have a 'fill' argument, and some, like here, have both! 'color' often refers to the outline/outside, while 'fill' often refers to... well, the fill!
 
 <div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 6**</div>
-  <div class="panel-body"><u>Part 1:</u><br>Take the code you produced for Exercise 4 and 1. Change the shape to be solid color squares mapped to the `species` variable. 2. Change the shape to be hollow squares mapped to the `species` variable. 3. Change the shape to be filled squares mapped to the `species` variable, and fill with a color of your choosing.
+  <div class="panel-heading">**EXERCISE 4**</div>
+  <div class="panel-body"><u>Part 1:</u><br>Take the code you produced for Exercise 2 and 1. Change the shape to be solid color squares mapped to the `species` variable. 2. Change the shape to be hollow squares mapped to the `species` variable. 3. Change the shape to be filled squares mapped to the `species` variable, and fill with a color of your choosing.
   <br>
   <br>
   <u>Part 2:</u><br>
@@ -653,7 +658,7 @@ penguins %>%
 
 <div class="panel panel-warning">
   <div class="panel-heading">**BONUS CHALLENGE:**</div>
-  <div class="panel-body">See if you can think of a way to use what we demonstrated above to take your code from the Exercise 6, part 2, question 3, and give each observation a thicker outside border. The result should look like the graph below:</div>
+  <div class="panel-body">See if you can think of a way to use what we demonstrated above to take your code from the Exercise 4, part 2, question 3, and give each observation a thicker outside border. The result should look like the graph below:</div>
   <br>
 ```{r class.source="graph-out", warning=FALSE, echo=FALSE, message=FALSE}
 penguins %>%
@@ -768,7 +773,7 @@ diamonds %>%
 Even with a very low alpha (look how faint the points outside the center cluster are), you can see just how many observations are overlapping! You will see better ways to visualize data like this later.
 
 <div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 7**</div>
+  <div class="panel-heading">**EXERCISE 5**</div>
   <div class="panel-body">Update the main graph you have been working with throughout the exercises to make the observations more translucent. First try doing so by mapping it to `island`. Then, create another graph where you set the alpha yourself. Try to pick the value you think makes the graph most legible and effective.</div>
 </div>
 

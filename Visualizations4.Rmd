@@ -73,7 +73,7 @@ theme_set(theme_classic() +
       plot.tag.position = c(0.05, 1)))
 ```
 
-<a href="exercises/Exercise_Viz4.Rmd" download>Exercise Sheet</a>
+<!-- <a href="exercises/Exercise_Viz4.Rmd" download>Exercise Sheet</a> -->
 
 At this point, you know why it is important to visualize your data, several types of graphs to use to create visualizations of different relationships and comparisons within your data, and how to customize some of the elements in those graphs. Changes to the specific type of graph you use, or its title and axes labels, are overt ways to impact the effectiveness of your visualization. However, there are other things that, while subtle, have a very significant impact as well. 
 
@@ -429,7 +429,7 @@ As a side note, since you can use `brewer.pal()` to get a vector of color values
 plot_hex +
     scale_fill_gradientn(colors = brewer.pal(n = 4, name = 'BuGn'))
 plot_jitter +
-  scale_color_manual(values = brewer.pal(n = 3, name = 'BuGn'))
+  scale_color_manual(values = brewer.pal(n = 3, name = 'Set2'))
 ```
 
 
@@ -447,7 +447,18 @@ You may sometimes encounter an error like this:
 
 <p style="color:#A79BF0"> **Error: Continuous value supplied to discrete scale**</p>
 
-This is another one of the errors from R that are actually pretty helpful and intuitive. This just means the type of color scale you or the function you are using does not map on to the data it is being applied to. In most instances like this, you just need to change the function you are using (e.g., brewer vs distiller).
+This is another one of the errors from R that are actually pretty helpful and intuitive. This most often means the function you are using does not map on to the type of data it is being applied to. In most instances like this, you just need to change the function you are using (e.g., brewer vs distiller).
+
+However, while using the wrong function will throw you an error, using an inappropriate color scale may **NOT** give you an error. For example:
+
+```{r}
+plot_jitter +
+  scale_color_brewer(palette = "Oranges")
+plot_hex +
+    scale_fill_distiller(palette = "Set3")
+```
+
+Thus, it is important to double check you are using the right type of scale for your data!
 
 <div class="panel panel-success">
   <div class="panel-heading">**EXERCISE 5**</div>
@@ -529,7 +540,7 @@ plasma(n)
 
 <div class="panel panel-success">
   <div class="panel-heading">**EXERCISE 6**</div>
-  <div class="panel-body">Take your code from Exercise 5 and replace the color palettes from RColorBrewer with ones from viris.
+  <div class="panel-body">Take your code from Exercise 5 and replace the color palettes from RColorBrewer with ones from viridis.
   </div>
 </div>
 

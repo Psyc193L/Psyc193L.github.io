@@ -225,7 +225,7 @@ A few of the most common elements and ways in which you may want to modify them 
 
 ### Titles
 
-Changing some of the the size, font fact (by making some bold), and color, of text in your visualization will help improve its overall legibility.
+Changing some of the the size, font face (by making some bold), and color, of text in your visualization will help improve its overall legibility.
 
 ```{r eval=FALSE}
 modified_plot = modified_plot +
@@ -254,7 +254,7 @@ modified_plot = modified_plot +
 modified_plot
 ```
 
-By default, most text in ggplot2 is left-aligned. To change the location of the text, you need to ad**just** it's **v**ertical or **h**orizontal location in the coordinate system, using `vjust` or `hjust`, respectively. When adjusting:
+By default, most text in ggplot2 is left-aligned. To change the location of the text, you need to ad**just** its **v**ertical or **h**orizontal location in the coordinate system, using `vjust` or `hjust`, respectively. When adjusting:
 
 * 0 == left-aligned
 * 0.5 == centered

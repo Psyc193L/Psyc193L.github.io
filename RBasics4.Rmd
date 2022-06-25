@@ -8,7 +8,7 @@ knitr::opts_chunk$set(strip.white = TRUE)
 library(tidyverse)
 ```
 
-<a href="exercises/Exercise3.Rmd" download>Exercise Sheet</a>
+<!-- <a href="exercises/Exercise3.Rmd" download>Exercise Sheet</a> -->
 
 In this lesson, a few miscellaneous topics will be covered that will help prepare you for all the content covered in the rest of the course. This is meant to wrap up the basics and background, getting you ready to dive in to the real R coding!
 
@@ -162,7 +162,6 @@ Below is an animated illustration of a similar example:
   </video>
 </center>
 <p style="font-size:6pt">Source: [Arthur Welle](https://twitter.com/ArthurWelle/status/1535429654760284161)</p>
-<br>
 
 ### Do's and Dont's
 

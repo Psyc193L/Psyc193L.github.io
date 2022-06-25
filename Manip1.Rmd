@@ -11,7 +11,7 @@ library(tidyverse)
 library(palmerpenguins)
 ```
 
-<a href="exercises/Exercise_Manip1.Rmd" download>Exercise Sheet</a>
+<!-- <a href="exercises/Exercise_Manip1.Rmd" download>Exercise Sheet</a> -->
 
 ## If/Else statements
 
@@ -296,7 +296,7 @@ This illustrates the Social/Data Science workflow that the tidyverse suite of pa
 
 * **Visualize** -- look at the data in different ways
 
-* ~**Model**~ -- ~answer questions about the data~
+* ~~**Model**~~ -- ~~answer questions about the data~~
   + *modeling and statistics are not covered in this course*
 
 * **Communicate** -- write reproducible research reports

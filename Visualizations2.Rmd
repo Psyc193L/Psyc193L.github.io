@@ -26,7 +26,7 @@ library(palmerpenguins)
 <!-- ::: -->
 <!-- ------------------------------- -->
 
-<a href="exercises/Exercise_Viz2.Rmd" download>Exercise Sheet</a>
+<!-- <a href="exercises/Exercise_Viz2.Rmd" download>Exercise Sheet</a> -->
 
 Previously, it was stated that the point of a visualization is to explore and understand a relationship or pattern in your data (often between a response/outcome variable and one or more explanatory/predictor variables). It is important to know how to best graphically represent your data based on the types of variables (categorical vs continuous) you have and the relationships or patterns you are trying to visualize. There are a number of ways you can visualize specific types of relationships. Some are better than others, and sometimes what is "best" depends on the specific context. 
 
@@ -231,7 +231,7 @@ penguins %>%
   geom_bin2d()
 ```
 
-Like a scatter plot, each point represents an observation. However, you also are given some information about how many observations may be occupying the same/similar space. In this example, the lighter the spot, the more concentrated the observations in that spot. You can 
+Like a scatter plot, each point represents an observation. However, you also are given some information about how many observations may be occupying the same/similar space. In this example, the lighter the spot, the more concentrated the observations in that spot.
 
 A twist on the 2d Histogram is to make a hexbin plot, which is essentially the same thing but uses hexagons instead of squares. Everything else is the same, but you use `geom_hex()`. Which also gives the added benefit of making you feel like you are casting a hex on the data (sometimes when you're coding, you have to look for all the little fun you can).
   
@@ -650,7 +650,7 @@ A strip chart is a variation on a jitter plot. It basically IS a jitter plot but
 penguins %>%
   ggplot(aes(y = body_mass_g, x = island)) + 
   geom_jitter(height = 0, width = .1, 
-              colour = "darkmagenta",
+              color = "darkmagenta",
               alpha = .5) + 
   stat_summary(fun = "mean", 
                geom = "crossbar", 
@@ -674,7 +674,7 @@ penguins %>%
                binwidth = 80,
                stackratio = 1,
                fill = "cyan3", 
-               colour = "cyan3")
+               color = "cyan3")
 ```
 
 The settings can be quite temperamental, and you have to play around with the binwidth, stackratio, and dotsize, but once dialed in they can make some nice looking visualizations. Especially so when paired with a boxplot:
@@ -691,7 +691,7 @@ penguins %>%
                dotsize = 1,
                alpha = .45, 
                fill = "cyan3", 
-               colour = "cyan3")
+               color = "cyan3")
 ```
 
 <div class="panel panel-success">
@@ -905,7 +905,7 @@ data.frame(
   g = rep(1:2, 2)
 ) %>%
   ggplot(aes(x, y, group = g)) +
-  geom_col(position = "dodge", fill = "grey50", colour = "black")+
+  geom_col(position = "dodge", fill = "grey50", color = "black")+
   geom_errorbar(
   aes(ymin = y - 1, ymax = y + 1),
   width = 0.2,
@@ -922,7 +922,7 @@ data.frame(
   g = rep(1:2, 2)
 ) %>%
   ggplot(aes(x, y, group = g)) +
-  geom_col(position = "dodge", fill = "grey50", colour = "black")+
+  geom_col(position = "dodge", fill = "grey50", color = "black")+
   geom_errorbar(
     aes(ymin = y - 1, ymax = y + 1),
     width = 0.2,
@@ -1321,7 +1321,7 @@ GeomFlatViolin <-
           
           draw_key = draw_key_polygon,
           
-          default_aes = aes(weight = 1, colour = "grey20", fill = "white", size = 0.5,
+          default_aes = aes(weight = 1, color = "grey20", fill = "white", size = 0.5,
                             alpha = NA, linetype = "solid"),
           
           required_aes = c("x", "y")
@@ -1338,7 +1338,7 @@ ggplot(aes(x = "", y = body_mass_g, fill = species)) +
   geom_flat_violin(position = position_nudge(x = rain_height+.05),
                    alpha = 0.4, trim = FALSE) + 
   # rain
-  geom_point(aes(colour = species), size = 2, 
+  geom_point(aes(color = species), size = 2, 
              alpha = .5, show.legend = FALSE, 
               position = position_jitter(width = 0.05, height = 0)) +
   # boxplots
@@ -1395,39 +1395,6 @@ Below are some guidelines and best practices that should be considered when desi
 As always, most illustrations by [@allison_horst](https://twitter.com/allison_horst)
 
 Custom violin plots modified from source code [here](https://psyteachr.github.io/introdataviz/advanced-plots.html)
-
-
-<!-- ------ -->
-<!-- ------ -->
-
-<!-- # Exercises: -->
-
-<!-- 1. I have a hypothesis that a pokemon's Attack and Speed could be related. Make a graph that plots these two variables and shows their relationship. -->
-
-
-<!-- 2. Pick 3 or 4 pokemon types that you're interested in and modify the graph above to show the difference between those types. -->
-
-<!-- 3. Change the color scheme so that the pokemon types have intuitive / appropriate colors (e.g., water = blue, fire = red), and other aesthetics to make it easy to see the differences between the groups.  -->
-
-<!-- 4. Modify the above graph to see whether those trends are different across the different Generations of pokemon.  -->
-
-<!-- 5. I'm curious about how many of each different pokemon type there are. Make a graph that will show this.  -->
-
-<!--     - For an extra challenge, try to reorder the x-axis. *hint*, use `fct_infreq()` -->
-
-
-
-<!-- 6. I wonder if there's a difference in the height of pokemon based on what type they are. Make a graph that will show this. **Note: There are many ways you can do this. Also, feel free to take liberties with what data you graph to help with readability of conveying the overall picture.** -->
-
-<!--     - For an extra challenge, try to reorder the x-axis. *hint*, you have to make modifications to the `Type1` variable before starting the ggplot command. Use `mutate()` and `reorder()`.  -->
-
-
-
-<!-- 7. What does the ratio of legendary pokemon look like across generations? Make a graph to show the counts and another one for the proportions.  -->
-
-<!-- 8. Take the plot for #7 and show the differences between generation 5 and 6 (only include these two). -->
-
-<!-- 9. Come up with some graphs of your own. Think of a question or thing you're curious about, or something you can graph, and make a few. While doing so, experiment with different aesthetic values, both mapping and arguments. Write out the question in words and then show the graph underneath.  -->
 
 <!-- ## For extra practice -->
 

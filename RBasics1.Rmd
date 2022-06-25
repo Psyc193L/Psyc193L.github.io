@@ -155,6 +155,8 @@ Here are some good resources that will help you throughout this class and your R
 
 * [Keyboard shortcuts](https://support.rstudio.com/hc/en-us/articles/200711853-Keyboard-Shortcuts)
 
+* [More Keyboard shortcuts](https://appsilon.com/rstudio-shortcuts-and-tips/)
+
 * [Tips for efficient code](https://www.datacamp.com/community/tutorials/five-tips-r-code-improve)
 
 * [Functional Programming (Advanced)](https://github.com/rstudio/cheatsheets/blob/main/purrr.pdf)

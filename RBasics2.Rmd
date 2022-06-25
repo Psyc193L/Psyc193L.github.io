@@ -4,7 +4,7 @@
 knitr::opts_chunk$set(strip.white = TRUE)
 ```
 
-<a href="exercises/Exercise1.Rmd" download>Exercise Sheet</a>
+<!-- <a href="exercises/Exercise1.Rmd" download>Exercise Sheet</a> -->
 
 Okay so what is R?
 
@@ -141,7 +141,7 @@ Programming languages often makes use of booleans (`TRUE` and `FALSE`), using th
 
 <div class="panel panel-success">
   <div class="panel-heading">**EXERCISE #3**</div>
-  <div class="panel-body">Use each of the operators covered in a new expression. Use each operator combined with at least one other operator as well.</div>
+  <div class="panel-body">Use each of the operators covered in a new expression. Use each operator combined with at least one operator from exercise 1 or 2 as well.</div>
 </div>
 		
 
@@ -262,7 +262,6 @@ You obviously will want to do more than evaluate simple expressions with R. To t
 Often times you will want to work with a series of values (or elements). **(Atomic) Vectors** are exactly that! Each item in a vector is an element. You initiate a vector with `c()`:
 
 ```{r warning = FALSE, message = FALSE, vectors}
-# Replace the X with some numbers to create a vector. Add more in if you'd like.
 myVector = c(4,2,0,6,9)
 myVector
 
@@ -292,7 +291,7 @@ All elements in a vector have to be the same type of data. R will automatically 
 
 <div class="panel panel-success">
   <div class="panel-heading">**EXERCISE #5**</div>
-  <div class="panel-body">Create 4 vectors that each contain a different type of data. See which operations can be applied to each vector.</div>
+  <div class="panel-body">Create 3 vectors that each contain a different type of data. See which operations can be applied to each vector.</div>
 </div>
 		
 
@@ -301,8 +300,6 @@ All elements in a vector have to be the same type of data. R will automatically 
 **"Indexing"** is a term used to refer to the process of selecting or pulling out specific elements from an object. You can index a vector by following the variable name with a set of brackets which specify the numerical position of the element you want.
 
 ```{r warning = FALSE, message = FALSE, vectors2}
-# Replace the X with a number to index that element in the vector.
-
 # Here, select the second element in the vector. 
 # Done so by putting 2 in brackets after the vector to 
 # say: "index the second element of this object"
@@ -322,21 +319,31 @@ You can think of a data frame like an excel spreadsheet: a series of equal lengt
 
 ```{r dataframes}
 data.frame()
+```
 
-# Column name in quotes, values as vectors
+Column name in quotes, values as vectors
+
+```{r}
 data.frame("Exam" = c(1:4), 
            "Score" = c(88,90,77,98)) 
+```
 
-# When only one value is specified, it will be repeated. 
+When only one value is specified, it will be repeated.
+
+```{r}
 data.frame("Exam" = c(1:4), 
            "Score" = c(88,90,77,98), 
            "Student" = c("Dave")) 
+```
 
-# If two, it will cycle between the two.
+If two, it will cycle between the two.
+
+```{r}
 data.frame("Exam" = c(1:4), 
            "Score" = c(88,90,77,98), 
            "Student" = c("Dave", "Ally")) 
 ```
+
 
 <div class="panel panel-success">
   <div class="panel-heading">**EXERCISE #7**</div>
@@ -347,26 +354,42 @@ data.frame("Exam" = c(1:4),
 
 Again, isolating a specific part of an object is called *indexing*.
 
+Below are a few ways to index different parts of a df.
+
 ```{r indexing DF}
 df = data.frame("Exam" = c(1:4), 
                 "Score" = c(88,90,77,98), 
                 "Student" = c("Dave"))
 df
+```
 
-  # Below are a few ways to index different parts of a df. 
+`df[column]` (a single value in the brackets only selects columns)
 
-# [column] (single value only selects columns)
-# Select the second row of our df
+For example, to get the second column from `df`
+
+```{r}
 df[2]
+```
 
-# [row,column] to select a single element using numbers 
-# Select the value in the second row of the first column 
+`df[row,column]` will select a single element (row/column combination) using numbers.
+
+For example, to get the value in the 2nd row of the 1st column from `df`
+
+```{r}
 df[2,1]
+```
 
-# Leave one value blank to select all
-# Select the value of the first row of all columns
+Leaving one of the row or column sections of the bracket blank will select <u>all</u>.
+
+For example, to get the value of the first row from **all** columns of `df`
+
+```{r}
 df[1,]
-# Select the value of the first column of all rows
+```
+
+to get the value of the first column from **all** rows of `df`
+
+```{r}
 df[,1]
 ```
 

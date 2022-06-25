@@ -9,6 +9,9 @@ _bookdown_files/
 rsconnect
 shiny_bookmarks
 shiny-book.*
+assignments/
+exercises/
+lecture/
 # knitr and R markdown default cache directories
 /*_cache/
 /cache/

@@ -102,12 +102,15 @@ All course materials are free. You have enough expenses, I am not interested in 
 <!-- DataHub website. -->
   
   
-* **[Discord]()**
+* **[Discord](https://discord.gg/fTuJwcxvGv)**
   + We will use Discord as a central place to manage questions about the class, communicate with each other, and easily copy/paste code for sharing.
 
   
-* **[Zoom](https://ucsd.zoom.us/my/ethanhurwitz)**
+* **[Zoom](https://ucsd.zoom.us/j/93535155608)**
   + Class will be remote, so all class periods and office hours will be held via Zoom!
+  
+* **[Anonymous Feedback](https://forms.gle/AVFTCHBMMzShrL257)**
+  + This is a place to submit anonymous feedback to the teaching team.
 
 ## Grades
 
@@ -120,32 +123,42 @@ This class has **NO EXAMS**. Yes, that is right.
 
 However, there must be ***some*** things to grade you on. They are the following:
 
-**Attendance Activities**
+<u>**"Attendance" Activities**</u>
 
-* These are practice exercises done in class that apply the concepts/material I am introducing.
-  + Forces you to participate and provides some grade buffer with easy points.
+* These are practice exercises done during lecture that apply the concepts/material I am introducing.
+  + Forces you to engage with the material while it is being presented and provides some grade buffer with easy points.
 
-**(Weekly) Practice Question Sets**
+<u>**Practice Problem Sets**</u>
 
-* These will be similar in format to the practice exercises done in class, but will be done on your own.
+* These will be similar in format to the practice exercises built into the lectures, but will be done on your own.
   + Provides you an opportunity to practice applying new skills and ideas on your own, but still in a directed, hand hold-y, way.
-  + There will often be time to work on these in class.
 
-**Skills Challenges (3x)**
+<u>**Skills Challenges (3x)**</u>
 
 * There will be one skills challenge for each of the 3 main sections of content covered in this course.
-  + Skills challenges will be similar to the practice question sets but use different data.
-  + They will also have some questions that are more abstract/conceptual, and require you really thinking about the data you're working with (similar to what you will be doing outside of this class).
+  + Skills challenges will be similar to the practice question sets but may use different data.
+  + They will also have some questions that are more abstract/conceptual, and require you really thinking about the data you are working with (similar to what you will be doing outside of this class).
+  
+<u>**Data Science Vignettes**</u>
 
-**Final Project**
+* These will be completed towards the end of the course and are brief case studies of actual data science projects undertaken in Social Science fields. These will be an opportunity to see how all the skills you have learned in this course can be directly applied in various fields of Social Sciences.
+  
+<u>**Feedback Forms**</u>
 
-You will:
+* This is a new course, using all brand new material made largely from scratch, and the first time it is being offered. I am particularly interested in getting feedback on... everything! What works, what does not, what was engaging, what was boring, what was helpful, etc. There will be very brief feedback surveys about all the material that will be graded only for completion.
 
-* Choose a dataset from a provided list of options and come up with a few research questions you can answer with that data. 
+<u>**Final Project**</u>
+
+There are two options, one that is more directed and one that is more open.
+
+For the <u>directed</u> option, you will choose a dataset that has specific questions that you must investigate and try to answer. For the <u>open</u> option, you will choose a dataset and come up with your own question(s) to investigate and try to answer.
+
+In both options, you will:
+
 * Include a brief literature review to provide sources which help justify and provide rationale for your hypothesized answers to those questions. 
-* Clean/change/modify/whatever the data to get it in a form where it can answer those questions, and create visualizations and summary statistics that demonstrate those answers.
+* Clean/change/modify/whatever the data to get it in the form you need, then create visualizations and summary statistics that try to test your hypotheses.
   + This will be reminiscent of what a Results section would look like from a peer-reviewed journal article.
-* The paper will largely just be explaining what you've done. 
+* The paper will largely be explaining what you have done. 
   + What does the data contain? 
   + What are your questions? 
   + What are the possible answers? 
@@ -154,32 +167,51 @@ You will:
   + What did you do (explain your code in words)? 
   + Show the visualizations and summary statistics and explain/interpret them.
 * The other thing you will do is create a literate programming document for your project. We will expound on this more later, but the code document you create will be thoroughly annotated for others' understanding.
+* More information about this will be posted later.
+
+### How Does Grading Work?
+
+Graded assignments will be downloaded and submitted on Canvas. For each assignment, you will submit a knit .html document and the source .Rmd document (more on this later). All assignments are due the Monday after they are introduced. i.e., anything released in Week 1 is due by Monday of Week 2, etc.
+
+This course is designed to facilitate your *engagement* and *effort* with the material. What is going to help you learn and develop R skills the most is to actually **practice doing** coding... a lot. It is thus, in my view, counter-productive to have a single heavily weighted assignment (exam) or for there to be high amounts of pressure to find the correct answer to every problem.
+
+In service of this, there will be no exams. Also, the Practice Problem Sets, Skills Challenges, and Data Science Vignettes, will be graded 50% for completion and 50% for accuracy. To earn the completion portion of the credit, you must demonstrate that you were actually engaging with the material in a meaningful way and trying your best. You will not earn this credit by just copy/pasting the same bit of code, or writing, "I don't know," for each question. I *will* check this. Additionally, several questions on assignments do not have a singular correct answer. You only must accurately the code accurately (which can often be done many ways)!
+
+### Is Code Graded For Quality?
+
+NO!
+
+![](figures/circuitousPath.jpeg){width=100%}
+<p style="font-size:6pt">Artwork by @allison_horst</p>
+
+This is an intro course that assumes no prior knowledge. As long as your code ultimately gives you what you want, and you aren't cheating or breaking any rules, it doesn't matter how circuitous or un-glamorous that code is!
 
 ### Grade Breakdown
 
-  This course is designed to facilitate your engagement and effort with the material. What is going to help you learn and develop R skills the most is to actually **practice doing** coding, a lot. It is thus, in my view, counter-productive to have a single heavily weighted assignment (exam). The full grade breakdown is as follows:
+The full grade breakdown is as follows:
 
 ```{r Grade Breakdown, echo=FALSE, message=F, warning=F}
 library(tidyverse)
-kableExtra::kbl(data.frame("Assignment" = c("Attendance Activities",
-                                            "(Weekly) Practice Question Sets",
-                                            "Skills Challenges",
-                                            "Final Project"), 
-                           "Total Percentage" = c("20", "20", "30", "30")#,
+library(kableExtra)
+kbl(data.frame("Assignment" = c("Attendance Activities",
+                                            "Practice Problem Sets",
+                                            "Skills Challenges +\n Vignettes",
+                                            "Final Project",
+                                            "Feedback Forms"), 
+                           "Total Percentage" = c("20", "20", "30", "25", "5")#,
                            #"Breakdown" = c("<b>test</b>", "*test*", "**test**", "`test`")
                            ), col.names = c("Assignment", "Total %")) %>%
     #kableExtra::kable_paper("striped", full_width = T) %>%
     #column_spec(5:7, bold = T) %>%
     #kableExtra::row_spec(1, bold = T, color = "white", background = "grey")
   #kable_material(c("striped", "hover"))
-    kableExtra::kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), position = "center")
+    kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), position = "center")
 ```
 
 Final letter grades in the course will be assigned according to the following percentage scale: 
 
 ```{r Grade Range, echo=FALSE, message=F, warning=F}
-library(tidyverse)
-kableExtra::kbl(data.frame("A" = c("A+", "A", "A-"), 
+kbl(data.frame("A" = c("A+", "A", "A-"), 
                            "A2" = c("TBD", "93.00+ ", "90.00-92.99"),
                            "B" = c("B+", "B", "B-"),
                            "B2" = c("87.00-89.99",
@@ -197,21 +229,12 @@ kableExtra::kbl(data.frame("A" = c("A+", "A", "A-"),
     #column_spec(5:7, bold = T) %>%
     #kableExtra::row_spec(1, bold = T, color = "white", background = "grey")
   #kable_material(c("striped", "hover"))
-    kableExtra::kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), position = "center")
+    kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), position = "center")
 ```
 
-  Grades will be rounded to the nearest hundredth of a point and the stated letter grade cutoffs will be applied without exception. There is no plan to “curve” grades in this course. Your instructor reserves the right to adjust all students’ grades up by a set value if deemed appropriate, and grades will not be adjusted down under any circumstances.  
- 
-  To earn an A+ in this course, you must do work of truly outstanding quality. A+ grades will be awarded at my discretion (there is no set grade percentage to earn this grade). 
-  
-### Is Code Graded For Quality?
+  Grades will be rounded to the nearest hundredth of a point and the stated letter grade cutoffs will be applied without exception. There is no plan to "curve" grades in this course. Your instructor reserves the right to adjust all students’ grades up by a set value if deemed appropriate, and grades will not be adjusted down under any circumstances. At the end of the term, I will determine whether/how to award A+ grades for outstanding performance.
 
-NO!
-
-![](figures/circuitousPath.jpeg){width=100%}
-<p style="font-size:6pt">Artwork by @allison_horst</p>
-
-This is an intro course that assumes no prior knowledge. As long as your code ultimately gives you what you want, and you aren't cheating or breaking any rules, it doesn't matter how circuitous or un-glamorous that code is!
+  <!-- To earn an A+ in this course, you must do work of truly outstanding quality. A+ grades will be awarded at my discretion (there is no set grade percentage to earn this grade).  -->
 
 ## Course Policies and Other Info
 
@@ -223,7 +246,7 @@ This is an intro course that assumes no prior knowledge. As long as your code ul
 
 ### Attendance
 
-  Attendance is <u>strongly encouraged</u>, and the decision to hold the course remotely was made in order to maximize the ability for students to attend synchronously, but is not required. Participation is based on activity completion, which can be completed asynchronously. HOWEVER, it is much more difficult to do so alone, and we will often go over the answers in class. 
+  Attendance is <u>strongly encouraged</u>, and the decision to hold the course remotely was made in order to maximize the ability for students to attend synchronously, but is not required. Participation is based on activity completion, which can be completed asynchronously. However, it is much more difficult to do so this way.
 
 ### Extensions
 
@@ -280,9 +303,35 @@ In choosing what content to include, this was my philosophy:
 	<!-- 	- Whereas most Social Psychology courses involve material that requires declarative knowledge, or the knowledge about facts, this course requires procedural knowledge. Learning programming is like learning a language, because it literally **is** learning a language. When you're learning to drive, you can't just read about different driving tips and best practices, you have to actually go out and get behind a wheel and practice. It requires procedural knowledge. With that in mind, focusing on a narrower amount of content affords more practice with that content and better learning. -->
 	<!-- 	- Always happy to chat about things outside the scope of course content! In office hours or email/discord/whatever -->
 		
-<!-- ## Schedule -->
+## Schedule
 
-<!-- SCHEDULE HERE -->
+The schedule below is tentative and subject to change.
+
+```{r Schedule, echo=FALSE, message=F, warning=F}
+kbl(data.frame("Week" = c("1", "2", "3", "4", "5"), 
+                           "Monday" = c("Syllabus", "<b>Holiday<br>No Class</b>",
+                                                 "Color<br>Theory",
+                                                 "Advanced<br>Wrangling", "Review"),
+                           "Tuesday" = c("Why use R<br>Coding Basics<br>Using R Effectively<br>Preparing For More", 
+                                         "Project Intro<br>Different Geoms", 
+                                         "Color Theory Problem Set<br>Data Viz Challenge", 
+                                         "Summarizing<br>Problem Set", "Vignettes"),
+                           "Wednesday" = c("ggplot Intro<br>Aesthetics",
+                                           "Problem Set", "Control Flow", 
+                                           "Text Cleaning<br>Transformation", 
+                                           "Project Questions"),
+                           "Thursday" = c("Aesthetics<br>Problem Set<br>Tidy Data",
+                                    "Customization<br>Problem Set",
+                                    "Basic Wrangling<br>Problem Set",
+                                    "Wrangling Challenge", "")), 
+    escape = FALSE, align = "c") %>%
+    #kableExtra::kable_paper("striped", full_width = T) %>%
+    #column_spec(5:7, bold = T) %>%
+    #kableExtra::row_spec(1, bold = T, color = "white", background = "grey")
+  #kable_material(c("striped", "hover"))
+    kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), position = "center")
+```
+
 
 ## Words of Advice
 
