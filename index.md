@@ -25,7 +25,7 @@ Summer Session 1 2022
 
 *Lab:* TuTh 12:00p-12:50p
 
-https://ucsd.zoom.us/my/ethanhurwitz
+https://ucsd.zoom.us/j/93535155608
 
 ## Course Description
 
@@ -125,23 +125,23 @@ However, there must be ***some*** things to grade you on. They are the following
 
 <u>**"Attendance" Activities**</u>
 
-* These are practice exercises done during lecture that apply the concepts/material I am introducing.
+* Practice exercises done during lecture that apply the concepts/material being introduced.
   + Forces you to engage with the material while it is being presented and provides some grade buffer with easy points.
 
-<u>**Practice Problem Sets**</u>
+<u>**Practice Problem Sets (x8)**</u>
 
-* These will be similar in format to the practice exercises built into the lectures, but will be done on your own.
+* Similar in format to the practice exercises built into the lectures.
   + Provides you an opportunity to practice applying new skills and ideas on your own, but still in a directed, hand hold-y, way.
 
-<u>**Skills Challenges (3x)**</u>
+<u>**Skills Challenges (x3)**</u>
 
 * There will be one skills challenge for each of the 3 main sections of content covered in this course.
   + Skills challenges will be similar to the practice question sets but may use different data.
-  + They will also have some questions that are more abstract/conceptual, and require you really thinking about the data you are working with (similar to what you will be doing outside of this class).
+  + They will also have some questions that are more abstract/conceptual, requiring you to really think about the data you are working with (similar to what you will be doing outside of this class).
   
 <u>**Data Science Vignettes**</u>
 
-* These will be completed towards the end of the course and are brief case studies of actual data science projects undertaken in Social Science fields. These will be an opportunity to see how all the skills you have learned in this course can be directly applied in various fields of Social Sciences.
+* Completed towards the end of the course, these are brief case studies of actual data science projects undertaken in Social Science fields. These will be an opportunity to see how all the skills you have learned in this course can be directly applied in various fields of Social Sciences.
   
 <u>**Feedback Forms**</u>
 
@@ -175,7 +175,7 @@ Graded assignments will be downloaded and submitted on Canvas. For each assignme
 
 This course is designed to facilitate your *engagement* and *effort* with the material. What is going to help you learn and develop R skills the most is to actually **practice doing** coding... a lot. It is thus, in my view, counter-productive to have a single heavily weighted assignment (exam) or for there to be high amounts of pressure to find the correct answer to every problem.
 
-In service of this, there will be no exams. Also, the Practice Problem Sets, Skills Challenges, and Data Science Vignettes, will be graded 50% for completion and 50% for accuracy. To earn the completion portion of the credit, you must demonstrate that you were actually engaging with the material in a meaningful way and trying your best. You will not earn this credit by just copy/pasting the same bit of code, or writing, "I don't know," for each question. I *will* check this. Additionally, several questions on assignments do not have a singular correct answer. You only must accurately the code accurately (which can often be done many ways)!
+In service of this, there will be no exams. Also, the Practice Problem Sets, Skills Challenges, and Data Science Vignettes, will be graded 50% for completion and 50% for accuracy. To earn the completion portion of the credit, you must demonstrate that you were actually engaging with the material in a meaningful way and trying your best. You will not earn this credit by just copy/pasting the same bit of code, or writing, "I don't know," for each question. I **will** check this. Additionally, several questions on assignments do not have a singular correct answer. You only need to use the code accurately (which can often be done many ways)!
 
 ### Is Code Graded For Quality?
 
@@ -354,7 +354,7 @@ The schedule below is tentative and subject to change.
   </tr>
   <tr>
    <td style="text-align:center;"> 2 </td>
-   <td style="text-align:center;"> <b>Holiday<br>No Class</b> </td>
+   <td style="text-align:center;"> <b><u>Holiday<br>No Class</u></b> </td>
    <td style="text-align:center;"> Project Intro<br>Different Geoms </td>
    <td style="text-align:center;"> Problem Set </td>
    <td style="text-align:center;"> Customization<br>Problem Set </td>
