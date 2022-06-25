@@ -90,11 +90,11 @@ All course materials are free. You have enough expenses, I am not interested in 
 
 
 * **Website**
-  + You're looking at it right now! This website will be the main hub for course-related material. This is where I will be uploading lecture notes, information about assignments, etc.
+  + You're looking at it right now! This website will functionally be the course textbook. This is where I will upload all lecture notes and information.
 
 
 * **Canvas**
-  + Canvas will be used for posting grades. That's pretty much it!
+  + Canvas will be used for downloading and submitting assignments as well as grades.
   
   
 <!-- * **[DataHub](https://datahub.ucsd.edu/hub/login)** -->
