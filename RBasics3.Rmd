@@ -2,6 +2,7 @@
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(strip.white = TRUE)
+library(tidyverse)
 ```
 
 <!-- <a href="exercises/Exercise2.Rmd" download>Exercise Sheet</a> -->
