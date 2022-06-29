@@ -445,7 +445,7 @@ One thing you might think to do is just go step by step:
 ```r
 mixture = mix(ingredients)
 thing_in_oven = pour(mixture)
-hot_baked_bake = bake(thing_in_oven)
+hot_baked_cake = bake(thing_in_oven)
 cooled_baked_cake = cool(hot_baked_bake)
 sliced_cake = slice(cooled_baked_cake)
 

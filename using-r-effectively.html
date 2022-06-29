@@ -47,6 +47,8 @@
 <li><a class="" href="why-use-r.html"><span class="header-section-number">2</span> Why use R?</a></li>
 <li><a class="" href="r-coding-basics.html"><span class="header-section-number">3</span> R Coding Basics</a></li>
 <li><a class="active" href="using-r-effectively.html"><span class="header-section-number">4</span> Using R Effectively</a></li>
+<li class="book-part">Visualizations</li>
+<li><a class="" href="intro-to-ggplot2.html"><span class="header-section-number">5</span> Intro to ggplot2</a></li>
 </ul>
 
         <div class="book-extra">
@@ -543,7 +545,7 @@ Artwork by <span class="citation">Horst (2022)</span>
 <div class="sourceCode" id="cb35"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">mixture</span> <span class="op">=</span> <span class="fu">mix</span><span class="op">(</span><span class="va">ingredients</span><span class="op">)</span></span>
 <span><span class="va">thing_in_oven</span> <span class="op">=</span> <span class="fu">pour</span><span class="op">(</span><span class="va">mixture</span><span class="op">)</span></span>
-<span><span class="va">hot_baked_bake</span> <span class="op">=</span> <span class="fu">bake</span><span class="op">(</span><span class="va">thing_in_oven</span><span class="op">)</span></span>
+<span><span class="va">hot_baked_cake</span> <span class="op">=</span> <span class="fu">bake</span><span class="op">(</span><span class="va">thing_in_oven</span><span class="op">)</span></span>
 <span><span class="va">cooled_baked_cake</span> <span class="op">=</span> <span class="fu">cool</span><span class="op">(</span><span class="va">hot_baked_bake</span><span class="op">)</span></span>
 <span><span class="va">sliced_cake</span> <span class="op">=</span> <span class="fu">slice</span><span class="op">(</span><span class="va">cooled_baked_cake</span><span class="op">)</span></span>
 <span></span>
@@ -711,17 +713,15 @@ Open up your Exercise1.Rmd file. Export your dataframe (<code>my_df</code>) as a
 </div>
 </div>
 
-<div id="refs" class="references">
-<div id="ref-allison_horst">
-<p>Horst, A. (2022). <a href="https://github.com/allisonhorst/stats-illustrations/">https://github.com/allisonhorst/stats-illustrations/</a></p>
 </div>
 </div>
 </div>
-</div>
-</div>
+
+
+
   <div class="chapter-nav">
 <div class="prev"><a href="r-coding-basics.html"><span class="header-section-number">3</span> R Coding Basics</a></div>
-<div class="empty"></div>
+<div class="next"><a href="intro-to-ggplot2.html"><span class="header-section-number">5</span> Intro to ggplot2</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
@@ -784,7 +784,7 @@ Open up your Exercise1.Rmd file. Export your dataframe (<code>my_df</code>) as a
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>PSYC193L</strong>" was written by Ethan Hurwitz. It was last built on 2022-06-28.</p>
+    <p>"<strong>PSYC193L</strong>" was written by Ethan Hurwitz. It was last built on 2022-06-29.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
