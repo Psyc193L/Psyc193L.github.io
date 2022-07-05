@@ -235,7 +235,8 @@ Notice that the color was just set to be equal to a simple logical test! This is
 
 <!-- >"Start by telling ggplot to use the `penguins` dataframe for our data, map flipper length to the y-axis and bill length to the x-axis. Represent each observation with a point, and map species to the color of each point. Add a line of best fit for our data, **and use the viridis color palette for our discrete mapped variable.**" -->
 
-There are tons of good color guides you can find on google. Here are couple:<br> 
+There are tons of good color guides you can find on google. Here are couple:
+
 * [one](figures/ggplot_colors.png)
 * [two](https://github.com/EarlGlynn/colorchart/raw/master/ColorChart.pdf)
 * [three](figures/ggplot_colors2.png)<br>
