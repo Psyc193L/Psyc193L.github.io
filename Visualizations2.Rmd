@@ -11,21 +11,6 @@ library(tidyverse)
 library(palmerpenguins)
 ```
 
-<!-- ### Prediction code: -->
-<!-- ::: {.rmdwarning} -->
-<!-- <p style="font-size:10pt">Let's declare this as a formal prediction. We'll specify two mutually exclusive alternatives that we *could* see.</p> -->
-
-<!-- * "If it is the case that the differences in penguin size could be explained by what sex they are (e.g., bigger penguins were males and the smaller ones were females), then all the points in the cluster at the top would be one color and all the points in the cluster at the bottom would be a different color. If it is not the case that the differences in penguin size could be explained by what sex they are, the points in each of the two clusters would not have distinct colors." -->
-<!-- ::: -->
-
-<!-- ### Summary code: -->
-<!-- ::: {.rmdimportant} -->
-<!-- <p style="font-size:10pt">*Things related to graph literacy and comprehension will appear in boxes like this moving forward!*</p> -->
-
-<!-- In the visualization we can see that, generally speaking, penguins with greater flipper length tend to have greater bill length as well. There seems to be a positive linear relationship between bill length and flipper length such that, as flipper length increases, bill length increases in turn. -->
-<!-- ::: -->
-<!-- ------------------------------- -->
-
 <!-- <a href="exercises/Exercise_Viz2.Rmd" download>Exercise Sheet</a> -->
 
 Previously, it was stated that the point of a visualization is to explore and understand a relationship or pattern in your data (often between a response/outcome variable and one or more explanatory/predictor variables). It is important to know how to best graphically represent your data based on the types of variables (categorical vs continuous) you have and the relationships or patterns you are trying to visualize. There are a number of ways you can visualize specific types of relationships. Some are better than others, and sometimes what is "best" depends on the specific context. 
@@ -66,10 +51,10 @@ penguins %>%
 
 <p class="text-info"> **<u>Note:</u> Proportions must sum to 1! If your bars ever do not sum to one, there is an issue!**</p>
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 1**</div>
-  <div class="panel-body">Create bar plots to explore both the count and proportion of penguins of each species. Try out different aesthetic **<u>settings</u>**, and see how they change the graph (if you want to try an aesthetic **<u>mapping</u>**, only use the singular variable on your x-axis).</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 1**</div> -->
+<!--   <div class="panel-body">Create bar plots to explore both the count and proportion of penguins of each species. Try out different aesthetic **<u>settings</u>**, and see how they change the graph (if you want to try an aesthetic **<u>mapping</u>**, only use the singular variable on your x-axis).</div> -->
+<!-- </div> -->
 
 ### Pie
 
@@ -140,10 +125,10 @@ penguins %>%
 
 In the first histogram you would probably say this is a unimodal distribution with most of the flipper lengths around 190mm (+/- a few). However, when looking at the second histogram, you would probably say this distribution looks more bimodal, with one cluster around 190mm and another around 210mm. The same data, visualized using the same type of graph, but two different stories based on choices that you made. You have to be very careful to make sure you are telling the **<u>data's</u>** story, not *your* story!
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 2**</div>
-  <div class="panel-body">Make a histogram to explore the distribution of `body_mass_g` scores in your dataset. Try out different aesthetic **<u>settings</u>** and see how they change the graph. Also, try different bin settings (size and width) and see how they change your interpretation/understanding of the data.</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 2**</div> -->
+<!--   <div class="panel-body">Make a histogram to explore the distribution of `body_mass_g` scores in your dataset. Try out different aesthetic **<u>settings</u>** and see how they change the graph. Also, try different bin settings (size and width) and see how they change your interpretation/understanding of the data.</div> -->
+<!-- </div> -->
 
 ### Density
 
@@ -187,10 +172,10 @@ penguins %>%
 
 ```
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 3**</div>
-  <div class="panel-body">Take your plot from Exercise 2 and add a colored line approximately where you think the mean would be. Add another line in a different color where you think the mode would be.</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 3**</div> -->
+<!--   <div class="panel-body">Take your plot from Exercise 2 and add a colored line approximately where you think the mean would be. Add another line in a different color where you think the mode would be.</div> -->
+<!-- </div> -->
 
 ## Continuous ~ Continuous
 
@@ -216,10 +201,10 @@ diamonds %>%
   geom_point(alpha = 0.1)
 ```
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 4**</div>
-  <div class="panel-body">Create a visualization to explore the relationship between a penguin's `bill_length_mm` and their `flipper_length_mm`. Try out different aesthetic **<u>settings</u>**, and see how they change the graph.</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 4**</div> -->
+<!--   <div class="panel-body">Create a visualization to explore the relationship between a penguin's `bill_length_mm` and their `flipper_length_mm`. Try out different aesthetic **<u>settings</u>**, and see how they change the graph.</div> -->
+<!-- </div> -->
 
 ### 2d Histogram
 
@@ -243,10 +228,10 @@ penguins %>%
 
 The conclusions you draw from the two should be identical. The choice between the two should largely be personal preference.
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 5**</div>
-  <div class="panel-body">Create a visualization to explore the relationship between a penguin's `bill_length_mm` and their `flipper_length_mm`. Specifically, create a visualization if you had anticipated having a large n. Try out different aesthetic **<u>settings</u>**, and see how they change the graph.</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 5**</div> -->
+<!--   <div class="panel-body">Create a visualization to explore the relationship between a penguin's `bill_length_mm` and their `flipper_length_mm`. Specifically, create a visualization if you had anticipated having a large n. Try out different aesthetic **<u>settings</u>**, and see how they change the graph.</div> -->
+<!-- </div> -->
 
 ### Adding Conditional Means
 
@@ -263,10 +248,10 @@ penguins %>%
 
 Well... Hang on. This... okay yes it **IS** a line, but this may not be what you were expecting to see. This highlights an important point: <u>**Just because you CAN fit a line to something does not always mean you should.**</u> 
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 6**</div>
-  <div class="panel-body">Take your visualization from Exercise 5 and add a line of best fit for your data. Try out different aesthetic **<u>settings</u>**, and see how they change the graph.</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 6**</div> -->
+<!--   <div class="panel-body">Take your visualization from Exercise 5 and add a line of best fit for your data. Try out different aesthetic **<u>settings</u>**, and see how they change the graph.</div> -->
+<!-- </div> -->
 
 ### Rugs and Margins
 
@@ -292,10 +277,10 @@ ggExtra::ggMarginal(type = "histogram")
 
 <p class="text-info"> **<u>Note:</u> `ggMarginal` is not part of ggplot proper, so it is not added on like other geoms. Instead, you have to pipe your ggplot graph in. In doing so, you must wrap the ggplot code in parentheses. This way, the entire visualization gets piped in and not just the last piece!**</p>
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 7**</div>
-  <div class="panel-body">Take your visualization from exercise 6 and try to add some extra information to the margins. Try out different aesthetic **<u>settings</u>**, and see how they change the graph.</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 7**</div> -->
+<!--   <div class="panel-body">Take your visualization from exercise 6 and try to add some extra information to the margins. Try out different aesthetic **<u>settings</u>**, and see how they change the graph.</div> -->
+<!-- </div> -->
 
 ## Continuous ~ Categorical
 
@@ -406,10 +391,10 @@ penguins %>%
 
 While you can use this here, line plots are best used for time series data.
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 8**</div>
-  <div class="panel-body">Create 3 visualizations to explore how the average penguin `flipper_length_mm` varies across the different `species` of penguins. Use a different shape for the mean in each visualization. Try out different aesthetic **<u>settings</u>**, and see how they change the graph (if you want to try an aesthetic **<u>mapping</u>**, only use the singular variable on your x-axis).</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 8**</div> -->
+<!--   <div class="panel-body">Create 3 visualizations to explore how the average penguin `flipper_length_mm` varies across the different `species` of penguins. Use a different shape for the mean in each visualization. Try out different aesthetic **<u>settings</u>**, and see how they change the graph (if you want to try an aesthetic **<u>mapping</u>**, only use the singular variable on your x-axis).</div> -->
+<!-- </div> -->
 
 ### Error bars
 
@@ -468,10 +453,10 @@ penguins %>%
 
 This gives basically the same graph as above, but only uses one `stat_summary()` call! The only downside here is you have slightly less control over customizing the line and point separately.
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 9**</div>
-  <div class="panel-body">Take your 3 visualizations created from Exercise 8 and add error bars around the means. Try out different aesthetic **<u>settings</u>**, and see how they change the graph.</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 9**</div> -->
+<!--   <div class="panel-body">Take your 3 visualizations created from Exercise 8 and add error bars around the means. Try out different aesthetic **<u>settings</u>**, and see how they change the graph.</div> -->
+<!-- </div> -->
 
 ### Boxplots
 
@@ -489,10 +474,10 @@ penguins %>%
   geom_boxplot()
 ```
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 10**</div>
-  <div class="panel-body">Create a boxplot to compare how `flipper_length_mm` varies across penguin `species`. Try out different aesthetic **<u>settings</u>**, and see how they change the graph (if you want to try an aesthetic **<u>mapping</u>**, only use the singular variable on your x-axis).</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 10**</div> -->
+<!--   <div class="panel-body">Create a boxplot to compare how `flipper_length_mm` varies across penguin `species`. Try out different aesthetic **<u>settings</u>**, and see how they change the graph (if you want to try an aesthetic **<u>mapping</u>**, only use the singular variable on your x-axis).</div> -->
+<!-- </div> -->
 
 ### Problem With Summary Stats
 
@@ -538,10 +523,10 @@ penguins %>%
 
 This way, you get all the benefits of a boxplot but are also conveying more information about the underlying distribution. Since ggplot is an additive/layered system, you can combine different geoms and elements to make particularly effective visualizations!
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 11**</div>
-  <div class="panel-body">Take your visualization from Exercise 10 and put a violin underneath to give more information about the distribution of `flipper_length_mm`. Try out different aesthetic **<u>settings</u>**, and see how they change the graph (if you want to try an aesthetic **<u>mapping</u>**, only use the singular variable on your x-axis).</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 11**</div> -->
+<!--   <div class="panel-body">Take your visualization from Exercise 10 and put a violin underneath to give more information about the distribution of `flipper_length_mm`. Try out different aesthetic **<u>settings</u>**, and see how they change the graph (if you want to try an aesthetic **<u>mapping</u>**, only use the singular variable on your x-axis).</div> -->
+<!-- </div> -->
 
 ### Jitter Plots
 
@@ -613,10 +598,10 @@ penguins %>%
                color = "red")
 ```
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 12**</div>
-  <div class="panel-body">Create 2-3 jitter plots to explore the relationship between a penguin's `bill_length_mm` and their `flipper_length_mm`. Think about which you think is best and why. Try out different aesthetic **<u>settings</u>**, and see how they change the graph (if you want to try an aesthetic **<u>mapping</u>**, only use the singular variable on your x-axis).</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 12**</div> -->
+<!--   <div class="panel-body">Create 2-3 jitter plots to explore the relationship between a penguin's `bill_length_mm` and their `flipper_length_mm`. Think about which you think is best and why. Try out different aesthetic **<u>settings</u>**, and see how they change the graph (if you want to try an aesthetic **<u>mapping</u>**, only use the singular variable on your x-axis).</div> -->
+<!-- </div> -->
 
 #### Limits
 
@@ -657,10 +642,10 @@ penguins %>%
                width = 0.3)
 ```
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 13**</div>
-  <div class="panel-body">Create a strip chart to compare the mean `flipper_length_mm` between different `species` of penguins. Try out different aesthetic **<u>settings</u>**, and see how they change the graph (if you want to try an aesthetic **<u>mapping</u>**, only use the singular variable on your x-axis).</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 13**</div> -->
+<!--   <div class="panel-body">Create a strip chart to compare the mean `flipper_length_mm` between different `species` of penguins. Try out different aesthetic **<u>settings</u>**, and see how they change the graph (if you want to try an aesthetic **<u>mapping</u>**, only use the singular variable on your x-axis).</div> -->
+<!-- </div> -->
 
 #### Beeswarm/Dot Plot
 
@@ -694,10 +679,10 @@ penguins %>%
                color = "cyan3")
 ```
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 14**</div>
-  <div class="panel-body">Create a modified beeswarm/dot plot to compare the `flipper_length_mm` between different `species` of penguins. Try to see how changes to the different settings in the `dotplot()` call effect your graph.</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 14**</div> -->
+<!--   <div class="panel-body">Create a modified beeswarm/dot plot to compare the `flipper_length_mm` between different `species` of penguins. Try to see how changes to the different settings in the `dotplot()` call effect your graph.</div> -->
+<!-- </div> -->
 
 ### Ridgeline Plot
 
@@ -730,10 +715,10 @@ penguins %>%
   stat_summary(fun.data = "mean_se", geom = "pointrange")
 ```
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 15**</div>
-  <div class="panel-body">Create a ridgeline plot to compare the `flipper_length_mm` across the different `species` of penguins. Try out different settings and aesthetics to see how they change your graph (if you want to try an aesthetic **<u>mapping</u>**, only use the singular variable on your y-axis).</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 15**</div> -->
+<!--   <div class="panel-body">Create a ridgeline plot to compare the `flipper_length_mm` across the different `species` of penguins. Try out different settings and aesthetics to see how they change your graph (if you want to try an aesthetic **<u>mapping</u>**, only use the singular variable on your y-axis).</div> -->
+<!-- </div> -->
 
 ## New Arguments and Functions
 
@@ -777,13 +762,13 @@ penguins %>%
                cols = vars(species))
 ```
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 16**</div>
-  <div class="panel-body">Take your scatter plot exploring the relationship between a penguin's `bill_length_mm` and their `flipper_length_mm` and do the following:<br>
-  1. Facet by `species`.
-  2. Facet by `sex`.
-  3. Facet by both `species` and `sex`.</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 16**</div> -->
+<!--   <div class="panel-body">Take your scatter plot exploring the relationship between a penguin's `bill_length_mm` and their `flipper_length_mm` and do the following:<br> -->
+<!--   1. Facet by `species`. -->
+<!--   2. Facet by `sex`. -->
+<!--   3. Facet by both `species` and `sex`.</div> -->
+<!-- </div> -->
 
 ### Groups
 
@@ -808,10 +793,10 @@ mtcars %>%
     stat_summary(fun = "mean", geom = "line")
 ```
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 17**</div>
-  <div class="panel-body">Create a line plot to visualize the compare how `flipper_length_mm` varies across penguin `species`, and whether there are any differences between the sexes of each species (think about what the graph would look like to best visualize this). Try out different aesthetic **<u>settings</u>**, and see how they change the graph.</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 17**</div> -->
+<!--   <div class="panel-body">Create a line plot to visualize the compare how `flipper_length_mm` varies across penguin `species`, and whether there are any differences between the sexes of each species (think about what the graph would look like to best visualize this). Try out different aesthetic **<u>settings</u>**, and see how they change the graph.</div> -->
+<!-- </div> -->
 
 Very often in studies implementing within-subjects designs (where there are multiple measurements from the same subject -- and particularly in developmental/infant studies), you will see figures that look like this:
 
@@ -1022,10 +1007,10 @@ penguins %>%
   facet_grid(cols = vars(species))
 ```
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 18**</div>
-  <div class="panel-body">Pick your favorite visualization you created that compares `flipper_length_mm` across the different `species` of penguins, and show how that comparison varies by `sex`. You can do this by adding a new aesthetic or faceting. Which do you think looks better and why? Try out different aesthetics to see how they change your graph.</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 18**</div> -->
+<!--   <div class="panel-body">Pick your favorite visualization you created that compares `flipper_length_mm` across the different `species` of penguins, and show how that comparison varies by `sex`. You can do this by adding a new aesthetic or faceting. Which do you think looks better and why? Try out different aesthetics to see how they change your graph.</div> -->
+<!-- </div> -->
 
 #### Raster
 
@@ -1125,10 +1110,10 @@ penguins %>%
   facet_grid(cols = vars(species))
 ```
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 19**</div>
-  <div class="panel-body">Take the visualization you created above to explore the relationship between a penguin's `bill_length_mm` and `flipper_length_mm`, and see if this relationship varies based on which `island` a penguin lives.</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 19**</div> -->
+<!--   <div class="panel-body">Take the visualization you created above to explore the relationship between a penguin's `bill_length_mm` and `flipper_length_mm`, and see if this relationship varies based on which `island` a penguin lives.</div> -->
+<!-- </div> -->
 
 ### Cont ~ Cont + Cont
 
@@ -1395,126 +1380,3 @@ Below are some guidelines and best practices that should be considered when desi
 As always, most illustrations by [@allison_horst](https://twitter.com/allison_horst)
 
 Custom violin plots modified from source code [here](https://psyteachr.github.io/introdataviz/advanced-plots.html)
-
-<!-- ## For extra practice -->
-
-<!-- Try to recreate these plots: -->
-
-<!-- ```{r echo=FALSE, fig.width=10} -->
-<!-- pokeClean %>% -->
-<!--   filter(Type1 %in% c("Dark", "Poison", "Fighting", "Dragon", "Ghost")) %>% -->
-<!--   ggplot(aes(y = Total, x = Type1, color = Type1)) + -->
-<!--   geom_jitter() +  -->
-<!--   stat_summary(fun.y = mean, geom = "point", color = "black") + -->
-<!--   stat_summary(fun.data = mean_se, geom = "errorbar", width = 0.25, size = 0.75, color = "black") -->
-
-<!-- pokeClean %>% -->
-<!--   filter(Type1 %in% c("Grass", "Ice", "Psychic", "Ground")) %>% -->
-<!--   ggplot(aes(y = HealthPoints, x = Defense)) + -->
-<!--   geom_point(aes(color = Type1)) + -->
-<!--   geom_smooth(method = "lm", se=FALSE)+ -->
-<!--   scale_color_manual(values = c("Grass" = "green4" , "Ice" = "darkslategray1", "Psychic" = "darkorchid4", "Ground" = "tan3")) -->
-
-<!-- pokeClean %>% -->
-<!--   na.omit(Type2) %>% -->
-<!--   ggplot(aes(y = Type1, x = Type2)) + -->
-<!--   geom_bin2d(bins = 1) + -->
-<!--   scale_fill_gradient(low="white", high="darkblue")#+ -->
-<!--   #scale_fill_gradient2(terrain.colors(10)) -->
-<!-- ``` -->
-
-
-
-<!-- ```{r example answers for exercises, include = FALSE, eval=FALSE} -->
-<!-- #1 -->
-<!-- pokeClean %>% -->
-<!--   ggplot(aes(y = HealthPoints, x = Defense)) + -->
-<!--   geom_point() + -->
-<!--   geom_smooth(method = "lm") -->
-
-<!-- #2 -->
-<!-- pokeClean %>% -->
-<!--   filter(Type1 %in% c("Grass", "Ice", "Psychic", "Ground")) %>% -->
-<!--   ggplot(aes(y = HealthPoints, x = Defense, color = Type1)) + -->
-<!--   geom_point() + -->
-<!--   geom_smooth(method = "lm", se=FALSE) -->
-
-<!-- #3 -->
-<!-- pokeClean %>% -->
-<!--   filter(Type1 %in% c("Grass", "Ice", "Psychic", "Ground")) %>% -->
-<!--   ggplot(aes(y = HealthPoints, x = Defense, color = Type1)) + -->
-<!--   geom_point() + -->
-<!--   geom_smooth(method = "lm", se=FALSE)+ -->
-<!--   scale_color_manual(values = c("Grass" = "green4" , "Ice" = "darkslategray1", "Psychic" = "darkorchid4", "Ground" = "tan3")) -->
-
-<!-- #4 -->
-<!-- pokeClean %>% -->
-<!--   filter(Type1 %in% c("Grass", "Ice", "Psychic", "Ground")) %>% -->
-<!--   ggplot(aes(y = HealthPoints, x = Defense, color = Type1)) + -->
-<!--   geom_point() + -->
-<!--   geom_smooth(method = "lm", se=FALSE)+ -->
-<!--   scale_color_manual(values = c("Grass" = "green4" , "Ice" = "darkslategray1", "Psychic" = "darkorchid4", "Ground" = "tan3")) + -->
-<!--   face_grid(cols = vars(Generation)) -->
-
-<!-- #5 -->
-<!-- pokeClean %>% -->
-<!--   ggplot(aes(x = Type1, fill = Type1)) +  -->
-<!--   geom_bar(stat = "count") +  -->
-<!--   ggtitle("Bar Plot - Counts") -->
-<!-- #5b -->
-<!-- pokeClean %>% -->
-<!--   ggplot(aes(x = fct_infreq(Type1), fill = Type1)) +  -->
-<!--   geom_bar(stat = "count") +  -->
-<!--   ggtitle("Bar Plot - Counts") -->
-<!-- #6 -->
-<!-- pokeClean %>% -->
-<!--   # mutate(Type1 = as.factor(Type1)) %>% -->
-<!--   # mutate(Type1 = fct_reorder(Type1, -height_m, mean)) %>% -->
-<!--   ggplot(aes(y = height_m, x = Type1, fill = Type1)) + -->
-<!--   stat_summary(fun.y = mean, geom = "bar") + -->
-<!--   stat_summary(fun.data = mean_se, geom = "errorbar", width = 0.25, size = 0.75) -->
-
-<!-- pokeClean %>% -->
-<!--   ggplot(aes(y = height_m, x = Type1, color = Type1)) + -->
-<!--   geom_jitter() +  -->
-<!--   stat_summary(fun.y = mean, geom = "point", color = "black") + -->
-<!--   stat_summary(fun.data = mean_se, geom = "errorbar", width = 0.25, size = 0.75, color = "black") -->
-
-<!-- #6 bonus -->
-<!-- pokeClean %>% -->
-<!--   #filter(height_m < 5) %>% -->
-<!--   mutate(Type1 = as.factor(Type1)) %>% -->
-<!--   mutate(Type1 = reorder(Type1, height_m, FUN = function(x) mean(x, na.rm = TRUE))) %>% -->
-<!--   ggplot(aes(y = height_m, x = Type1, color = Type1)) + -->
-<!--   #geom_jitter() + -->
-<!--   geom_violin() + -->
-<!--   stat_summary(fun.y = mean, geom = "point", color = "black") + -->
-<!--   stat_summary(fun.data = mean_se, geom = "errorbar", width = 0.25, size = 0.75, color = "black") -->
-
-
-<!-- #7 -->
-<!-- pokeClean %>% -->
-<!--   ggplot(aes(x = Generation, fill = Legendary)) +  -->
-<!--   geom_bar(aes(y = (..count..)/sum(..count..)), position = "fill") + -->
-<!--   ggtitle("Bar Plot - Count") + -->
-<!--   ylab("Count") -->
-
-<!-- pokeClean %>% -->
-<!--   ggplot(aes(x = Generation, fill = Legendary)) +  -->
-<!--   geom_bar(stat = "count") + -->
-<!--   ggtitle("Bar Plot - Proportion") + -->
-<!--   ylab("Proportion") -->
-
-<!-- #8  -->
-
-<!-- pokeClean %>% -->
-<!--   filter(as.numeric(Generation) > 4) %>% #key is needing to change Generation from factor -->
-<!--   mutate(Type1 = as.factor(Type1)) %>% -->
-<!--   mutate(Type1 = reorder(Type1, height_m, FUN = function(x) mean(x, na.rm = TRUE))) %>% -->
-<!--   ggplot(aes(y = height_m, x = Type1, color = Type1)) + -->
-<!--   geom_jitter() + -->
-<!--   stat_summary(fun.y = mean, geom = "point", color = "black") + -->
-<!--   stat_summary(fun.data = mean_se, geom = "errorbar", width = 0.25, size = 0.75, color = "black") + -->
-<!--   facet_grid(cols = vars(Generation)) -->
-
-<!-- ``` -->

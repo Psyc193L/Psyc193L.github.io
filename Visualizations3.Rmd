@@ -646,4 +646,4 @@ ggsave(plot = a,
 * [Graphics for communication](http://r4ds.had.co.nz/graphics-for-communication.html)
 * [Patchwork source](https://github.com/thomasp85/patchwork)
 * [Patchwork background](https://www.data-imaginist.com/2019/patch-it-up-and-send-it-out/)
-* [ggplot theme cheat sheet]([this](figures/ggplot_theme_cheatsheet.png))
+* [ggplot theme cheat sheet](figures/ggplot_theme_cheatsheet.png)
