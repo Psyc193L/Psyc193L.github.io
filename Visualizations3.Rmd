@@ -11,7 +11,7 @@ library(tidyverse)
 library(palmerpenguins)
 ```
 
-<a href="exercises/Exercise_Viz3.Rmd" download>Exercise Sheet</a>
+<!-- <a href="exercises/Exercise_Viz3.Rmd" download>Exercise Sheet</a> -->
 
 You now have a number of different graphs in your toolkit to use when visualizing different types of relationships or comparisons in your data. You also learned a lot of ways to tinker with the geoms and their aesthetics. Now it is time to add some techniques and skills to customize the other elements of the graphs.
 
@@ -35,11 +35,11 @@ base_plot
 
 Saving the visualization to a variable prevents the need to copy/paste the entire code each time.
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 1**</div>
-  <div class="panel-body">Use the `penguins` dataframe and create your own `base_plot`. Make sure to have a continuous variable on the y-axis and a categorical variable on the x-axis.
-  </div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 1**</div> -->
+<!--   <div class="panel-body">Use the `penguins` dataframe and create your own `base_plot`. Make sure to have a continuous variable on the y-axis and a categorical variable on the x-axis. -->
+<!--   </div> -->
+<!-- </div> -->
 
 ## Scaling The Axes
 
@@ -70,11 +70,11 @@ Changing the limits of the coordinate system changes the zoom of your visualizat
 
 There are a number of other scale commands that override the default, such as `scale_y_log10()`, `scale_y_sqrt()`, and `scale_y_reverse()`, to quickly and easily change the scale. Instead of having to completely transform all your data, just adding a transform to the axis in your plot can be a big time saver and much safer!
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 2**</div>
-  <div class="panel-body">Modify your `base_plot` so the scale is more appropriate and represents the full range.
-  </div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 2**</div> -->
+<!--   <div class="panel-body">Modify your `base_plot` so the scale is more appropriate and represents the full range. -->
+<!--   </div> -->
+<!-- </div> -->
 
 ### Get Rid Of Padding
 
@@ -96,11 +96,11 @@ base_plot +
                      expand = c(0,0))
 ```
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 3**</div>
-  <div class="panel-body">Modify your `base_plot` so the padding is gone.
-  </div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 3**</div> -->
+<!--   <div class="panel-body">Modify your `base_plot` so the padding is gone. -->
+<!--   </div> -->
+<!-- </div> -->
 
 ## Titles, Captions, and Labels, Oh My!
 
@@ -133,11 +133,11 @@ The specific arguments used are pretty self explanatory. While this added more i
 
 <p class="text-info"> **<u>Note:</u> Graphs here may look slightly different from those you generate with the same code. There is some hidden formatting in the back-end included to help the graphs render properly in the space constraint.**</p>
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 4**</div>
-  <div class="panel-body">Modify your `base_plot` so that it has more appropriate titles for the y- and x-axis. Additionally, add an appropriate title, subtitle (if needed), figure tag, and caption.
-  </div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 4**</div> -->
+<!--   <div class="panel-body">Modify your `base_plot` so that it has more appropriate titles for the y- and x-axis. Additionally, add an appropriate title, subtitle (if needed), figure tag, and caption. -->
+<!--   </div> -->
+<!-- </div> -->
 
 ## Themes
 
@@ -207,11 +207,11 @@ theme(plot.tag.position = c(0.05, 1),
 
 You should start to develop your own personal taste for which visualizations you find the most pleasing and informative. For the sake of illustration, subsequent figures will use `theme_classic()`.
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 5**</div>
-  <div class="panel-body">Create a new variable called `modified_graph` that takes your `base_graph` and saves all modifications you've added thus far. Then, try applying some different themes to your `modified_graph`.
-  </div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 5**</div> -->
+<!--   <div class="panel-body">Create a new variable called `modified_graph` that takes your `base_graph` and saves all modifications you've added thus far. Then, try applying some different themes to your `modified_graph`. -->
+<!--   </div> -->
+<!-- </div> -->
 
 While using one of ggplot's built in themes serves as a good starting point, to make manual changes to the theme's settings, you use the `theme()` function. This function works as follows, generally speaking, you first specify the specific element of the visualization you want to modify, set that equal to what type of element it is with an `element_*()` call (e.g., text, line, blank, etc.), and then specify what part of that element you want to change and what value it should be equal to.
 
@@ -273,11 +273,11 @@ modified_plot = modified_plot +
 modified_plot
 ```
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 6**</div>
-  <div class="panel-body">Add some code to `modified_graph` to modify your visualization's titles and increase their legibility.
-  </div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 6**</div> -->
+<!--   <div class="panel-body">Add some code to `modified_graph` to modify your visualization's titles and increase their legibility. -->
+<!--   </div> -->
+<!-- </div> -->
 
 ### Captions
 
@@ -289,11 +289,11 @@ modified_plot = modified_plot +
 modified_plot
 ```
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 7**</div>
-  <div class="panel-body">Add some code to `modified_graph` to modify your visualization's caption and increase its legibility.
-  </div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 7**</div> -->
+<!--   <div class="panel-body">Add some code to `modified_graph` to modify your visualization's caption and increase its legibility. -->
+<!--   </div> -->
+<!-- </div> -->
 
 ### Axes Titles
 
@@ -330,11 +330,11 @@ modified_plot
 
 Notice that the margins are in reference to the overall orientation of the graph. To add space between the y-axis title and the values, even though it is the "bottom" of the element, it is to the right of the overall graph. Thus, some "r" space is added in `margin()`.
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 8**</div>
-  <div class="panel-body">Add some code to `modified_graph` to modify your visualization's axes titles and increase their legibility.
-  </div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 8**</div> -->
+<!--   <div class="panel-body">Add some code to `modified_graph` to modify your visualization's axes titles and increase their legibility. -->
+<!--   </div> -->
+<!-- </div> -->
 
 ### Axes Values
 
@@ -355,11 +355,11 @@ modified_plot
 
 Now **THAT** is looking like a publication-worthy visualization!
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 9**</div>
-  <div class="panel-body">Add some code to `modified_graph` to modify your visualization's axes values and increase their legibility.
-  </div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 9**</div> -->
+<!--   <div class="panel-body">Add some code to `modified_graph` to modify your visualization's axes values and increase their legibility. -->
+<!--   </div> -->
+<!-- </div> -->
 
 ### Setting a Default
 
@@ -469,11 +469,11 @@ penguins %>%
                size = 0.5)
 ```
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 10**</div>
-  <div class="panel-body">Use the code you've generated throughout the previous few examples to create a new default theme setting.
-  </div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 10**</div> -->
+<!--   <div class="panel-body">Use the code you've generated throughout the previous few examples to create a new default theme setting. -->
+<!--   </div> -->
+<!-- </div> -->
 
 ### Legends
 
@@ -601,11 +601,11 @@ b / c
 
 <p class="text-info"> **<u>Note:</u> The format settings defined for a single graph may not be best for an arrangement of multiple graphs combined into a single visualization. In the visualizations above the axes titles and labels are a little too big, causing some of them to overlap and be unreadable.**</p>
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 11**</div>
-  <div class="panel-body">Use patchwork to combine your `base_graph` and `modified_graph` to compare the two. Try arranging them in different layouts using different operators.
-  </div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 11**</div> -->
+<!--   <div class="panel-body">Use patchwork to combine your `base_graph` and `modified_graph` to compare the two. Try arranging them in different layouts using different operators. -->
+<!--   </div> -->
+<!-- </div> -->
 
 <!-- You can use the `plot_layouts()` function to specify the number of columns in the graph arrangement and have more manual control over the layout. Compare the two outputs below. -->
 
@@ -634,11 +634,11 @@ ggsave(plot = a,
        height = 8)
 ```
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 12**</div>
-  <div class="panel-body">Save your `modified_graph` and include that graph file with your submission.
-  </div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 12**</div> -->
+<!--   <div class="panel-body">Save your `modified_graph` and include that graph file with your submission. -->
+<!--   </div> -->
+<!-- </div> -->
 
 ## Extra resources
 
