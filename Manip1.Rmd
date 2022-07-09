@@ -76,16 +76,16 @@ x
 
 Writing `if` statements like this is most useful when the code you want to run executes a function. As you will note above, in all instances the `print()` function was the code being executed (what is in the curly brackets). An infinite number of `if` conditions can be chained together in an `if...else` chain.
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 1**</div>
-  <div class="panel-body">
-  1. define a variable `z` that will randomly sample a value from `1:100`.<br>
-  2. Write an `if` statement that will `print()` "My first R if" if `z` is less than 20. Run all the code in the cell.<br>
-  3. Add an `else` condition to your `if` statement that will print, "Still my first R if, but z is not less than 20." Run all the code in the cell.<br>
-  4. Between your `if` and `else` conditions, add an `else if` that will print "The else if evaluated TRUE!" when z is greater than 40 but less than 80. Run all the code in the cell.<br>
-  5. Try running all the code in the cell and see how often each string gets printed.
-  </div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 1**</div> -->
+<!--   <div class="panel-body"> -->
+<!--   1. define a variable `z` that will randomly sample a value from `1:100`.<br> -->
+<!--   2. Write an `if` statement that will `print()` "My first R if" if `z` is less than 20. Run all the code in the cell.<br> -->
+<!--   3. Add an `else` condition to your `if` statement that will print, "Still my first R if, but z is not less than 20." Run all the code in the cell.<br> -->
+<!--   4. Between your `if` and `else` conditions, add an `else if` that will print "The else if evaluated TRUE!" when z is greater than 40 but less than 80. Run all the code in the cell.<br> -->
+<!--   5. Try running all the code in the cell and see how often each string gets printed. -->
+<!--   </div> -->
+<!-- </div> -->
 
 
 There are two alternative ways to write `if...else` statements. 
@@ -112,10 +112,10 @@ ifelse(4 < x, "The first condition evaluated true.",
 x
 ```
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 2**</div>
-  <div class="panel-body">Reformat your code from Exercise 1 to use the `ifelse()` syntax.</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 2**</div> -->
+<!--   <div class="panel-body">Reformat your code from Exercise 1 to use the `ifelse()` syntax.</div> -->
+<!-- </div> -->
 
 
 ### case_when() {#case_when}
@@ -134,10 +134,10 @@ case_when(
 x
 ```
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 3**</div>
-  <div class="panel-body">Reformat your code from Exercise 1 to use the `case_when()` syntax.</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 3**</div> -->
+<!--   <div class="panel-body">Reformat your code from Exercise 1 to use the `case_when()` syntax.</div> -->
+<!-- </div> -->
 
 
 **In sum:**
@@ -179,10 +179,10 @@ Breaking down the code above step by step: First a `for` loop was initiated, say
 :::
 
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 4**</div>
-  <div class="panel-body">Use a `for` loop to to subtract 2 from all values in vector `v`.</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 4**</div> -->
+<!--   <div class="panel-body">Use a `for` loop to to subtract 2 from all values in vector `v`.</div> -->
+<!-- </div> -->
 
 `for` loops are often combined with `if` statements to apply conditional code iteratively through your data. 
 
@@ -237,12 +237,12 @@ y
 You can see that only Ally and Tyreek's scores, the students who completed the SONA extra credit, have changed.
 
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 5**</div>
-  <div class="panel-body">
-  1. Use a `for` loop to give a 1.5x bonus only to the employees in dataframe `work_df` who worked overtime.<br>
-  2. Rewrite your code using `ifelse()` syntax to accomplish the same goal.</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 5**</div> -->
+<!--   <div class="panel-body"> -->
+<!--   1. Use a `for` loop to give a 1.5x bonus only to the employees in dataframe `work_df` who worked overtime.<br> -->
+<!--   2. Rewrite your code using `ifelse()` syntax to accomplish the same goal.</div> -->
+<!-- </div> -->
 
 # Tidy Data and Tidyverse
 
@@ -330,12 +330,12 @@ From this one function alone, you can learn a lot about your data:
 
 3. These variables are saved as either "fct" (factors), "dbl" (double-precision), or "int" (integers).
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 6**</div>
-  <div class="panel-body">
-  1. Use `glimpse()` to exam the `msleep` dataset.<br>
-  2. What information have you learned about this dataset from the output?</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 6**</div> -->
+<!--   <div class="panel-body"> -->
+<!--   1. Use `glimpse()` to exam the `msleep` dataset.<br> -->
+<!--   2. What information have you learned about this dataset from the output?</div> -->
+<!-- </div> -->
 
 ### head
 
@@ -351,12 +351,12 @@ You can specify the exact amount of rows you want to print by passing a second a
 head(penguins, 10)
 ```
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 7**</div>
-  <div class="panel-body">
-  1. Use `head()` to exam the `msleep` dataset.<br>
-  2. Modify your `head()` call to look at the first 7 rows of data.</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 7**</div> -->
+<!--   <div class="panel-body"> -->
+<!--   1. Use `head()` to exam the `msleep` dataset.<br> -->
+<!--   2. Modify your `head()` call to look at the first 7 rows of data.</div> -->
+<!-- </div> -->
 
 <!-- You will see `head()` used in several of the examples below to help make the output more digestible. -->
 
