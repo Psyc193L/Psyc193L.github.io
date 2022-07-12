@@ -183,3 +183,16 @@ viridis
 colorspace
 color-and-design-resources
 references-3
+control-flow
+ifelse-statements
+traditional
+ifelse
+case_when
+loops
+tidy-data-and-tidyverse
+Tidy-Data
+tidyverse
+investigating-data
+view-full
+glimpse
+head
