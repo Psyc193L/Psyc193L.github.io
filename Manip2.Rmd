@@ -99,13 +99,13 @@ kables(list(arrTable1, tempTable3, arrTable2))
 
 To get rows arranged in a descending order, with highest values at the top, wrap variable names in `desc()` within the `arrange()` call. If a second column is passed, the rows with identical values on the first variable will be arranged by the values on the second.
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 1**</div>
-  <div class="panel-body">
-  1. Use `arrange()` to order the `msleep2` dataset by `bodywt`.<br>
-  2. Modify your `arrange()` call to order the `bodywt` column from greatest to least.<br>
-  3. What is the largest animal recorded in this dataset?</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 1**</div> -->
+<!--   <div class="panel-body"> -->
+<!--   1. Use `arrange()` to order the `msleep2` dataset by `bodywt`.<br> -->
+<!--   2. Modify your `arrange()` call to order the `bodywt` column from greatest to least.<br> -->
+<!--   3. What is the largest animal recorded in this dataset?</div> -->
+<!-- </div> -->
 
 ## Rename
 
@@ -132,11 +132,11 @@ mtcars2 %>%
 
 <p class="text-info"> **<u>Note:</u> You do not have to address variables in the order they appear in the df. The variable names will be mapped regardless of their position!**</p>
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 2**</div>
-  <div class="panel-body">
-  Both of the weight columns in this dataset are measuring in kilograms. Use `rename()` to give those variables more informative names.</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 2**</div> -->
+<!--   <div class="panel-body"> -->
+<!--   Both of the weight columns in this dataset are measuring in kilograms. Use `rename()` to give those variables more informative names.</div> -->
+<!-- </div> -->
 
 ### Saving Changes
 
@@ -290,13 +290,13 @@ tempTable2 = Temp2 %>%
 kables(list(tempTable1, tempTable3, tempTable2))
 ```
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 3**</div>
-  <div class="panel-body">
-  1. Move the `order` column to be positioned before the `vore` column.<br>
-  2. Move the `sleep_total` column to be positioned after the `sleep_cycle` column.<br>
-  3. Move both wt columns to be positioned after `genus`.</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 3**</div> -->
+<!--   <div class="panel-body"> -->
+<!--   1. Move the `order` column to be positioned before the `vore` column.<br> -->
+<!--   2. Move the `sleep_total` column to be positioned after the `sleep_cycle` column.<br> -->
+<!--   3. Move both wt columns to be positioned after `genus`.</div> -->
+<!-- </div> -->
 
 ## Select {#select}
 
@@ -382,13 +382,13 @@ kables(list(tempTable1, tempTable3, tempTable2))
 **This selects the `cyl` column, the `hp` column, and all columns in between the two!**
 :::
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 4**</div>
-  <div class="panel-body">
-  1. Subset the `name` and `vore` columns.<br>
-  2. Subset the `genus` and `order` columns.<br>
-  3. Subset all the sleep related columns.</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 4**</div> -->
+<!--   <div class="panel-body"> -->
+<!--   1. Subset the `name` and `vore` columns.<br> -->
+<!--   2. Subset the `genus` and `order` columns.<br> -->
+<!--   3. Subset all the sleep related columns.</div> -->
+<!-- </div> -->
 
 `select()` can also be used to *get rid of columns* you do **NOT** want by negating the vector of column names using a `!`.
 
@@ -428,12 +428,12 @@ kables(list(tempTable1, tempTable3, tempTable2))
 **This selects all columns *except* `cyl` and `gear`.**
 :::
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 5**</div>
-  <div class="panel-body">
-  1. Use `select()` to get rid of the `awake` column.<br>
-  2. Get rid of all columns related to the animal's weight.</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 5**</div> -->
+<!--   <div class="panel-body"> -->
+<!--   1. Use `select()` to get rid of the `awake` column.<br> -->
+<!--   2. Get rid of all columns related to the animal's weight.</div> -->
+<!-- </div> -->
 
 When you specifically want to move a variable (or variables) to the front of your df, there is an easy way to do so using `select()` instead of `relocate()`:
 
@@ -567,15 +567,15 @@ kables(list(tempTable1, tempTable3, tempTable2))
 **This filters the dataframe to return only rows where `model` is "Lotus Europa".**
 :::
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 6**</div>
-  <div class="panel-body">
-  Filter the data to show only the observations where...<br>
-  1. The animals are of Rodentia order.<br>
-  2. The animals have a body weight of 5 or greater.<br>
-  3. The animals are not herbivores.
-  </div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 6**</div> -->
+<!--   <div class="panel-body"> -->
+<!--   Filter the data to show only the observations where...<br> -->
+<!--   1. The animals are of Rodentia order.<br> -->
+<!--   2. The animals have a body weight of 5 or greater.<br> -->
+<!--   3. The animals are not herbivores. -->
+<!--   </div> -->
+<!-- </div> -->
 
 Multiple conditions can be strung together using logical operators:
 
@@ -623,15 +623,15 @@ When multiple logical tests are strung together they get evaluated from left to 
 which is different than:<br>
 `filter((cyl == 4 | hp < 200) & gear == 5)`.
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 7**</div>
-  <div class="panel-body">
-  Filter the data to show...<br>
-  1. The animals who sleep for over 14 hours total and weigh less than 3<br>
-  2. The carnivores who spend over 10 hours awake, then subset only the `awake`, `vore`, and `sleep_total` columns.<br>
-  3. All animals with a brain weight greater than 0.1 or spend less than 1 hour in rem, **except those who are herbivores**, then subset only the `brainwt`, `sleep_rem`, and `name` columns, and arrange the results by `awake` from greatest to least.
-  </div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 7**</div> -->
+<!--   <div class="panel-body"> -->
+<!--   Filter the data to show...<br> -->
+<!--   1. The animals who sleep for over 14 hours total and weigh less than 3<br> -->
+<!--   2. The carnivores who spend over 10 hours awake, then subset only the `awake`, `vore`, and `sleep_total` columns.<br> -->
+<!--   3. All animals with a brain weight greater than 0.1 or spend less than 1 hour in rem, **except those who are herbivores**, then subset only the `brainwt`, `sleep_rem`, and `name` columns, and arrange the results by `awake` from greatest to least. -->
+<!--   </div> -->
+<!-- </div> -->
 
 
 ### %in%
@@ -674,15 +674,15 @@ kables(list(tempTable1, tempTable3, tempTable2))
 **This filters the dataframe to return only rows where `model` is "Lotus Europa", "Ferrari Dino", or "Volvo 142E".**
 :::
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 8**</div>
-  <div class="panel-body">
-  Filter the data to show...<br>
-  1. Animals in the "Cetacea", "Cingulata", or "Pilosa" order, who sleep for a total of anywhere between 5 and 10 hours.<br>
-  2. Modify the code from above to show only the `name`, `order`, `sleep_total`, and `brainwt`. <br>
-  3. Modify the code from above to arrange by brain weight from least to greatest.
-  </div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 8**</div> -->
+<!--   <div class="panel-body"> -->
+<!--   Filter the data to show...<br> -->
+<!--   1. Animals in the "Cetacea", "Cingulata", or "Pilosa" order, who sleep for a total of anywhere between 5 and 10 hours.<br> -->
+<!--   2. Modify the code from above to show only the `name`, `order`, `sleep_total`, and `brainwt`. <br> -->
+<!--   3. Modify the code from above to arrange by brain weight from least to greatest. -->
+<!--   </div> -->
+<!-- </div> -->
 
 ### Pattern Matching
 
@@ -699,15 +699,15 @@ mtcars2 %>%
 **This filters the dataframe to return only rows where `model` contains the string "Porsche" in its value.**
 :::
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 9**</div>
-  <div class="panel-body">
-  Filter the data to show...<br>
-  1. The animals who sleep for over 14 hours total and weigh less than 3<br>
-  2. The carnivores who spend over 10 hours awake, then subset only the `awake`, `vore`, and `sleep_total` columns.<br>
-  3. All animals with a brain weight greater than 0.1 or spend less than 1 hour in rem, **except those who are herbivores**, then subset only the `brainwt`, `sleep_rem`, and `name` columns, and arrange the results by `awake` from greatest to least.
-  </div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 9**</div> -->
+<!--   <div class="panel-body"> -->
+<!--   Filter the data to show...<br> -->
+<!--   1. The animals who sleep for over 14 hours total and weigh less than 3<br> -->
+<!--   2. The carnivores who spend over 10 hours awake, then subset only the `awake`, `vore`, and `sleep_total` columns.<br> -->
+<!--   3. All animals with a brain weight greater than 0.1 or spend less than 1 hour in rem, **except those who are herbivores**, then subset only the `brainwt`, `sleep_rem`, and `name` columns, and arrange the results by `awake` from greatest to least. -->
+<!--   </div> -->
+<!-- </div> -->
 
 ## Indexing
 
@@ -740,14 +740,14 @@ By using `select()`, the result is a dataframe with one column. When trying to p
 
 By using `pull()`, the result is a vector and can be passed to `mean()` without issue.
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 10**</div>
-  <div class="panel-body">
-  1. Index the `sleep_total` variable from `msleep2`.<br>
-  2. Find the mean of `sleep_total`.<br>
-  3. Subset the data to only include carnivores, index the `bodywt` column, and find the average value. Do the same for herbivores. Which has a higher average body weight?
-  </div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 10**</div> -->
+<!--   <div class="panel-body"> -->
+<!--   1. Index the `sleep_total` variable from `msleep2`.<br> -->
+<!--   2. Find the mean of `sleep_total`.<br> -->
+<!--   3. Subset the data to only include carnivores, index the `bodywt` column, and find the average value. Do the same for herbivores. Which has a higher average body weight? -->
+<!--   </div> -->
+<!-- </div> -->
 
 ### pluck()
 
@@ -759,13 +759,13 @@ mtcars2 %>%
   pluck(4)
 ```
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 11**</div>
-  <div class="panel-body">
-  1. Subset the data for primates who spend more than 13 hours awake, arrange the `awake` column from greatest to least, index it, and the 2nd value from the resulting vector.<br>
-  2. Using a process similar to the one above, write some code that will result in the value for the 2nd lowest brain weight for omnivores who spend less than 2 hours in rem.
-  </div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 11**</div> -->
+<!--   <div class="panel-body"> -->
+<!--   1. Subset the data for primates who spend more than 13 hours awake, arrange the `awake` column from greatest to least, index it, and the 2nd value from the resulting vector.<br> -->
+<!--   2. Using a process similar to the one above, write some code that will result in the value for the 2nd lowest brain weight for omnivores who spend less than 2 hours in rem. -->
+<!--   </div> -->
+<!-- </div> -->
 
 <button class="btn btn-primary" data-toggle="collapse" data-target="#BlockName"> Advanced </button>  
 <div id="BlockName" class="collapse">  
@@ -812,14 +812,14 @@ mtcars2 %>%
   n_distinct()
 ```
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 12**</div>
-  <div class="panel-body">
-  Write some code to get:<br>
-  1. The unique values in the `vore` column.<br>
-  2. The *number* of unique values in the `vore` column.
-  </div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 12**</div> -->
+<!--   <div class="panel-body"> -->
+<!--   Write some code to get:<br> -->
+<!--   1. The unique values in the `vore` column.<br> -->
+<!--   2. The *number* of unique values in the `vore` column. -->
+<!--   </div> -->
+<!-- </div> -->
 
 ## Adding Variables
 
@@ -863,13 +863,13 @@ mtcars2 %>%
 **In addition to the weight in pounds variable, this code also creates a variable showing the cost of traveling 1 mile for each observation (car) considering the current price of gas.**
 :::
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 13**</div>
-  <div class="panel-body">
-  1. The sleep variables are all measured in hours. Create a new variable called `sleep_total_m` that measures total **minutes** of sleep.<br>
-  2. Create a new variable that represents the proportion of total sleep spent in rem, move that column to come after `sleep_rem`, filter to show only observations with a ratio of 0.25 or greater, arrange the new column from greatest to least, and index the `bodywt` of the animal with the highest ratio.
-  </div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 13**</div> -->
+<!--   <div class="panel-body"> -->
+<!--   1. The sleep variables are all measured in hours. Create a new variable called `sleep_total_m` that measures total **minutes** of sleep.<br> -->
+<!--   2. Create a new variable that represents the proportion of total sleep spent in rem, move that column to come after `sleep_rem`, filter to show only observations with a ratio of 0.25 or greater, arrange the new column from greatest to least, and index the `bodywt` of the animal with the highest ratio. -->
+<!--   </div> -->
+<!-- </div> -->
 
 ### Conditional Values
 
@@ -904,13 +904,13 @@ mtcars2 %>%
 **This creates a new variable called `power`. Each observation's value for this variable depends on its value for `hp`. If `hp` is greater than 200, it is "High" powered, if lower than 200 then "Low" powered.**
 :::
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 14**</div>
-  <div class="panel-body">
-  1. Find out what the average total sleep is for all animals, then use `case_when()` to create a new column that has the value "sleepyhead" if the animal has a `sleep_total` higher than average, "wide-awake" if lower than average, and "average" if exactly average.<br>
-  2. Use `ifelse()` to create a new column just indicating whether the animal had a "higher" or "lower" `sleep_total` than average.
-  </div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 14**</div> -->
+<!--   <div class="panel-body"> -->
+<!--   1. Find out what the average total sleep is for all animals, then use `case_when()` to create a new column that has the value "sleepyhead" if the animal has a `sleep_total` higher than average, "wide-awake" if lower than average, and "average" if exactly average.<br> -->
+<!--   2. Use `ifelse()` to create a new column just indicating whether the animal had a "higher" or "lower" `sleep_total` than average. -->
+<!--   </div> -->
+<!-- </div> -->
 
 ### Position
 
@@ -968,13 +968,13 @@ ex_df %>%
   drop_na(A)
 ```
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 15**</div>
-  <div class="panel-body">
-  1. Use `drop_na()` to remove all observations with an `NA`.<br>
-  2. Only get rid of observations with an `NA` for `brainwt`.
-  </div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 15**</div> -->
+<!--   <div class="panel-body"> -->
+<!--   1. Use `drop_na()` to remove all observations with an `NA`.<br> -->
+<!--   2. Only get rid of observations with an `NA` for `brainwt`. -->
+<!--   </div> -->
+<!-- </div> -->
 
 ## Modifying Existing Variables {#Modifying-Existing-Variables}
 
@@ -1006,13 +1006,13 @@ mtcars2 %>%
 
 You can see from this output that all the numbers in `mpg` have quotes around them. Also, it is labeled "<chr>" and not "<dbl>". While the raw data for `cyl` look unchanged, you can see it now says "<fct>".
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 16**</div>
-  <div class="panel-body">
-  1. As mentioned above, the weight columns are measured in kg. Change these columns so that they contain the weight in lbs (1kg = ~2.205 lbs). Arrange the new body weight column from least to greatest, and index the value for the lightest animal in the dataset.<br>
-  2. Change the `vore` column to be a *factor* instead of *character*, and the `awake` column to be a *character* instead of *numeric*.
-  </div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 16**</div> -->
+<!--   <div class="panel-body"> -->
+<!--   1. As mentioned above, the weight columns are measured in kg. Change these columns so that they contain the weight in lbs (1kg = ~2.205 lbs). Arrange the new body weight column from least to greatest, and index the value for the lightest animal in the dataset.<br> -->
+<!--   2. Change the `vore` column to be a *factor* instead of *character*, and the `awake` column to be a *character* instead of *numeric*. -->
+<!--   </div> -->
+<!-- </div> -->
 
 ### Factors
 
@@ -1099,12 +1099,12 @@ mtcars2 %>%
 
 <p class="text-info"> **<u>Note:</u> `fct_reorder()` was used in the ggplot call directly because this is a fairly particular reordering. It is unlikely that, outside of for the purpose of generating this specific visualization, you would want the levels of `cyl` to be ordered based on its level of `mpg`.<br><br>Also, you can combine `fct_reorder()` with `fct_rev()` to reverse the order of the levels.**</p>
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 17**</div>
-  <div class="panel-body">
-Take 3-4 visualizations you created in the exercises from the data visualization lectures and reorder the factor levels so they are in a more sensible order.
-  </div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 17**</div> -->
+<!--   <div class="panel-body"> -->
+<!-- Take 3-4 visualizations you created in the exercises from the data visualization lectures and reorder the factor levels so they are in a more sensible order. -->
+<!--   </div> -->
+<!-- </div> -->
 
 <!-- Another type of reordering is useful when you are colouring the lines on a plot. fct_reorder2() reorders the factor by the y values associated with the largest x values. This makes the plot easier to read because the line colours line up with the legend. -->
 
