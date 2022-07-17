@@ -58,7 +58,7 @@ if(3 < x) {
 }
 #> [1] "The condition evaluated TRUE"
 x
-#> [1] 5
+#> [1] 4
 ```
 
 This code specifies what to do depending on whether the test evaluates to `TRUE` or if it evaluates to `FALSE`.
@@ -116,9 +116,9 @@ x = sample(c(1:6), 1)
 ifelse(4 < x, "The first condition evaluated true.",
        ifelse(2 < x & x < 5, "The second condition evaluated true.", 
               "Neither the first or second condition evaluated true."))
-#> [1] "The first condition evaluated true."
+#> [1] "The second condition evaluated true."
 x
-#> [1] 5
+#> [1] 4
 ```
 
 <!-- <div class="panel panel-success"> -->
@@ -140,9 +140,9 @@ case_when(
   2 < x & x < 5 ~ "The second condition evaluated true.",
   TRUE ~ "Neither the first or second condition evaluated true."
 )
-#> [1] "The first condition evaluated true."
+#> [1] "Neither the first or second condition evaluated true."
 x
-#> [1] 2
+#> [1] 6
 ```
 
 <!-- <div class="panel panel-success"> -->
