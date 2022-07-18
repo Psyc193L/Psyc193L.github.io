@@ -135,8 +135,8 @@ tempTable1 = penguins_example %>%
     row_spec(0, bold = T, underline = T, color = "white", align = "c", background = "grey")
 
 Temp2 = penguins_example %>%
-  summarize(flipper_m = mean(flp_mm),
-            mass_m = mean(mass),
+  summarize(mass_m = mean(mass),
+            flipper_m = mean(flp_mm),
             ratio = mean(mass / flp_mm))
 
 tempTable2 = Temp2 %>%
