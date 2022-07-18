@@ -133,16 +133,14 @@
 <span><span class="co">#&gt; 4       NA       NA       NA       NA    NA</span></span>
 <span><span class="co">#&gt; 5        1        0        1        0     1</span></span>
 <span><span class="co">#&gt; 6       NA       NA       NA       NA    NA</span></span></code></pre></div>
-<div class="panel panel-success">
-<div class="panel-heading">
-<strong>EXERCISE 1</strong>
-</div>
-<div class="panel-body">
-Use helper functions to…<br>
-1. Select all columns that start with “sleep”.<br>
-2. Select all columns that end with “wt”.
-</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 1**</div> -->
+<!--   <div class="panel-body"> -->
+<!-- Use helper functions to...<br> -->
+<!--   1. Select all columns that start with "sleep".<br> -->
+<!--   2. Select all columns that end with "wt". -->
+<!--   </div> -->
+<!-- </div> -->
 </div>
 <div id="contains" class="section level3">
 <h3>
@@ -182,14 +180,12 @@ Use helper functions to…<br>
 <span><span class="co">#&gt; 4             361        18       </span></span>
 <span><span class="co">#&gt; 5              NA        NA       </span></span>
 <span><span class="co">#&gt; 6             191         0   JAIL</span></span></code></pre></div>
-<div class="panel panel-success">
-<div class="panel-heading">
-<strong>EXERCISE 2</strong>
-</div>
-<div class="panel-body">
-Select all columns that contain “re”.
-</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 2**</div> -->
+<!--   <div class="panel-body"> -->
+<!-- Select all columns that contain "re". -->
+<!--   </div> -->
+<!-- </div> -->
 </div>
 <div id="matches" class="section level3">
 <h3>
@@ -367,16 +363,14 @@ How the Syntax Works
 </p>
 </div>
 <p><br></p>
-<div class="panel panel-success">
-<div class="panel-heading">
-<strong>EXERCISE 3</strong>
-</div>
-<div class="panel-body">
-Use <code>where()</code> to select…<br><br>
-1. All columns that are <em>numeric</em>.<br>
-2. All columns that are <em>characters</em>.
-</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 3**</div> -->
+<!--   <div class="panel-body"> -->
+<!-- Use `where()` to select...<br>   -->
+<!--   1. All columns that are *numeric*.<br> -->
+<!--   2. All columns that are *characters*. -->
+<!--   </div> -->
+<!-- </div> -->
 </div>
 <div id="misc-selecting" class="section level3">
 <h3>
@@ -431,16 +425,14 @@ Use <code>where()</code> to select…<br><br>
 <span>  <span class="fu"><a href="https://rdrr.io/r/base/nrow.html">ncol</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="co">#&gt; [1] 776</span></span></code></pre></div>
 <p>The total number of columns has decreased by exactly the number of columns that start with “RAW”!</p>
-<div class="panel panel-success">
-<div class="panel-heading">
-<strong>EXERCISE 4</strong>
-</div>
-<div class="panel-body">
-User helper functions to select the columns that…<br><br>
-1. Contain “re” and are <em>numeric</em> data.<br>
-2. End with “e” and do not start with “sleep”.
-</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 4**</div> -->
+<!--   <div class="panel-body"> -->
+<!-- User helper functions to select the columns that...<br>   -->
+<!--   1. Contain "re" and are *numeric* data.<br> -->
+<!--   2. End with "e" and do not start with "sleep". -->
+<!--   </div> -->
+<!-- </div> -->
 </div>
 </div>
 <div id="filtering" class="section level2">
@@ -473,20 +465,13 @@ User helper functions to select the columns that…<br><br>
 <li>It is filtering for observations where any of the columns that start with “I” and also contain a digit in the column name have a score/value greater than 75.</li>
 </ul>
 <p>So what is a use case for this? Maybe you have a suicidality questionnaire in your dataset and a participant who responds greater than <span class="math inline">\(X\)</span> on any of the questions needs to be contacted for emergency intervention. There are many questions on your suicidality questionnaire (the columns that start with “I” here), and this is a way to quickly filter for the people who responded with greater than 75 on <strong>ANY</strong> of those questions!</p>
-<div class="panel panel-success">
-<div class="panel-heading">
-<strong>EXERCISE 5</strong>
-</div>
-<div class="panel-body">
-<ol style="list-style-type: decimal">
-<li>Filter for observations where scores in any variable that ends with “wt” is above 35.<br>
-</li>
-<li>Filter for observations where scores in any variable that starts with “sleep” is less than 2.
-</li>
-</ol>
-</div>
-
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 5**</div> -->
+<!--   <div class="panel-body"> -->
+<!--   1. Filter for observations where scores in any variable that ends with "wt" is above 35.<br> -->
+<!--   2. Filter for observations where scores in any variable that starts with "sleep" is less than 2. -->
+<!--   </div> -->
+<!-- </div> -->
 </div>
 <div id="if_all" class="section level3">
 <h3>
@@ -612,17 +597,15 @@ User helper functions to select the columns that…<br><br>
 <span><span class="co">#&gt; 5  NA  NA       NA   NA       NA   NA</span></span>
 <span><span class="co">#&gt; 6 999 999 6.906755  999 6.906755  999</span></span></code></pre></div>
 <p>As before, multiple helper functions can be strung together and they can also be negated with <code>!</code>.</p>
-<div class="panel panel-success">
-<div class="panel-heading">
-<strong>EXERCISE 6</strong>
-</div>
-<div class="panel-body">
-Use helper functions to…<br>
-1. Round all the columns that are <em>numeric</em>.<br>
-2. Round only the columns that are <em>numeric</em> and start with “sleep”.<br>
-3. <code><a href="https://rdrr.io/r/base/scale.html">scale()</a></code> the columns that end with “wt” and are <em>numeric</em>, then filter the results for only those where all columns that end with “wt” are greater than 0.
-</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 6**</div> -->
+<!--   <div class="panel-body"> -->
+<!-- Use helper functions to...<br> -->
+<!--   1. Round all the columns that are *numeric*.<br> -->
+<!--   2. Round only the columns that are *numeric* and start with "sleep".<br> -->
+<!--   3. `scale()` the columns that end with "wt" and are *numeric*, then filter the results for only those where all columns that end with "wt" are greater than 0. -->
+<!--   </div> -->
+<!-- </div> -->
 </div>
 <div id="regex" class="section level2">
 <h2>
