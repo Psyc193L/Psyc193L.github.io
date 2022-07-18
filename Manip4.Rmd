@@ -31,12 +31,12 @@ penguins %>%
   count(species)
 ```
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 1**</div>
-  <div class="panel-body">
-  Write some code to find the number of instances of each unique value of `vore`.
-  </div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 1**</div> -->
+<!--   <div class="panel-body"> -->
+<!--   Write some code to find the number of instances of each unique value of `vore`. -->
+<!--   </div> -->
+<!-- </div> -->
 
 ### Proportions
 
@@ -79,12 +79,12 @@ penguins %>%
   sum()
 ```
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 2**</div>
-  <div class="panel-body">
-  Modify your code from exercise 1 to show the proportions, and verify that they sum to 1.
-  </div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 2**</div> -->
+<!--   <div class="panel-body"> -->
+<!--   Modify your code from exercise 1 to show the proportions, and verify that they sum to 1. -->
+<!--   </div> -->
+<!-- </div> -->
 
 ## Summary
 
@@ -242,12 +242,12 @@ mean(thirdCol)
 <!--               mutate(new = bill_length_mm + bill_depth_mm)) -->
 <!-- ``` -->
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 3**</div>
-  <div class="panel-body">
-  Use `summarize()` to find the average number of hours each animal spends awake and the average brain weight. If there are any issues with missing values, modify your code to account for this.
-  </div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 3**</div> -->
+<!--   <div class="panel-body"> -->
+<!--   Use `summarize()` to find the average number of hours each animal spends awake and the average brain weight. If there are any issues with missing values, modify your code to account for this. -->
+<!--   </div> -->
+<!-- </div> -->
 
 ## Grouping Data
 
@@ -399,12 +399,12 @@ penguins %>%
 **This first groups by `island` then `species` within `island`, and finds the number of observations for each. From the output, you can see that not all islands have observations from each species. In fact, some islands only contain obsercvations from a single species!**
 :::
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 4**</div>
-  <div class="panel-body">
-  Modify your code from exercise 3 to show averages for each level of `vore`.
-  </div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 4**</div> -->
+<!--   <div class="panel-body"> -->
+<!--   Modify your code from exercise 3 to show averages for each level of `vore`. -->
+<!--   </div> -->
+<!-- </div> -->
 
 ### Using `across()` with `summarize()`
 
@@ -465,14 +465,14 @@ penguins %>%
 
 The combination of `group_by()`, `summarize()`, and `across()`, allow for some quick and powerful code that is relatively short. In just a few lines above, you were able to get some very specific and nuanced information about this dataset!
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 5**</div>
-  <div class="panel-body">
-  1. Find the average of all variables that start with "sleep" for every level of `vore`.<br>
-  2. Find the average and sd for all variables that end in "wt" for every level of `vore`.<br>
-  3. Find the number of unique values for each variable that is a *character*.
-  </div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 5**</div> -->
+<!--   <div class="panel-body"> -->
+<!--   1. Find the average of all variables that start with "sleep" for every level of `vore`.<br> -->
+<!--   2. Find the average and sd for all variables that end in "wt" for every level of `vore`.<br> -->
+<!--   3. Find the number of unique values for each variable that is a *character*. -->
+<!--   </div> -->
+<!-- </div> -->
 
 ## Extra Resources
 

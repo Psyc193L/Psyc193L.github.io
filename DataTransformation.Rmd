@@ -71,13 +71,13 @@ Each row contains 3 unique observations (there just happens to be multiple measu
 
 <p class="text-info"> **<u>Note:</u> When specifying the columns to pivot, you are literally `select()`'ing them. Thus, regular `select()` rules and helper functions can be used! e.g., Here, all columns except `baker` should be pivoted, `!baker` could have been written instead of `cinnamon_1:nutmeg_3`. Likewise, `matches("[[:digit:]]")`, since all columns have a number.**</p>
 
-<br>
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 1**</div>
-  <div class="panel-body">
-Use `pivot_longer()` to transform the data found in `tidyr::table4a` (`table4a`).
-</div>
-</div>
+<!-- <br> -->
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 1**</div> -->
+<!--   <div class="panel-body"> -->
+<!-- Use `pivot_longer()` to transform the data found in `tidyr::table4a` (`table4a`). -->
+<!-- </div> -->
+<!-- </div> -->
 
 ### pivot_wider()
 
@@ -114,13 +114,13 @@ bakers_long %>%
 bakers # Original df
 ```
 
-<br>
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 2**</div>
-  <div class="panel-body">
-Use `pivot_wider()` to transform the data found in `table2` (specifically, the `type` column).
-</div>
-</div>
+<!-- <br> -->
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 2**</div> -->
+<!--   <div class="panel-body"> -->
+<!-- Use `pivot_wider()` to transform the data found in `table2` (specifically, the `type` column). -->
+<!-- </div> -->
+<!-- </div> -->
 
 ## Relational Data
 
@@ -164,13 +164,13 @@ bakers %>%
 **This code used `mutate()` to add a new column to `bakers` that did not exist in `bakers2`. This new, modified, version of `bakers` was then piped to a `bind_rows()` call that contained `bakers2` as an argument. This binds the rows of the new, modified, `bakers` with `bakers2`. As you can see, all the rows from `bakers2` have `NA` values in this new column, because it did not exist in the original df!**
 :::
 
-<div class="panel panel-success">
-<div class="panel-heading">**EXERCISE 3**</div>
-<div class="panel-body">
-1. Use `bind_rows()` to combine the `penguins1` and `penguins2` dfs.<br>
-2. Then, pipe that result to combine with `penguins3`.
-</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!-- <div class="panel-heading">**EXERCISE 3**</div> -->
+<!-- <div class="panel-body"> -->
+<!-- 1. Use `bind_rows()` to combine the `penguins1` and `penguins2` dfs.<br> -->
+<!-- 2. Then, pipe that result to combine with `penguins3`. -->
+<!-- </div> -->
+<!-- </div> -->
 
 <!-- ### bind_cols() -->
 
@@ -205,12 +205,12 @@ Mutating Joins are named as such because, like `mutate()`, they add new columns 
 ![](figures/inner_join.gif){width=100%}
 <p style="font-size:6pt">Source: [tidyexplain](https://github.com/gadenbuie/tidyexplain)</p>
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 4**</div>
-  <div class="panel-body">
-Using dfs `x` and `y`, write some code that will return a new df that contains only the observations common in both.
-</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 4**</div> -->
+<!--   <div class="panel-body"> -->
+<!-- Using dfs `x` and `y`, write some code that will return a new df that contains only the observations common in both. -->
+<!-- </div> -->
+<!-- </div> -->
 
 ### left_join()
 
@@ -219,12 +219,12 @@ Using dfs `x` and `y`, write some code that will return a new df that contains o
 ![](figures/left_join.gif){width=100%}
 <p style="font-size:6pt">Source: [tidyexplain](https://github.com/gadenbuie/tidyexplain)</p>
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 5**</div>
-  <div class="panel-body">
-Using dfs `x` and `y`, write some code that will return a new df that contains all variables across both dfs, but only from observations in `x`.
-</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 5**</div> -->
+<!--   <div class="panel-body"> -->
+<!-- Using dfs `x` and `y`, write some code that will return a new df that contains all variables across both dfs, but only from observations in `x`. -->
+<!-- </div> -->
+<!-- </div> -->
 
 ### right_join()
 
@@ -233,12 +233,12 @@ Using dfs `x` and `y`, write some code that will return a new df that contains a
 ![](figures/right_join.gif){width=100%}
 <p style="font-size:6pt">Source: [tidyexplain](https://github.com/gadenbuie/tidyexplain)</p>
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 6**</div>
-  <div class="panel-body">
-Using dfs `x` and `y`, write some code that will return a new df that contains all variables across both dfs, but only from observations in `y`.
-</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 6**</div> -->
+<!--   <div class="panel-body"> -->
+<!-- Using dfs `x` and `y`, write some code that will return a new df that contains all variables across both dfs, but only from observations in `y`. -->
+<!-- </div> -->
+<!-- </div> -->
 
 ### full_join()
 
@@ -247,12 +247,12 @@ Using dfs `x` and `y`, write some code that will return a new df that contains a
 ![](figures/full_join.gif){width=100%}
 <p style="font-size:6pt">Source: [tidyexplain](https://github.com/gadenbuie/tidyexplain)</p>
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 7**</div>
-  <div class="panel-body">
-Using dfs `x` and `y`, write some code that will return a new df that contains all variables and observations from both dfs.
-</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 7**</div> -->
+<!--   <div class="panel-body"> -->
+<!-- Using dfs `x` and `y`, write some code that will return a new df that contains all variables and observations from both dfs. -->
+<!-- </div> -->
+<!-- </div> -->
 
 ### Join Summary
 
@@ -294,12 +294,12 @@ bakers3
 union(bakers_combined, bakers3)
 ```
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 8**</div>
-  <div class="panel-body">
-Using dfs `penguins_set1` and `penguins_set2`, write some code that will return a new df that contains all unique observations from both samples.
-</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 8**</div> -->
+<!--   <div class="panel-body"> -->
+<!-- Using dfs `penguins_set1` and `penguins_set2`, write some code that will return a new df that contains all unique observations from both samples. -->
+<!-- </div> -->
+<!-- </div> -->
 
 ### intersect()
 
@@ -312,12 +312,12 @@ Using dfs `penguins_set1` and `penguins_set2`, write some code that will return 
 intersect(bakers_combined, bakers3)
 ```
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 9**</div>
-  <div class="panel-body">
-Using dfs `penguins_set1` and `penguins_set2`, write some code that will return a new df that contains only the observations that appeared in both samples.
-</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 9**</div> -->
+<!--   <div class="panel-body"> -->
+<!-- Using dfs `penguins_set1` and `penguins_set2`, write some code that will return a new df that contains only the observations that appeared in both samples. -->
+<!-- </div> -->
+<!-- </div> -->
 
 ### setdiff()
 
@@ -337,12 +337,12 @@ setdiff(bakers3, bakers_combined)
 ```
 
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 10**</div>
-  <div class="panel-body">
-Using dfs `penguins_set1` and `penguins_set2`, write some code that will return a new df that contains only the unique observations in `penguins_set1`.
-</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 10**</div> -->
+<!--   <div class="panel-body"> -->
+<!-- Using dfs `penguins_set1` and `penguins_set2`, write some code that will return a new df that contains only the unique observations in `penguins_set1`. -->
+<!-- </div> -->
+<!-- </div> -->
 
 ### Summary
 
