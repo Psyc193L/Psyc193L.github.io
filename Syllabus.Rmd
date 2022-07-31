@@ -4,14 +4,11 @@
 
 Psyc193L: Introduction to R for Social Sciences
 
-Summer Session 1 2022
+Summer Session 2022
 
 *Lecture:* MTuWTh 11:00a-11:50a
 
 *Lab:* TuTh 12:00p-12:50p
-
-
-https://ucsd.zoom.us/my/ethanhurwitz
 
 ## Course Description
 
@@ -88,11 +85,11 @@ All course materials are free. You have enough expenses, I am not interested in 
 <!-- DataHub website. -->
   
   
-* **[Discord](https://discord.gg/fTuJwcxvGv)**
-  + We’ll use Discord as a central place to manage questions about the class, communicate with each other, and easily copy/paste code for sharing. 
+* **[Discord](https://discord.gg/ncbGmCEU38)**
+  + We will use Discord as a central place to manage questions about the class, communicate with each other, and easily copy/paste code for sharing. 
 
   
-* **[Zoom](https://ucsd.zoom.us/j/93535155608)**
+* **[Zoom](https://ucsd.zoom.us/j/96247922618)**
   + Class will be remote, so all class periods and office hours will be held via Zoom!
 
 ## Grades

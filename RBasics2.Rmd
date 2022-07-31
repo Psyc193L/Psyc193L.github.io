@@ -50,10 +50,10 @@ kableExtra::kbl(data.frame("Operator" = c("`+`",
 3^2/2*5/2
 ```
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE #1**</div>
-  <div class="panel-body">Use each of the operators covered in a new expression.</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE #1**</div> -->
+<!--   <div class="panel-body">Use each of the operators covered in a new expression.</div> -->
+<!-- </div> -->
 
 ### Comparison Operators
 
@@ -90,10 +90,10 @@ You can look at some simple test expressions to see how they evaluate:
 2.5 <= 2.5
 ```
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE #2**</div>
-  <div class="panel-body">Use each of the operators covered in a new expression.</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE #2**</div> -->
+<!--   <div class="panel-body">Use each of the operators covered in a new expression.</div> -->
+<!-- </div> -->
 
 ### Logical Operators
 
@@ -139,11 +139,11 @@ Programming languages often makes use of booleans (`TRUE` and `FALSE`), using th
 
 <p class="text-info"> **<u>Note:</u> You must use ALL CAPS (when you spell the logical's name)**</p>
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE #3**</div>
-  <div class="panel-body">Use each of the operators covered in a new expression. Use each operator combined with at least one operator from exercise 1 or 2 as well.</div>
-</div>
-		
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE #3**</div> -->
+<!--   <div class="panel-body">Use each of the operators covered in a new expression. Use each operator combined with at least one operator from exercise 1 or 2 as well.</div> -->
+<!-- </div> -->
+
 
 ## Variable Assignment
 
@@ -226,10 +226,10 @@ z
 typeof(z)
 ```
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE #4**</div>
-  <div class="panel-body">Define variables of each of the previous types. Use `typeof()` to verify the type.</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE #4**</div> -->
+<!--   <div class="panel-body">Define variables of each of the previous types. Use `typeof()` to verify the type.</div> -->
+<!-- </div> -->
 		
 		
 ## Global environment		
@@ -289,10 +289,10 @@ c(1, "hello")
 
 All elements in a vector have to be the same type of data. R will automatically coerce (change) data types of elements in a vector to match each other. You have to be careful because this can often cause issues!
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE #5**</div>
-  <div class="panel-body">Create 3 vectors that each contain a different type of data. See which operations can be applied to each vector.</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE #5**</div> -->
+<!--   <div class="panel-body">Create 3 vectors that each contain a different type of data. See which operations can be applied to each vector.</div> -->
+<!-- </div> -->
 		
 
 #### Indexing Vectors
@@ -306,10 +306,10 @@ All elements in a vector have to be the same type of data. R will automatically 
 myVector[2] 
 ```
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE #6**</div>
-  <div class="panel-body">Index the first, middle, and last, element from each of the vectors you defined above. Save the first element from your first vector to a variable called `first_first`, and the last element from your last vector to one called `last_last`.</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE #6**</div> -->
+<!--   <div class="panel-body">Index the first, middle, and last, element from each of the vectors you defined above. Save the first element from your first vector to a variable called `first_first`, and the last element from your last vector to one called `last_last`.</div> -->
+<!-- </div> -->
 
 ### Dataframes
 
@@ -345,10 +345,10 @@ data.frame("Exam" = c(1:4),
 ```
 
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE #7**</div>
-  <div class="panel-body">Create a dataframe that has information about your top 3 favorite animals. It should contain 3 columns: 1. That has the words, "first", "second", and "third". 2. That has the animals names. 3. That has a rating, on a scale of 1-10, of how likely you think it is you could beat that animal in a fight to the death.</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE #7**</div> -->
+<!--   <div class="panel-body">Create a dataframe that has information about your top 3 favorite animals. It should contain 3 columns: 1. That has the words, "first", "second", and "third". 2. That has the animals names. 3. That has a rating, on a scale of 1-10, of how likely you think it is you could beat that animal in a fight to the death.</div> -->
+<!-- </div> -->
 
 #### Indexing dfs
 
@@ -434,17 +434,17 @@ df[["Student"]][2] # Same as above
 
 This may be familiar if you have knowledge of other coding languages, but is a little more verbose.
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE #8**</div>
-  <div class="panel-body">Index the second row of your dataframe and save it to a variable called `df_second_row`. Index the name of your second favorite animal and save it to a variable called `second_fave`. Index the battle likelihood rating for your third favorite animal and save it to a variable called `third_rating`.</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE #8**</div> -->
+<!--   <div class="panel-body">Index the second row of your dataframe and save it to a variable called `df_second_row`. Index the name of your second favorite animal and save it to a variable called `second_fave`. Index the battle likelihood rating for your third favorite animal and save it to a variable called `third_rating`.</div> -->
+<!-- </div> -->
 
-### Tibbles
+<!-- ### Tibbles -->
 
-There is another type of data object that you will often encounter when working with datasets: **Tibbles**. Tibbles are relatively new, and are the default data object created by many of the packages and functions we will use most often in this course.
+<!-- There is another type of data object that you will often encounter when working with datasets: **Tibbles**. Tibbles are relatively new, and are the default data object created by many of the packages and functions we will use most often in this course. -->
 
-Here is how Hadley Wickham (the dude who created tibbles, and much of the other code you will use) describes them:
+<!-- Here is how Hadley Wickham (the dude who created tibbles, and much of the other code you will use) describes them: -->
 
-> "Tibbles are data frames, but they tweak some older behaviors to make life a little easier. R is an old language, and some things that were useful 10 or 20 years ago now get in your way. It's difficult to change base R without breaking existing code, so most innovation occurs in packages. 
-Tibbles are data.frames that are lazy and surly: they do less (i.e. they don't change variable names or types, and don't do partial matching) and complain more (e.g. they will generate a warning when a variable/column you are trying to index does not exist). This forces you to confront problems earlier, typically leading to cleaner, more expressive code."
+<!-- > "Tibbles are data frames, but they tweak some older behaviors to make life a little easier. R is an old language, and some things that were useful 10 or 20 years ago now get in your way. It's difficult to change base R without breaking existing code, so most innovation occurs in packages.  -->
+<!-- Tibbles are data.frames that are lazy and surly: they do less (i.e. they don't change variable names or types, and don't do partial matching) and complain more (e.g. they will generate a warning when a variable/column you are trying to index does not exist). This forces you to confront problems earlier, typically leading to cleaner, more expressive code." -->
 

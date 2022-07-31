@@ -27,7 +27,9 @@ ncol(dat)
 nrow(dat)
 ```
 
-It contains `r ncol(dat)`(!!) variables from `r nrow(dat)` observations!!! Throughout, as has been done previously, a `head()` call will be added at the end of most of the code just to prevent having a ***giant*** output in every block!
+It contains `r ncol(dat)`(!!) variables from `r nrow(dat)` observations!!! Throughout, as has been done previously, a `head()` call will be added at the end of most of the code just to prevent having a ***giant*** output in every block! 
+
+<p class="text-info"> **<u>Note:</u> Using `head()` here is only to make these notes easier for you to understand. This is <u>NOT</u> something that should *always* be used in your code!!**</p>
 
 ## Selecting {#helper-functions}
 
@@ -168,7 +170,7 @@ dat %>%
 
 ### `where()`
 
-`where()` takes a function and returns all variables for which the function returns `TRUE`. For example, say you wanted to find how many quantitative variables there are in this df.
+`where()` takes a function and returns all variables for which the function returns `TRUE`. For example, say you wanted to find how many quantitative variables there are in this df. As a reminder, `ncol()` returns the number of columns of the object passed to it. 
 
 ```{r}
 dat %>%
@@ -176,7 +178,11 @@ dat %>%
   ncol()
 ```
 
-<p class="text-info"> **Note: We don't <u>call</u> the function by including parentheses after it, we just *NAME* the function.**</p>
+::: {.rmdimportant}
+**This takes the `dat` dataframe, selects only the columns that are numeric, and then finds the number of columns.**
+:::
+
+<p class="text-info"> **Note: 1. You do not <u>call</u> the function by including parentheses after it, you just *NAME* the function. 2. The `ncol()` here is only used to make these notes easier for you to understand (and not print hundreds of columns). It is <u>NOT</u> necessary when using `where()`.**</p>
 
 <button class="btn btn-primary" data-toggle="collapse" data-target="#BlockName"> How the Syntax Works</button>  
 <div id="BlockName" class="collapse">  
@@ -287,33 +293,41 @@ The total number of columns has decreased by exactly the number of columns that 
 
 ## Filtering
 
-There are two `if_*()` functions which apply the same test function to a selection of columns and combine the results into a single logical vector (a vector of `TRUE` and `FALSE`). **Since you are dealing with logical vectors, this is good for *filtering*!**
+There are two `if_*()` functions which take a selection of columns and apply the same test function to each. The results from each column are combined into individual logical vectors (a vector of `TRUE` and `FALSE`). **Since you are dealing with logical vectors, this is good for *filtering*!**
 
 ### `if_any()` 
 
 Returns `TRUE` when the test evaluates to `TRUE` for *any* of the selected columns.
+
+`filter(if_any(selection_of_columns, filter test to apply to each))`
+
+Since the first argument of `if_any()` is a selection of columns, you can use the same selection helper functions introduced above!
 
 ```{r}
 # Show the number of rows and columns in the full df
 dim(dat)
 
 # Show the number of rows and columns for
-# All observations where at least one of the selected
-# Variables has a score above 75:
+# All observations where the value of at least one of the selected
+# Columns is greater than or equal to 1:
 dat %>%
-  filter(if_any(starts_with("I") & matches("[[:digit:]]"), ~ . > 75)) %>%
+  filter(if_any(starts_with("K"), ~ . >= 1)) %>%
   dim()
 ```
 
-<p class="text-info"> **Note: To save space `dim()` was added here. However, without that, it will just output the actual rows of data like any other filter call would.**</p>
+::: {.rmdimportant}
+**From `dat`, return only the observations where the value of <u>ANY</u> column that starts with "K" is greater than or equal to 1.**
+:::
 
-Notice how the number of columns (second value) stays the same, but the number of rows (first value) differs!
+<p class="text-info"> **<u>Note:</u> `dim()` was added here only to save space and make these notes easier for you to understand. Without `dim()`, this code will just output the actual rows of data like any other filter call would (which is what you want!). `dim()` is NOT something that should *always* be used in your code.**</p>
+
+Notice how the number of columns (second value) stays the same, but the number of rows (first value) differs! This is because, even though you are selecting some rows to apply the test to, you are ultimately filtering rows to return, not selecting columns to return.
 
 To break down the unique syntax here:
 
-* It is filtering for observations where any of the columns that start with "I" and also contain a digit in the column name have a score/value greater than 75.
+* It is filtering for observations where any of the columns that start with "K" have a score/value greater than or equal to 1.
 
-So what is a use case for this? Maybe you have a suicidality questionnaire in your dataset and a participant who responds greater than $X$ on any of the questions needs to be contacted for emergency intervention. There are many questions on your suicidality questionnaire (the columns that start with "I" here), and this is a way to quickly filter for the people who responded with greater than 75 on **ANY** of those questions!
+So what is a use case for this? Maybe you have a suicidality questionnaire in your dataset and a participant who responds greater than $X$ on any of the questions needs to be contacted for emergency intervention. There are many questions on your suicidality questionnaire (the columns that start with "K" here), and this is a way to quickly filter for the people who responded with 1 or greater on **ANY** of those questions!
 
 <!-- <div class="panel panel-success"> -->
 <!--   <div class="panel-heading">**EXERCISE 5**</div> -->
@@ -325,16 +339,20 @@ So what is a use case for this? Maybe you have a suicidality questionnaire in yo
 
 ### `if_all()`
 
-`if_all()` is similar to `if_any()`, except it returns `TRUE` **only** when the test evaluates to `TRUE` for **ALL** of the selected columns.
+`if_all()` is similar to `if_any()`, except it returns `TRUE` **only** when the test evaluates to `TRUE` for **<u>ALL</u>** of the selected columns.
 
 ```{r}
 # Show the number of rows and columns for
 # the observations where ALL of the selected
-# variables has a score above 75:
+# columns have a value greater than or equal to 1:
 dat %>%
-  filter(if_all(starts_with("I") & matches("[[:digit:]]"), ~ . > 75)) %>%
+  filter(if_all(starts_with("K"), ~ . >= 1)) %>%
   dim()
 ```
+
+::: {.rmdimportant}
+**From `dat`, return only the observations where the values of <u>ALL</u> columns that start with "K" are greater than or equal to 1.**
+:::
 
 Importantly, these functions will not give you an error if you do something incorrect (whereas using `select()` would). Since you are dealing with logical vectors and tests, having nothing return is not inherently indicative of a problem! 
 
@@ -347,17 +365,22 @@ dat %>%
 dat %>%
   filter(if_all(starts_with("Y"), ~ . > 75)) %>%
   dim()
+
+dat %>%
+  dim()
 ```
 
 ## Mutating `across()`
 
 `mutate()` was [previously](#Modifying-Existing-Variables) used to make changes to the data in our columns. To do so, you had to specify the specific column you wanted to change and what you wanted to do to it. However, utilizing the `across()` function, you can instead apply some changes to **multiple** columns simultaneously!
 
-From the tidyverse website:
+<!-- From the tidyverse website: -->
 
-"`across()` makes it easy to apply the same transformation to multiple columns, allowing you to use `select()` semantics (like helper functions) inside "data-masking" functions like `mutate()`. R code in dplyr verbs is generally evaluated once per group. Inside `across()` however, code is evaluated once for each combination of columns and groups!"
+<!-- "`across()` makes it easy to apply the same transformation to multiple columns, allowing you to use `select()` semantics (like helper functions) inside "data-masking" functions like `mutate()`. R code in dplyr verbs is generally evaluated once per group. Inside `across()` however, code is evaluated once for each combination of columns and groups!" -->
 
-For example, you can apply some function/code to specific variables:
+`across(selection_of_columns, NAME of function to apply to each)`
+
+For example, if you wanted to `scale()` specific columns:
 
 ```{r}
 dat %>% 
@@ -366,7 +389,7 @@ dat %>%
   head(10)
 ```
 
-You can use helper functions to make these selections as well!
+Just like in the `if_*()` calls, because the first argument of `across()` expects a selection of columns, you can use helper functions to make these selections as well!
 
 ```{r}
 dat %>% 
@@ -377,6 +400,8 @@ dat %>%
   # to save space
   head(10)
 ```
+
+<p class="text-info"> **<u>Note:</u> All of the `select()` calls were added only to save space and make these notes easier for you to understand by highlighting the specific rows that are changed. Without the `select()` calls, this code will output all of the data (which is what you want!). `select()` calls are NOT something that should *always* be used in your code with `mutate(across())`.**</p>
 
 You can combine `where()` with `across()` to mutate conditionally. In other words, **IF** the column passes some test, the function will be applied to all its values.
 
@@ -401,16 +426,27 @@ dat %>%
   
 Which they do!
 
-You also can apply multiple functions by `list`ing them. For example:
+<p class="text-info"> **<u>Note:</u> `glimpse()` was added here only to make these notes easier for you to understand. Without `glimpse()`, this code will just output the actual data (which is what you want!). `glimpse()` is NOT something that should *always* be used in your code with `across()` or `where()`.**</p>
+
+As before, multiple helper functions can be strung together with operators and they can also be negated with `!`. For example:
 
 ```{r}
 dat %>%
+  mutate(across(where(is.numeric) & starts_with("Z"), log)) %>%
   select(starts_with("Z")) %>%
-  mutate(across(where(is.numeric), list(log, round))) %>%
   head()
 ```
 
-As before, multiple helper functions can be strung together and they can also be negated with `!`. 
+You also can apply *multiple* functions simultaneously by `list`ing them. For example:
+
+```{r}
+dat %>%
+  mutate(across(where(is.numeric) & starts_with("Z"), list(log = log, round = round))) %>%
+  select(starts_with("Z")) %>%
+  head()
+```
+
+Some common functions you may want to apply to columns in this way include: `mean()`, `sd()`, `round()`, `scale()`, `log()`, and many many others!
 
 <!-- <div class="panel panel-success"> -->
 <!--   <div class="panel-heading">**EXERCISE 6**</div> -->

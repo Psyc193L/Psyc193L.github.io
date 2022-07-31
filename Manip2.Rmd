@@ -448,7 +448,7 @@ The `everything()` function selects... everything! It will select all the variab
 
 <!-- filter(columnToSubset == valueOfInterest) - returns rows that meet specified condition(s). Can use single conditions or string together multiple tests with logical operators -->
 
-The second primary subsetting function is `filter()`, which returns rows that meet specified condition(s). Each condition is a logical test performed on a column. This will results in a vector of `TRUE` and `FALSE` values, and only the rows for which the test evaluates to `TRUE` will be returned!
+The second primary subsetting function is `filter()`, which returns rows that meet specified condition(s). Each condition is a logical test performed on a column. This will results in a vector of `TRUE` and `FALSE` values, and only the rows where the test evaluates to `TRUE` will be returned!
 
 ![](figures/dplyr_filter.jpeg){width=100%}
 <p style="font-size:6pt">Artwork by @allison_horst</p>
@@ -491,7 +491,7 @@ kables(list(tempTable1, tempTable3, tempTable2))
 **This filters the dataframe to return only rows where `gear` has a value of 4.**
 :::
 
-Any evaluative operator can be used in the conditions:
+Any evaluative operator can be used in the conditions. The test conditions only need to result in `TRUE` or `FALSE`:
 
 ```{r eval=FALSE}
 mtcars2 %>%
@@ -526,7 +526,7 @@ kables(list(tempTable1, tempTable3, tempTable2))
 ```
 
 ::: {.rmdimportant}
-**This filters the dataframe to return only rows where `gear` has a value of 4.**
+**This filters the dataframe to return only rows where the `gear` column has a value of 4.**
 :::
 
 The values specified in your tests do not have to be numbers, they can be text strings as well!
@@ -564,7 +564,7 @@ kables(list(tempTable1, tempTable3, tempTable2))
 ```
 
 ::: {.rmdimportant}
-**This filters the dataframe to return only rows where `model` is "Lotus Europa".**
+**This filters the dataframe to return only rows where the `model` column has the value "Lotus Europa".**
 :::
 
 <!-- <div class="panel panel-success"> -->
@@ -615,7 +615,7 @@ kables(list(tempTable1, tempTable3, tempTable2))
 **This filters the dataframe to return only rows where `cyl` does not have a value of 4 OR `hp` is less than 100.**
 :::
 
-When multiple logical tests are strung together they get evaluated from left to right. You must be mindful about the order of operations and using parentheses to make sure the conditions are evaluated as you intended. For example:
+When multiple logical tests are strung together they get evaluated from left to right. You must be mindful about the order of operations and using parentheses to make sure the conditions are evaluated as you intended. For example, say you wanted to filter for observations that were either 4 cylinder or less than 200 horse power, and also had 5 gears. In other words, cars with 4 cylinders and 5 gears or cars with less than 200 horse power and 5 gears:
 
 `filter(cyl == 4 | hp < 200 & gear == 5)` would be evaluated as:<br>
 `filter(cyl == 4 | (hp < 200 & gear == 5))`
@@ -636,7 +636,7 @@ which is different than:<br>
 
 ### %in%
 
-Stringing together multiple tests of text patterns would be very cumbersome (e.g., `model == "Lotus Europa" | model == "Ferrari Dino" | ...`). Fortunately, there is an alternative with the `%in%` operator. As a reminder, this will check to see if the value of one variable is in a vector of possible values.
+Stringing together multiple tests of text patterns would be very cumbersome (e.g., `model == "Lotus Europa" | model == "Ferrari Dino" | ...`). Fortunately, there is an alternative with the `%in%` operator. As a reminder, this will check to see if the value of one variable is in a vector of possible values. Test conditions using the `%in%` operator are used the same way as all test conditions using all other operators: you must specify the variable to search within and what values to return (those in the vector).
 
 ```{r eval=FALSE}
 mtcars2 %>%
@@ -671,7 +671,19 @@ kables(list(tempTable1, tempTable3, tempTable2))
 ```
 
 ::: {.rmdimportant}
-**This filters the dataframe to return only rows where `model` is "Lotus Europa", "Ferrari Dino", or "Volvo 142E".**
+**This filters the dataframe to return only rows where the value of `model` is "Lotus Europa", "Ferrari Dino", or "Volvo 142E".**
+:::
+
+
+As `%in%` is an operator, it can also be combined with other operators!
+
+```{r}
+mtcars2 %>%
+  filter(hp > 300 | model %in% c("Lotus Europa", "Ferrari Dino", "Volvo 142E"))
+```
+
+::: {.rmdimportant}
+**This filters the dataframe to return only rows where the value of `hp` is greater than 300 OR the value of `model` is "Lotus Europa", "Ferrari Dino", or "Volvo 142E".**
 :::
 
 <!-- <div class="panel panel-success"> -->

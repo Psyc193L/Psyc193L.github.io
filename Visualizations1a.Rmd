@@ -125,10 +125,10 @@ In the visualization it can be seen that, generally speaking, penguins with grea
 
 Hot dang, looks like this could be a promising explanation for how penguins differ in size! There would obviously need to be some kind of formal statistical analysis to know for sure, but visualizing your raw data in ways like this allow you to quickly get insights into different questions you may want to use your data to answer.
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 1**</div>
-  <div class="panel-body">Think about what patterns you notice in the visualization you created, and test whether `sex` or `species` might explain those patterns. Make a prediction, test that prediction, and then describe what you see.</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 1**</div> -->
+<!--   <div class="panel-body">Think about what patterns you notice in the visualization you created, and test whether `sex` or `species` might explain those patterns. Make a prediction, test that prediction, and then describe what you see.</div> -->
+<!-- </div> -->
 
 
 ### Global vs Local Aesthetics
@@ -162,10 +162,10 @@ penguins %>%
 
 Alright! The points are still colored by species, but there is just the one line for all the data, as was originally intended. You will also notice that a `mapping=` was not specified in `geom_point()`, and it was removed from the `ggplot()` as well! It actually is not necessary to specify that. Once you have the hang of things, you can leave that part out.
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 2**</div>
-  <div class="panel-body">Add in the line of best fit to your graph with `geom_smooth()`, making sure that your code produces a single line that is fit to ***all*** your data.</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 2**</div> -->
+<!--   <div class="panel-body">Add in the line of best fit to your graph with `geom_smooth()`, making sure that your code produces a single line that is fit to ***all*** your data.</div> -->
+<!-- </div> -->
 
 
 ### Setting vs Mapping Aesthetics
@@ -260,55 +260,55 @@ There are tons of good color guides you can find on google. Here are couple:
 
 More on colors will be covered in a later lesson.
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 3**</div>
-  <div class="panel-body">Use R code to recreate the graphs below:
-<br>
-A. Make a visualization to investigate the relationship between bill length (on the y-axis) and bill depth (on the x-axis). 
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 3**</div> -->
+<!--   <div class="panel-body">Use R code to recreate the graphs below: -->
+<!-- <br> -->
+<!-- A. Make a visualization to investigate the relationship between bill length (on the y-axis) and bill depth (on the x-axis).  -->
 
-```{r echo=FALSE, include=FALSE, results='hide', warning=FALSE, message=FALSE}
-penguins %>%
-  ggplot(aes(y = bill_length_mm, x = bill_depth_mm)) + 
-  geom_point()
-```
-
-
-B.
-
-```{r warning=FALSE, echo=FALSE}
-penguins %>%
-  ggplot(aes(y = bill_length_mm, x = bill_depth_mm,
-             color = species)) + 
-  geom_point()
-```
+<!-- ```{r echo=FALSE, include=FALSE, results='hide', warning=FALSE, message=FALSE} -->
+<!-- penguins %>% -->
+<!--   ggplot(aes(y = bill_length_mm, x = bill_depth_mm)) +  -->
+<!--   geom_point() -->
+<!-- ``` -->
 
 
-C. Make a visualization to investigate the relationship between between body mass and flipper length. In doing so, make the geometric figure rendering the observations appear in blue.
+<!-- B. -->
 
-```{r echo=FALSE, include=FALSE, results='hide', warning=FALSE}
-penguins %>%
-  ggplot(aes(y = body_mass_g, x = flipper_length_mm)) + 
-  geom_point(color = "blue")
-```
+<!-- ```{r warning=FALSE, echo=FALSE} -->
+<!-- penguins %>% -->
+<!--   ggplot(aes(y = bill_length_mm, x = bill_depth_mm, -->
+<!--              color = species)) +  -->
+<!--   geom_point() -->
+<!-- ``` -->
 
-D.
 
-```{r warning=FALSE, echo=FALSE, message=FALSE}
-penguins %>%
-  ggplot(aes(y = body_mass_g, x = flipper_length_mm)) + 
-  geom_point(color = "blue") + 
-  geom_smooth(method = "lm", se = FALSE, color = "black")
-```
+<!-- C. Make a visualization to investigate the relationship between between body mass and flipper length. In doing so, make the geometric figure rendering the observations appear in blue. -->
 
-E.
+<!-- ```{r echo=FALSE, include=FALSE, results='hide', warning=FALSE} -->
+<!-- penguins %>% -->
+<!--   ggplot(aes(y = body_mass_g, x = flipper_length_mm)) +  -->
+<!--   geom_point(color = "blue") -->
+<!-- ``` -->
 
-```{r warning=FALSE, echo=FALSE, message=FALSE}
-penguins %>%
-  ggplot(aes(y = body_mass_g, x = flipper_length_mm)) + 
-  geom_point(aes(color = flipper_length_mm > 210)) + 
-  geom_smooth(method = "lm", se = FALSE, color = "black")
-```
-</div></div>
+<!-- D. -->
+
+<!-- ```{r warning=FALSE, echo=FALSE, message=FALSE} -->
+<!-- penguins %>% -->
+<!--   ggplot(aes(y = body_mass_g, x = flipper_length_mm)) +  -->
+<!--   geom_point(color = "blue") +  -->
+<!--   geom_smooth(method = "lm", se = FALSE, color = "black") -->
+<!-- ``` -->
+
+<!-- E. -->
+
+<!-- ```{r warning=FALSE, echo=FALSE, message=FALSE} -->
+<!-- penguins %>% -->
+<!--   ggplot(aes(y = body_mass_g, x = flipper_length_mm)) +  -->
+<!--   geom_point(aes(color = flipper_length_mm > 210)) +  -->
+<!--   geom_smooth(method = "lm", se = FALSE, color = "black") -->
+<!-- ``` -->
+<!-- </div></div> -->
 
 ## Shape
 
@@ -394,43 +394,43 @@ penguins %>%
 
 This introduces another way to change colors in ggplot! When changing the color of something, some geoms have a 'color' argument, some have a 'fill' argument, and some, like here, have both! 'color' often refers to the outline/outside, while 'fill' often refers to... well, the fill!
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 4**</div>
-  <div class="panel-body"><u>Part 1:</u><br>Take the code you produced for Exercise 2 and 1. Change the shape to be solid color squares mapped to the `species` variable. 2. Change the shape to be hollow squares mapped to the `species` variable. 3. Change the shape to be filled squares mapped to the `species` variable, and fill with a color of your choosing.
-  <br>
-  <br>
-  <u>Part 2:</u><br>
-  Use R code to recreate the graphs below:
-  <br>
-1. 
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 4**</div> -->
+<!--   <div class="panel-body"><u>Part 1:</u><br>Take the code you produced for Exercise 2 and 1. Change the shape to be solid color squares mapped to the `species` variable. 2. Change the shape to be hollow squares mapped to the `species` variable. 3. Change the shape to be filled squares mapped to the `species` variable, and fill with a color of your choosing. -->
+<!--   <br> -->
+<!--   <br> -->
+<!--   <u>Part 2:</u><br> -->
+<!--   Use R code to recreate the graphs below: -->
+<!--   <br> -->
+<!-- 1.  -->
 
-```{r warning=FALSE, echo=FALSE, message=FALSE}
-penguins %>%
-  ggplot(aes(y = flipper_length_mm, x = bill_length_mm)) + 
-  geom_point(aes(color = species,
-                 shape = island)) + 
-  geom_smooth(method = 'lm', se = FALSE)
-```
+<!-- ```{r warning=FALSE, echo=FALSE, message=FALSE} -->
+<!-- penguins %>% -->
+<!--   ggplot(aes(y = flipper_length_mm, x = bill_length_mm)) +  -->
+<!--   geom_point(aes(color = species, -->
+<!--                  shape = island)) +  -->
+<!--   geom_smooth(method = 'lm', se = FALSE) -->
+<!-- ``` -->
 
-2. 
+<!-- 2.  -->
 
-```{r warning=FALSE, echo=FALSE, message=FALSE}
-penguins %>%
-  ggplot(aes(y = body_mass_g, x = bill_depth_mm)) + 
-  geom_point(aes(color = species),
-             shape = 4)
-```
+<!-- ```{r warning=FALSE, echo=FALSE, message=FALSE} -->
+<!-- penguins %>% -->
+<!--   ggplot(aes(y = body_mass_g, x = bill_depth_mm)) +  -->
+<!--   geom_point(aes(color = species), -->
+<!--              shape = 4) -->
+<!-- ``` -->
 
-3. 
+<!-- 3.  -->
 
-```{r warning=FALSE, echo=FALSE, message=FALSE}
-penguins %>%
-  ggplot(aes(y = bill_length_mm, x = body_mass_g)) + 
-  geom_point(color = 'green',
-             fill = 'red',
-             shape = 23)
-```
-</div></div>
+<!-- ```{r warning=FALSE, echo=FALSE, message=FALSE} -->
+<!-- penguins %>% -->
+<!--   ggplot(aes(y = bill_length_mm, x = body_mass_g)) +  -->
+<!--   geom_point(color = 'green', -->
+<!--              fill = 'red', -->
+<!--              shape = 23) -->
+<!-- ``` -->
+<!-- </div></div> -->
 
 ## Size
 
@@ -501,26 +501,26 @@ penguins %>%
   geom_smooth(method = "lm", se = FALSE)
 ```
 
-<div class="panel panel-warning">
-  <div class="panel-heading">**BONUS CHALLENGE:**</div>
-  <div class="panel-body">See if you can think of a way to use what we demonstrated above to take your code from the Exercise 4, part 2, question 3, and give each observation a thicker outside border. The result should look like the graph below:</div>
-  <br>
-```{r class.source="graph-out", warning=FALSE, echo=FALSE, message=FALSE}
-penguins %>%
-  ggplot(aes(y = bill_length_mm, x = body_mass_g)) + 
-      geom_point(color = 'green',
-             shape = 23,
-             size = 5) +
-      geom_point(color = 'green',
-             shape = 23,
-             size = 4) +
-  geom_point(color = 'green',
-             fill = 'red',
-             shape = 23,
-             size = 3)
-```
-</div>
-<br>
+<!-- <div class="panel panel-warning"> -->
+<!--   <div class="panel-heading">**BONUS CHALLENGE:**</div> -->
+<!--   <div class="panel-body">See if you can think of a way to use what we demonstrated above to take your code from the Exercise 4, part 2, question 3, and give each observation a thicker outside border. The result should look like the graph below:</div> -->
+<!--   <br> -->
+<!-- ```{r class.source="graph-out", warning=FALSE, echo=FALSE, message=FALSE} -->
+<!-- penguins %>% -->
+<!--   ggplot(aes(y = bill_length_mm, x = body_mass_g)) +  -->
+<!--       geom_point(color = 'green', -->
+<!--              shape = 23, -->
+<!--              size = 5) + -->
+<!--       geom_point(color = 'green', -->
+<!--              shape = 23, -->
+<!--              size = 4) + -->
+<!--   geom_point(color = 'green', -->
+<!--              fill = 'red', -->
+<!--              shape = 23, -->
+<!--              size = 3) -->
+<!-- ``` -->
+<!-- </div> -->
+<!-- <br> -->
 
 ## Alpha
 
@@ -617,10 +617,10 @@ diamonds %>%
 
 Even with a very low alpha (look how faint the points outside the center cluster are), you can see just how many observations are overlapping! You will see better ways to visualize data like this later.
 
-<div class="panel panel-success">
-  <div class="panel-heading">**EXERCISE 5**</div>
-  <div class="panel-body">Update the main graph you have been working with throughout the exercises to make the observations more translucent. First try doing so by mapping it to `island`. Then, create another graph where you set the alpha yourself. Try to pick the value you think makes the graph most legible and effective.</div>
-</div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE 5**</div> -->
+<!--   <div class="panel-body">Update the main graph you have been working with throughout the exercises to make the observations more translucent. First try doing so by mapping it to `island`. Then, create another graph where you set the alpha yourself. Try to pick the value you think makes the graph most legible and effective.</div> -->
+<!-- </div> -->
 
 ## References:
 

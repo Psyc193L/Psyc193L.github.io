@@ -133,20 +133,20 @@ Load an installed package:
 <!--   <div class="panel-body">Decide where you want your R and class files to live on your computer. Create a new project called "my_first_project" in that location. Open the .Rproj file and create and save a new RMarkdown file titled "notes".</div> -->
 <!-- </div> -->
 
-### File Paths
+<!-- ## File Paths OLD OLD OLD -->
 
-A file's path specifies where that file is located. It is like a map for your computer, giving it instructions on where to go to look for that specific file. When you download a file (e.g., **"dataset.csv"**), it likely would appear in your downloads folder. Thus, the full file specification would be:
+<!-- A file's path specifies where that file is located. It is like a map for your computer, giving it instructions on where to go to look for that specific file. When you download a file (e.g., **"dataset.csv"**), it likely would appear in your downloads folder. Thus, the full file specification would be: -->
 
-For mac: `/users/user_name/Downloads/dataset.csv`
+<!-- For mac: `/users/user_name/Downloads/dataset.csv` -->
 
-For windows: `C:\Users\user_name\Downloads\dataset.csv`
+<!-- For windows: `C:\Users\user_name\Downloads\dataset.csv` -->
 
-(Replacing "user_name" with whatever the user name on your machine is)
+<!-- (Replacing "user_name" with whatever the user name on your machine is) -->
 
-A file path is constructed by 2 parts: 
+<!-- A file path is constructed by 2 parts:  -->
 
-1. the file location: `/users/user_name/Downloads/` or `C:\Users\user_name\Downloads\`
-2. the file name: `dataset.csv`
+<!-- 1. the file location: `/users/user_name/Downloads/` or `C:\Users\user_name\Downloads\` -->
+<!-- 2. the file name: `dataset.csv` -->
 
 <!-- You do not have to specify the full file path if you change R's current *working directory*. Setting your working directory is basically telling R, "I'm going to be working in this specific place. So if you need to look for any files, they will be **here**. Also, if you create any files, create them **here**." -->
 
@@ -217,7 +217,7 @@ A file path is constructed by 2 parts:
 
 <!-- In fact, this course website, all the course content, my personal website (and all parts of it), are all created in RStudio and written in a lot of R Markdown files! -->
 
-#### Syntax
+## R Markdown Syntax
 
 R Markdown syntax could be a whole course on its own, but there are a couple fundamental things worth knowing:
 
@@ -325,16 +325,16 @@ mean (x, na.rm = TRUE)
 mean( x, na.rm = TRUE )
 ```
 
-* Place a space after () (used for function arguments):
+<!-- * Place a space after () (used for function arguments): -->
 
-```{r eval=FALSE}
-# Good
-function(x) {}
+<!-- ```{r eval=FALSE} -->
+<!-- # Good -->
+<!-- function(x) {} -->
 
-# Bad
-function (x) {}
-function(x){}
-```
+<!-- # Bad -->
+<!-- function (x) {} -->
+<!-- function(x){} -->
+<!-- ``` -->
 
 * Most operators (`==`, `+`, `-`, `<-`, etc.) should always be surrounded by spaces:
 
@@ -384,35 +384,35 @@ do_something_very_complicated("that", requires, many, arguments,
 <!--   <div class="panel-body">Clean up all the code below so that it follows the proper formatting guidelines listed above.</div> -->
 <!-- </div> -->
 
-### Document Organization
+<!-- ### Document Organization -->
 
-You want to organize your files and directory structure in a way that is easy to navigate. You may come back to files months or years later, and you want to make sure you will understand what you were doing and what files are where. Not to mention if you make your project files open and accessible to the public!
+<!-- You want to organize your files and directory structure in a way that is easy to navigate. You may come back to files months or years later, and you want to make sure you will understand what you were doing and what files are where. Not to mention if you make your project files open and accessible to the public! -->
 
-Some things that can help with this include:
+<!-- Some things that can help with this include: -->
 
-* Separate your data cleaning and analysis codes. R Markdown files are helpful for this because you can abide by the separation of concerns principle and label your code sections. 
+<!-- * Separate your data cleaning and analysis codes. R Markdown files are helpful for this because you can abide by the separation of concerns principle and label your code sections.  -->
 
-* Make text files for data if needed -- describing where it came from, coding the variables if needed, etc. 
+<!-- * Make text files for data if needed -- describing where it came from, coding the variables if needed, etc.  -->
 
-* **Never** mess with your raw data (and keep backups). Try to touch it directly as little as possible.
+<!-- * **Never** mess with your raw data (and keep backups). Try to touch it directly as little as possible. -->
 
-* Use version control. Version control are systems that save changes as separate files. Using a system like git is helpful, and prevents you from having tons and tons of older versions of files on your computer.
+<!-- * Use version control. Version control are systems that save changes as separate files. Using a system like git is helpful, and prevents you from having tons and tons of older versions of files on your computer. -->
 
-As far as your markdown files themselves...
+<!-- As far as your markdown files themselves... -->
 
-* All the needed packages should be loaded at the top of your document
-* No package installations should be called/executed
-* No warnings/messages should be printed when you load packages (turn on the options to hide these)
-* Markdown formatting should be used to make your file easier to follow
-* You should use relative file paths only, making use of the `here` package
-* There should be no code chunks with errors!
-* **NEVER EVER** print out an entire dataset (> 10 rows). This is *never* necessary.
-* It is good to have a high text-to-code ratio!
+<!-- * All the needed packages should be loaded at the top of your document -->
+<!-- * No package installations should be called/executed -->
+<!-- * No warnings/messages should be printed when you load packages (turn on the options to hide these) -->
+<!-- * Markdown formatting should be used to make your file easier to follow -->
+<!-- * You should use relative file paths only, making use of the `here` package -->
+<!-- * There should be no code chunks with errors! -->
+<!-- * **NEVER EVER** print out an entire dataset (> 10 rows). This is *never* necessary. -->
+<!-- * It is good to have a high text-to-code ratio! -->
 
-### Visual Summary
+<!-- ### Visual Summary -->
 
-![](figures/workflow.jpg){width=100%}
-<p style="font-size:6pt">Artwork by @allison_horst</p>
+<!-- ![](figures/workflow.jpg){width=100%} -->
+<!-- <p style="font-size:6pt">Artwork by @allison_horst</p> -->
 
 ## Pipes
 
@@ -543,32 +543,47 @@ Use a pipe when...
 <!--   <div class="panel-body">Rewrite the following code as properly formatted pipe chains.</div> -->
 <!-- </div> -->
 
-### Pipe Positions
+<!-- ### Pipe Positions -->
 
-When you pipe something in to a function, it is input as the first element by default.
+<!-- When you pipe something in to a function, it is input as the first element by default. -->
 
-`a %>% sum(b)` is equivalent to `sum(a, b)`
+<!-- `a %>% sum(b)` is equivalent to `sum(a, b)` -->
 
-You can specify which argument (or what position in the function) the piped input should be given to with the `.` operator. The `.` operator can be used to refer to the object/dataframe in its current state in the pipe chain. In other words, the `.` refers to what is being piped in to the current function. 
+<!-- You can specify which argument (or what position in the function) the piped input should be given to with the `.` operator. The `.` operator can be used to refer to the object/dataframe in its current state in the pipe chain. In other words, the `.` refers to what is being piped in to the current function.  -->
 
-Consider the following example using the `seq(from, to)` function, which has two arguments (*from* and *to*). `seq()` will generate a sequence of numbers with a range of the *from* value until the *to* value (it was very hard avoiding the use of the words "from" and "to" here). By default, what is piped in will be input as the first element. 
+<!-- Consider the following example using the `seq(from, to)` function, which has two arguments (*from* and *to*). `seq()` will generate a sequence of numbers with a range of the *from* value until the *to* value (it was very hard avoiding the use of the words "from" and "to" here). By default, what is piped in will be input as the first element.  -->
 
-```{r}
-a = 1
-b = 5
-b %>% seq(a)
-```
+<!-- ```{r} -->
+<!-- a = 1 -->
+<!-- b = 5 -->
+<!-- b %>% seq(a) -->
+<!-- ``` -->
 
-Above, when `b` is piped in, it gets set as the first argument and the result is a descending sequence. However, if you explicitly told `seq()` where you wanted the piped input to go using `.`, you could get the expected ascending sequence:
+<!-- Above, when `b` is piped in, it gets set as the first argument and the result is a descending sequence. However, if you explicitly told `seq()` where you wanted the piped input to go using `.`, you could get the expected ascending sequence: -->
 
-```{r}
-b %>% seq(from = a, 
-          to = .)
-```
+<!-- ```{r} -->
+<!-- b %>% seq(from = a,  -->
+<!--           to = .) -->
+<!-- ``` -->
 
 ## Data Importing and Exporting
 
 While the built in datasets that R comes with can be very helpful, the whole point of learning R is to use it for our own needs. So you need some ways to get your raw data into R, and the products of your code out of R.
+
+### File Paths
+
+A file's path specifies where that file is located. It is like a map for your computer, giving it instructions on where to go to look for that specific file. When you download a file (e.g., **"dataset.csv"**), it likely would appear in your downloads folder. Thus, the full file specification would be:
+
+For mac: `/Users/user_name/Downloads/dataset.csv`
+
+For windows: `C:\Users\user_name\Downloads\dataset.csv`
+
+(Replacing "user_name" with whatever the user name on your machine is)
+
+A file path is constructed by 2 parts: 
+
+1. the file location: `/users/user_name/Downloads/` or `C:\Users\user_name\Downloads\`
+2. the file name: `dataset.csv`
 
 ### Importing
 
@@ -576,16 +591,26 @@ You are most often going to work with csv's and .RData files. You can work with 
 
 #### csv Files
 
-You will use the `read_csv()` function to load a dataset into R. This function takes a file as its argument. How does R know where to look for the file? You need to give it the right file path, and this is where the `here()` function discussed [previously](#here) will be applied!
+You will use the `read_csv()` function to load a dataset into R. This function takes a file as its argument. How does R know where to look for the file? You need to give it the right file path! <!-- and this is where the `here()` function discussed [previously](#here) will be applied! -->
 
-Recall in the previous lesson when considering the structure of your project directories, an example was discussed where you had a data file called **"dataset.csv"** and it was in a folder called **"data"**. You tell `read_csv()` where to look by giving it the same `here()` call used before!
+<!-- Recall in the previous lesson when considering the structure of your project directories, an example was discussed where you had a data file called **"dataset.csv"** and it was in a folder called **"data"**. You tell `read_csv()` where to look by giving it the same `here()` call used before! -->
+
+
+<!-- ```{r eval = FALSE} -->
+<!-- here("data", "dataset.csv") -->
+<!-- #> "/Users/ethan/Documents/Psyc193L/data/dataset.csv" -->
+
+<!-- example_df = read_csv(here("data", "dataset.csv")) -->
+<!-- ``` -->
 
 ```{r eval = FALSE}
-here("data", "dataset.csv")
-#> "/Users/ethan/Documents/Psyc193L/data/dataset.csv"
+# On mac
+read_csv("/Users/user_name/Downloads/dataset.csv")
 
-example_df = read_csv(here("data", "dataset.csv"))
+# On windows
+read_csv("C:\Users\user_name\Downloads\dataset.csv")
 ```
+
 
 If the output from `read_csv()` was not saved to a variable, it would just print it out in the console. You need a variable to *get* the output so you can use it later in your other code. You do this by saving it to a variable.
 
@@ -598,6 +623,14 @@ example_df = read_csv("https://www.ethanhurwitz.com/example_data.csv")
 #### RData Files
 
 The other type of file you may want to import is an .RData file. These directly load R objects into your workspace. Instead of using `read_csv()`, you just use `load()` and pass it the file path to a .RData file!
+
+```{r eval=FALSE}
+# On mac
+load("/Users/user_name/Downloads/dataset.RData")
+
+# On windows
+load("C:\Users\user_name\Downloads\dataset.RData")
+```
 
 Since .RData files already contain R objects, you do not have to save this to a variable. It is loading variables that already exist!
 
