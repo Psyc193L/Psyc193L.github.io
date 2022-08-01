@@ -4,9 +4,9 @@ before_chapter_script: _common.R
 delete_merged_file: true
 rmd_files:
 - index.Rmd
-# - RBasics1.Rmd
-# - RBasics2.Rmd
-# - RBasics3_new.Rmd
+- RBasics1.Rmd
+- RBasics2.Rmd
+- RBasics3_new.Rmd
 # # - RBasics3.Rmd
 # # - RBasics4.Rmd
 # - Visualizations1.Rmd
