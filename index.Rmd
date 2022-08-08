@@ -72,7 +72,7 @@ Name: [Ethan Hurwitz](https://www.ethanhurwitz.com/)
 
 Email: ehurwitz@ucsd.edu
 
-Office Hours: TBD
+Office Hours: Thurs 10am
 
 ## Course Structure
 
@@ -349,21 +349,21 @@ The schedule below is tentative and subject to change.
 
 ```{r Schedule, echo=FALSE, message=F, warning=F}
 kbl(data.frame("Week" = c("1", "2", "3", "4", "5"), 
-                           "Monday" = c("Syllabus", "Project Info<br>Tidy Data",
-                                                 "Color<br>Theory",
-                                                 "Advanced<br>Wrangling", "RStudio<br>Projects"),
-                           "Tuesday" = c("Why use R<br>Coding Basics<br>Using R Effectively", 
+                           "Monday" = c("Syllabus", "Different Graph Types",
+                                                 "Viz Challenge<br>+Project Intro",
+                                                 "Summarizing", ""),
+                           "Tuesday" = c("Why use R<br>+Coding Basics<br>+Using R Effectively", 
                                          "Different Graph Types", 
-                                         "Color Theory Problem Set<br>Data Viz Challenge", 
-                                         "Summarizing<br>Problem Set", "Vignettes"),
+                                         "Tidy Data<br>+Control Flow", 
+                                         "Wrangling<br>Challenge", ""),
                            "Wednesday" = c("R Basics<br>Assignments",
-                                           "Problem Set", "Control Flow", 
-                                           "Wrangling Challenge", 
-                                           "Project Questions"),
+                                           "ggplot<br>Customization", "Basic<br>Wrangling", 
+                                           "Data<br>Transformation", 
+                                           ""),
                            "Thursday" = c("ggplot Intro",
-                                    "ggplot<br>Customization",
-                                    "Basic Wrangling",
-                                    "Transformations", "")), 
+                                    "Color<br>Theory",
+                                    "Advanced<br>+Wrangling",
+                                    "RStudio Projects<br>+Project Mtg", "")), 
     escape = FALSE, align = "c") %>%
     #kableExtra::kable_paper("striped", full_width = T) %>%
     #column_spec(5:7, bold = T) %>%
