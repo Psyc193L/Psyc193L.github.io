@@ -72,7 +72,7 @@ Name: [Ethan Hurwitz](https://www.ethanhurwitz.com/)
 
 Email: ehurwitz@ucsd.edu
 
-Office Hours: TBD
+Office Hours: Thurs 10am
 
 ## Course Structure
 
@@ -387,36 +387,36 @@ The schedule below is tentative and subject to change.
   <tr>
    <td style="text-align:center;"> 1 </td>
    <td style="text-align:center;"> Syllabus </td>
-   <td style="text-align:center;"> Why use R<br>Coding Basics<br>Using R Effectively </td>
+   <td style="text-align:center;"> Why use R<br>+Coding Basics<br>+Using R Effectively </td>
    <td style="text-align:center;"> R Basics<br>Assignments </td>
    <td style="text-align:center;"> ggplot Intro </td>
   </tr>
   <tr>
    <td style="text-align:center;"> 2 </td>
-   <td style="text-align:center;"> Project Info<br>Tidy Data </td>
    <td style="text-align:center;"> Different Graph Types </td>
-   <td style="text-align:center;"> Problem Set </td>
+   <td style="text-align:center;"> Different Graph Types </td>
    <td style="text-align:center;"> ggplot<br>Customization </td>
+   <td style="text-align:center;"> Color<br>Theory </td>
   </tr>
   <tr>
    <td style="text-align:center;"> 3 </td>
-   <td style="text-align:center;"> Color<br>Theory </td>
-   <td style="text-align:center;"> Color Theory Problem Set<br>Data Viz Challenge </td>
-   <td style="text-align:center;"> Control Flow </td>
-   <td style="text-align:center;"> Basic Wrangling </td>
+   <td style="text-align:center;"> Viz Challenge<br>+Project Intro </td>
+   <td style="text-align:center;"> Tidy Data<br>+Control Flow </td>
+   <td style="text-align:center;"> Basic<br>Wrangling </td>
+   <td style="text-align:center;"> Advanced<br>+Wrangling </td>
   </tr>
   <tr>
    <td style="text-align:center;"> 4 </td>
-   <td style="text-align:center;"> Advanced<br>Wrangling </td>
-   <td style="text-align:center;"> Summarizing<br>Problem Set </td>
-   <td style="text-align:center;"> Wrangling Challenge </td>
-   <td style="text-align:center;"> Transformations </td>
+   <td style="text-align:center;"> Summarizing </td>
+   <td style="text-align:center;"> Wrangling<br>Challenge </td>
+   <td style="text-align:center;"> Data<br>Transformation </td>
+   <td style="text-align:center;"> RStudio Projects<br>+Project Mtg </td>
   </tr>
   <tr>
    <td style="text-align:center;"> 5 </td>
-   <td style="text-align:center;"> RStudio<br>Projects </td>
-   <td style="text-align:center;"> Vignettes </td>
-   <td style="text-align:center;"> Project Questions </td>
+   <td style="text-align:center;">  </td>
+   <td style="text-align:center;">  </td>
+   <td style="text-align:center;">  </td>
    <td style="text-align:center;">  </td>
   </tr>
 </tbody>
