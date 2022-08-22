@@ -74,6 +74,8 @@ penguins %>%
 
 <img src="Visualizations2_files/figure-html/unnamed-chunk-4-1.png" width="672" />
 
+More information on why it is recommended to avoid using pie charts can be found [here](https://www.data-to-viz.com/caveat/pie.html) (stop before the "Alternatives" section).
+
 ::: {.rmdcaution} 
 **When you are creating a visualization to communicate something about a single categorical variable, you really should just use a table and not a graph at all.**
 :::

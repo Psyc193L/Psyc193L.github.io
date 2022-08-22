@@ -56,9 +56,9 @@ if(3 < x) {
 } else {
   print("the condition evaluated FALSE")
 }
-#> [1] "The condition evaluated TRUE"
+#> [1] "the condition evaluated FALSE"
 x
-#> [1] 4
+#> [1] 1
 ```
 
 This code specifies what to do depending on whether the test evaluates to `TRUE` or if it evaluates to `FALSE`.
@@ -140,9 +140,9 @@ case_when(
   2 < x & x < 5 ~ "The second condition evaluated true.",
   TRUE ~ "Neither the first or second condition evaluated true."
 )
-#> [1] "The first condition evaluated true."
+#> [1] "The second condition evaluated true."
 x
-#> [1] 3
+#> [1] 4
 ```
 
 <!-- <div class="panel panel-success"> -->

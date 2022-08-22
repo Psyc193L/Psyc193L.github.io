@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 17 Projects and Organization | PSYC193L</title>
+<meta name="author" content="Ethan Hurwitz">
+<meta name="description" content="Using R effectively goes beyond things like implementing and adhering to proper style and syntax guidelines. It also means developing simple workflows that foster collaboration and are...">
+<meta name="generator" content="bookdown 0.24 with bs4_book()">
+<meta property="og:title" content="Chapter 17 Projects and Organization | PSYC193L">
+<meta property="og:type" content="book">
+<meta property="og:url" content="https://psyc193l.github.io/projects-and-organization.html">
+<meta property="og:description" content="Using R effectively goes beyond things like implementing and adhering to proper style and syntax guidelines. It also means developing simple workflows that foster collaboration and are...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 17 Projects and Organization | PSYC193L">
+<meta name="twitter:description" content="Using R effectively goes beyond things like implementing and adhering to proper style and syntax guidelines. It also means developing simple workflows that foster collaboration and are...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.0/transition.js"></script><script src="libs/bs3compat-0.4.0/tabs.js"></script><script src="libs/bs3compat-0.4.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><link rel="stylesheet" href="bs4_style.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">PSYC193L</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"><span class="header-section-number">1</span> Syllabus</a></li>
+<li class="book-part">R Basics</li>
+<li><a class="" href="why-use-r.html"><span class="header-section-number">2</span> Why use R?</a></li>
+<li><a class="" href="r-coding-basics.html"><span class="header-section-number">3</span> R Coding Basics</a></li>
+<li><a class="" href="using-r-effectively.html"><span class="header-section-number">4</span> Using R Effectively</a></li>
+<li class="book-part">Visualizations</li>
+<li><a class="" href="intro-to-ggplot2.html"><span class="header-section-number">5</span> Intro to ggplot2</a></li>
+<li><a class="" href="aesthetics.html"><span class="header-section-number">6</span> Aesthetics</a></li>
+<li><a class="" href="different-geoms-and-when-to-use-them.html"><span class="header-section-number">7</span> Different Geoms and When To Use Them</a></li>
+<li><a class="" href="customization.html"><span class="header-section-number">8</span> Customization</a></li>
+<li><a class="" href="color-theory.html"><span class="header-section-number">9</span> Color Theory</a></li>
+<li class="book-part">Data Manipulation</li>
+<li><a class="" href="control-flow.html"><span class="header-section-number">10</span> Control Flow</a></li>
+<li><a class="" href="tidy-data-and-tidyverse.html"><span class="header-section-number">11</span> Tidy Data and Tidyverse</a></li>
+<li><a class="" href="basic-wrangling.html"><span class="header-section-number">12</span> Basic Wrangling</a></li>
+<li><a class="" href="advanced-wrangling.html"><span class="header-section-number">13</span> Advanced Wrangling</a></li>
+<li><a class="" href="summarizing-data.html"><span class="header-section-number">14</span> Summarizing Data</a></li>
+<li><a class="" href="text-cleaning.html"><span class="header-section-number">15</span> Text Cleaning</a></li>
+<li><a class="" href="data-transformation.html"><span class="header-section-number">16</span> Data Transformation</a></li>
+<li><a class="active" href="projects-and-organization.html"><span class="header-section-number">17</span> Projects and Organization</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="projects-and-organization" class="section level1">
+<h1>
+<span class="header-section-number">17</span> Projects and Organization<a class="anchor" aria-label="anchor" href="#projects-and-organization"><i class="fas fa-link"></i></a>
+</h1>
+<p>Using R effectively goes beyond things like implementing and adhering to proper style and syntax guidelines. It also means developing simple workflows that foster collaboration and are reproducible. This section covers some foundational tools to develop a functional and reproducible Social Sciences workflow.</p>
+<div id="r-projects" class="section level2">
+<h2>
+<span class="header-section-number">17.1</span> R Projects<a class="anchor" aria-label="anchor" href="#r-projects"><i class="fas fa-link"></i></a>
+</h2>
+<p>Something that is strongly encouraged is creating a new R Project for every project you work on. There is a really great tutorial on R projects <a href="https://alexd106.github.io/intro2R/project_setup.html">here</a>. The section below will highlight and summarize a few key pieces of information from it.</p>
+<div id="why-use-them" class="section level3">
+<h3>
+<span class="header-section-number">17.1.1</span> Why use them?<a class="anchor" aria-label="anchor" href="#why-use-them"><i class="fas fa-link"></i></a>
+</h3>
+<blockquote>
+<p>“There’s nothing more frustrating than coming back to a project months (sometimes years) later and have to spend days (or weeks) figuring out where everything is, what you did and why you did it. A well documented project that has a consistent and logical structure increases the liklihood that you can pick up where you left off with minimal fuss no matter how much time has passed. In addition, it’s much easier to write code to automate tasks when files are well organised and are sensibly named. This is even more relevant nowadays as it’s never been easier to collect vasts amount of data which can be saved across 1000’s or even 100,000’s of separate data files. Lastly, having a well organised project reduces the risk of introducing bugs or errors into your workflow and if they do occur (which inevitably they will at some point), it makes it easier to track down these errors and deal with them efficiently.”</p>
+</blockquote>
+</div>
+<div id="what-are-they" class="section level3">
+<h3>
+<span class="header-section-number">17.1.2</span> What are they?<a class="anchor" aria-label="anchor" href="#what-are-they"><i class="fas fa-link"></i></a>
+</h3>
+<blockquote>
+<p>“An RStudio Project keeps all of your R scripts, R markdown documents, R functions and data together in one place. The nice thing about RStudio Projects is that each project has its own directory, workspace, history and source documents so different analyses that you are working on are kept completely separate from each other. This means that you can have multiple instances of RStudio open at the same time (if that’s your thing) or you can switch very easily between projects without fear of them interfering with each other.”</p>
+</blockquote>
+</div>
+<div id="how-do-i-make-one" class="section level3">
+<h3>
+<span class="header-section-number">17.1.3</span> How do I make one?<a class="anchor" aria-label="anchor" href="#how-do-i-make-one"><i class="fas fa-link"></i></a>
+</h3>
+<p>You create a new project by going to <em>File -&gt; New Project -&gt; New Directory</em>.</p>
+<div class="inline-figure"><img src="figures/rprojects.png" style="width:100.0%"></div>
+<blockquote>
+<p>Once your new project has been created you will now have a new folder on your computer that contains an RStudio project file (which ends in <code>.Rproj</code>). This <code>.Rproj</code> file contains various project options and can also be used as a shortcut for opening the project directly from the file system (just double click on it). You can then access all the related files directly in RStudio under the ‘Files’ tab (see below).</p>
+</blockquote>
+<div class="inline-figure"><img src="figures/rprojectfiles.png" style="width:100.0%"></div>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE #2**</div> -->
+<!--   <div class="panel-body">Decide where you want your R and class files to live on your computer. Create a new project called "my_first_project" in that location. Open the .Rproj file and create and save a new RMarkdown file titled "notes".</div> -->
+<!-- </div> -->
+</div>
+<div id="file-paths-1" class="section level3">
+<h3>
+<span class="header-section-number">17.1.4</span> File Paths<a class="anchor" aria-label="anchor" href="#file-paths-1"><i class="fas fa-link"></i></a>
+</h3>
+<p>Recall from an earlier lesson that a file’s path specifies where that file is located. It is like a map for your computer, giving it instructions on where to go to look for that specific file.</p>
+<p>You do not have to specify the full file path if you change R’s current <em>working directory</em>. Setting your working directory is basically telling R, “I’m going to be working in this specific place. So if you need to look for any files, they will be <strong>here</strong>. Also, if you create any files, create them <strong>here</strong>.”</p>
+<p>This can cause some issues though. If a file path tells your computer where to look for a file, and you set your working directory to a folder in a specific place on your computer, then that code would not work if someone else tried to run it. Their computer could not access yours, and likely has a totally different file structure!</p>
+<p>One of the best features of RStudio Projects is that it helps solve this issue! Instead of using <strong>absolute</strong> file paths like this (where it is fully specified), it will let you use <strong>relative</strong> file paths. In a <strong>relative</strong> file path, all file paths are <em>relative</em> to a particular directory. When you use an RStudio Project, upon opening a <strong>.Rproj</strong> file, it will automatically set your working directory to the location of that file! This way, if you want to share your project and analysis files with someone else, you just save and send the entire project directory. When they open it on their computer, the relative path will be appropriately set!</p>
+<div id="here" class="section level4">
+<h4>
+<span class="header-section-number">17.1.4.1</span> Here()<a class="anchor" aria-label="anchor" href="#here"><i class="fas fa-link"></i></a>
+</h4>
+<p>Kirill Müller has created an extremely useful R tool called <code>here</code>.</p>
+<img src="figures/here.png" style="width:100.0%"><p style="font-size:6pt">
+Artwork by <span class="citation">Horst (2022)</span>
+</p>
+<p>The functions within the <code>here</code> package create file paths relative to the top-level directory (aka the <strong>root</strong>). The top-level of the current project can be printed any time you call <code>here()</code>. For example, when I run <code>here()</code>, it will print out: <code>"/Users/ethan/Documents/Psyc193L"</code>, because my R Project folder is called <strong>“Psyc193L”</strong> and it’s in my <strong>Documents</strong> folder.</p>
+<p>You can also easily build a path relative to the top-level directory! Say for example that you made a “data” folder in your R Project directory (more about directory organization later), and put <strong>“dataset.csv”</strong> in there. You can use <code>here()</code> to get full relative file path like so:</p>
+<p><code>here("data", "dataset.csv")</code></p>
+<p>The output from this would be, <code>"/Users/ethan/Documents/Psyc193L/data/dataset.csv"</code></p>
+<p>These relative paths work regardless of where the associated file lives inside your project directory, and will work for anyone who downloads your project and runs that code on their own computer!</p>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE #3**</div> -->
+<!--   <div class="panel-body">Use `here()` to find the file path to your R Project and copy/paste it to the cell below. What would the `here()` command be to create the file path do your "notes" document? Include that below as well!</div> -->
+<!-- </div> -->
+</div>
+</div>
+<div id="introduction-file" class="section level3">
+<h3>
+<span class="header-section-number">17.1.5</span> Introduction File<a class="anchor" aria-label="anchor" href="#introduction-file"><i class="fas fa-link"></i></a>
+</h3>
+<p>It is also a good practice to create a specific introduction file in the root of each project. Explain how to navigate the directory, where everything is, a synopsis of what the project/assignment is about, any of the materials needed to run the code you have, etc. Future you will thank you for doing this!</p>
+</div>
+<div id="tldr" class="section level3">
+<h3>
+<span class="header-section-number">17.1.6</span> TL;DR<a class="anchor" aria-label="anchor" href="#tldr"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li><p>Create an RStudio Project for every data analysis project or assignment</p></li>
+<li><p>Keep all the files related to that project in that directory</p></li>
+<li><p>Save your outputs (plots and cleaned data) there as well</p></li>
+<li>
+<p>Only ever use relative paths, not absolute paths</p>
+<ul>
+<li>Specifically, use <code>here()</code>
+</li>
+</ul>
+</li>
+<li><p>Create an introduction file for the project folder</p></li>
+</ul>
+</div>
+</div>
+<div id="literate-programming" class="section level2">
+<h2>
+<span class="header-section-number">17.2</span> Literate Programming<a class="anchor" aria-label="anchor" href="#literate-programming"><i class="fas fa-link"></i></a>
+</h2>
+<p>Given the goals of reproducibility, one of the best things you can do is make sure your code is easy to understand and replicate. To do this, you should establish the routine of <strong>literate programming</strong>.</p>
+<p>Literate programming was originally proposed by Donald Knuth in 1984.</p>
+<blockquote>
+<p>“Let us change our traditional attitude to the construction of programs: Instead of imagining that our main task is to instruct a computer what to do, let us concentrate rather on explaining to humans what we want the computer to do.”<br>
+— Donald E. Knuth, Literate Programming, 1984</p>
+</blockquote>
+<p>In practice literate programming is a technique for mixing written text and chunks of code together, whereby you will annotate your code step-wise and explain what each part of your code is doing via comments throughout. This practice provides a much easier documentation of your code and the creation of written reports of your code and the results of your code.</p>
+<div id="markdown" class="section level3">
+<h3>
+<span class="header-section-number">17.2.1</span> Markdown<a class="anchor" aria-label="anchor" href="#markdown"><i class="fas fa-link"></i></a>
+</h3>
+<p>R Markdown files were <a href="why-use-r.html#file-types">previously</a> introduced as the type of file you will mainly be using. Not only do they allow the combination of R code and text, but they also incorporate markdown syntax (which you can think of as its own mini language), HTML, and CSS! Thus, R Markdown files afford a powerful combination of languages to help create literate programming documents with easy to understand and reproduce analyses.</p>
+<p>However, the true power comes from the ability to take markdown files and generate many different kinds of documents. When combined with some other packages (e.g., <code>knitr</code>), R Markdown files can be turned into:</p>
+<ul>
+<li>PDFs</li>
+<li>Microsoft Word documents</li>
+<li>Slideshows (like powerpoint or keynote)</li>
+<li>Web pages</li>
+</ul>
+<p>In fact, this course website, all the course content, my personal website (and all parts of it), were all created in RStudio and written in a lot of R Markdown files!</p>
+<div id="syntax" class="section level4">
+<h4>
+<span class="header-section-number">17.2.1.1</span> Syntax<a class="anchor" aria-label="anchor" href="#syntax"><i class="fas fa-link"></i></a>
+</h4>
+<p>R Markdown syntax could be a whole course on its own, but there are a couple fundamental things worth knowing:</p>
+<p>You can insert code chunks with the keyboard shortcut: ctrl+option+i on OSX or alt+i on Windows</p>
+<div class="sourceCode" id="cb359"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">## R code here</span></span></code></pre></div>
+<p>You should always name your chunks (part of literate programming), and there are a number of options you can set for them (that are chunk specific). Some include:</p>
+<ul>
+<li>Figure height and width</li>
+<li>Whether to <strong>echo</strong> (show) or <strong>eval</strong>uate (run) that code chunk in the final document (debugging tip! If you have a problem code chunk, set eval = <code>FALSE</code> so you can still knit, but leave yourself a note to fix it later!)</li>
+<li>Whether to show <strong>warnings</strong> and <strong>messages</strong>
+</li>
+</ul>
+<p>You can see the full list of options <a href="yihui.name/knitr/options/">here</a>.</p>
+<p>You can also write R code inline, or, without a chunk. You can do this by writing a set of backticks, r (lowercase) after the first, then a space and then your code. For example:</p>
+<p>The mean is <code>`r mean(x)`</code>.</p>
+<p>When this document is generated, the R code will be evaluated and it will look as though “The mean is 14.” (or whatever the mean of <code>x</code> happens to be) was written!</p>
+<!-- <div class="panel panel-success"> -->
+<!--   <div class="panel-heading">**EXERCISE #4**</div> -->
+<!--   <div class="panel-body">Create a new code chunk in your R Markdown file. Name the code chunk "exercise 4", and copy/paste your file path from above.</div> -->
+<!-- </div> -->
+</div>
+</div>
+</div>
+<div id="document-organization" class="section level2">
+<h2>
+<span class="header-section-number">17.3</span> Document Organization<a class="anchor" aria-label="anchor" href="#document-organization"><i class="fas fa-link"></i></a>
+</h2>
+<p>You want to organize your files and directory structure in a way that is easy to navigate. You may come back to files months or years later, and you want to make sure you will understand what you were doing and what files are where. Not to mention if you make your project files open and accessible to the public!</p>
+<p>Some things that can help with this include:</p>
+<ul>
+<li><p>Separate your data cleaning and analysis codes. R Markdown files are helpful for this because you can abide by the separation of concerns principle and label your code sections.</p></li>
+<li><p>Make text files for data if needed – describing where it came from, coding the variables if needed, etc.</p></li>
+<li><p><strong>Never</strong> mess with your raw data (and keep backups). Try to touch it directly as little as possible.</p></li>
+<li><p>Use version control. Version control are systems that save changes as separate files. Using a system like git is helpful, and prevents you from having tons and tons of older versions of files on your computer.</p></li>
+</ul>
+<p>As far as your markdown files themselves…</p>
+<ul>
+<li>All the needed packages should be loaded at the top of your document</li>
+<li>No package installations should be called/executed</li>
+<li>No warnings/messages should be printed when you load packages (turn on the options to hide these)</li>
+<li>Markdown formatting should be used to make your file easier to follow</li>
+<li>You should use relative file paths only, making use of the <code>here</code> package</li>
+<li>There should be no code chunks with errors!</li>
+<li>
+<strong>NEVER EVER</strong> print out an entire dataset (&gt; 10 rows). This is <em>never</em> necessary.</li>
+<li>It is good to have a high text-to-code ratio!</li>
+</ul>
+</div>
+<div id="visual-summary" class="section level2">
+<h2>
+<span class="header-section-number">17.4</span> Visual Summary<a class="anchor" aria-label="anchor" href="#visual-summary"><i class="fas fa-link"></i></a>
+</h2>
+<img src="figures/workflow.jpg" style="width:100.0%"><p style="font-size:6pt">
+Artwork by <span class="citation">Horst (2022)</span>
+</p>
+
+<div id="refs" class="references">
+<div id="ref-allison_horst">
+<p>Horst, A. (2022). <a href="https://github.com/allisonhorst/stats-illustrations/">https://github.com/allisonhorst/stats-illustrations/</a></p>
+</div>
+</div>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="data-transformation.html"><span class="header-section-number">16</span> Data Transformation</a></div>
+<div class="empty"></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#projects-and-organization"><span class="header-section-number">17</span> Projects and Organization</a></li>
+<li>
+<a class="nav-link" href="#r-projects"><span class="header-section-number">17.1</span> R Projects</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#why-use-them"><span class="header-section-number">17.1.1</span> Why use them?</a></li>
+<li><a class="nav-link" href="#what-are-they"><span class="header-section-number">17.1.2</span> What are they?</a></li>
+<li><a class="nav-link" href="#how-do-i-make-one"><span class="header-section-number">17.1.3</span> How do I make one?</a></li>
+<li><a class="nav-link" href="#file-paths-1"><span class="header-section-number">17.1.4</span> File Paths</a></li>
+<li><a class="nav-link" href="#introduction-file"><span class="header-section-number">17.1.5</span> Introduction File</a></li>
+<li><a class="nav-link" href="#tldr"><span class="header-section-number">17.1.6</span> TL;DR</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#literate-programming"><span class="header-section-number">17.2</span> Literate Programming</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#markdown"><span class="header-section-number">17.2.1</span> Markdown</a></li></ul>
+</li>
+<li><a class="nav-link" href="#document-organization"><span class="header-section-number">17.3</span> Document Organization</a></li>
+<li><a class="nav-link" href="#visual-summary"><span class="header-section-number">17.4</span> Visual Summary</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>PSYC193L</strong>" was written by Ethan Hurwitz. It was last built on 2022-08-22.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>
