@@ -21,7 +21,7 @@ Something that is strongly encouraged is creating a new R Project for every proj
 
 ### How do I make one?
 
-You create a new project by going to *file -> new project*.
+You create a new project by going to *File -> New Project -> New Directory*.
 
 ![](figures/rprojects.png){width=100%}
 
@@ -41,7 +41,7 @@ Recall from an earlier lesson that a file's path specifies where that file is lo
 
 You do not have to specify the full file path if you change R's current *working directory*. Setting your working directory is basically telling R, "I'm going to be working in this specific place. So if you need to look for any files, they will be **here**. Also, if you create any files, create them **here**."
 
-This can cause some issues though. If a file path tells your computer where to look for a file, and you set it to a folder in a specific place on your computer, then that code would not work if someone else tried to run it. Their computer could not access yours, and likely has a totally different file structure!
+This can cause some issues though. If a file path tells your computer where to look for a file, and you set your working directory to a folder in a specific place on your computer, then that code would not work if someone else tried to run it. Their computer could not access yours, and likely has a totally different file structure!
 
 One of the best features of RStudio Projects is that it helps solve this issue! Instead of using **absolute** file paths like this (where it is fully specified), it will let you use **relative** file paths. In a **relative** file path, all file paths are *relative* to a particular directory. When you use an RStudio Project, upon opening a **.Rproj** file, it will automatically set your working directory to the location of that file! This way, if you want to share your project and analysis files with someone else, you just save and send the entire project directory. When they open it on their computer, the relative path will be appropriately set!
 
@@ -52,7 +52,7 @@ Kirill Müller has created an extremely useful R tool called `here`.
 ![](figures/here.png){width=100%}
 <p style="font-size:6pt">Artwork by @allison_horst</p>
 
-The functions within the `here` package create paths relative to the top-level directory (aka the **root**). The top-level of the current project can be printed any time you call `here()`. For example, when I run `here()`, it will print out: `"/Users/ethan/Documents/Psyc193L"`, because my R Project folder is called **"Psyc193L"** and it's in my **Documents** folder.
+The functions within the `here` package create file paths relative to the top-level directory (aka the **root**). The top-level of the current project can be printed any time you call `here()`. For example, when I run `here()`, it will print out: `"/Users/ethan/Documents/Psyc193L"`, because my R Project folder is called **"Psyc193L"** and it's in my **Documents** folder.
 
 You can also easily build a path relative to the top-level directory! Say for example that you made a "data" folder in your R Project directory (more about directory organization later), and put **"dataset.csv"** in there. You can use `here()` to get full relative file path like so:
 

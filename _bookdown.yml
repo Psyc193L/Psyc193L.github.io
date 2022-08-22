@@ -17,9 +17,9 @@ rmd_files:
 - Manip1.Rmd
 - Manip2.Rmd
 - Manip3.Rmd
-# - Manip4.Rmd
-# - DataTransformation.Rmd
-# - Projects.Rmd
+- Manip4.Rmd
+- DataTransformation.Rmd
+- Projects.Rmd
 language:
   ui:
     chapter_name: "Chapter "
