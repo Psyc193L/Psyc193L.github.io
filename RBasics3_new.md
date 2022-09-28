@@ -229,7 +229,7 @@ You should always name your chunks (part of literate programming), and there are
 * Whether to **echo** (show) or **eval**uate (run) that code chunk in the final document (debugging tip! If you have a problem code chunk, set eval = `FALSE` so you can still knit, but leave yourself a note to fix it later!)
 * Whether to show **warnings** and **messages**
 
-You can see the full list of options [here](yihui.name/knitr/options/).
+You can see the full list of options [here](https://yihui.org/knitr/options/#chunk-options).
 
 You can also write R code inline, or, without a chunk. You can do this by writing a set of backticks, r (lowercase) after the first, then a space and then your code. For example:
 
@@ -462,7 +462,7 @@ If you were to express this process as a set of nested functions, it would look 
 eat(slice(cool(bake(put(pour(mix(ingredients), into = baking_pan), into = oven), time = 30), duration = 20), pieces = 6, 1))
 ```
 
-Nesting a dataframe inside a function is hard to read because it forces you to read the sequence of functions inside out. You have to start in the innermost parentheses, and then work your way out/back.
+Nesting functions like this (functions within functions) is hard to read because it forces you to read the sequence of functions inside out. You have to start in the innermost parentheses, and then work your way out/back.
 
 Even if you were to apply your style and syntax guidelines here:
 

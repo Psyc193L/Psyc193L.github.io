@@ -1,7 +1,7 @@
 --- 
 title: "PSYC193L"
 author: "Ethan Hurwitz"
-date: "2022-09-23"
+date: "2022-09-28"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
@@ -23,11 +23,9 @@ Fall 2022
 
 Warren Lecture Hall room 2113 (WLH2113)
 
-*Lecture:* M/W 3:00pm-3:50pm
+*Lecture:* M/W 3:00pm-3:50pm (in-person)
 
-*Lab:* F 3:00pm-3:50pm
-
-https://ucsd.zoom.us/j/94054557839
+*Lab:* F 3:00pm-3:50pm (on zoom [https://ucsd.zoom.us/j/94054557839](https://ucsd.zoom.us/j/94054557839))
 
 ## Course Description
 
@@ -74,7 +72,7 @@ Name: [Ethan Hurwitz](https://www.ethanhurwitz.com/)
 
 Email: ehurwitz@ucsd.edu
 
-Office Hours: TBD
+Office Hours: By Appointment (contact me to schedule)
 
 **Teaching Assistant**
 
@@ -213,7 +211,7 @@ Again, you will be given optional datasets to choose from later on. You will <b>
 <!-- Graded assignments will be downloaded and submitted on Canvas. For each assignment, you will submit a knit .html document and the source .Rmd document (more on this later). All assignments are due the Monday after they are introduced. i.e., anything released in Week 1 is due by Monday of Week 2, etc. -->
 
 <!-- Regular Term Version:-->
-Graded assignments will be downloaded and submitted on Canvas. For each assignment, you will submit a knit .html document and the source .Rmd document (more on this later). Submissions that do not include BOTH file types will be considered incomplete after week 1. <b>All assignments are due by Sunday at 11:59pm the week they are introduced. i.e., anything released on Monday of Week 1 is due by that Sunday at 11:59pm (before Monday of Week 2), etc.</b>
+Graded assignments will be downloaded and submitted on Canvas. For each assignment, you will submit a knit .html document and the source .Rmd document (more on this later). Submissions that do not include BOTH file types will be considered incomplete after week 1. <b>All assignments are due by Sunday at 11:59pm the week they are released i.e., anything released on Monday of Week 1 is due by that Sunday at 11:59pm (before Monday of Week 2), etc.</b> If you submit the Exercise assignment(s) for a given week by Wednesday at 11:59pm of that week, it will be graded with feedback by that Saturday at the latest. Thus, you will be able to use that feedback for the Practice Problem set on the same topic and potentially avoid making repeat errors across assignments. This is not required, and assignments will only be considered late if they are submitted after the Sunday at 11:59pm deadline.
 
 This course is designed to facilitate your *engagement* and *effort* with the material. What is going to help you learn and develop R skills the most is to actually **practice doing** coding... a lot. It is thus, in my view, counter-productive to have a single heavily weighted assignment (exam) or for there to be high amounts of pressure to find some singularly correct answer to every problem.
 
