@@ -81,7 +81,7 @@ Visualizations are composed of different geometric shapes, lines, edges, contour
 
 The following graphs will serve as examples used throughout.
 
-<p class="text-info"> **<u>Note:</u> these are not great visualizations, but will be useful to illustrate some different concepts.**</p>
+<p class="text-info"> **<u>Note:</u> these are not great visualizations, but will be useful to illustrate some different concepts. In particular, a line plot should generally ONLY be used when there is discrete/ordered data on the x-axis. It is used here with 2 continuous variables just to help demonstrate different color principles.**</p>
 
 ```{r}
 plot_bar = penguins %>%
