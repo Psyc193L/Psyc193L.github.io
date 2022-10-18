@@ -648,7 +648,7 @@ specplot(sequential_hcl(n = 7, palette = "Lajolla"))
 
 It is outside the scope of this course to get more into design principles in general and how they can be applied to visualizations, but there are several good resources for this. Here are a few:
 
-* [Visualization Principles Cheatsheet (This is worth saving!!!)](figures/visualization_principles.pdf)
+* [Visualization Principles Cheatsheet (This is worth saving!!!)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/Psyc193L/Psyc193L.github.io/main/figures/visualization-principles.pdf)
 * [Kieran Healy's](https://socviz.co/lookatdata.html#lookatdata) book on data visualization, particularly chapter 1, covers a lot of different design principles and how they can be applied to graphs.
 * [Claus Wilke's](https://clauswilke.com/dataviz/index.html) book is also great, particularly Part II. 
 * [General Do's and Do Not's](https://guides.lib.uci.edu/datavis/do)
