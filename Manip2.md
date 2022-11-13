@@ -22,6 +22,8 @@ library(tidyverse) # Load tidyverse packages
 
 When wrangling your data, you will be performing a series of actions to clean and prepare it for whatever task you have. Whether you are creating visualizations, performing statistical analyses, or doing anything else, you will likely need to change your data object in some way. Below, several of the most fundamental and basic data manipulation functions will be outlined. You will notice that the function names are all verbs, denoting that they are performing some action on the data object.
 
+You may find it helpful to review the [section](#pipes) on pipes before moving forward!
+
 ## Arrange
 
 `arrange()` orders the rows of a data frame by the values of selected columns. By default this will be ascending, where the lowest values are in the first few rows.
