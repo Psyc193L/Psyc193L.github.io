@@ -17,8 +17,8 @@ rmd_files:
 - Manip1.Rmd
 - DataTransformation.Rmd
 - Manip2.Rmd
-# - Manip3.Rmd
-# - Manip4.Rmd
+- Manip3.Rmd
+- Manip4.Rmd
 # - DataTransformation.Rmd
 # - Projects.Rmd
 language:
