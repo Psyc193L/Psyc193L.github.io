@@ -118,7 +118,7 @@ ifelse(4 < x, "The first condition evaluated true.",
               "Neither the first or second condition evaluated true."))
 #> [1] "The first condition evaluated true."
 x
-#> [1] 6
+#> [1] 5
 ```
 
 <!-- <div class="panel panel-success"> -->
@@ -142,7 +142,7 @@ case_when(
 )
 #> [1] "The first condition evaluated true."
 x
-#> [1] 2
+#> [1] 1
 ```
 
 <!-- <div class="panel panel-success"> -->
