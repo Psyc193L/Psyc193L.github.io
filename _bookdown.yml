@@ -24,6 +24,7 @@ rmd_files:
 # - Projects.Rmd
 
 # 111A Notes:
+- index.Rmd
 - RBasics1.Rmd
 - RBasics2.Rmd
 - RBasics3_new.Rmd
