@@ -4,21 +4,23 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Chapter 6 Basic Wrangling | psyc193l.github.io</title>
+<title>Chapter 7 Basic Wrangling | PSYC193L</title>
+<meta name="author" content="Ethan Hurwitz">
+<meta name="description" content="library(tidyverse) # Load tidyverse packages  Artwork by Horst (2022)  Throughout this page, explanations for the code above will appear in blocks like this one! When wrangling your data, you will...">
 <meta name="generator" content="bookdown 0.24 with bs4_book()">
-<meta property="og:title" content="Chapter 6 Basic Wrangling | psyc193l.github.io">
+<meta property="og:title" content="Chapter 7 Basic Wrangling | PSYC193L">
 <meta property="og:type" content="book">
+<meta property="og:url" content="https://psyc193l.github.io/basic-wrangling.html">
+<meta property="og:description" content="library(tidyverse) # Load tidyverse packages  Artwork by Horst (2022)  Throughout this page, explanations for the code above will appear in blocks like this one! When wrangling your data, you will...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chapter 6 Basic Wrangling | psyc193l.github.io">
+<meta name="twitter:title" content="Chapter 7 Basic Wrangling | PSYC193L">
+<meta name="twitter:description" content="library(tidyverse) # Load tidyverse packages  Artwork by Horst (2022)  Throughout this page, explanations for the code above will appear in blocks like this one! When wrangling your data, you will...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.2/transition.js"></script><script src="libs/bs3compat-0.4.2/tabs.js"></script><script src="libs/bs3compat-0.4.2/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><link rel="stylesheet" href="bs4_style.css">
 <link rel="stylesheet" href="style.css">
-<meta name="description" content="library(tidyverse) # Load tidyverse packages  Artwork by @allison_horst  Throughout this page, explanations for the code above will appear in blocks like this one! When wrangling your data, you...">
-<meta property="og:description" content="library(tidyverse) # Load tidyverse packages  Artwork by @allison_horst  Throughout this page, explanations for the code above will appear in blocks like this one! When wrangling your data, you...">
-<meta name="twitter:description" content="library(tidyverse) # Load tidyverse packages  Artwork by @allison_horst  Throughout this page, explanations for the code above will appear in blocks like this one! When wrangling your data, you...">
 </head>
 <body data-spy="scroll" data-target="#toc">
 
@@ -28,7 +30,7 @@
 
     <div class="d-flex align-items-start justify-content-between">
       <h1>
-        <a href="index.html" title=""></a>
+        <a href="index.html" title="">PSYC193L</a>
       </h1>
       <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
     </div>
@@ -40,20 +42,21 @@
 
       <nav aria-label="Table of contents"><h2>Table of contents</h2>
         <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"><span class="header-section-number">1</span> Home</a></li>
 <li class="book-part">R Basics</li>
-<li><a class="" href="why-use-r.html"><span class="header-section-number">1</span> Why use R?</a></li>
-<li><a class="" href="r-coding-basics.html"><span class="header-section-number">2</span> R Coding Basics</a></li>
-<li><a class="" href="using-r-effectively.html"><span class="header-section-number">3</span> Using R Effectively</a></li>
+<li><a class="" href="why-use-r.html"><span class="header-section-number">2</span> Why use R?</a></li>
+<li><a class="" href="r-coding-basics.html"><span class="header-section-number">3</span> R Coding Basics</a></li>
+<li><a class="" href="using-r-effectively.html"><span class="header-section-number">4</span> Using R Effectively</a></li>
 <li class="book-part">Data Manipulation</li>
-<li><a class="" href="control-flow.html"><span class="header-section-number">4</span> Control Flow</a></li>
-<li><a class="" href="tidy-data-and-tidyverse.html"><span class="header-section-number">5</span> Tidy Data and Tidyverse</a></li>
-<li><a class="active" href="basic-wrangling.html"><span class="header-section-number">6</span> Basic Wrangling</a></li>
-<li><a class="" href="summarizing-data.html"><span class="header-section-number">7</span> Summarizing Data</a></li>
-<li><a class="" href="text-cleaning.html"><span class="header-section-number">8</span> Text Cleaning</a></li>
+<li><a class="" href="control-flow.html"><span class="header-section-number">5</span> Control Flow</a></li>
+<li><a class="" href="tidy-data-and-tidyverse.html"><span class="header-section-number">6</span> Tidy Data and Tidyverse</a></li>
+<li><a class="active" href="basic-wrangling.html"><span class="header-section-number">7</span> Basic Wrangling</a></li>
+<li><a class="" href="summarizing-data.html"><span class="header-section-number">8</span> Summarizing Data</a></li>
+<li><a class="" href="text-cleaning.html"><span class="header-section-number">9</span> Text Cleaning</a></li>
 <li class="book-part">Visualizations</li>
-<li><a class="" href="intro-to-ggplot2.html"><span class="header-section-number">9</span> Intro to ggplot2</a></li>
-<li><a class="" href="aesthetics.html"><span class="header-section-number">10</span> Aesthetics</a></li>
-<li><a class="" href="different-geoms-and-when-to-use-them.html"><span class="header-section-number">11</span> Different Geoms and When To Use Them</a></li>
+<li><a class="" href="intro-to-ggplot2.html"><span class="header-section-number">10</span> Intro to ggplot2</a></li>
+<li><a class="" href="aesthetics.html"><span class="header-section-number">11</span> Aesthetics</a></li>
+<li><a class="" href="different-geoms-and-when-to-use-them.html"><span class="header-section-number">12</span> Different Geoms and When To Use Them</a></li>
 </ul>
 
         <div class="book-extra">
@@ -61,24 +64,24 @@
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="basic-wrangling" class="section level1" number="6">
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="basic-wrangling" class="section level1" number="7">
 <h1>
-<span class="header-section-number">6</span> Basic Wrangling<a class="anchor" aria-label="anchor" href="#basic-wrangling"><i class="fas fa-link"></i></a>
+<span class="header-section-number">7</span> Basic Wrangling<a class="anchor" aria-label="anchor" href="#basic-wrangling"><i class="fas fa-link"></i></a>
 </h1>
 <div class="sourceCode" id="cb56"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span> <span class="co"># Load tidyverse packages</span></span></code></pre></div>
 <!-- <a href="exercises/Exercise_Manip2.Rmd" download>Exercise Sheet</a> -->
 <img src="figures/data_cowboy.png" style="width:100.0%"><p style="font-size:6pt">
-Artwork by <span class="citation">@allison_horst</span>
+Artwork by <span class="citation">Horst (2022)</span>
 </p>
 <div class="rmdimportant">
 <p><strong>Throughout this page, explanations for the code above will appear in blocks like this one!</strong></p>
 </div>
 <p>When wrangling your data, you will be performing a series of actions to clean and prepare it for whatever task you have. Whether you are creating visualizations, performing statistical analyses, or doing anything else, you will likely need to change your data object in some way. Below, several of the most fundamental and basic data manipulation functions will be outlined. You will notice that the function names are all verbs, denoting that they are performing some action on the data object.</p>
 <p>You may find it helpful to review the <a href="using-r-effectively.html#pipes">section</a> on pipes before moving forward!</p>
-<div id="arrange" class="section level2" number="6.1">
+<div id="arrange" class="section level2" number="7.1">
 <h2>
-<span class="header-section-number">6.1</span> Arrange<a class="anchor" aria-label="anchor" href="#arrange"><i class="fas fa-link"></i></a>
+<span class="header-section-number">7.1</span> Arrange<a class="anchor" aria-label="anchor" href="#arrange"><i class="fas fa-link"></i></a>
 </h2>
 <p><code><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange()</a></code> orders the rows of a data frame by the values of selected columns. By default this will be ascending, where the lowest values are in the first few rows.</p>
 <div class="sourceCode" id="cb57"><pre class="downlit sourceCode r">
@@ -509,12 +512,12 @@ Maserati Bora
 <!--   3. What is the largest animal recorded in this dataset?</div> -->
 <!-- </div> -->
 </div>
-<div id="rename" class="section level2" number="6.2">
+<div id="rename" class="section level2" number="7.2">
 <h2>
-<span class="header-section-number">6.2</span> Rename<a class="anchor" aria-label="anchor" href="#rename"><i class="fas fa-link"></i></a>
+<span class="header-section-number">7.2</span> Rename<a class="anchor" aria-label="anchor" href="#rename"><i class="fas fa-link"></i></a>
 </h2>
 <img src="figures/dplyr_rename_new.jpeg" style="width:100.0%"><p style="font-size:6pt">
-Artwork by <span class="citation">@allison_horst</span>
+Artwork by <span class="citation">Horst (2022)</span>
 </p>
 <p>Columns in a dataframe can be named poorly in several ways. They could have a name that is not meaningful or interpretable, they could have a name that is too long, or they could have a name that includes special characters or is otherwise difficult to work with (e.g., including spaces).</p>
 <p>You can rename columns by using the <code><a href="https://dplyr.tidyverse.org/reference/rename.html">rename()</a></code> function. This function takes the following form:</p>
@@ -549,9 +552,9 @@ Artwork by <span class="citation">@allison_horst</span>
 <!--   <div class="panel-body"> -->
 <!--   Both of the weight columns in this dataset are measuring in kilograms. Use `rename()` to give those variables more informative names.</div> -->
 <!-- </div> -->
-<div id="saving-changes" class="section level3" number="6.2.1">
+<div id="saving-changes" class="section level3" number="7.2.1">
 <h3>
-<span class="header-section-number">6.2.1</span> Saving Changes<a class="anchor" aria-label="anchor" href="#saving-changes"><i class="fas fa-link"></i></a>
+<span class="header-section-number">7.2.1</span> Saving Changes<a class="anchor" aria-label="anchor" href="#saving-changes"><i class="fas fa-link"></i></a>
 </h3>
 <p>The code above using <code><a href="https://dplyr.tidyverse.org/reference/rename.html">rename()</a></code> changed some of the variable names in the <code>mtcars2</code> dataframe. However, if you look at the <code>mtcars2</code> dataframe…</p>
 <div class="sourceCode" id="cb60"><pre class="downlit sourceCode r">
@@ -591,12 +594,12 @@ Artwork by <span class="citation">@allison_horst</span>
 <p>A good rule of thumb is that if you need to use the object in its current state again or make significant changes to it, particularly if you change its structure, you should create a new object (e.g., mtcars3) rather than overwrite/update the existing one.</p>
 </div>
 </div>
-<div id="clean-names" class="section level2" number="6.3">
+<div id="clean-names" class="section level2" number="7.3">
 <h2>
-<span class="header-section-number">6.3</span> Clean Names<a class="anchor" aria-label="anchor" href="#clean-names"><i class="fas fa-link"></i></a>
+<span class="header-section-number">7.3</span> Clean Names<a class="anchor" aria-label="anchor" href="#clean-names"><i class="fas fa-link"></i></a>
 </h2>
 <img src="figures/janitor_clean_names.png" style="width:100.0%"><p style="font-size:6pt">
-Artwork by <span class="citation">@allison_horst</span>
+Artwork by <span class="citation">Horst (2022)</span>
 </p>
 <p>The <code>clean_names()</code> function from the <code>janitor</code> package is a powerful tool to change all your column names at once to a specific naming convention. This can be used to easily convert all variable names to one of the naming conventions mentioned in the <a href="using-r-effectively.html#naming-convention">Coding Best Practices</a> section:</p>
 <ul>
@@ -611,13 +614,13 @@ Artwork by <span class="citation">@allison_horst</span>
 <p><strong>Different packages may use the same variable names for the functions they contain. When you load a package with <code><a href="https://rdrr.io/r/base/library.html">library()</a></code>, that may overwrite some functions loaded by other packages. Thus, you may want to use a function from a particular package, but not load the entire package contents and override other functions!</strong></p>
 </div>
 </div>
-<div id="relocate" class="section level2" number="6.4">
+<div id="relocate" class="section level2" number="7.4">
 <h2>
-<span class="header-section-number">6.4</span> Relocate<a class="anchor" aria-label="anchor" href="#relocate"><i class="fas fa-link"></i></a>
+<span class="header-section-number">7.4</span> Relocate<a class="anchor" aria-label="anchor" href="#relocate"><i class="fas fa-link"></i></a>
 </h2>
 <p><code><a href="https://dplyr.tidyverse.org/reference/relocate.html">relocate()</a></code> can be used to reorder the columns in your dataframe. With <code><a href="https://dplyr.tidyverse.org/reference/relocate.html">relocate()</a></code>, you specify which column(s) you want to move, and what they should come <em>.before</em> or <em>.after</em>.</p>
 <img src="figures/dplyr_relocate.png" style="width:100.0%"><p style="font-size:6pt">
-Artwork by <span class="citation">@allison_horst</span>
+Artwork by <span class="citation">Horst (2022)</span>
 </p>
 <div class="sourceCode" id="cb64"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">mtcars2</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
@@ -1457,9 +1460,9 @@ Volvo 142E
 </tr></tbody></table></div>
 <!-- <div class="panel panel-success"> --><!--   <div class="panel-heading">**EXERCISE 3**</div> --><!--   <div class="panel-body"> --><!--   1. Move the `order` column to be positioned before the `vore` column.<br> --><!--   2. Move the `sleep_total` column to be positioned after the `sleep_cycle` column.<br> --><!--   3. Move both wt columns to be positioned after `genus`.</div> --><!-- </div> -->
 </div>
-<div id="select" class="section level2" number="6.5">
+<div id="select" class="section level2" number="7.5">
 <h2>
-<span class="header-section-number">6.5</span> Select<a class="anchor" aria-label="anchor" href="#select"><i class="fas fa-link"></i></a>
+<span class="header-section-number">7.5</span> Select<a class="anchor" aria-label="anchor" href="#select"><i class="fas fa-link"></i></a>
 </h2>
 <!-- select(c(columns_of_interest)) - returns the selected columns. You can select by actively choosing which columns you want, or choosing which columns you DON’T want (negate with a `!` in front of the vector of column names) -->
 <p>Above, you used <code><a href="https://rdrr.io/r/utils/head.html">head()</a></code> when you wanted to output a preview of your dataframe. There will be many times like this when you want to <strong>subset</strong> your data (cutting it to show only subsets of it – which contain or exclude specific variables/observations).</p>
@@ -2484,14 +2487,14 @@ Volvo 142E
 <span><span class="co">#&gt; 7 2.78     Volvo 142E  21   4  121 109    4</span></span></code></pre></div>
 <p>The <code><a href="https://tidyselect.r-lib.org/reference/everything.html">everything()</a></code> function selects… everything! It will select all the variables in a df. So this is first selecting the <code>wt</code> variable, and then everything else. The result is still all the variables in the df, but <code>wt</code> is at the front.</p>
 </div>
-<div id="filter" class="section level2" number="6.6">
+<div id="filter" class="section level2" number="7.6">
 <h2>
-<span class="header-section-number">6.6</span> Filter<a class="anchor" aria-label="anchor" href="#filter"><i class="fas fa-link"></i></a>
+<span class="header-section-number">7.6</span> Filter<a class="anchor" aria-label="anchor" href="#filter"><i class="fas fa-link"></i></a>
 </h2>
 <!-- filter(columnToSubset == valueOfInterest) - returns rows that meet specified condition(s). Can use single conditions or string together multiple tests with logical operators -->
 <p>The second primary subsetting function is <code><a href="https://dplyr.tidyverse.org/reference/filter.html">filter()</a></code>, which returns rows that meet specified condition(s). Each condition is a logical test performed on a column. This will results in a vector of <code>TRUE</code> and <code>FALSE</code> values, and only the rows where the test evaluates to <code>TRUE</code> will be returned!</p>
 <img src="figures/dplyr_filter.jpeg" style="width:100.0%"><p style="font-size:6pt">
-Artwork by <span class="citation">@allison_horst</span>
+Artwork by <span class="citation">Horst (2022)</span>
 </p>
 <p>As you see in the illustration above, only the rows with a check mark (where the logical test resulted in <code>TRUE</code>) would be returned from that <code><a href="https://dplyr.tidyverse.org/reference/filter.html">filter()</a></code> call!</p>
 <div class="sourceCode" id="cb70"><pre class="downlit sourceCode r">
@@ -3779,9 +3782,9 @@ which is different than:<br><code>filter((cyl == 4 | hp &lt; 200) &amp; gear == 
 <!--   3. All animals with a brain weight greater than 0.1 or spend less than 1 hour in rem, **except those who are herbivores**, then subset only the `brainwt`, `sleep_rem`, and `name` columns, and arrange the results by `awake` from greatest to least. -->
 <!--   </div> -->
 <!-- </div> -->
-<div id="in" class="section level3" number="6.6.1">
+<div id="in" class="section level3" number="7.6.1">
 <h3>
-<span class="header-section-number">6.6.1</span> %in%<a class="anchor" aria-label="anchor" href="#in"><i class="fas fa-link"></i></a>
+<span class="header-section-number">7.6.1</span> %in%<a class="anchor" aria-label="anchor" href="#in"><i class="fas fa-link"></i></a>
 </h3>
 <p>Stringing together multiple tests of text patterns would be very cumbersome (e.g., <code>model == "Lotus Europa" | model == "Ferrari Dino" | ...</code>). Fortunately, there is an alternative with the <code>%in%</code> operator. As a reminder, this will check to see if the value of one variable is in a vector of possible values. Test conditions using the <code>%in%</code> operator are used the same way as all test conditions using all other operators: you must specify the variable to search within and what values to return (those in the vector).</p>
 <div class="sourceCode" id="cb74"><pre class="downlit sourceCode r">
@@ -4133,9 +4136,9 @@ Volvo 142E
 <!--   </div> -->
 <!-- </div> -->
 </div>
-<div id="pattern-matching" class="section level3" number="6.6.2">
+<div id="pattern-matching" class="section level3" number="7.6.2">
 <h3>
-<span class="header-section-number">6.6.2</span> Pattern Matching<a class="anchor" aria-label="anchor" href="#pattern-matching"><i class="fas fa-link"></i></a>
+<span class="header-section-number">7.6.2</span> Pattern Matching<a class="anchor" aria-label="anchor" href="#pattern-matching"><i class="fas fa-link"></i></a>
 </h3>
 <p>For any number of reasons there may be times you do not want to search for an exact string match. Rather, you want to filter based on whether a value <em>contains</em> a certain string. This can be accomplished with <code><a href="https://rdrr.io/r/base/grep.html">grepl()</a></code>, which takes the form:</p>
 <p><code>grepl(pattern_to_search_for, where_to_search)</code></p>
@@ -4158,14 +4161,14 @@ Volvo 142E
 <!-- </div> -->
 </div>
 </div>
-<div id="indexing" class="section level2" number="6.7">
+<div id="indexing" class="section level2" number="7.7">
 <h2>
-<span class="header-section-number">6.7</span> Indexing<a class="anchor" aria-label="anchor" href="#indexing"><i class="fas fa-link"></i></a>
+<span class="header-section-number">7.7</span> Indexing<a class="anchor" aria-label="anchor" href="#indexing"><i class="fas fa-link"></i></a>
 </h2>
 <p>Indexing dfs was introduced <a href="#Indexing-dfs">previously</a>, but will often need to be done throughout a pipe chain. There are two functions to help with this: <code><a href="https://dplyr.tidyverse.org/reference/pull.html">pull()</a></code> and <code><a href="https://purrr.tidyverse.org/reference/pluck.html">pluck()</a></code>.</p>
-<div id="pull" class="section level3" number="6.7.1">
+<div id="pull" class="section level3" number="7.7.1">
 <h3>
-<span class="header-section-number">6.7.1</span> pull()<a class="anchor" aria-label="anchor" href="#pull"><i class="fas fa-link"></i></a>
+<span class="header-section-number">7.7.1</span> pull()<a class="anchor" aria-label="anchor" href="#pull"><i class="fas fa-link"></i></a>
 </h3>
 <p><code><a href="https://dplyr.tidyverse.org/reference/pull.html">pull()</a></code> will extract a variable from a df. This can be done by the variable’s name or its numeric position (using name is always preferred). <code><a href="https://dplyr.tidyverse.org/reference/pull.html">pull()</a></code> is like using the <code>$</code> operator to index.</p>
 <div class="sourceCode" id="cb77"><pre class="downlit sourceCode r">
@@ -4198,9 +4201,9 @@ Volvo 142E
 <!--   </div> -->
 <!-- </div> -->
 </div>
-<div id="pluck" class="section level3" number="6.7.2">
+<div id="pluck" class="section level3" number="7.7.2">
 <h3>
-<span class="header-section-number">6.7.2</span> pluck()<a class="anchor" aria-label="anchor" href="#pluck"><i class="fas fa-link"></i></a>
+<span class="header-section-number">7.7.2</span> pluck()<a class="anchor" aria-label="anchor" href="#pluck"><i class="fas fa-link"></i></a>
 </h3>
 <p><code><a href="https://purrr.tidyverse.org/reference/pluck.html">pluck()</a></code> allows you to index elements from an object, and can also be done by name or numeric position. Above, the <code>cyl</code> column was indexed from <code>mtcars2</code>. Say you wanted the 4th observation from that column:</p>
 <div class="sourceCode" id="cb79"><pre class="downlit sourceCode r">
@@ -4233,9 +4236,9 @@ Advanced
 </div>
 </div>
 </div>
-<div id="Unique-Entries" class="section level2" number="6.8">
+<div id="Unique-Entries" class="section level2" number="7.8">
 <h2>
-<span class="header-section-number">6.8</span> Unique Entries<a class="anchor" aria-label="anchor" href="#Unique-Entries"><i class="fas fa-link"></i></a>
+<span class="header-section-number">7.8</span> Unique Entries<a class="anchor" aria-label="anchor" href="#Unique-Entries"><i class="fas fa-link"></i></a>
 </h2>
 <p>When working with larger dfs, it is difficult to get a sense of the unique values a particular variable may contain. You can get this using <code><a href="https://dplyr.tidyverse.org/reference/distinct.html">distinct()</a></code>.</p>
 <div class="sourceCode" id="cb82"><pre class="downlit sourceCode r">
@@ -4277,13 +4280,13 @@ Advanced
 <!--   </div> -->
 <!-- </div> -->
 </div>
-<div id="adding-variables" class="section level2" number="6.9">
+<div id="adding-variables" class="section level2" number="7.9">
 <h2>
-<span class="header-section-number">6.9</span> Adding Variables<a class="anchor" aria-label="anchor" href="#adding-variables"><i class="fas fa-link"></i></a>
+<span class="header-section-number">7.9</span> Adding Variables<a class="anchor" aria-label="anchor" href="#adding-variables"><i class="fas fa-link"></i></a>
 </h2>
 <p>To add new variables to your dataframe, you use the <code><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate()</a></code> function.</p>
 <img src="figures/dplyr_mutate.png" style="width:100.0%"><p style="font-size:6pt">
-Artwork by <span class="citation">@allison_horst</span>
+Artwork by <span class="citation">Horst (2022)</span>
 </p>
 <p><code><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate()</a></code> takes the form:</p>
 <p><code>mutate("new_col_name" = content_for_that_column)</code></p>
@@ -4344,14 +4347,14 @@ Artwork by <span class="citation">@allison_horst</span>
 <!--   2. Create a new variable that represents the proportion of total sleep spent in rem, move that column to come after `sleep_rem`, filter to show only observations with a ratio of 0.25 or greater, arrange the new column from greatest to least, and index the `bodywt` of the animal with the highest ratio. -->
 <!--   </div> -->
 <!-- </div> -->
-<div id="conditional-values" class="section level3" number="6.9.1">
+<div id="conditional-values" class="section level3" number="7.9.1">
 <h3>
-<span class="header-section-number">6.9.1</span> Conditional Values<a class="anchor" aria-label="anchor" href="#conditional-values"><i class="fas fa-link"></i></a>
+<span class="header-section-number">7.9.1</span> Conditional Values<a class="anchor" aria-label="anchor" href="#conditional-values"><i class="fas fa-link"></i></a>
 </h3>
 <p>You may want a variable to have a value based on some different conditions. <code><a href="https://dplyr.tidyverse.org/reference/case_when.html">case_when()</a></code> was <a href="control-flow.html#case_when">introduced</a> as a way to string together a number of ifelse type statements and return some values. This can be extremely useful when creating new variables!</p>
 <!-- [case_when()] -->
 <img src="figures/dplyr_case_when.png" style="width:100.0%"><p style="font-size:6pt">
-Artwork by <span class="citation">@allison_horst</span>
+Artwork by <span class="citation">Horst (2022)</span>
 </p>
 <div class="sourceCode" id="cb87"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">mtcars2</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
@@ -4394,9 +4397,9 @@ Artwork by <span class="citation">@allison_horst</span>
 <!--   </div> -->
 <!-- </div> -->
 </div>
-<div id="position" class="section level3" number="6.9.2">
+<div id="position" class="section level3" number="7.9.2">
 <h3>
-<span class="header-section-number">6.9.2</span> Position<a class="anchor" aria-label="anchor" href="#position"><i class="fas fa-link"></i></a>
+<span class="header-section-number">7.9.2</span> Position<a class="anchor" aria-label="anchor" href="#position"><i class="fas fa-link"></i></a>
 </h3>
 <p>By default <code><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate()</a></code> adds the new variable(s) to the end of the dataframe. However, you can specify what existing column you want the new column to appear <code>.before</code> or <code>.after</code>.</p>
 <div class="sourceCode" id="cb89"><pre class="downlit sourceCode r">
@@ -4419,9 +4422,9 @@ Artwork by <span class="citation">@allison_horst</span>
 <strong><u>Note:</u> The <code>.before</code> and <code>.after</code> specifications apply to ALL new variables created by the particular <code><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate()</a></code> call. If you want to create multiple new variables and have them added in different places in your dataframe, you will need to separate them into different <code><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate()</a></code> calls.</strong>
 </p>
 </div>
-<div id="NAs" class="section level3" number="6.9.3">
+<div id="NAs" class="section level3" number="7.9.3">
 <h3>
-<span class="header-section-number">6.9.3</span> NAs<a class="anchor" aria-label="anchor" href="#NAs"><i class="fas fa-link"></i></a>
+<span class="header-section-number">7.9.3</span> NAs<a class="anchor" aria-label="anchor" href="#NAs"><i class="fas fa-link"></i></a>
 </h3>
 <p>When performing vector computations, you have to be mindful of <code>NA</code> values in your data. <code>NA</code> values can cause major issues. For example:</p>
 <div class="sourceCode" id="cb90"><pre class="downlit sourceCode r">
@@ -4470,9 +4473,9 @@ Artwork by <span class="citation">@allison_horst</span>
 <!-- </div> -->
 </div>
 </div>
-<div id="Modifying-Existing-Variables" class="section level2" number="6.10">
+<div id="Modifying-Existing-Variables" class="section level2" number="7.10">
 <h2>
-<span class="header-section-number">6.10</span> Modifying Existing Variables<a class="anchor" aria-label="anchor" href="#Modifying-Existing-Variables"><i class="fas fa-link"></i></a>
+<span class="header-section-number">7.10</span> Modifying Existing Variables<a class="anchor" aria-label="anchor" href="#Modifying-Existing-Variables"><i class="fas fa-link"></i></a>
 </h2>
 <p><code><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate()</a></code> can also be used to modify existing variables! This is done by passing a column name that already exists in the dataframe. For example:</p>
 <div class="sourceCode" id="cb93"><pre class="downlit sourceCode r">
@@ -4490,9 +4493,9 @@ Artwork by <span class="citation">@allison_horst</span>
 <p class="text-info">
 <strong><u>Note:</u> You will generally not want to overwrite a variable if you are changing it in some meaningful way (as is the case in the example above). Instead, you should create a new variable.</strong>
 </p>
-<div id="change-variable-types" class="section level3" number="6.10.1">
+<div id="change-variable-types" class="section level3" number="7.10.1">
 <h3>
-<span class="header-section-number">6.10.1</span> Change Variable Types<a class="anchor" aria-label="anchor" href="#change-variable-types"><i class="fas fa-link"></i></a>
+<span class="header-section-number">7.10.1</span> Change Variable Types<a class="anchor" aria-label="anchor" href="#change-variable-types"><i class="fas fa-link"></i></a>
 </h3>
 <p>One of the ways in which it <em>is</em> appropriate to modify a variable is when you need to change the <em>type</em> of data it contains. In R, you can change data type by using the <code>as.*</code> function. For example, <code><a href="https://rdrr.io/r/base/logical.html">as.logical()</a></code> changes the passed values to be <em>logical.</em> The one exception is that when changing something to a <em>factor</em>, you should use <code><a href="https://rdrr.io/r/base/factor.html">factor()</a></code> (more on this below.)</p>
 <div class="sourceCode" id="cb94"><pre class="downlit sourceCode r">
@@ -4521,14 +4524,14 @@ Artwork by <span class="citation">@allison_horst</span>
 <!--   </div> -->
 <!-- </div> -->
 </div>
-<div id="factors" class="section level3" number="6.10.2">
+<div id="factors" class="section level3" number="7.10.2">
 <h3>
-<span class="header-section-number">6.10.2</span> Factors<a class="anchor" aria-label="anchor" href="#factors"><i class="fas fa-link"></i></a>
+<span class="header-section-number">7.10.2</span> Factors<a class="anchor" aria-label="anchor" href="#factors"><i class="fas fa-link"></i></a>
 </h3>
 <p>Factors are important, and can be a little tricky to work with, so they get their own section. Factors are categorical data that have a specific order, and by proxy a specific defined range of possible values (e.g., Months of the year).</p>
-<div id="factor-conversion" class="section level4" number="6.10.2.1">
+<div id="factor-conversion" class="section level4" number="7.10.2.1">
 <h4>
-<span class="header-section-number">6.10.2.1</span> Factor Conversion<a class="anchor" aria-label="anchor" href="#factor-conversion"><i class="fas fa-link"></i></a>
+<span class="header-section-number">7.10.2.1</span> Factor Conversion<a class="anchor" aria-label="anchor" href="#factor-conversion"><i class="fas fa-link"></i></a>
 </h4>
 <p>When working with factors, particularly when converting data to and from a factor, you have to be very careful. Consider the following:</p>
 <div class="sourceCode" id="cb95"><pre class="downlit sourceCode r">
@@ -4554,9 +4557,9 @@ Artwork by <span class="citation">@allison_horst</span>
 <span><span class="co">#&gt; 2    1</span></span></code></pre></div>
 <p>The take-home point is to always double check that your code is doing what you intend it to, especially when converting to and from a <em>factor</em>!</p>
 </div>
-<div id="reorder-levels" class="section level4" number="6.10.2.2">
+<div id="reorder-levels" class="section level4" number="7.10.2.2">
 <h4>
-<span class="header-section-number">6.10.2.2</span> Reorder Levels<a class="anchor" aria-label="anchor" href="#reorder-levels"><i class="fas fa-link"></i></a>
+<span class="header-section-number">7.10.2.2</span> Reorder Levels<a class="anchor" aria-label="anchor" href="#reorder-levels"><i class="fas fa-link"></i></a>
 </h4>
 <p>While the levels of a <em>factor</em> are ordered, you may at times want to change what that order is. One of the more common instances when this will occur is in visualizations. Consider the following:</p>
 <div class="sourceCode" id="cb98"><pre class="downlit sourceCode r">
@@ -4615,63 +4618,63 @@ Artwork by <span class="citation">@allison_horst</span>
 </div>
 </div>
 </div>
-<div id="extras" class="section level2" number="6.11">
+<div id="extras" class="section level2" number="7.11">
 <h2>
-<span class="header-section-number">6.11</span> Extras<a class="anchor" aria-label="anchor" href="#extras"><i class="fas fa-link"></i></a>
+<span class="header-section-number">7.11</span> Extras<a class="anchor" aria-label="anchor" href="#extras"><i class="fas fa-link"></i></a>
 </h2>
 <ul>
 <li><a href="https://github.com/rstudio/cheatsheets/blob/main/factors.pdf">Factors cheatsheet</a></li>
 </ul>
 </div>
-<div id="references" class="section level2" number="6.12">
+<div id="references" class="section level2" number="7.12">
 <h2>
-<span class="header-section-number">6.12</span> References<a class="anchor" aria-label="anchor" href="#references"><i class="fas fa-link"></i></a>
+<span class="header-section-number">7.12</span> References<a class="anchor" aria-label="anchor" href="#references"><i class="fas fa-link"></i></a>
 </h2>
 
 </div>
 </div>
   <div class="chapter-nav">
-<div class="prev"><a href="tidy-data-and-tidyverse.html"><span class="header-section-number">5</span> Tidy Data and Tidyverse</a></div>
-<div class="next"><a href="summarizing-data.html"><span class="header-section-number">7</span> Summarizing Data</a></div>
+<div class="prev"><a href="tidy-data-and-tidyverse.html"><span class="header-section-number">6</span> Tidy Data and Tidyverse</a></div>
+<div class="next"><a href="summarizing-data.html"><span class="header-section-number">8</span> Summarizing Data</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#basic-wrangling"><span class="header-section-number">6</span> Basic Wrangling</a></li>
-<li><a class="nav-link" href="#arrange"><span class="header-section-number">6.1</span> Arrange</a></li>
+<li><a class="nav-link" href="#basic-wrangling"><span class="header-section-number">7</span> Basic Wrangling</a></li>
+<li><a class="nav-link" href="#arrange"><span class="header-section-number">7.1</span> Arrange</a></li>
 <li>
-<a class="nav-link" href="#rename"><span class="header-section-number">6.2</span> Rename</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#saving-changes"><span class="header-section-number">6.2.1</span> Saving Changes</a></li></ul>
+<a class="nav-link" href="#rename"><span class="header-section-number">7.2</span> Rename</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#saving-changes"><span class="header-section-number">7.2.1</span> Saving Changes</a></li></ul>
 </li>
-<li><a class="nav-link" href="#clean-names"><span class="header-section-number">6.3</span> Clean Names</a></li>
-<li><a class="nav-link" href="#relocate"><span class="header-section-number">6.4</span> Relocate</a></li>
-<li><a class="nav-link" href="#select"><span class="header-section-number">6.5</span> Select</a></li>
+<li><a class="nav-link" href="#clean-names"><span class="header-section-number">7.3</span> Clean Names</a></li>
+<li><a class="nav-link" href="#relocate"><span class="header-section-number">7.4</span> Relocate</a></li>
+<li><a class="nav-link" href="#select"><span class="header-section-number">7.5</span> Select</a></li>
 <li>
-<a class="nav-link" href="#filter"><span class="header-section-number">6.6</span> Filter</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#in"><span class="header-section-number">6.6.1</span> %in%</a></li>
-<li><a class="nav-link" href="#pattern-matching"><span class="header-section-number">6.6.2</span> Pattern Matching</a></li>
+<a class="nav-link" href="#filter"><span class="header-section-number">7.6</span> Filter</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#in"><span class="header-section-number">7.6.1</span> %in%</a></li>
+<li><a class="nav-link" href="#pattern-matching"><span class="header-section-number">7.6.2</span> Pattern Matching</a></li>
 </ul>
 </li>
 <li>
-<a class="nav-link" href="#indexing"><span class="header-section-number">6.7</span> Indexing</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#pull"><span class="header-section-number">6.7.1</span> pull()</a></li>
-<li><a class="nav-link" href="#pluck"><span class="header-section-number">6.7.2</span> pluck()</a></li>
+<a class="nav-link" href="#indexing"><span class="header-section-number">7.7</span> Indexing</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#pull"><span class="header-section-number">7.7.1</span> pull()</a></li>
+<li><a class="nav-link" href="#pluck"><span class="header-section-number">7.7.2</span> pluck()</a></li>
 </ul>
 </li>
-<li><a class="nav-link" href="#Unique-Entries"><span class="header-section-number">6.8</span> Unique Entries</a></li>
+<li><a class="nav-link" href="#Unique-Entries"><span class="header-section-number">7.8</span> Unique Entries</a></li>
 <li>
-<a class="nav-link" href="#adding-variables"><span class="header-section-number">6.9</span> Adding Variables</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#conditional-values"><span class="header-section-number">6.9.1</span> Conditional Values</a></li>
-<li><a class="nav-link" href="#position"><span class="header-section-number">6.9.2</span> Position</a></li>
-<li><a class="nav-link" href="#NAs"><span class="header-section-number">6.9.3</span> NAs</a></li>
+<a class="nav-link" href="#adding-variables"><span class="header-section-number">7.9</span> Adding Variables</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#conditional-values"><span class="header-section-number">7.9.1</span> Conditional Values</a></li>
+<li><a class="nav-link" href="#position"><span class="header-section-number">7.9.2</span> Position</a></li>
+<li><a class="nav-link" href="#NAs"><span class="header-section-number">7.9.3</span> NAs</a></li>
 </ul>
 </li>
 <li>
-<a class="nav-link" href="#Modifying-Existing-Variables"><span class="header-section-number">6.10</span> Modifying Existing Variables</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#change-variable-types"><span class="header-section-number">6.10.1</span> Change Variable Types</a></li>
-<li><a class="nav-link" href="#factors"><span class="header-section-number">6.10.2</span> Factors</a></li>
+<a class="nav-link" href="#Modifying-Existing-Variables"><span class="header-section-number">7.10</span> Modifying Existing Variables</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#change-variable-types"><span class="header-section-number">7.10.1</span> Change Variable Types</a></li>
+<li><a class="nav-link" href="#factors"><span class="header-section-number">7.10.2</span> Factors</a></li>
 </ul>
 </li>
-<li><a class="nav-link" href="#extras"><span class="header-section-number">6.11</span> Extras</a></li>
-<li><a class="nav-link" href="#references"><span class="header-section-number">6.12</span> References</a></li>
+<li><a class="nav-link" href="#extras"><span class="header-section-number">7.11</span> Extras</a></li>
+<li><a class="nav-link" href="#references"><span class="header-section-number">7.12</span> References</a></li>
 </ul>
 
       <div class="book-extra">
@@ -4688,7 +4691,7 @@ Artwork by <span class="citation">@allison_horst</span>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong></strong>" was written by . </p>
+    <p>"<strong>PSYC193L</strong>" was written by Ethan Hurwitz. It was last built on 2023-01-02.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
