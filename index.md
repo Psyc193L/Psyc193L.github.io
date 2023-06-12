@@ -19,13 +19,11 @@ csl: apa.csl
 
 Psyc193L: Introduction to R for Social Sciences
 
-Fall 2022
+Summer Session 2022
 
-Warren Lecture Hall room 2113 (WLH2113)
+*Lecture:* MTuWTh 11:00a-11:50a
 
-*Lecture:* M/W 3:00pm-3:50pm (in-person)
-
-*Lab:* F 3:00pm-3:50pm (on zoom [https://ucsd.zoom.us/j/94054557839](https://ucsd.zoom.us/j/94054557839))
+*Lab:* TuTh 12:00p-12:50p
 
 ## Course Description
 
@@ -74,11 +72,11 @@ Email: ehurwitz@ucsd.edu
 
 Office Hours: By Appointment (contact me to schedule)
 
-**Teaching Assistant**
+<!-- **Teaching Assistant** -->
 
-Name: Alexis Smith-Flores
+<!-- Name: Alexis Smith-Flores -->
 
-Email: assmith@ucsd.edu
+<!-- Email: assmith@ucsd.edu -->
 
 ## Course Structure
 
@@ -116,14 +114,14 @@ All course materials are free. You have enough expenses, I am not interested in 
 <!-- DataHub website. -->
   
   
-* **[Discord](https://discord.gg/nSVZVr3FMG)**
+* **[Discord]()**
   + We will use Discord as a central place to manage questions about the class, communicate with each other, and easily copy/paste code for sharing. Checking the discord is an expected part of the class.
 
   
 * **[Zoom](https://ucsd.zoom.us/j/94054557839)**
-  + Office hours and some class periods will be held remotely via Zoom!
+  + Class will be remote, so all class periods and office hours will be held via Zoom!
   
-* **[Anonymous Feedback](https://forms.gle/WxLnmCbdgiKRqap89)**
+* **[Anonymous Feedback]()**
   + This is a place to submit anonymous feedback to the teaching team.
 
 ## Grades
@@ -208,10 +206,10 @@ Again, you will be given optional datasets to choose from later on. You will <b>
 ### How Does Grading Work?
 
 <!-- Summer Session Version:-->
-<!-- Graded assignments will be downloaded and submitted on Canvas. For each assignment, you will submit a knit .html document and the source .Rmd document (more on this later). All assignments are due the Monday after they are introduced. i.e., anything released in Week 1 is due by Monday of Week 2, etc. -->
+Graded assignments will be downloaded and submitted on Canvas. For each assignment, you will submit a knit .html document and the source .Rmd document (more on this later). Submissions that do not include BOTH file types will be considered incomplete after week 1. <b>All assignments are due the Monday after they are introduced. i.e., anything released in Week 1 is due by Monday of Week 2, etc.</b> If you submit the Exercise assignment(s) for a given week by Wednesday at 11:59pm of that week, it will be graded with feedback by that Saturday at the latest. Thus, you will be able to use that feedback for the Practice Problem set on the same topic and potentially avoid making repeat errors across assignments. This is not required, and assignments will only be considered late if they are submitted after the Monday at 11:59pm deadline.
 
 <!-- Regular Term Version:-->
-Graded assignments will be downloaded and submitted on Canvas. For each assignment, you will submit a knit .html document and the source .Rmd document (more on this later). Submissions that do not include BOTH file types will be considered incomplete after week 1. <b>All assignments are due by Sunday at 11:59pm the week they are released i.e., anything released on Monday of Week 1 is due by that Sunday at 11:59pm (before Monday of Week 2), etc.</b> If you submit the Exercise assignment(s) for a given week by Wednesday at 11:59pm of that week, it will be graded with feedback by that Saturday at the latest. Thus, you will be able to use that feedback for the Practice Problem set on the same topic and potentially avoid making repeat errors across assignments. This is not required, and assignments will only be considered late if they are submitted after the Sunday at 11:59pm deadline.
+<!-- Graded assignments will be downloaded and submitted on Canvas. For each assignment, you will submit a knit .html document and the source .Rmd document (more on this later). Submissions that do not include BOTH file types will be considered incomplete after week 1. <b>All assignments are due by Sunday at 11:59pm the week they are released i.e., anything released on Monday of Week 1 is due by that Sunday at 11:59pm (before Monday of Week 2), etc.</b> If you submit the Exercise assignment(s) for a given week by Wednesday at 11:59pm of that week, it will be graded with feedback by that Saturday at the latest. Thus, you will be able to use that feedback for the Practice Problem set on the same topic and potentially avoid making repeat errors across assignments. This is not required, and assignments will only be considered late if they are submitted after the Sunday at 11:59pm deadline. -->
 
 This course is designed to facilitate your *engagement* and *effort* with the material. What is going to help you learn and develop R skills the most is to actually **practice doing** coding... a lot. It is thus, in my view, counter-productive to have a single heavily weighted assignment (exam) or for there to be high amounts of pressure to find some singularly correct answer to every problem.
 
@@ -308,35 +306,40 @@ Final letter grades in the course will be assigned according to the following pe
 
 <!-- Summer Session Version: -->
   <!-- Attendance is <u>strongly encouraged</u>, and the decision to hold the course remotely was made in order to maximize the ability for students to attend synchronously, but is not required. Participation is based on activity completion, which can be completed asynchronously. However, it is much more difficult to do so this way. -->
+Lectures are flipped and there are no class participation credits. Class meeting times are designed to be times where you can come, work on the assignments, and get help live/immediate help from me. Thus, the course *can* be completed entirely asynchronously. However, it is invariably the case that the students who regularly attend class meetings or engage with me attain the highest grades in this course. So, I strongly encourage you to attend at least occasionally and make sure to get your questions answered. 
   
 <!-- Regular Term Version: -->
-Attendance is <u>strongly encouraged</u>, but is <b>not required</b>. Lectures are flipped and there are no class participation credits. Thus, the course can be completed asynchronously. However, it is invariably the case that students who regularly attend class meetings attain the highest grades in this course.
+<!-- Attendance is <u>strongly encouraged</u>, but is <b>not required</b>. Lectures are flipped and there are no class participation credits. Thus, the course can be completed asynchronously. However, it is invariably the case that students who regularly attend class meetings attain the highest grades in this course. -->
 
 ### Late Work
 
 <!-- Summer Session Version: -->
+Exercises, Practice Problem Sets, and Challenges, can be submitted up to 5 days past their due date for late credit. The late penalty is 10% **per day** late, and will only be accepted up to 5 days past the due date (i.e., by Saturday). <b><u>The paper/project CANNOT be submitted late</u></b>.
 <!-- Assignments can be submitted up to 5 days past their due date for late credit. The late penalty for assignments is 10% per day late, capping out at 50% (5 days late). This applies to all assignments <b><u>except the paper and those in the final week</u></b>. -->
 
 <!-- There may be some instances where it is better for you to take the late penalty than submit an incomplete assignment (e.g., the more incomplete an assignment, the better to take the late penalty). -->
 
-<!-- Please do not let this flexibility encourage you to submit work late, because it is <b>*VERY*</b> easy to get behind on assignments given the pace of a Summer course. You can quickly find yourself with many assignments accruing high late penalties which have a significant impact on your overall course grade. Instead, you should view this as a built in accommodation for some unforeseen circumstances. -->
+Please do not let this flexibility encourage you to submit work late, because it is <b>*VERY*</b> easy to get behind on assignments given the pace of a Summer course. You can quickly find yourself with many assignments accruing high late penalties which have a significant impact on your overall course grade. Instead, you should view this as a built in accommodation for some unforeseen circumstances.
 
 <!-- Regular Term Version: -->
-Exercises, Practice Problem Sets, and Challenges, can be submitted up to 5 days past their due date for late credit. The late penalty is 10% per day late, and will only be accepted up to 5 days past the due date (i.e., Friday of the following week). <b><u>The paper/project CANNOT be submitted late</u></b>.
+<!-- Exercises, Practice Problem Sets, and Challenges, can be submitted up to 5 days past their due date for late credit. The late penalty is 10% per day late, and will only be accepted up to 5 days past the due date (i.e., Friday of the following week). <b><u>The paper/project CANNOT be submitted late</u></b>. -->
 
 ### Extensions
 
 <!-- Summer Session Version: -->
-<!-- Assignments have due dates that give you a fair amount of time to complete them. Granted, it is a Summer Session course, so things move at an accelerated pace. That said, I am a pretty reasonable person and will grant extensions under *reasonable* circumstances (being stressed will not warrant an extension). Please reach out to me if you are struggling or any unique situations arise. -->
+Assignments have due dates that give you a fair amount of time to complete them, and should be able to accommodate instances where you get sick or something else comes up. Granted, it is a Summer Session course, so things move at an accelerated pace. 
+<!-- That said, I am a pretty reasonable person and will grant extensions under *reasonable* circumstances (being stressed will not warrant an extension).  -->
+
+Please reach out to me if you are struggling or any unique/extenuating situations arise. I am a pretty reasonable person, and am willing to work with you when you have proper documentation for unforeseen circumstances (e.g., getting sick, death in the family, etc.).
 
 <!-- Regular Term Version: -->
-  Assignments have due dates that afford a lot amount of time to complete them, and should be able to accommodate instances where you get sick or something else comes up. However, each student will have one "emergency button" they can push. You can use an emergency button to remove the late penalty on any week's assignments. If something comes up and you must submit assignments late, you can push your "emergency button" and submit it up to 5 days late with no late penalty. This is something you can only do **once** all quarter, and must let me know explicitly when/if you use it!
-  
-Please reach out to me if you are struggling or any unique situations arise.
+<!--   Assignments have due dates that afford a lot amount of time to complete them, and should be able to accommodate instances where you get sick or something else comes up. However, each student will have one "emergency button" they can push. You can use an emergency button to remove the late penalty on any week's assignments. If something comes up and you must submit assignments late, you can push your "emergency button" and submit it up to 5 days late with no late penalty. This is something you can only do **once** all quarter, and must let me know explicitly when/if you use it! -->
+
+<!-- Please reach out to me if you are struggling or any unique situations arise. -->
 
 ### Email/Discord DMs
 
-  If you would prefer to ask a question privately,<!-- you may DM me on Zoom,--> email me, send me a DM on discord, or come to my office hours. My preference would be a <!--Zoom DM or--> Discord DM, as I will check those more frequently. If you choose to email, please include “PSYC 193L” in the subject line of your emails. Doing this will make sure I see your message in a timely manner. 
+  If you would prefer to ask a question privately, you may DM me on Zoom, email me, send me a DM on discord, or come to my office hours. My preference would be a Zoom DM or Discord DM, as I will check those more frequently. If you choose to email, please include “PSYC 193L” in the subject line of your emails. Doing this will make sure I see your message in a timely manner.
   
 ### Academic Integrity
 
@@ -350,9 +353,9 @@ Please reach out to me if you are struggling or any unique situations arise.
 
 ### Extra Credit
 
-  You may earn up to 2 points of extra credit which will be added to your overall grade in the course. One of those points can be earned by completing SONA participation credits (worth 0.25 points each). To sign up for an experiment, go to the [SONA website](https://ucsd.sona-systems.com). To earn the full point of extra credit in the class, you must complete 2 SONA credits.
+  You may earn up to 2 points of extra credit which will be added to your overall grade in the course. One of those points can be earned by completing SONA participation credits (worth 0.5 points each). To sign up for an experiment, go to the [SONA website](https://ucsd.sona-systems.com). To earn the full point of extra credit in the class, you must complete 2 SONA credits.
  
-  The second extra credit point can be earned by completing the CAPEs for our course as well as an additional survey sent out at the end of the quarter. If 80% of the class completes both surveys, the entire class will earn 1 extra credit point. 
+  The second extra credit point can be earned by completing the CAPEs for our course as well as an additional survey sent out at the end of the quarter. If 85% of the class completes <b>BOTH</b>, the entire class will earn 1 extra credit point. 
 
 ## What We Expect From You
 
@@ -395,23 +398,70 @@ In choosing what content to include, this was my philosophy:
 
 The schedule below is tentative and subject to change.
 
-<!-- ```{r Summer Schedule, echo=FALSE, message=F, warning=F} -->
-<!-- kbl(data.frame("Week" = c("1", "2", "3", "4", "5"),  -->
-<!--                            "Monday" = c("Syllabus", "Different Graph Types", -->
-<!--                                                  "Viz Challenge<br>+Project Intro", -->
-<!--                                                  "Summarizing", ""), -->
-<!--                            "Tuesday" = c("Why use R<br>+Coding Basics<br>+Using R Effectively",  -->
-<!--                                          "Different Graph Types",  -->
-<!--                                          "Tidy Data<br>+Control Flow",  -->
-<!--                                          "Wrangling<br>Challenge", ""), -->
-<!--                            "Wednesday" = c("R Basics<br>Assignments", -->
-<!--                                            "ggplot<br>Customization", "Basic<br>Wrangling",  -->
-<!--                                            "Data<br>Transformation",  -->
-<!--                                            ""), -->
-<!--                            "Thursday" = c("ggplot Intro", -->
-<!--                                     "Color<br>Theory", -->
-<!--                                     "Advanced<br>+Wrangling", -->
-<!--                                     "RStudio Projects<br>+Project Mtg", "")),  -->
+<table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:center;"> Week </th>
+   <th style="text-align:center;"> Monday </th>
+   <th style="text-align:center;"> Tuesday </th>
+   <th style="text-align:center;"> Wednesday </th>
+   <th style="text-align:center;"> Thursday </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:center;"> 1 </td>
+   <td style="text-align:center;"> Syllabus </td>
+   <td style="text-align:center;"> Why use R<br>+Coding Basics<br>+Using R Effectively </td>
+   <td style="text-align:center;"> R Basics<br>Assignments </td>
+   <td style="text-align:center;"> ggplot Intro </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> 2 </td>
+   <td style="text-align:center;"> Different Graph Types </td>
+   <td style="text-align:center;"> Different Graph Types </td>
+   <td style="text-align:center;"> ggplot<br>Customization </td>
+   <td style="text-align:center;"> Color<br>Theory </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> 3 </td>
+   <td style="text-align:center;"> Viz Challenge<br>+Project Intro </td>
+   <td style="text-align:center;"> Tidy Data<br>+Control Flow </td>
+   <td style="text-align:center;"> Basic<br>Wrangling </td>
+   <td style="text-align:center;"> Advanced<br>+Wrangling </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> 4 </td>
+   <td style="text-align:center;"> Summarizing </td>
+   <td style="text-align:center;"> Wrangling<br>Challenge </td>
+   <td style="text-align:center;"> Data<br>Transformation </td>
+   <td style="text-align:center;"> RStudio Projects<br>+Project Mtg </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> 5 </td>
+   <td style="text-align:center;">  </td>
+   <td style="text-align:center;">  </td>
+   <td style="text-align:center;">  </td>
+   <td style="text-align:center;">  </td>
+  </tr>
+</tbody>
+</table>
+
+
+
+
+<!-- ```{r AY Schedule, echo=FALSE, message=F, warning=F} -->
+<!-- kbl(data.frame("Week" = c("1", "2", "3", "4", "5", "6", "7", "8", "9", "10"),  -->
+<!--                            "Topic" = c("Why Use R?<br>Coding Basics<br>Using R Effectively<br>R Basics Challenge",  -->
+<!--                                        "Intro to ggplot", -->
+<!--                                                  "geoms and graph types", -->
+<!--                                                  "ggplot Customization<br>Color Theory", -->
+<!--                                        "Data Viz Challenge", -->
+<!--                                        "Control Flow<br>Transformations", -->
+<!--                                        "Basic Wrangling", -->
+<!--                                        "Advanced Wrangling<br>Summarizing", -->
+<!--                                        "Data Manipulation Challenge", -->
+<!--                                        "Projects")),  -->
 <!--     escape = FALSE, align = "c") %>% -->
 <!--     #kableExtra::kable_paper("striped", full_width = T) %>% -->
 <!--     #column_spec(5:7, bold = T) %>% -->
@@ -419,60 +469,6 @@ The schedule below is tentative and subject to change.
 <!--   #kable_material(c("striped", "hover")) -->
 <!--     kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), position = "center") -->
 <!-- ``` -->
-
-
-<table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
- <thead>
-  <tr>
-   <th style="text-align:center;"> Week </th>
-   <th style="text-align:center;"> Topic </th>
-  </tr>
- </thead>
-<tbody>
-  <tr>
-   <td style="text-align:center;"> 1 </td>
-   <td style="text-align:center;"> Why Use R?<br>Coding Basics<br>Using R Effectively<br>R Basics Challenge </td>
-  </tr>
-  <tr>
-   <td style="text-align:center;"> 2 </td>
-   <td style="text-align:center;"> Intro to ggplot </td>
-  </tr>
-  <tr>
-   <td style="text-align:center;"> 3 </td>
-   <td style="text-align:center;"> geoms and graph types </td>
-  </tr>
-  <tr>
-   <td style="text-align:center;"> 4 </td>
-   <td style="text-align:center;"> ggplot Customization<br>Color Theory </td>
-  </tr>
-  <tr>
-   <td style="text-align:center;"> 5 </td>
-   <td style="text-align:center;"> Data Viz Challenge </td>
-  </tr>
-  <tr>
-   <td style="text-align:center;"> 6 </td>
-   <td style="text-align:center;"> Control Flow<br>Transformations </td>
-  </tr>
-  <tr>
-   <td style="text-align:center;"> 7 </td>
-   <td style="text-align:center;"> Basic Wrangling </td>
-  </tr>
-  <tr>
-   <td style="text-align:center;"> 8 </td>
-   <td style="text-align:center;"> Advanced Wrangling<br>Summarizing </td>
-  </tr>
-  <tr>
-   <td style="text-align:center;"> 9 </td>
-   <td style="text-align:center;"> Data Manipulation Challenge </td>
-  </tr>
-  <tr>
-   <td style="text-align:center;"> 10 </td>
-   <td style="text-align:center;"> Projects </td>
-  </tr>
-</tbody>
-</table>
-
-
 
 ## Words of Advice
 
@@ -490,7 +486,6 @@ It is truly a roller coaster. With time, effort, and perseverance,<!-- and maybe
 
 Don't just take my word for it! Here are some suggestions and advice from students who took this course previously:
 
-
 * "When going into this class, don't over think or complicate things. If you find yourself in this situation and taking too long on the assignments, ask for help! I thought it was embarrassing asking for help in the beginning, but I benefited greatly from it. Also, stay on top of the assignments because its easy to fall behind. I recommend not waiting till the day it's due. Finally, it's better to turn in an assignment a day late and completed rather than rushed or not at all."
 
 * "Make sure to utilize the lecture notes while watching lectures and doing the assignments! There is a lot of material for this class, but it becomes easier once you realize that most of the exercises and assignments are based around the notes."
@@ -507,7 +502,7 @@ Don't just take my word for it! Here are some suggestions and advice from studen
 
 5. Try to keep a good mindset. Acknowledge that this is challenging, but is not impossible, that you have help available and know what our expectations are for you.
 
-6. Be proactive. <!--This is a Summer Session course, and we will be moving very quickly through material.--> If you constantly wait until the last minute to do things, you run the risk of not only just missing work, but falling behind and having trouble being able to catch up.
+6. Be proactive. This is a Summer Session course, and we will be moving very quickly through material. If you constantly wait until the last minute to do things, you run the risk of not only just missing work, but falling behind and having trouble being able to catch up.
 
 ## Acknowledgements
 
