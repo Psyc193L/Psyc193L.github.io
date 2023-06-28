@@ -1,7 +1,7 @@
 --- 
 title: "PSYC193L"
 author: "Ethan Hurwitz"
-date: "2023-06-12"
+date: "2023-06-28"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
@@ -19,7 +19,7 @@ csl: apa.csl
 
 Psyc193L: Introduction to R for Social Sciences
 
-Summer Session 2022
+Summer Session 2023
 
 *Lecture:* MTuWTh 11:00a-11:50a
 
@@ -72,11 +72,11 @@ Email: ehurwitz@ucsd.edu
 
 Office Hours: By Appointment (contact me to schedule)
 
-<!-- **Teaching Assistant** -->
+**Teaching Assistant**
 
-<!-- Name: Alexis Smith-Flores -->
+Name: Kyros Shen
 
-<!-- Email: assmith@ucsd.edu -->
+Email: jis165@ucsd.edu
 
 ## Course Structure
 
@@ -114,14 +114,14 @@ All course materials are free. You have enough expenses, I am not interested in 
 <!-- DataHub website. -->
   
   
-* **[Discord]()**
+* **[Discord](https://discord.gg/GJTr7GPj)**
   + We will use Discord as a central place to manage questions about the class, communicate with each other, and easily copy/paste code for sharing. Checking the discord is an expected part of the class.
 
   
-* **[Zoom](https://ucsd.zoom.us/j/94054557839)**
+* **[Zoom](https://ucsd.zoom.us/j/96021674089)**
   + Class will be remote, so all class periods and office hours will be held via Zoom!
   
-* **[Anonymous Feedback]()**
+* **[Anonymous Feedback](https://forms.gle/SWXEoKPye7HsdQzK7)**
   + This is a place to submit anonymous feedback to the teaching team.
 
 ## Grades
