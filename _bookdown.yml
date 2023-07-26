@@ -21,7 +21,7 @@ rmd_files:
  - Manip3.Rmd
  - Manip4.Rmd
  - DataTransformation.Rmd # During Summer
-# - Projects.Rmd
+ - Projects.Rmd
 
 # # 111A Notes:
 # - index.Rmd
