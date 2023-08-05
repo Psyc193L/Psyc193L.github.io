@@ -1,7 +1,7 @@
 --- 
 title: "PSYC193L"
 author: "Ethan Hurwitz"
-date: "2023-07-26"
+date: "2023-08-05"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
@@ -74,9 +74,9 @@ Office Hours: By Appointment (contact me to schedule)
 
 **Teaching Assistant**
 
-Name: Kyros Shen
+Name: Kira von-kleist (part-time)
 
-Email: jis165@ucsd.edu
+Email: kvonklei@ucsd.edu
 
 ## Course Structure
 
