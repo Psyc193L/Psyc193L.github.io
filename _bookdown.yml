@@ -5,9 +5,9 @@ delete_merged_file: true
 rmd_files:
 # 193L Sequence:
  - index.Rmd
- # - RBasics1.Rmd
- # - RBasics2.Rmd
- # - RBasics3_new.Rmd
+ - RBasics1.Rmd
+ - RBasics2.Rmd
+ - RBasics3_new.Rmd
 # # # # - RBasics3.Rmd
 # # # # - RBasics4.Rmd
  # - Visualizations1.Rmd
