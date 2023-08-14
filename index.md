@@ -1,7 +1,7 @@
 --- 
 title: "PSYC193L"
 author: "Ethan Hurwitz"
-date: "2023-08-07"
+date: "2023-08-14"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
