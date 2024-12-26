@@ -238,7 +238,7 @@ This is an intro course that assumes no prior knowledge. As long as your code ul
 The full grade breakdown is as follows:
 
 <!-- 193L -->
-```{r Grade Breakdown, echo=FALSE, message=F, warning=F}
+```{r 193L Grade Breakdown, echo=FALSE, message=F, warning=F}
 library(tidyverse)
 library(kableExtra)
 
@@ -274,7 +274,7 @@ library(kableExtra)
 ```
 
 <!-- 193 -->
-```{r Grade Breakdown, echo=FALSE, message=F, warning=F}
+```{r 193 Grade Breakdown, echo=FALSE, message=F, warning=F}
 library(tidyverse)
 library(kableExtra)
 
