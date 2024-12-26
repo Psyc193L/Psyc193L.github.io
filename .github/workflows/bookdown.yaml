@@ -161,7 +161,9 @@ jobs:
           R -e 'install.packages("bslib")'
           R -e 'install.packages("downlit")'
           R -e 'install.packages("xml2")'
-          R -e 'install.packages("Lock5withR")'
+#          R -e 'devtools::install_version("Lock5withR",version="1.2-0")'
+#          R -e 'install.packages("Lock5withR")'
+
       - name: Cache renv
         uses: actions/cache@v3
         with:
