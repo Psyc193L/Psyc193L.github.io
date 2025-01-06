@@ -485,17 +485,37 @@ The schedule below is tentative and subject to change.
 <!-- ``` -->
 
 ```{r AY Schedule, echo=FALSE, message=F, warning=F}
+#193L
+# kbl(data.frame("Week" = c("1", "2", "3", "4", "5", "6", "7", "8", "9", "10"),
+#                            "Topic" = c("Why Use R?<br>Coding Basics<br>Using R Effectively<br>R Basics Challenge",
+#                                        "Intro to ggplot",
+#                                                  "geoms and graph types",
+#                                                  "ggplot Customization<br>Color Theory",
+#                                        "Data Viz Challenge",
+#                                        "Control Flow<br>Transformations",
+#                                        "Basic Wrangling",
+#                                        "Advanced Wrangling<br>Summarizing",
+#                                        "Data Manipulation Challenge",
+#                                        "Projects")),
+#     escape = FALSE, align = "c") %>%
+#     #kableExtra::kable_paper("striped", full_width = T) %>%
+#     #column_spec(5:7, bold = T) %>%
+#     #kableExtra::row_spec(1, bold = T, color = "white", background = "grey")
+#   #kable_material(c("striped", "hover"))
+#     kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), position = "center")
+
+#193
 kbl(data.frame("Week" = c("1", "2", "3", "4", "5", "6", "7", "8", "9", "10"),
-                           "Topic" = c("Why Use R?<br>Coding Basics<br>Using R Effectively<br>R Basics Challenge",
+                           "Topic" = c("Why Use R?<br>Coding Basics<br>Using R Effectively", 
+                                       "R Basics Challenge",
                                        "Intro to ggplot",
-                                                 "geoms and graph types",
-                                                 "ggplot Customization<br>Color Theory",
+                                       "geoms and graph types",
+                                       "ggplot Customization<br>Color Theory",
                                        "Data Viz Challenge",
                                        "Control Flow<br>Transformations",
                                        "Basic Wrangling",
                                        "Advanced Wrangling<br>Summarizing",
-                                       "Data Manipulation Challenge",
-                                       "Projects")),
+                                       "Data Manipulation Challenge")),
     escape = FALSE, align = "c") %>%
     #kableExtra::kable_paper("striped", full_width = T) %>%
     #column_spec(5:7, bold = T) %>%
