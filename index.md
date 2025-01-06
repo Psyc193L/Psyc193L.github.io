@@ -1,7 +1,7 @@
 --- 
 title: "PSYC193L"
 author: "Ethan Hurwitz"
-date: "2024-12-26"
+date: "2025-01-06"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
@@ -467,43 +467,43 @@ The schedule below is tentative and subject to change.
 <tbody>
   <tr>
    <td style="text-align:center;"> 1 </td>
-   <td style="text-align:center;"> Why Use R?<br>Coding Basics<br>Using R Effectively<br>R Basics Challenge </td>
+   <td style="text-align:center;"> Why Use R?<br>Coding Basics<br>Using R Effectively </td>
   </tr>
   <tr>
    <td style="text-align:center;"> 2 </td>
-   <td style="text-align:center;"> Intro to ggplot </td>
+   <td style="text-align:center;"> R Basics Challenge </td>
   </tr>
   <tr>
    <td style="text-align:center;"> 3 </td>
-   <td style="text-align:center;"> geoms and graph types </td>
+   <td style="text-align:center;"> Intro to ggplot </td>
   </tr>
   <tr>
    <td style="text-align:center;"> 4 </td>
-   <td style="text-align:center;"> ggplot Customization<br>Color Theory </td>
+   <td style="text-align:center;"> geoms and graph types </td>
   </tr>
   <tr>
    <td style="text-align:center;"> 5 </td>
-   <td style="text-align:center;"> Data Viz Challenge </td>
+   <td style="text-align:center;"> ggplot Customization<br>Color Theory </td>
   </tr>
   <tr>
    <td style="text-align:center;"> 6 </td>
-   <td style="text-align:center;"> Control Flow<br>Transformations </td>
+   <td style="text-align:center;"> Data Viz Challenge </td>
   </tr>
   <tr>
    <td style="text-align:center;"> 7 </td>
-   <td style="text-align:center;"> Basic Wrangling </td>
+   <td style="text-align:center;"> Control Flow<br>Transformations </td>
   </tr>
   <tr>
    <td style="text-align:center;"> 8 </td>
-   <td style="text-align:center;"> Advanced Wrangling<br>Summarizing </td>
+   <td style="text-align:center;"> Basic Wrangling </td>
   </tr>
   <tr>
    <td style="text-align:center;"> 9 </td>
-   <td style="text-align:center;"> Data Manipulation Challenge </td>
+   <td style="text-align:center;"> Advanced Wrangling<br>Summarizing </td>
   </tr>
   <tr>
    <td style="text-align:center;"> 10 </td>
-   <td style="text-align:center;"> Projects </td>
+   <td style="text-align:center;"> Data Manipulation Challenge </td>
   </tr>
 </tbody>
 </table>
