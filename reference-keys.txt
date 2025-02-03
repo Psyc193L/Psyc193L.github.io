@@ -141,3 +141,17 @@ raincloud
 best-practices
 extra-resources
 citations
+customization
+scaling-the-axes
+get-rid-of-padding
+titles-captions-and-labels-oh-my
+themes
+titles
+captions
+axes-titles
+axes-values
+setting-a-default
+legends
+combining-graphs
+saving-graphs
+extra-resources-1
