@@ -467,7 +467,7 @@ kbl(data.frame("Week" = c("1", "2", "3", "4", "5"),
 ```
 
 
-```{r AY Schedule, echo=FALSE, message=F, warning=F}
+```{r AY Schedule2, echo=FALSE, message=F, warning=F}
 # kbl(data.frame("Week" = c("1", "2", "3", "4", "5", "6", "7", "8", "9", "10"),
 #                            "Topic" = c("Why Use R?<br>Coding Basics<br>Using R Effectively<br>R Basics Challenge",
 #                                        "Intro to ggplot",
