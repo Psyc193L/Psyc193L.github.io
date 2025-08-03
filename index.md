@@ -1,7 +1,7 @@
 --- 
 title: "PSYC193L"
 author: "Ethan Hurwitz"
-date: "2025-03-03"
+date: "2025-08-03"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
@@ -17,19 +17,19 @@ csl: apa.csl
 
 ## Basic Info
 
-<!-- Psyc193L: Introduction to R for Social Sciences -->
+Psyc193L: Introduction to R for Social Sciences
 
-<!-- Summer Session 2023 -->
+Summer Session 2025
 
-<!-- *Lecture:* MTuWTh 11:00a-11:50a -->
+*Lecture:* TuTh 11:00am-1:50pm
 
 <!-- *Lab:* TuTh 12:00p-12:50p -->
 
-Psyc193: Introduction to R for Social Sciences
+<!-- Psyc193: Introduction to R for Social Sciences -->
 
-Winter 2025
+<!-- Winter 2025 -->
 
-*Lecture:* TuTh 11:00am-12:20pm
+<!-- *Lecture:* TuTh 11:00am-12:20pm -->
 
 ## Course Description
 
@@ -120,7 +120,7 @@ All course materials are free. You have enough expenses, I am not interested in 
 <!-- DataHub website. -->
   
   
-* **[Discord](https://discord.gg/ncbGmCEU38)**
+* **[Discord](https://discord.gg/UKgvZNMc)**
   + We will use Discord as a central place to manage questions about the class, communicate with each other, and easily copy/paste code for sharing. Checking the discord is an expected part of the class.
 
   
@@ -129,7 +129,7 @@ All course materials are free. You have enough expenses, I am not interested in 
 
 <!-- + Class will be remote, so all class periods and office hours will be held via Zoom! -->
   
-* **[Anonymous Feedback](https://forms.gle/yGBSitxWnEHiAYJN9)**
+* **[Anonymous Feedback](https://forms.gle/udG8BF6S8WMZibni9)**
   + This is a place to submit anonymous feedback to the teaching team.
 
 ## Grades
@@ -238,9 +238,6 @@ This is an intro course that assumes no prior knowledge. As long as your code ul
 The full grade breakdown is as follows:
 
 <!-- 193L -->
-
-
-<!-- 193 -->
 <table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
  <thead>
   <tr>
@@ -251,19 +248,26 @@ The full grade breakdown is as follows:
 <tbody>
   <tr>
    <td style="text-align:left;"> Exercises </td>
-   <td style="text-align:left;"> 30 </td>
+   <td style="text-align:left;"> 20 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Practice Problem Sets </td>
-   <td style="text-align:left;"> 30 </td>
+   <td style="text-align:left;"> 20 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Skills Challenges </td>
-   <td style="text-align:left;"> 40 </td>
+   <td style="text-align:left;"> 30 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Final Project </td>
+   <td style="text-align:left;"> 30 </td>
   </tr>
 </tbody>
 </table>
 
+
+
+<!-- 193 -->
 
 
 Final letter grades in the course will be assigned according to the following percentage scale: 
@@ -324,36 +328,36 @@ Lectures are flipped and there are no class participation credits. Class meeting
 
 <!-- Summer Session Version: -->
 <!-- Exercises, Practice Problem Sets, and Challenges, can be submitted up to 5 days past their due date for late credit. The late penalty is 10% **per day** late, and will only be accepted up to 5 days past the due date (i.e., by Saturday). <b><u>The paper/project CANNOT be submitted late</u></b>. -->
-<!-- Assignments can be submitted up to 5 days past their due date for late credit. The late penalty for assignments is 10% per day late, capping out at 50% (5 days late). This applies to all assignments <b><u>except the paper and those in the final week</u></b>. -->
+Assignments can be submitted up to 5 days past their due date for late credit. The late penalty for assignments is 10% per day late, capping out at 50% (5 days late). This applies to all assignments <b><u>except the paper and those in the final week</u></b>.
 
-<!-- There may be some instances where it is better for you to take the late penalty than submit an incomplete assignment (e.g., the more incomplete an assignment, the better to take the late penalty). -->
+There may be some instances where it is better for you to take the late penalty than submit an incomplete assignment (e.g., the more incomplete an assignment, the better to take the late penalty).
 
-<!-- Please do not let this flexibility encourage you to submit work late, because it is <b>*VERY*</b> easy to get behind on assignments given the pace of a Summer course. You can quickly find yourself with many assignments accruing high late penalties which have a significant impact on your overall course grade. Instead, you should view this as a built in accommodation for some unforeseen circumstances. -->
+Please do not let this flexibility encourage you to submit work late, because it is <b>*VERY*</b> easy to get behind on assignments given the pace of a Summer course. You can quickly find yourself with many assignments accruing high late penalties which have a significant impact on your overall course grade. Instead, you should view this as a built in accommodation for some unforeseen circumstances.
 
 <!-- Regular Term Version: -->
 <!-- Exercises, Practice Problem Sets, and Challenges, can be submitted up to 5 days past their due date for late credit. The late penalty is 10% per day late, and will only be accepted up to 5 days past the due date (i.e., Friday of the following week). <b><u>The paper/project CANNOT be submitted late</u></b>. -->
 
-Exercises, Practice Problem Sets, and Challenges, can be submitted up to 2 weeks past their due date for late credit. The late penalty is 10% per week late, and will only be accepted up to 2 weeks past the due date. The reason for this is that, similar to other language or math courses, the material we learn throughout the term is contingent on the immediately preceding content. Thus, if you do not stay on top of the material, you will get lost and be unable to keep pace with the assignments. 
+<!-- Exercises, Practice Problem Sets, and Challenges, can be submitted up to 2 weeks past their due date for late credit. The late penalty is 10% per week late, and will only be accepted up to 2 weeks past the due date. The reason for this is that, similar to other language or math courses, the material we learn throughout the term is contingent on the immediately preceding content. Thus, if you do not stay on top of the material, you will get lost and be unable to keep pace with the assignments.  -->
 
 ### Extensions
 
 <!-- Summer Session Version: -->
-<!-- Assignments have due dates that give you a fair amount of time to complete them, and should be able to accommodate instances where you get sick or something else comes up. Granted, it is a Summer Session course, so things move at an accelerated pace.  -->
-<!-- That said, I am a pretty reasonable person and will grant extensions under *reasonable* circumstances (being stressed will not warrant an extension).  -->
+Assignments have due dates that give you a fair amount of time to complete them, and should be able to accommodate instances where you get sick or something else comes up. Granted, it is a Summer Session course, so things move at an accelerated pace.
+That said, I am a reasonable person and will grant extensions under *reasonable* circumstances that would afford accommodations (i.e., things that meet the University policies for extenuating circumstances such as family emergencies, health issues, etc.).
 
-<!-- Please reach out to me if you are struggling or any unique/extenuating situations arise. I am a pretty reasonable person, and am willing to work with you when you have proper documentation for unforeseen circumstances (e.g., getting sick, death in the family, etc.). -->
+Please reach out to me if you are struggling or any unique/extenuating situations arise. I am a pretty reasonable person, and am willing to work with you when you have proper documentation for unforeseen circumstances (e.g., getting sick, death in the family, etc.).
 
 <!-- Regular Term Version: -->
-  Assignments have due dates that afford a lot amount of time to complete them, and should be able to accommodate instances where you get sick or something else comes up. However, each student will have one "emergency button" they can push. You can use an emergency button to remove one week's late penalty on any week's assignments. If something comes up and you must submit assignments late, you can push your "emergency button" and submit it up to one week late with no late penalty. This is something you can only do **once** all quarter, and must let me know explicitly when/if you use it!
+<!--   Assignments have due dates that afford a lot amount of time to complete them, and should be able to accommodate instances where you get sick or something else comes up. However, each student will have one "emergency button" they can push. You can use an emergency button to remove one week's late penalty on any week's assignments. If something comes up and you must submit assignments late, you can push your "emergency button" and submit it up to one week late with no late penalty. This is something you can only do **once** all quarter, and must let me know explicitly when/if you use it! -->
 
-Please reach out to me if you are struggling or any unique situations arise.
+<!-- Please reach out to me if you are struggling or any unique situations arise. -->
 
 ### Email/Discord DMs
 
   <!-- If you would prefer to ask a question privately, you may DM me on Zoom, email me, send me a DM on discord, or come to my office hours. My preference would be a Zoom DM or Discord DM, as I will check those more frequently. If you choose to email, please include “PSYC 193L” in the subject line of your emails. Doing this will make sure I see your message in a timely manner. -->
   
   If you would prefer to ask a question privately, you may email me, send me a DM on discord, or come to my office hours. My preference would be an email or Discord DM, as I will check those more frequently. If you choose to email, please include “PSYC 193” in the subject line of your emails. Doing this will make sure I see your message in a timely manner.
-  
+
 ### Academic Integrity
 
   All students are expected to adhere to standards of academic integrity. Cheating of any kind on any assignment will not be tolerated. It is disrespectful to your peers, the university, and to me. Especially considering this course is designed with a grading scheme that rewards effort and engagement and does not disproportionately favor correctness.
@@ -368,7 +372,7 @@ Please reach out to me if you are struggling or any unique situations arise.
 
   You may earn up to 2 points of extra credit which will be added to your overall grade in the course. One of those points can be earned by completing SONA participation credits (1 SONA credit is worth 0.5 EC points). To sign up for an experiment, go to the [SONA website](https://ucsd.sona-systems.com). To earn the full point of extra credit in the class, you must complete 2 SONA credits. **Please note that completing 1 study on SONA does not always mean earning 1 SONA credit, and there are differences in credit hours for in person vs. remote studies.**
  
-  The second extra credit point can be earned by completing the SETs for our course as well as an additional survey sent out at the end of the quarter. If 75% of the class completes <b>BOTH</b>, the entire class will earn 1 extra credit point. 
+  The second extra credit point can be earned by completing the SETs for our course as well as an additional survey sent out at the end of the quarter. If 70% of the class completes <b>BOTH</b>, the entire class will earn 1 extra credit point. 
 
 ## What We Expect From You
 
@@ -411,102 +415,62 @@ In choosing what content to include, this was my philosophy:
 
 The schedule below is tentative and subject to change.
 
-<!-- ```{r Summer Schedule, echo=FALSE, message=F, warning=F} -->
-<!-- kbl(data.frame("Week" = c("1", "2", "3", "4", "5"), -->
-<!--                            "Monday" = c("Syllabus", "Different Graph Types", -->
-<!--                                                  "Viz Challenge<br>+Project Intro", -->
-<!--                                                  "Summarizing", ""), -->
-<!--                            "Tuesday" = c("Why use R<br>+Coding Basics<br>+Using R Effectively", -->
-<!--                                          "Different Graph Types", -->
-<!--                                          "Tidy Data<br>+Control Flow", -->
-<!--                                          "Wrangling<br>Challenge", ""), -->
-<!--                            "Wednesday" = c("R Basics<br>Assignments", -->
-<!--                                            "ggplot<br>Customization", "Basic<br>Wrangling", -->
-<!--                                            "Data<br>Transformation", -->
-<!--                                            ""), -->
-<!--                            "Thursday" = c("ggplot Intro", -->
-<!--                                     "Color<br>Theory", -->
-<!--                                     "Advanced<br>+Wrangling", -->
-<!--                                     "RStudio Projects<br>+Project Mtg", "")), -->
-<!--     escape = FALSE, align = "c") %>% -->
-<!--     #kableExtra::kable_paper("striped", full_width = T) %>% -->
-<!--     #column_spec(5:7, bold = T) %>% -->
-<!--     #kableExtra::row_spec(1, bold = T, color = "white", background = "grey") -->
-<!--   #kable_material(c("striped", "hover")) -->
-<!--     kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), position = "center") -->
-<!-- ``` -->
-
-
-<!-- ```{r AY Schedule, echo=FALSE, message=F, warning=F} -->
-<!-- kbl(data.frame("Week" = c("1", "2", "3", "4", "5", "6", "7", "8", "9", "10"),  -->
-<!--                            "Topic" = c("Why Use R?<br>Coding Basics<br>Using R Effectively<br>R Basics Challenge",  -->
-<!--                                        "Intro to ggplot", -->
-<!--                                                  "geoms and graph types", -->
-<!--                                                  "ggplot Customization<br>Color Theory", -->
-<!--                                        "Data Viz Challenge", -->
-<!--                                        "Control Flow<br>Transformations", -->
-<!--                                        "Basic Wrangling", -->
-<!--                                        "Advanced Wrangling<br>Summarizing", -->
-<!--                                        "Data Manipulation Challenge", -->
-<!--                                        "Projects")),  -->
-<!--     escape = FALSE, align = "c") %>% -->
-<!--     #kableExtra::kable_paper("striped", full_width = T) %>% -->
-<!--     #column_spec(5:7, bold = T) %>% -->
-<!--     #kableExtra::row_spec(1, bold = T, color = "white", background = "grey") -->
-<!--   #kable_material(c("striped", "hover")) -->
-<!--     kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), position = "center") -->
-<!-- ``` -->
+<!-- Temp -->
+While the course officially meets on Tuesday and Thursday each week, I have ordered the weekly content into a M-Th schedule to help give you an idea of how you could schedule your weeks for this course (while still maintaining some balance with weekends).
 
 <table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
  <thead>
   <tr>
    <th style="text-align:center;"> Week </th>
-   <th style="text-align:center;"> Topic </th>
+   <th style="text-align:center;"> Monday </th>
+   <th style="text-align:center;"> Tuesday </th>
+   <th style="text-align:center;"> Wednesday </th>
+   <th style="text-align:center;"> Thursday </th>
   </tr>
  </thead>
 <tbody>
   <tr>
    <td style="text-align:center;"> 1 </td>
-   <td style="text-align:center;"> Why Use R?<br>Coding Basics<br>Using R Effectively </td>
+   <td style="text-align:center;"> Syllabus </td>
+   <td style="text-align:center;"> Why use R<br>+Coding Basics<br>+Using R Effectively </td>
+   <td style="text-align:center;"> R Basics<br>Assignments </td>
+   <td style="text-align:center;"> ggplot Intro </td>
   </tr>
   <tr>
    <td style="text-align:center;"> 2 </td>
-   <td style="text-align:center;"> R Basics Challenge </td>
+   <td style="text-align:center;"> Different Graph Types </td>
+   <td style="text-align:center;"> Different Graph Types </td>
+   <td style="text-align:center;"> ggplot<br>Customization </td>
+   <td style="text-align:center;"> Color<br>Theory </td>
   </tr>
   <tr>
    <td style="text-align:center;"> 3 </td>
-   <td style="text-align:center;"> Intro to ggplot </td>
+   <td style="text-align:center;"> Viz Challenge<br>+Project Intro </td>
+   <td style="text-align:center;"> Tidy Data<br>+Control Flow </td>
+   <td style="text-align:center;"> Basic<br>Wrangling </td>
+   <td style="text-align:center;"> Advanced<br>+Wrangling </td>
   </tr>
   <tr>
    <td style="text-align:center;"> 4 </td>
-   <td style="text-align:center;"> geoms and graph types </td>
+   <td style="text-align:center;"> Summarizing </td>
+   <td style="text-align:center;"> Wrangling<br>Challenge </td>
+   <td style="text-align:center;"> Data<br>Transformation </td>
+   <td style="text-align:center;"> RStudio Projects<br>+Project Mtg </td>
   </tr>
   <tr>
    <td style="text-align:center;"> 5 </td>
-   <td style="text-align:center;"> ggplot Customization<br>Color Theory </td>
-  </tr>
-  <tr>
-   <td style="text-align:center;"> 6 </td>
-   <td style="text-align:center;"> Data Viz Challenge </td>
-  </tr>
-  <tr>
-   <td style="text-align:center;"> 7 </td>
-   <td style="text-align:center;"> Control Flow<br>Transformations </td>
-  </tr>
-  <tr>
-   <td style="text-align:center;"> 8 </td>
-   <td style="text-align:center;"> Basic Wrangling </td>
-  </tr>
-  <tr>
-   <td style="text-align:center;"> 9 </td>
-   <td style="text-align:center;"> Advanced Wrangling<br>Summarizing </td>
-  </tr>
-  <tr>
-   <td style="text-align:center;"> 10 </td>
-   <td style="text-align:center;"> Data Manipulation Challenge </td>
+   <td style="text-align:center;">  </td>
+   <td style="text-align:center;">  </td>
+   <td style="text-align:center;">  </td>
+   <td style="text-align:center;">  </td>
   </tr>
 </tbody>
 </table>
+
+
+
+
+
 
 
 
@@ -546,6 +510,6 @@ Don't just take my word for it! Here are some suggestions and advice from studen
 
 ## Acknowledgements
 
-I'd like to directly thank [Emma Geller](https://www.lime-lab-ucsd.com/people), [Judy Fan](https://cogtoolslab.github.io/people.html), and Angela Lowe, for sharing their syllabi materials, teaching philosophy, and mentorship.<!--, and [Natalia Pallis-Hassani](https://www.linkedin.com/in/natalia-pallis-hassani-865ba3193) for feedback in developing course material.--> Throughout this course, I will use many illustrations created by the brilliant [Allison Horst](https://www.allisonhorst.com/).
+I'd like to directly thank [Emma Geller](https://www.lime-lab-ucsd.com/people), [Judy Fan](https://cogtoolslab.github.io/people.html), and Angela Lowe, for sharing their syllabi materials and input on this course.<!--, and [Natalia Pallis-Hassani](https://www.linkedin.com/in/natalia-pallis-hassani-865ba3193) for feedback in developing course material.--> Throughout this course, I will use many illustrations created by the brilliant [Allison Horst](https://www.allisonhorst.com/).
 
 ## References
