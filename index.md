@@ -1,7 +1,7 @@
 --- 
 title: "PSYC193L"
 author: "Ethan Hurwitz"
-date: "2025-08-03"
+date: "2025-08-05"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
@@ -124,8 +124,8 @@ All course materials are free. You have enough expenses, I am not interested in 
   + We will use Discord as a central place to manage questions about the class, communicate with each other, and easily copy/paste code for sharing. Checking the discord is an expected part of the class.
 
   
-* **[Zoom](https://ucsd.zoom.us/j/7073646912)**
-  + For office hours held via zoom.
+* **[Zoom](https://ucsd.zoom.us/j/91742919135)**
+  + For class meetings and office hours held via zoom.
 
 <!-- + Class will be remote, so all class periods and office hours will be held via Zoom! -->
   
