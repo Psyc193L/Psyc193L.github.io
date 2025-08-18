@@ -15,9 +15,9 @@ rmd_files:
  - Visualizations2.Rmd
  - Visualizations3.Rmd
  - Visualizations4.Rmd
- # - Manip1.Rmd
+ - Manip1.Rmd
  # - DataTransformation.Rmd #During AY
- # - Manip2.Rmd
+ - Manip2.Rmd
  # - Manip3.Rmd
  # - Manip4.Rmd
 #  #- DataTransformation.Rmd # During Summer
