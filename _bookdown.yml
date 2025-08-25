@@ -18,9 +18,9 @@ rmd_files:
  - Manip1.Rmd
  # - DataTransformation.Rmd #During AY
  - Manip2.Rmd
- # - Manip3.Rmd
- # - Manip4.Rmd
-#  #- DataTransformation.Rmd # During Summer
+ - Manip3.Rmd
+ - Manip4.Rmd
+ - DataTransformation.Rmd # During Summer
 #  - Projects.Rmd
 
 # # 111A Notes:
