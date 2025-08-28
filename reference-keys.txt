@@ -263,3 +263,17 @@ setdiff
 summary-1
 extra-resources-4
 references-5
+projects-and-organization
+r-projects
+why-use-them
+what-are-they
+how-do-i-make-one
+file-paths-1
+here
+introduction-file
+tldr
+literate-programming
+markdown
+syntax
+document-organization
+visual-summary
