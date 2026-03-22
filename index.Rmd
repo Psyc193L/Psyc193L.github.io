@@ -17,11 +17,19 @@ csl: apa.csl
 
 ## Basic Info
 
-Psyc193L: Introduction to R for Social Sciences
+<!-- Psyc193L: Introduction to R for Social Sciences -->
 
-Summer Session 2025
+PSYC193L: Introduction to R Programming
 
-*Lecture:* TuTh 11:00am-1:50pm
+Spring 2026
+
+*Lecture:* MW 9:00am-9:50am
+
+*Lab:* F 9:00am-9:50am
+
+<!-- Summer Session 2025 -->
+
+<!-- *Lecture:* TuTh 11:00am-1:50pm -->
 
 <!-- *Lab:* TuTh 12:00p-12:50p -->
 
@@ -78,11 +86,21 @@ Email: ehurwitz@ucsd.edu
 
 Office Hours: By Appointment (contact me to schedule)
 
-<!-- **Teaching Assistant** -->
+**Teaching Assistant**
 
-<!-- Name: Kira von-kleist (part-time) -->
+Name: Ajinkya Jadhav
 
-<!-- Email: kvonklei@ucsd.edu -->
+Email: asjadhav@ucsd.edu
+
+Office Hours: 
+
+**PLA**
+
+Name: America Baretto
+
+Email: abarreto@ucsd.edu
+
+Office Hours: Wed at 3pm
 
 ## Course Structure
 
@@ -92,9 +110,9 @@ Office Hours: By Appointment (contact me to schedule)
   
   Before each class, I will release online lecture notes as well as a recorded lecture where I cover the material. You can watch those and following along with the relevant files as you would in class synchronously. This allows you to get practice implementing the code as it is being introduced, but also be able to pause or rewind if needed. Classes will be treated as open office hours / study halls. You can ask questions about the lecture material, get live help, work through problems together, and make progress on assignments during class time!
 
-<!-- ### “Lecture” vs. “Lab” Sessions  -->
+### “Lecture” vs. “Lab” Sessions
 
-<!--   While the official schedule of classes specifies separate “Lecture” and “Lab” sessions for the course, do not take this distinction too seriously. “Lecture” sessions will not consist exclusively of traditional lecture, and “Lab” sessions will not consist exclusively of traditional guided laboratory exercises. On any given day, you are likely to encounter some mix of brief lecture, group discussion, and/or hands-on activities. -->
+  While the official schedule of classes specifies separate “Lecture” and “Lab” sessions for the course, do not take this distinction too seriously. “Lecture” sessions will not consist exclusively of traditional lecture, and “Lab” sessions will not consist exclusively of traditional guided laboratory exercises. On any given day, you are likely to encounter some mix of brief lecture, group discussion, and/or hands-on activities.
   
 ## What Tools Will We Be Using In This Class?
 
@@ -120,16 +138,16 @@ All course materials are free. You have enough expenses, I am not interested in 
 <!-- DataHub website. -->
   
   
-* **[Discord](https://discord.gg/UKgvZNMc)**
+* **[Discord](https://discord.gg/EMrShXmwdM)**
   + We will use Discord as a central place to manage questions about the class, communicate with each other, and easily copy/paste code for sharing. Checking the discord is an expected part of the class.
 
   
-* **[Zoom](https://ucsd.zoom.us/j/91742919135)**
+* **[Zoom](https://ucsd.zoom.us/j/99287138425)**
   + For class meetings and office hours held via zoom.
 
 <!-- + Class will be remote, so all class periods and office hours will be held via Zoom! -->
   
-* **[Anonymous Feedback](https://forms.gle/udG8BF6S8WMZibni9)**
+* **[Anonymous Feedback](https://forms.gle/FvQzioXbsrhofnfr9)**
   + This is a place to submit anonymous feedback to the teaching team.
 
 ## Grades
@@ -170,47 +188,47 @@ However, there must be ***some*** things to grade you on. They are the following
 
 <!-- * This is a new course using all new material made largely from scratch. I am particularly interested in getting feedback on... everything! What works, what does not, what was engaging, what was boring, what was helpful, etc. There will be very brief feedback surveys about all the material that will be graded only for completion. -->
 
-<!-- <u>**Final Project**</u> -->
+<u>**Final Project**</u>
 
 <!-- 193L Version -->
-<!-- Towards the end of this term you will write a complete research report in [APA format](https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_formatting_and_style_guide/general_format.html) including a title page, abstract, introduction, methods, results, discussion, and references sections. There are two options for the project: one that is more directed and one that is more open. -->
+Towards the end of this term you will write a complete research report in [APA format](https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_formatting_and_style_guide/general_format.html) including a title page, abstract, introduction, methods, results, discussion, and references sections. There are two options for the project: one that is more directed and one that is more open.
 
-<!-- For the <u>directed</u> option, you will choose a dataset that has specific questions that you must investigate and try to answer. For the <u>open</u> option, you will choose a dataset and come up with your own question(s) to investigate and try to answer. Datasets will be provided for you. You do not have to find or generate them on your own. -->
+For the <u>directed</u> option, you will choose a dataset that has specific questions that you must investigate and try to answer. For the <u>open</u> option, you will choose a dataset and come up with your own question(s) to investigate and try to answer. Datasets will be provided for you. You do not have to find or generate them on your own.
 
-<!-- In both options, you will: -->
+In both options, you will:
 
-<!-- * Conduct a brief literature review to find sources which help motivate the research question(s) and provide rationale for your hypothesized answers to those questions. -->
-<!-- * Clean/change/modify/whatever the data to get it in the form you need, then create visualizations and summary statistics that look for potential answers to your hypotheses. -->
-<!-- * The paper will largely be explaining what you have done.  -->
-<!--   + What does the data contain?  -->
-<!--   + What are your questions?  -->
-<!--   + What are the possible answers?  -->
-<!--   + What are your predictions and why? -->
-<!--   + What would you expect to see if your predictions are accurate? If they are not accurate? -->
-<!--   + What did you do (explain your code in words)?  -->
-<!--   + Show the visualizations and summary statistics and explain/interpret them. -->
-<!-- * The other thing you will do is create a literate programming document for your project. We will expound on this more later, but the code document you create will be thoroughly annotated for others' understanding. -->
-<!-- * More information about this will be posted later. -->
+* Conduct a brief literature review to find sources which help motivate the research question(s) and provide rationale for your hypothesized answers to those questions.
+* Clean/change/modify/whatever the data to get it in the form you need, then create visualizations and summary statistics that look for potential answers to your hypotheses.
+* The paper will largely be explaining what you have done.
+  + What does the data contain?
+  + What are your questions?
+  + What are the possible answers?
+  + What are your predictions and why?
+  + What would you expect to see if your predictions are accurate? If they are not accurate?
+  + What did you do (explain your code in words)?
+  + Show the visualizations and summary statistics and explain/interpret them.
+* The other thing you will do is create a literate programming document for your project. We will expound on this more later, but the code document you create will be thoroughly annotated for others' understanding.
+* More information about this will be posted later.
 
-<!-- <u>Paper Guidelines:</u> -->
+<u>Paper Guidelines:</u>
 
-<!-- * Must adhere to proper APA format -->
-<!-- * Minimum of 3-4 pages of text (double spaced -- not including the space for figures/tables/etc.) -->
-<!-- * Minimum of 3 references (you should probably have more though) -->
-<!-- * Sufficiently motivate the question(s) and justify your hypotheses by what you find in your literature review. Describe and interpret your results mindfully. -->
+* Must adhere to proper APA format
+* Minimum of 3-4 pages of text (double spaced -- not including the space for figures/tables/etc.)
+* Minimum of 3 references (you should probably have more though)
+* Sufficiently motivate the question(s) and justify your hypotheses by what you find in your literature review. Describe and interpret your results mindfully.
 
-<!-- <b>If you plan on using this paper to satisfy the Psychology B.S., Research Paper Requirement, your paper must adhere to the following guidelines:</b> -->
+<b>If you plan on using this paper to satisfy the Psychology B.S., Research Paper Requirement, your paper must adhere to the following guidelines:</b>
 
-<!-- * At least <u>6 full pages of text</u> (double spaced, but must be text. Space taken up by charts, graphs, etc., does not count towards the 6 page minimum) -->
-<!-- * At least 5 references, including a minimum of <u>3 empirical papers</u> (you should probably have more though) -->
-<!-- * Discuss specific methodologies used in the lab or research articles cited -->
-<!--   + Specifically, you will have a more thorough introduction that reviews, in depth, the methodology typically used to study the topic of the dataset of your choice. -->
-<!-- * Written clearly so a non-expert can follow the logic of what is being presented -->
-<!-- * Demonstrate evidence of critical thinking about research (not summarizing what has been done) -->
+* At least <u>6 full pages of text</u> (double spaced, but must be text. Space taken up by charts, graphs, etc., does not count towards the 6 page minimum)
+* At least 5 references, including a minimum of <u>3 empirical papers</u> (you should probably have more though)
+* Discuss specific methodologies used in the lab or research articles cited
+  + Specifically, you will have a more thorough introduction that reviews, in depth, the methodology typically used to study the topic of the dataset of your choice.
+* Written clearly so a non-expert can follow the logic of what is being presented
+* Demonstrate evidence of critical thinking about research (not summarizing what has been done)
 
-<!-- <b><u>Note:</u></b> These are departmental guidelines, I have no say in this. This is what the department requires a Psychology B.S. Research Paper to have. -->
+<b><u>Note:</u></b> These are departmental guidelines, I have no say in this. This is what the department requires a Psychology B.S. Research Paper to have.
 
-<!-- Again, you will be given optional datasets to choose from later on. You will <b>NOT</b> have to collect this data yourself! -->
+Again, you will be given optional datasets to choose from later on. You will <b>NOT</b> have to collect this data yourself!
 
 ### How Does Grading Work?
 
@@ -231,7 +249,7 @@ NO!
 ![](figures/circuitousPath.jpeg){width=100%}
 <p style="font-size:6pt">Artwork by @allison_horst</p>
 
-This is an intro course that assumes no prior knowledge. As long as your code ultimately gives you what you want, and you are not cheating or breaking any rules, it does not matter how circuitous or un-glamorous that code is!
+This is an intro course that assumes no prior knowledge. As long as your code ultimately gives you what you want, **and importantly you are not cheating or breaking any rules**, it does not matter how circuitous or un-glamorous that code is!
 
 ### Grade Breakdown
 
@@ -243,6 +261,21 @@ library(tidyverse)
 library(kableExtra)
 
 # Summer Session Version:
+
+# kbl(data.frame("Assignment" = c("Exercises",
+#                                             "Practice Problem Sets",
+#                                             "Skills Challenges",
+#                                             "Final Project"),
+#                            "Total Percentage" = c("20", "20", "30", "30")#,
+#                            #"Breakdown" = c("<b>test</b>", "*test*", "**test**", "`test`")
+#                            ), col.names = c("Assignment", "Total %")) %>%
+#     #kableExtra::kable_paper("striped", full_width = T) %>%
+#     #column_spec(5:7, bold = T) %>%
+#     #kableExtra::row_spec(1, bold = T, color = "white", background = "grey")
+#   #kable_material(c("striped", "hover"))
+#     kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), position = "center")
+
+# Regular Term Version:
 
 kbl(data.frame("Assignment" = c("Exercises",
                                             "Practice Problem Sets",
@@ -256,21 +289,6 @@ kbl(data.frame("Assignment" = c("Exercises",
     #kableExtra::row_spec(1, bold = T, color = "white", background = "grey")
   #kable_material(c("striped", "hover"))
     kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), position = "center")
-
-# Regular Term Version:
-
-# kbl(data.frame("Assignment" = c("Exercises",
-#                                             "Practice Problem Sets",
-#                                             "Skills Challenges",
-#                                             "Final Project"), 
-#                            "Total Percentage" = c("20", "20", "30", "30")#,
-#                            #"Breakdown" = c("<b>test</b>", "*test*", "**test**", "`test`")
-#                            ), col.names = c("Assignment", "Total %")) %>%
-#     #kableExtra::kable_paper("striped", full_width = T) %>%
-#     #column_spec(5:7, bold = T) %>%
-#     #kableExtra::row_spec(1, bold = T, color = "white", background = "grey")
-#   #kable_material(c("striped", "hover"))
-#     kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), position = "center")
 ```
 
 <!-- 193 -->
@@ -342,38 +360,39 @@ kbl(data.frame("A" = c("A+", "A", "A-"),
 
 <!-- Summer Session Version: -->
   <!-- Attendance is <u>strongly encouraged</u>, and the decision to hold the course remotely was made in order to maximize the ability for students to attend synchronously, but is not required. Participation is based on activity completion, which can be completed asynchronously. However, it is much more difficult to do so this way. -->
-Lectures are flipped and there are no class participation credits. Class meeting times are designed to be times where you can come, work on the assignments, and get live/immediate help from me. Thus, the course *can* be completed entirely asynchronously. However, it is invariably the case that the students who regularly attend class meetings or engage with me attain the highest grades in this course. So, I strongly encourage you to attend at least occasionally and make sure to get your questions answered. 
+<!-- Lectures are flipped and there are no class participation credits. Class meeting times are designed to be times where you can come, work on the assignments, and get live/immediate help from me. While attendance is not mandatory, it is invariably the case that the students who regularly attend class meetings or engage with me attain the highest grades in this course. So, I strongly encourage you to attend at least occasionally and make sure to get your questions answered.  -->
   
 <!-- Regular Term Version: -->
-<!-- Attendance is <u>strongly encouraged</u>, but is <b>not required</b>. Lectures are flipped and there are no class participation credits. Thus, the course can be completed asynchronously. However, it is invariably the case that students who regularly attend class meetings attain the highest grades in this course. -->
+Attendance is <u>strongly encouraged</u>, but is <b>not required</b>. Lectures are flipped and there are no class participation credits. However, it is invariably the case that students who regularly attend class meetings attain the highest grades in this course.
 
 ### Late Work
 
 <!-- Summer Session Version: -->
 <!-- Exercises, Practice Problem Sets, and Challenges, can be submitted up to 5 days past their due date for late credit. The late penalty is 10% **per day** late, and will only be accepted up to 5 days past the due date (i.e., by Saturday). <b><u>The paper/project CANNOT be submitted late</u></b>. -->
-Assignments can be submitted up to 5 days past their due date for late credit. The late penalty for assignments is 10% per day late, capping out at 50% (5 days late). This applies to all assignments <b><u>except the paper and those in the final week</u></b>.
 
-There may be some instances where it is better for you to take the late penalty than submit an incomplete assignment (e.g., the more incomplete an assignment, the better to take the late penalty).
+<!-- Assignments can be submitted up to 5 days past their due date for late credit. The late penalty for assignments is 10% per day late, capping out at 50% (5 days late). This applies to all assignments <b><u>except the paper and those in the final week</u></b>. -->
 
-Please do not let this flexibility encourage you to submit work late, because it is <b>*VERY*</b> easy to get behind on assignments given the pace of a Summer course. You can quickly find yourself with many assignments accruing high late penalties which have a significant impact on your overall course grade. Instead, you should view this as a built in accommodation for some unforeseen circumstances.
+<!-- There may be some instances where it is better for you to take the late penalty than submit an incomplete assignment (e.g., the more incomplete an assignment, the better to take the late penalty). -->
+
+<!-- Please do not let this flexibility encourage you to submit work late, because it is <b>*VERY*</b> easy to get behind on assignments given the pace of a Summer course. You can quickly find yourself with many assignments accruing high late penalties which have a significant impact on your overall course grade. Instead, you should view this as a built in accommodation for some unforeseen circumstances. -->
 
 <!-- Regular Term Version: -->
 <!-- Exercises, Practice Problem Sets, and Challenges, can be submitted up to 5 days past their due date for late credit. The late penalty is 10% per day late, and will only be accepted up to 5 days past the due date (i.e., Friday of the following week). <b><u>The paper/project CANNOT be submitted late</u></b>. -->
 
-<!-- Exercises, Practice Problem Sets, and Challenges, can be submitted up to 2 weeks past their due date for late credit. The late penalty is 10% per week late, and will only be accepted up to 2 weeks past the due date. The reason for this is that, similar to other language or math courses, the material we learn throughout the term is contingent on the immediately preceding content. Thus, if you do not stay on top of the material, you will get lost and be unable to keep pace with the assignments.  -->
+Exercises, Practice Problem Sets, and Challenges, can be submitted up to 2 weeks past their due date for late credit. The late penalty is 10% per week late, and will only be accepted up to 2 weeks past the due date. The reason for this is that, similar to other language or math courses, the material we learn throughout the term is contingent on the immediately preceding content. Thus, if you do not stay on top of the material, you will get lost and be unable to keep pace with the assignments. <b><u>The paper/project CANNOT be submitted late</u></b>.
 
 ### Extensions
 
 <!-- Summer Session Version: -->
-Assignments have due dates that give you a fair amount of time to complete them, and should be able to accommodate instances where you get sick or something else comes up. Granted, it is a Summer Session course, so things move at an accelerated pace.
-That said, I am a reasonable person and will grant extensions under *reasonable* circumstances that would afford accommodations (i.e., things that meet the University policies for extenuating circumstances such as family emergencies, health issues, etc.).
+<!-- Assignments have due dates that give you a fair amount of time to complete them, and should be able to accommodate instances where you get sick or something else comes up. Granted, it is a Summer Session course, so things move at an accelerated pace. -->
+<!-- That said, I am a reasonable person and will grant extensions under *reasonable* circumstances that would afford accommodations (i.e., things that meet the University policies for extenuating circumstances such as family emergencies, health issues, etc.). -->
 
-Please reach out to me if you are struggling or any unique/extenuating situations arise. I am a pretty reasonable person, and am willing to work with you when you have proper documentation for unforeseen circumstances (e.g., getting sick, death in the family, etc.).
+<!-- Please reach out to me if you are struggling or any unique/extenuating situations arise. I am a pretty reasonable person, and am willing to work with you when you have proper documentation for unforeseen circumstances (e.g., getting sick, death in the family, etc.). -->
 
 <!-- Regular Term Version: -->
-<!--   Assignments have due dates that afford a lot amount of time to complete them, and should be able to accommodate instances where you get sick or something else comes up. However, each student will have one "emergency button" they can push. You can use an emergency button to remove one week's late penalty on any week's assignments. If something comes up and you must submit assignments late, you can push your "emergency button" and submit it up to one week late with no late penalty. This is something you can only do **once** all quarter, and must let me know explicitly when/if you use it! -->
+  Assignments have due dates that afford a lot amount of time to complete them, and should be able to accommodate instances where you get sick or something else comes up. However, each student will have one "emergency button" they can push. You can use an emergency button to remove one week's late penalty on any week's assignments. If something comes up and you must submit assignments late, you can push your "emergency button" and submit it up to one week late with no late penalty. This is something you can only do **once** all quarter, and must let me know explicitly when/if you use it!
 
-<!-- Please reach out to me if you are struggling or any unique situations arise. -->
+Please reach out if you are struggling or any unique situations arise.
 
 ### Email/Discord DMs
 
@@ -384,6 +403,10 @@ Please reach out to me if you are struggling or any unique/extenuating situation
 ### Academic Integrity
 
   All students are expected to adhere to standards of academic integrity. Cheating of any kind on any assignment will not be tolerated. It is disrespectful to your peers, the university, and to me. Especially considering this course is designed with a grading scheme that rewards effort and engagement and does not disproportionately favor correctness.
+  
+  <b><u>AI tools are not permitted in this course under any circumstances.</u></b> Assignments, writing, and projects, must be completed entirely without the use of AI at any stage. This restriction is in place to ensure that all submitted work reflects the student’s own learning and skills. Work suspected to be generated or assisted by AI will be reported to the Academic Integrity Office in accordance with university policy. **I teach you a specific way to complete tasks/objectives in this class. It is <u>VERY</u> easy for me to spot when a student is implementing something that has never been taught in class**. 
+
+  Please understand that, as prevalent as it has become, academic dishonesty is simply not worth the cost. Aside from the obvious loss of academic benefit, one finding of academic integrity violations carries a serious penalty. A second finding will result in expulsion from the University – the administration and faculty take this very seriously.
 
   If you are unsure what might constitute a violation of academic integrity, consult me and/or the [UCSD website on academic integrity](http://academicintegrity.ucsd.edu). Any evidence of academic misconduct will be reported to the Academic Integrity Office. Consequences for academic misconduct may include a failing grade in the course and official action by the University. <u>**Please, do not make me have to do this.**</u> If you are struggling with the course content or anything else, **reach out to me**.  
 
@@ -442,28 +465,28 @@ The schedule below is tentative and subject to change.
 While the course officially meets on Tuesday and Thursday each week, I have ordered the weekly content into a M-Th schedule to help give you an idea of how you could schedule your weeks for this course (while still maintaining some balance with weekends).
 
 ```{r Summer Schedule, echo=FALSE, message=F, warning=F}
-kbl(data.frame("Week" = c("1", "2", "3", "4", "5"),
-                           "Monday" = c("Syllabus", "Different Graph Types",
-                                                 "Viz Challenge<br>+Project Intro",
-                                                 "Summarizing", ""),
-                           "Tuesday" = c("Why use R<br>+Coding Basics<br>+Using R Effectively",
-                                         "Different Graph Types",
-                                         "Tidy Data<br>+Control Flow",
-                                         "Wrangling<br>Challenge", ""),
-                           "Wednesday" = c("R Basics<br>Assignments",
-                                           "ggplot<br>Customization", "Basic<br>Wrangling",
-                                           "Data<br>Transformation",
-                                           ""),
-                           "Thursday" = c("ggplot Intro",
-                                    "Color<br>Theory",
-                                    "Advanced<br>+Wrangling",
-                                    "RStudio Projects<br>+Project Mtg", "")),
-    escape = FALSE, align = "c") %>%
-    #kableExtra::kable_paper("striped", full_width = T) %>%
-    #column_spec(5:7, bold = T) %>%
-    #kableExtra::row_spec(1, bold = T, color = "white", background = "grey")
-  #kable_material(c("striped", "hover"))
-    kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), position = "center")
+# kbl(data.frame("Week" = c("1", "2", "3", "4", "5"),
+#                            "Monday" = c("Syllabus", "Different Graph Types",
+#                                                  "Viz Challenge<br>+Project Intro",
+#                                                  "Summarizing", ""),
+#                            "Tuesday" = c("Why use R<br>+Coding Basics<br>+Using R Effectively",
+#                                          "Different Graph Types",
+#                                          "Tidy Data<br>+Control Flow",
+#                                          "Wrangling<br>Challenge", ""),
+#                            "Wednesday" = c("R Basics<br>Assignments",
+#                                            "ggplot<br>Customization", "Basic<br>Wrangling",
+#                                            "Data<br>Transformation",
+#                                            ""),
+#                            "Thursday" = c("ggplot Intro",
+#                                     "Color<br>Theory",
+#                                     "Advanced<br>+Wrangling",
+#                                     "RStudio Projects<br>+Project Mtg", "")),
+#     escape = FALSE, align = "c") %>%
+#     #kableExtra::kable_paper("striped", full_width = T) %>%
+#     #column_spec(5:7, bold = T) %>%
+#     #kableExtra::row_spec(1, bold = T, color = "white", background = "grey")
+#   #kable_material(c("striped", "hover"))
+#     kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), position = "center")
 ```
 
 
@@ -489,23 +512,23 @@ kbl(data.frame("Week" = c("1", "2", "3", "4", "5"),
 
 ```{r AY Schedule, echo=FALSE, message=F, warning=F}
 #193L
-# kbl(data.frame("Week" = c("1", "2", "3", "4", "5", "6", "7", "8", "9", "10"),
-#                            "Topic" = c("Why Use R?<br>Coding Basics<br>Using R Effectively<br>R Basics Challenge",
-#                                        "Intro to ggplot",
-#                                                  "geoms and graph types",
-#                                                  "ggplot Customization<br>Color Theory",
-#                                        "Data Viz Challenge",
-#                                        "Control Flow<br>Transformations",
-#                                        "Basic Wrangling",
-#                                        "Advanced Wrangling<br>Summarizing",
-#                                        "Data Manipulation Challenge",
-#                                        "Projects")),
-#     escape = FALSE, align = "c") %>%
-#     #kableExtra::kable_paper("striped", full_width = T) %>%
-#     #column_spec(5:7, bold = T) %>%
-#     #kableExtra::row_spec(1, bold = T, color = "white", background = "grey")
-#   #kable_material(c("striped", "hover"))
-#     kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), position = "center")
+kbl(data.frame("Week" = c("1", "2", "3", "4", "5", "6", "7", "8", "9", "10"),
+                           "Topic" = c("Why Use R?<br>Coding Basics<br>Using R Effectively<br>R Basics Challenge",
+                                       "Intro to ggplot",
+                                                 "geoms and graph types",
+                                                 "ggplot Customization<br>Color Theory",
+                                       "Data Viz Challenge",
+                                       "Control Flow<br>Transformations",
+                                       "Basic Wrangling",
+                                       "Advanced Wrangling<br>Summarizing",
+                                       "Data Manipulation Challenge",
+                                       "Projects")),
+    escape = FALSE, align = "c") %>%
+    #kableExtra::kable_paper("striped", full_width = T) %>%
+    #column_spec(5:7, bold = T) %>%
+    #kableExtra::row_spec(1, bold = T, color = "white", background = "grey")
+  #kable_material(c("striped", "hover"))
+    kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), position = "center")
 
 #193
 # kbl(data.frame("Week" = c("1", "2", "3", "4", "5", "6", "7", "8", "9", "10"),
