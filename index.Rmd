@@ -188,6 +188,10 @@ However, there must be ***some*** things to grade you on. They are the following
 
 <!-- * This is a new course using all new material made largely from scratch. I am particularly interested in getting feedback on... everything! What works, what does not, what was engaging, what was boring, what was helpful, etc. There will be very brief feedback surveys about all the material that will be graded only for completion. -->
 
+<u>**Attendance and Check-Ins**</u>
+
+* While this is a flipped course, it is not a completely asynchronous course. As such, students will be required to attend at least 10 class meetings throughout the term for credit. They will also be required to have a check-in meeting with a member of the teaching team at least twice throughout the term. During these meetings, students will go over some of their completed assignments. These serve as a way to check that students are actually understanding the material they submit and that it is your own work.
+
 <u>**Final Project**</u>
 
 <!-- 193L Version -->
@@ -255,7 +259,43 @@ This is an intro course that assumes no prior knowledge. As long as your code ul
 
 The full grade breakdown is as follows:
 
-<!-- 193L -->
+<!-- 193L w/o Attendance-->
+```{r 193L Grade Breakdown, echo=FALSE, message=F, warning=F}
+library(tidyverse)
+library(kableExtra)
+
+# Summer Session Version:
+
+# kbl(data.frame("Assignment" = c("Exercises",
+#                                             "Practice Problem Sets",
+#                                             "Skills Challenges",
+#                                             "Final Project"),
+#                            "Total Percentage" = c("20", "20", "30", "30")#,
+#                            #"Breakdown" = c("<b>test</b>", "*test*", "**test**", "`test`")
+#                            ), col.names = c("Assignment", "Total %")) %>%
+#     #kableExtra::kable_paper("striped", full_width = T) %>%
+#     #column_spec(5:7, bold = T) %>%
+#     #kableExtra::row_spec(1, bold = T, color = "white", background = "grey")
+#   #kable_material(c("striped", "hover"))
+#     kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), position = "center")
+
+# Regular Term Version:
+
+# kbl(data.frame("Assignment" = c("Exercises",
+#                                             "Practice Problem Sets",
+#                                             "Skills Challenges",
+#                                             "Final Project"),
+#                            "Total Percentage" = c("20", "20", "30", "30")#,
+#                            #"Breakdown" = c("<b>test</b>", "*test*", "**test**", "`test`")
+#                            ), col.names = c("Assignment", "Total %")) %>%
+#     #kableExtra::kable_paper("striped", full_width = T) %>%
+#     #column_spec(5:7, bold = T) %>%
+#     #kableExtra::row_spec(1, bold = T, color = "white", background = "grey")
+#   #kable_material(c("striped", "hover"))
+#     kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), position = "center")
+```
+
+<!-- 193L w/ Attendance-->
 ```{r 193L Grade Breakdown, echo=FALSE, message=F, warning=F}
 library(tidyverse)
 library(kableExtra)
@@ -280,8 +320,9 @@ library(kableExtra)
 kbl(data.frame("Assignment" = c("Exercises",
                                             "Practice Problem Sets",
                                             "Skills Challenges",
+                                            "Attendance + Meetings",
                                             "Final Project"),
-                           "Total Percentage" = c("20", "20", "30", "30")#,
+                           "Total Percentage" = c("17.5", "17.5", "30", "5", "30")#,
                            #"Breakdown" = c("<b>test</b>", "*test*", "**test**", "`test`")
                            ), col.names = c("Assignment", "Total %")) %>%
     #kableExtra::kable_paper("striped", full_width = T) %>%
@@ -363,7 +404,9 @@ kbl(data.frame("A" = c("A+", "A", "A-"),
 <!-- Lectures are flipped and there are no class participation credits. Class meeting times are designed to be times where you can come, work on the assignments, and get live/immediate help from me. While attendance is not mandatory, it is invariably the case that the students who regularly attend class meetings or engage with me attain the highest grades in this course. So, I strongly encourage you to attend at least occasionally and make sure to get your questions answered.  -->
   
 <!-- Regular Term Version: -->
-Attendance is <u>strongly encouraged</u>, but is <b>not required</b>. Lectures are flipped and there are no class participation credits. However, it is invariably the case that students who regularly attend class meetings attain the highest grades in this course.
+<!-- Attendance is <u>strongly encouraged</u>, but is <b>not required</b>. Lectures are flipped and there are no class participation credits. However, it is invariably the case that students who regularly attend class meetings attain the highest grades in this course. -->
+
+Students are required to attend at least 10 class meetings to earn the full attendance credit for the course. Regular attendance is <u>strongly encouraged</u>, but is <b>not required</b>. It is invariably the case that students who regularly attend class meetings attain the highest grades in this course.
 
 ### Late Work
 
