@@ -96,7 +96,7 @@ Office Hours: Mon 12-1pm via zoom (960 3584 8051)
 
 **PLA**
 
-Name: America Baretto
+Name: America Barreto
 
 Email: abarreto@ucsd.edu
 
@@ -452,7 +452,7 @@ In choosing what content to include, this was my philosophy:
 The schedule below is tentative and subject to change.
 
 <!-- Temp -->
-While the course officially meets on Tuesday and Thursday each week, I have ordered the weekly content into a M-Th schedule to help give you an idea of how you could schedule your weeks for this course (while still maintaining some balance with weekends).
+While the course officially meets on MWF each week, I have ordered the weekly content into a M-F schedule to help give you an idea of how you could schedule your weeks for this course (while still maintaining some balance with weekends).
 
 
 
