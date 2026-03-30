@@ -296,7 +296,7 @@ library(kableExtra)
 ```
 
 <!-- 193L w/ Attendance-->
-```{r 193L Grade Breakdown, echo=FALSE, message=F, warning=F}
+```{r 193L Grade Breakdown2, echo=FALSE, message=F, warning=F}
 library(tidyverse)
 library(kableExtra)
 
@@ -333,7 +333,7 @@ kbl(data.frame("Assignment" = c("Exercises",
 ```
 
 <!-- 193 -->
-```{r 193 Grade Breakdown2, echo=FALSE, message=F, warning=F}
+```{r 193 Grade Breakdown, echo=FALSE, message=F, warning=F}
 library(tidyverse)
 library(kableExtra)
 
