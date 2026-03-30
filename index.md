@@ -188,6 +188,10 @@ However, there must be ***some*** things to grade you on. They are the following
 
 <!-- * This is a new course using all new material made largely from scratch. I am particularly interested in getting feedback on... everything! What works, what does not, what was engaging, what was boring, what was helpful, etc. There will be very brief feedback surveys about all the material that will be graded only for completion. -->
 
+<u>**Attendance and Check-Ins**</u>
+
+* While this is a flipped course, it is not a completely asynchronous course. As such, students will be required to attend at least 10 class meetings throughout the term for credit. They will also be required to have a check-in meeting with a member of the teaching team at least twice throughout the term. During these meetings, students will go over some of their completed assignments. These serve as a way to check that students are actually understanding the material they submit and that it is your own work.
+
 <u>**Final Project**</u>
 
 <!-- 193L Version -->
@@ -255,7 +259,10 @@ This is an intro course that assumes no prior knowledge. As long as your code ul
 
 The full grade breakdown is as follows:
 
-<!-- 193L -->
+<!-- 193L w/o Attendance-->
+
+
+<!-- 193L w/ Attendance-->
 <table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
  <thead>
   <tr>
@@ -266,15 +273,19 @@ The full grade breakdown is as follows:
 <tbody>
   <tr>
    <td style="text-align:left;"> Exercises </td>
-   <td style="text-align:left;"> 20 </td>
+   <td style="text-align:left;"> 17.5 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Practice Problem Sets </td>
-   <td style="text-align:left;"> 20 </td>
+   <td style="text-align:left;"> 17.5 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Skills Challenges </td>
    <td style="text-align:left;"> 30 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Attendance &amp; Meetings </td>
+   <td style="text-align:left;"> 5 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Final Project </td>
@@ -340,7 +351,9 @@ Final letter grades in the course will be assigned according to the following pe
 <!-- Lectures are flipped and there are no class participation credits. Class meeting times are designed to be times where you can come, work on the assignments, and get live/immediate help from me. While attendance is not mandatory, it is invariably the case that the students who regularly attend class meetings or engage with me attain the highest grades in this course. So, I strongly encourage you to attend at least occasionally and make sure to get your questions answered.  -->
   
 <!-- Regular Term Version: -->
-Attendance is <u>strongly encouraged</u>, but is <b>not required</b>. Lectures are flipped and there are no class participation credits. However, it is invariably the case that students who regularly attend class meetings attain the highest grades in this course.
+<!-- Attendance is <u>strongly encouraged</u>, but is <b>not required</b>. Lectures are flipped and there are no class participation credits. However, it is invariably the case that students who regularly attend class meetings attain the highest grades in this course. -->
+
+Students are required to attend at least 10 class meetings to earn the full attendance credit for the course. Regular attendance is <u>strongly encouraged</u>, but is <b>not required</b>. It is invariably the case that students who regularly attend class meetings attain the highest grades in this course.
 
 ### Late Work
 
