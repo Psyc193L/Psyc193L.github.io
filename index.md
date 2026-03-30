@@ -1,7 +1,7 @@
 --- 
 title: "PSYC193L"
 author: "Ethan Hurwitz"
-date: "2026-03-22"
+date: "2026-03-30"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
@@ -92,7 +92,7 @@ Name: Ajinkya Jadhav
 
 Email: asjadhav@ucsd.edu
 
-Office Hours: 
+Office Hours: Mon 12-1pm via zoom (960 3584 8051)
 
 **PLA**
 
