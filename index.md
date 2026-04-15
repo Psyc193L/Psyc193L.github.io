@@ -1,7 +1,7 @@
 --- 
 title: "PSYC193L"
 author: "Ethan Hurwitz"
-date: "2026-04-13"
+date: "2026-04-15"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
@@ -100,7 +100,7 @@ Name: America Barreto
 
 Email: abarreto@ucsd.edu
 
-Office Hours: Wed at 3pm
+Office Hours: Wed at 3pm via zoom (992 8713 8425)
 
 ## Course Structure
 
