@@ -676,7 +676,7 @@ Some common functions you may want to apply to columns in this way include: `mea
 
 Regular expressions (regex) are a way to select certain *kinds* of characters. When you want to refer to a class/type of character, you can select them with a regex.
 
-Regular expressions all get wrapped in brackets. So, to use any of these, wrap them in brackets. (i.e., they need double brackets in practice!):
+Regular expressions all get wrapped in brackets. So, to use any of these, wrap them in brackets and then quotes. (i.e., they need double brackets in quotes to be used!):
 
 - **[:punct:]** - punctuation.
 - **[:alpha:]** - letters.

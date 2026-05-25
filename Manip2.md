@@ -2934,13 +2934,13 @@ mtcars2 %>%
 
 <img src="Manip2_files/figure-html/unnamed-chunk-58-1.png" alt="" width="672" />
 
-To reorder the levels of a factor by their relationship with another variable (instead of frequency of occurrence), you can use `fct_reorder()`. In `fct_reorder()`, you must specify the factor to reorder, and the other variable you wish to reorder the levels by.
+To reorder the levels of a factor by their relationship with another variable (instead of frequency of occurrence), you can use `fct_reorder()`. In `fct_reorder()`, you must specify the factor to reorder, and the other variable you wish to reorder the levels by. By default, `fct_order()` will use the median. To change this, you must specify the exact function (similar to how we do in `stat_summary()`).
 
 
 ``` r
 mtcars2 %>%
   mutate(cyl = factor(cyl)) %>%
-  ggplot(aes(y = mpg, x = fct_reorder(cyl, mpg))) +
+  ggplot(aes(y = mpg, x = fct_reorder(cyl, mpg, .fun="mean"))) +
   stat_summary(fun.data = "mean_se", geom = "pointrange")
 ```
 
