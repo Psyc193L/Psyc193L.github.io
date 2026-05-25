@@ -135,7 +135,7 @@ And adding a set of curly brackets {} with an "r" in it next to the first set of
 
 ![](figures/rmd1.png){width=100%}
 
-You can also insert code chunks by pressing control+options+i on OSX or control+alt+i on windows (RStudio is full of nifty shortcuts!)
+You can also insert code chunks by pressing control+option+i on OSX or control+alt+i on windows (RStudio is full of nifty shortcuts!)
 
 Generally speaking, you want to name your code chunks to help readily identify what task that section of code is handling. 
 
