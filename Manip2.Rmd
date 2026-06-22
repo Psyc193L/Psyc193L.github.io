@@ -1107,7 +1107,7 @@ To reorder the levels of a factor by their relationship with another variable (i
 ```{r warning = FALSE}
 mtcars2 %>%
   mutate(cyl = factor(cyl)) %>%
-  ggplot(aes(y = mpg, x = fct_reorder(cyl, mpg, .fun="mean"))) +
+  ggplot(aes(y = mpg, x = fct_reorder(cyl, mpg, .fun = "mean"))) +
   stat_summary(fun.data = "mean_se", geom = "pointrange")
 ```
 
