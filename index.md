@@ -1,7 +1,7 @@
 --- 
 title: "PSYC193L"
 author: "Ethan Hurwitz"
-date: "2026-05-25"
+date: "2026-06-22"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
@@ -21,11 +21,15 @@ csl: apa.csl
 
 PSYC193L: Introduction to R Programming
 
-Spring 2026
+Summer Session II 2026
 
-*Lecture:* MW 9:00am-9:50am
+*Lecture:* TuTh 11:00am-1:50pm
 
-*Lab:* F 9:00am-9:50am
+<!-- Spring 2026 -->
+
+<!-- *Lecture:* MW 11:00am-12:50pm -->
+
+<!-- *Lab:* F 9:00am-9:50am -->
 
 <!-- Summer Session 2025 -->
 
@@ -86,21 +90,21 @@ Email: ehurwitz@ucsd.edu
 
 Office Hours: By Appointment (contact me to schedule)
 
-**Teaching Assistant**
+<!-- **Teaching Assistant** -->
 
-Name: Ajinkya Jadhav
+<!-- Name:  -->
 
-Email: asjadhav@ucsd.edu
+<!-- Email:  -->
 
-Office Hours: Mon 12-1pm via zoom (960 3584 8051)
+<!-- Office Hours:  -->
 
-**PLA**
+<!-- **PLA** -->
 
-Name: America Barreto
+<!-- Name:  -->
 
-Email: abarreto@ucsd.edu
+<!-- Email:  -->
 
-Office Hours: Wed at 3pm via zoom (992 8713 8425)
+<!-- Office Hours:  -->
 
 ## Course Structure
 
@@ -138,16 +142,16 @@ All course materials are free. You have enough expenses, I am not interested in 
 <!-- DataHub website. -->
   
   
-* **[Discord](https://discord.gg/EMrShXmwdM)**
+* **[Discord](https://discord.gg/u8Az4QA9kj)**
   + We will use Discord as a central place to manage questions about the class, communicate with each other, and easily copy/paste code for sharing. Checking the discord is an expected part of the class.
 
   
-* **[Zoom](https://ucsd.zoom.us/j/99287138425)**
+* **[Zoom](https://ucsd.zoom.us/j/95463743030)**
   + For class meetings and office hours held via zoom.
 
 <!-- + Class will be remote, so all class periods and office hours will be held via Zoom! -->
   
-* **[Anonymous Feedback](https://forms.gle/FvQzioXbsrhofnfr9)**
+* **[Anonymous Feedback](https://forms.gle/B9QUXVxk9xiqV99s5)**
   + This is a place to submit anonymous feedback to the teaching team.
 
 ## Grades
@@ -190,16 +194,23 @@ However, there must be ***some*** things to grade you on. They are the following
 
 <u>**Attendance and Check-Ins**</u>
 
-* While this is a flipped course, it is not a completely asynchronous course. As such, students will be required to attend at least 10 class meetings throughout the term for credit. They will also be required to have a check-in meeting with a member of the teaching team at least twice throughout the term. During these meetings, students will go over some of their completed assignments. These serve as a way to check that students are actually understanding the material they submit and that it is your own work.
+<!-- <!-- Regular term --> -->
+<!-- * While this is a flipped course, it is not an asynchronous course. As such, students will be required to attend at least 10 class meetings throughout the term for credit. They will also be required to have a check-in meeting with a member of the teaching team at least twice throughout the term. During these meetings, students will go over some of their completed assignments. These serve as a way to check that students are actually understanding the material they submit and that it is your own work. -->
+
+<!-- Summer term -->
+* While this is a flipped and remote course, it is not an asynchronous course. As such, students will be required to complete at least 7 check-in meetings with a member of the teaching team throughout the term. These meetings are part of the overall course grade. During these meetings, students will review some of their completed assignments and answer questions about the work they submitted. These serve as a way to check that students are actually understanding the material they submit and that it is your own work, as well as enacting some accountability to make sure you stay on track with your work. These meetings should be completed during class and will take approximately 10 minutes or so. You can reach out beforehand to reserve priority for meeting slots. Otherwise, the meetings will be first come first served per class. 
 
 <u>**Final Project**</u>
 
 <!-- 193L Version -->
-Towards the end of this term you will write a complete research report in [APA format](https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_formatting_and_style_guide/general_format.html) including a title page, abstract, introduction, methods, results, discussion, and references sections. There are two options for the project: one that is more directed and one that is more open.
+Towards the end of this term you will write a complete research report in [APA format](https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_formatting_and_style_guide/general_format.html) including a title page, abstract, introduction, methods, results, discussion, and references sections. 
+<!-- There are two options for the project: one that is more directed and one that is more open. -->
 
-For the <u>directed</u> option, you will choose a dataset that has specific questions that you must investigate and try to answer. For the <u>open</u> option, you will choose a dataset and come up with your own question(s) to investigate and try to answer. Datasets will be provided for you. You do not have to find or generate them on your own.
+<!-- For the <u>directed</u> option, you will choose a dataset that has specific questions that you must investigate and try to answer. For the <u>open</u> option, you will choose a dataset and come up with your own question(s) to investigate and try to answer.  -->
+You will choose a dataset that has specific questions that you must investigate and try to answer using that data. These datasets will be provided to you. You do not have to find or generate them on your own.
 
-In both options, you will:
+<!-- In both options, you will: -->
+In this project, you will:
 
 * Conduct a brief literature review to find sources which help motivate the research question(s) and provide rationale for your hypothesized answers to those questions.
 * Clean/change/modify/whatever the data to get it in the form you need, then create visualizations and summary statistics that look for potential answers to your hypotheses.
@@ -230,17 +241,17 @@ In both options, you will:
 * Written clearly so a non-expert can follow the logic of what is being presented
 * Demonstrate evidence of critical thinking about research (not summarizing what has been done)
 
-<b><u>Note:</u></b> These are departmental guidelines, I have no say in this. This is what the department requires a Psychology B.S. Research Paper to have.
+<b><u>Note:</u></b> These are [departmental guidelines](https://psychology.ucsd.edu/undergraduate-program/research/research-paper-guidelines.html), I have no say in this. This is what the department requires a Psychology B.S. Research Paper to have.
 
 Again, you will be given optional datasets to choose from later on. You will <b>NOT</b> have to collect this data yourself!
 
 ### How Does Grading Work?
 
 <!-- Summer Session Version:-->
-<!-- Graded assignments will be downloaded and submitted on Canvas. For each assignment, you will submit a knit .html document and the source .Rmd document (more on this later). Submissions that do not include BOTH file types will be considered incomplete after week 1. <b>All assignments are due the Monday after they are introduced. i.e., anything released in Week 1 is due by Monday of Week 2, etc.</b> If you submit the Exercise assignment(s) for a given week by Wednesday at 11:59pm of that week, it will be graded with feedback by that Saturday at the latest. Thus, you will be able to use that feedback for the Practice Problem set on the same topic and potentially avoid making repeat errors across assignments. This is not required, and assignments will only be considered late if they are submitted after the Monday at 11:59pm deadline. -->
+Graded assignments will be downloaded and submitted on Canvas. For each assignment, you will submit a knit .html document and the source .Rmd document (more on this later). Submissions that do not include **BOTH** file types will be considered incomplete after week 1. <b>All assignments are due by Sunday at 11:59pm the week they are released i.e., anything released on Monday of Week 1 is due by that Sunday at 11:59pm (before Monday of Week 2), etc.</b> If you submit the Exercise assignment(s) for a given week by Wednesday at 11:59pm of that week, it will be graded with feedback by that Friday at the latest. Thus, you will be able to use that feedback for the Practice Problem set on the same topic and potentially avoid making repeat errors across assignments. This is not required, and assignments will only be considered late if they are submitted after the Sunday at 11:59pm deadline.
 
 <!-- Regular Term Version:-->
-Graded assignments will be downloaded and submitted on Canvas. For each assignment, you will submit a knit .html document and the source .Rmd document (more on this later). Submissions that do not include BOTH file types will be considered incomplete after week 1. <b>All assignments are due by Sunday at 11:59pm the week they are released i.e., anything released on Monday of Week 1 is due by that Sunday at 11:59pm (before Monday of Week 2), etc.</b> If you submit the Exercise assignment(s) for a given week by Wednesday at 11:59pm of that week, it will be graded with feedback by that Saturday at the latest. Thus, you will be able to use that feedback for the Practice Problem set on the same topic and potentially avoid making repeat errors across assignments. This is not required, and assignments will only be considered late if they are submitted after the Sunday at 11:59pm deadline.
+<!-- Graded assignments will be downloaded and submitted on Canvas. For each assignment, you will submit a knit .html document and the source .Rmd document (more on this later). Submissions that do not include BOTH file types will be considered incomplete after week 1. <b>All assignments are due by Sunday at 11:59pm the week they are released i.e., anything released on Monday of Week 1 is due by that Sunday at 11:59pm (before Monday of Week 2), etc.</b> If you submit the Exercise assignment(s) for a given week by Wednesday at 11:59pm of that week, it will be graded with feedback by that Saturday at the latest. Thus, you will be able to use that feedback for the Practice Problem set on the same topic and potentially avoid making repeat errors across assignments. This is not required, and assignments will only be considered late if they are submitted after the Sunday at 11:59pm deadline. -->
 
 This course is designed to facilitate your *engagement* and *effort* with the material. What is going to help you learn and develop R skills the most is to actually **practice doing** coding... a lot. It is thus, in my view, counter-productive to have a single heavily weighted assignment (exam) or for there to be high amounts of pressure to find some singularly correct answer to every problem.
 
@@ -273,23 +284,23 @@ The full grade breakdown is as follows:
 <tbody>
   <tr>
    <td style="text-align:left;"> Exercises </td>
-   <td style="text-align:left;"> 17.5 </td>
+   <td style="text-align:left;"> 20 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Practice Problem Sets </td>
-   <td style="text-align:left;"> 17.5 </td>
+   <td style="text-align:left;"> 20 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Skills Challenges </td>
    <td style="text-align:left;"> 30 </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> Attendance &amp; Meetings </td>
-   <td style="text-align:left;"> 5 </td>
+   <td style="text-align:left;"> Check-in Meetings </td>
+   <td style="text-align:left;"> 10 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Final Project </td>
-   <td style="text-align:left;"> 30 </td>
+   <td style="text-align:left;"> 20 </td>
   </tr>
 </tbody>
 </table>
@@ -347,52 +358,56 @@ Final letter grades in the course will be assigned according to the following pe
 ### Attendance
 
 <!-- Summer Session Version: -->
-  <!-- Attendance is <u>strongly encouraged</u>, and the decision to hold the course remotely was made in order to maximize the ability for students to attend synchronously, but is not required. Participation is based on activity completion, which can be completed asynchronously. However, it is much more difficult to do so this way. -->
+Regular attendance is <u>strongly encouraged</u> and the decision to hold the course remotely was made in order to maximize the ability for students to attend synchronously. Class meeting times are designed to be times where you can come, work on the assignments, and get live/immediate help from me. Part of the check-in meetings serve as your attendance grade. That said, it is invariably the case that the students who regularly attend class meetings and/or engage with me attain the highest grades in this course.
 <!-- Lectures are flipped and there are no class participation credits. Class meeting times are designed to be times where you can come, work on the assignments, and get live/immediate help from me. While attendance is not mandatory, it is invariably the case that the students who regularly attend class meetings or engage with me attain the highest grades in this course. So, I strongly encourage you to attend at least occasionally and make sure to get your questions answered.  -->
   
 <!-- Regular Term Version: -->
 <!-- Attendance is <u>strongly encouraged</u>, but is <b>not required</b>. Lectures are flipped and there are no class participation credits. However, it is invariably the case that students who regularly attend class meetings attain the highest grades in this course. -->
 
-Students are required to attend at least 10 class meetings to earn the full attendance credit for the course. Regular attendance is <u>strongly encouraged</u>, but is <b>not required</b>. It is invariably the case that students who regularly attend class meetings attain the highest grades in this course.
+<!-- Students are required to attend at least 10 class meetings to earn the full attendance credit for the course. Regular attendance is <u>strongly encouraged</u>, but is <b>not required</b>. It is invariably the case that students who regularly attend class meetings attain the highest grades in this course. -->
 
 ### Late Work
 
 <!-- Summer Session Version: -->
-<!-- Exercises, Practice Problem Sets, and Challenges, can be submitted up to 5 days past their due date for late credit. The late penalty is 10% **per day** late, and will only be accepted up to 5 days past the due date (i.e., by Saturday). <b><u>The paper/project CANNOT be submitted late</u></b>. -->
+Exercises, Practice Problem Sets, and Challenges, can be submitted up to 5 days past their due date for late credit. The late penalty is 10% **per day** late, and will only be accepted up to 5 days past the due date (i.e., by Saturday). <b><u>The paper/project CANNOT be submitted late</u></b>.
 
 <!-- Assignments can be submitted up to 5 days past their due date for late credit. The late penalty for assignments is 10% per day late, capping out at 50% (5 days late). This applies to all assignments <b><u>except the paper and those in the final week</u></b>. -->
 
 <!-- There may be some instances where it is better for you to take the late penalty than submit an incomplete assignment (e.g., the more incomplete an assignment, the better to take the late penalty). -->
 
-<!-- Please do not let this flexibility encourage you to submit work late, because it is <b>*VERY*</b> easy to get behind on assignments given the pace of a Summer course. You can quickly find yourself with many assignments accruing high late penalties which have a significant impact on your overall course grade. Instead, you should view this as a built in accommodation for some unforeseen circumstances. -->
+Please do not let this flexibility encourage you to submit work late, because it is <u>**VERY**</u> easy to get behind on assignments given the pace of a Summer course. You can quickly find yourself with many assignments accruing high late penalties which have a significant impact on your overall course grade. Instead, you should view this as a built in accommodation for some unforeseen circumstances.
 
 <!-- Regular Term Version: -->
 <!-- Exercises, Practice Problem Sets, and Challenges, can be submitted up to 5 days past their due date for late credit. The late penalty is 10% per day late, and will only be accepted up to 5 days past the due date (i.e., Friday of the following week). <b><u>The paper/project CANNOT be submitted late</u></b>. -->
 
-Exercises, Practice Problem Sets, and Challenges, can be submitted up to 2 weeks past their due date for late credit. The late penalty is 10% per week late, and will only be accepted up to 2 weeks past the due date. The reason for this is that, similar to other language or math courses, the material we learn throughout the term is contingent on the immediately preceding content. Thus, if you do not stay on top of the material, you will get lost and be unable to keep pace with the assignments. <b><u>The paper/project CANNOT be submitted late</u></b>.
+<!-- Exercises, Practice Problem Sets, and Challenges, can be submitted up to 2 weeks past their due date for late credit. The late penalty is 10% per week late, and will only be accepted up to 2 weeks past the due date. The reason for this is that, similar to other language or math courses, the material we learn throughout the term is contingent on the immediately preceding content. Thus, if you do not stay on top of the material, you will get lost and be unable to keep pace with the assignments. <b><u>All late work must be submitted by Friday of Week 10. The paper/project CANNOT be submitted late. Assignments turned in after Friday of Week 10, and projects turned in past the deadline, will NOT be accepted.</u></b> -->
 
 ### Extensions
 
 <!-- Summer Session Version: -->
-<!-- Assignments have due dates that give you a fair amount of time to complete them, and should be able to accommodate instances where you get sick or something else comes up. Granted, it is a Summer Session course, so things move at an accelerated pace. -->
+Assignments have due dates that give you a fair amount of time to complete them and should be able to accommodate instances where you get sick or something else comes up. Granted, it is a Summer Session course, so things inherently move at an accelerated pace. However, each student will have one "emergency button" they can push. You can use an emergency button to remove two day's late penalty on any week's assignments. If something comes up and you must submit assignments late, you can push your "emergency button" and submit it up to two days late with no late penalty. This is something you can only do **once** all term, and must let me know explicitly when/if you use it! The emergency button **cannot be used retroactively**, meaning that you must reach out and let me know prior to an assignment's deadline that you will be using the emergency button for that week. Further, **the emergency button CANNOT be used on the final paper/project**. As noted above, the final paper/project cannot be submitted late.
 <!-- That said, I am a reasonable person and will grant extensions under *reasonable* circumstances that would afford accommodations (i.e., things that meet the University policies for extenuating circumstances such as family emergencies, health issues, etc.). -->
+
+Please reach out to me if you are struggling or have any unique/extenuating situations arise. I am here to help and support you, but can't do that if I don't know when something is going on.
 
 <!-- Please reach out to me if you are struggling or any unique/extenuating situations arise. I am a pretty reasonable person, and am willing to work with you when you have proper documentation for unforeseen circumstances (e.g., getting sick, death in the family, etc.). -->
 
 <!-- Regular Term Version: -->
-  Assignments have due dates that afford a lot amount of time to complete them, and should be able to accommodate instances where you get sick or something else comes up. However, each student will have one "emergency button" they can push. You can use an emergency button to remove one week's late penalty on any week's assignments. If something comes up and you must submit assignments late, you can push your "emergency button" and submit it up to one week late with no late penalty. This is something you can only do **once** all quarter, and must let me know explicitly when/if you use it!
+  <!-- Assignments have due dates that afford a lot of time to complete them, and should be able to accommodate instances where you get sick or something else comes up. However, each student will have one "emergency button" they can push. You can use an emergency button to remove one week's late penalty on any week's assignments. If something comes up and you must submit assignments late, you can push your "emergency button" and submit it up to one week late with no late penalty. This is something you can only do **once** all quarter, and must let me know explicitly when/if you use it! The emergency button **cannot be used retroactively**, meaning that you must reach out and let me know prior to an assignment's deadline that you will be using the emergency button for that week. Further, **the emergency button CANNOT be used on the final paper/project**. As noted above, the final paper/project cannot be submitted late. -->
 
-Please reach out if you are struggling or any unique situations arise.
+<!-- Please reach out if you are struggling or any unique situations arise. -->
 
 ### Email/Discord DMs
 
   <!-- If you would prefer to ask a question privately, you may DM me on Zoom, email me, send me a DM on discord, or come to my office hours. My preference would be a Zoom DM or Discord DM, as I will check those more frequently. If you choose to email, please include “PSYC 193L” in the subject line of your emails. Doing this will make sure I see your message in a timely manner. -->
   
-  If you would prefer to ask a question privately, you may email me, send me a DM on discord, or come to my office hours. My preference would be an email or Discord DM, as I will check those more frequently. If you choose to email, please include “PSYC 193” in the subject line of your emails. Doing this will make sure I see your message in a timely manner.
+  If you would prefer to ask a question privately, you may email me, send me a DM on discord, or come to my office hours. My preference would be an email or Discord DM, as I will check those more frequently. If you choose to email, please include “PSYC 193L” in the subject line of your emails. Doing this will make sure I see your message in a timely manner.
 
 ### Academic Integrity
 
-  All students are expected to adhere to standards of academic integrity. Cheating of any kind on any assignment will not be tolerated. It is disrespectful to your peers, the university, and to me. Especially considering this course is designed with a grading scheme that rewards effort and engagement and does not disproportionately favor correctness.
+  All students are expected to adhere to standards of academic integrity. Cheating of any kind on any assignment will not be tolerated. It is disrespectful to your peers, the university, and to me. Especially considering this course is designed with a grading scheme that rewards effort and engagement and does not disproportionately favor correctness. As a result of the rampant use of generative AI by students in previous terms, this course has been forced to adopt a very conservative stance on utilizing resources outside of the course material. 
+  
+ <b><u>All questions on all assignments must be answered using ONLY content that has been covered in the course material at the time of the assignment's release.</u></b> Unfortunately, if a student submits answers that include content not covered in the course material, I have no way of knowing if that is from their own prior knowledge or something they were provided from outside resources like generative AI. Thus, even if you come into the class with prior R or coding knowledge, your answers **must** adhere to the style, syntax, and content, that is covered in the course material. I understand this is annoying, and I would prefer not to have to enact this policy, but this unfortunately is a response to the rampant amount of cheating that has taken place in recent terms.
   
   <b><u>AI tools are not permitted in this course under any circumstances.</u></b> Assignments, writing, and projects, must be completed entirely without the use of AI at any stage. This restriction is in place to ensure that all submitted work reflects the student’s own learning and skills. Work suspected to be generated or assisted by AI will be reported to the Academic Integrity Office in accordance with university policy. **I teach you a specific way to complete tasks/objectives in this class. It is <u>VERY</u> easy for me to spot when a student is implementing something that has never been taught in class**. 
 
@@ -402,7 +417,11 @@ Please reach out if you are struggling or any unique situations arise.
 
 ### OSD Accommodations
 
-  Any student with a documented disability will be accommodated according to University policy. For details, please consult the Office of [Students with Disabilities (OSD)](http://disabilities.ucsd.edu). If you require accommodation for any component of the course, please provide me with documentation from OSD as soon as possible. ***Please note that accommodations cannot be made retroactively under any circumstances***. For example, if you submit a Skills Challenge and afterward provide documentation that you require extra time, you will receive accommodation only on subsequent assignments and not on the one that you have already taken. 
+  Any student with a documented disability will be accommodated according to University policy. For details, please consult the Office of [Students with Disabilities (OSD)](http://disabilities.ucsd.edu). If you require accommodation for any component of the course, please provide me with documentation from OSD as soon as possible. ***Please note that accommodations cannot be made retroactively under any circumstances***. For example, if you submit a Skills Challenge and afterward provide documentation that you require extra time, you will receive accommodations only on subsequent assignments and not on the one that you have already taken.
+
+### Other Accommodations
+
+If you undergo an experience or situation that would precipitate you receiving additional accommodations beyond those provided by OSD accommodations, please either contact me directly or have a relevant University body (e.g., OPHD) contact me to let me know.
 
 ### Extra Credit
 
@@ -454,11 +473,6 @@ The schedule below is tentative and subject to change.
 <!-- Temp -->
 While the course officially meets on MWF each week, I have ordered the weekly content into a M-F schedule to help give you an idea of how you could schedule your weeks for this course (while still maintaining some balance with weekends).
 
-
-
-
-
-
 <table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
  <thead>
   <tr>
@@ -469,46 +483,31 @@ While the course officially meets on MWF each week, I have ordered the weekly co
 <tbody>
   <tr>
    <td style="text-align:center;"> 1 </td>
-   <td style="text-align:center;"> Why Use R?<br>Coding Basics<br>Using R Effectively<br>R Basics Challenge </td>
+   <td style="text-align:center;"> Why Use R?<br>Coding Basics<br>Using R Effectively<br>R Basics Challenge<br>Intro to ggplot </td>
   </tr>
   <tr>
    <td style="text-align:center;"> 2 </td>
-   <td style="text-align:center;"> Intro to ggplot </td>
+   <td style="text-align:center;"> geoms and graph types<br>ggplot Customization<br>Color Theory </td>
   </tr>
   <tr>
    <td style="text-align:center;"> 3 </td>
-   <td style="text-align:center;"> geoms and graph types </td>
+   <td style="text-align:center;"> Data Viz Challenge<br>Control Flow<br>Transformations<br>Basic Wrangling </td>
   </tr>
   <tr>
    <td style="text-align:center;"> 4 </td>
-   <td style="text-align:center;"> ggplot Customization<br>Color Theory </td>
+   <td style="text-align:center;"> Advanced Wrangling<br>Summarizing<br>Data Manipulation Challenge </td>
   </tr>
   <tr>
    <td style="text-align:center;"> 5 </td>
-   <td style="text-align:center;"> Data Viz Challenge </td>
-  </tr>
-  <tr>
-   <td style="text-align:center;"> 6 </td>
-   <td style="text-align:center;"> Control Flow<br>Transformations </td>
-  </tr>
-  <tr>
-   <td style="text-align:center;"> 7 </td>
-   <td style="text-align:center;"> Basic Wrangling </td>
-  </tr>
-  <tr>
-   <td style="text-align:center;"> 8 </td>
-   <td style="text-align:center;"> Advanced Wrangling<br>Summarizing </td>
-  </tr>
-  <tr>
-   <td style="text-align:center;"> 9 </td>
-   <td style="text-align:center;"> Data Manipulation Challenge </td>
-  </tr>
-  <tr>
-   <td style="text-align:center;"> 10 </td>
    <td style="text-align:center;"> Projects </td>
   </tr>
 </tbody>
 </table>
+
+
+
+
+
 
 
 
@@ -548,6 +547,6 @@ Don't just take my word for it! Here are some suggestions and advice from studen
 
 ## Acknowledgements
 
-I'd like to directly thank [Emma Geller](https://www.lime-lab-ucsd.com/people), [Judy Fan](https://cogtoolslab.github.io/people.html), and Angela Lowe, for sharing their syllabi materials and input on this course.<!--, and [Natalia Pallis-Hassani](https://www.linkedin.com/in/natalia-pallis-hassani-865ba3193) for feedback in developing course material.--> Throughout this course, I will use many illustrations created by the brilliant [Allison Horst](https://www.allisonhorst.com/).
+I'd like to thank [Emma Geller](https://www.lime-lab-ucsd.com/people), [Judy Fan](https://cogtoolslab.github.io/people.html), and Angela Lowe, for sharing their syllabi materials and input on this course.<!--, and [Natalia Pallis-Hassani](https://www.linkedin.com/in/natalia-pallis-hassani-865ba3193) for feedback in developing course material.--> Throughout this course, I will use many illustrations created by [Allison Horst](https://www.allisonhorst.com/).
 
 ## References
