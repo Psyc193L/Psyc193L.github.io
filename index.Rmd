@@ -194,7 +194,7 @@ However, there must be ***some*** things to grade you on. They are the following
 
 <u>**Attendance and Check-Ins**</u>
 
-<!-- <!-- Regular term --> -->
+<!-- <!-- Regular term -->
 <!-- * While this is a flipped course, it is not an asynchronous course. As such, students will be required to attend at least 10 class meetings throughout the term for credit. They will also be required to have a check-in meeting with a member of the teaching team at least twice throughout the term. During these meetings, students will go over some of their completed assignments. These serve as a way to check that students are actually understanding the material they submit and that it is your own work. -->
 
 <!-- Summer term -->
